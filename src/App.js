@@ -13,12 +13,12 @@ import RefundPolicy from "./components/Refund";
 function App() {
   return (
      <Router>
-      <Routes>
-        {/* <Route path="/" element={<Home />} /> */}
-        <Route path="/Homepage" element={<Homepage/>}/>
+      
+       <Routes>
+        <Route path="/" element={<Homepage />} />
         <Route path="/termsandconditions" element={<TermsAndCondition />} />
         <Route path="/privacypolicy" element={<PrivacyPolicy />} />
-        <Route path="/refundpolicy" element={<RefundPolicy/>}/>
+        <Route path="/refundpolicy" element={<RefundPolicy />} />
       </Routes>
     </Router>
   );
