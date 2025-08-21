@@ -1,0 +1,148 @@
+.principles-section {
+  padding: 4rem 1.5rem;
+  background-color: #ffffff;
+}
+
+.principles-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.principles-heading {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #111827; /* Tailwind gray-900 */
+  margin-bottom: 1rem;
+  line-height: 1.3;
+}
+
+@media (min-width: 768px) {
+  .principles-heading {
+    font-size: 2.5rem;
+  }
+}
+
+.principles-subheading {
+  color: #4b5563; /* Tailwind gray-600 */
+  max-width: 640px;
+  margin: 0 auto 3rem auto;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.principles-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .principles-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.principle-card {
+  padding: 1.5rem;
+  border: 1px solid #e5e7eb; /* Tailwind gray-200 */
+  border-radius: 1rem;
+  background-color: #ffffff;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  transition: box-shadow 0.2s ease;
+}
+
+.principle-card:hover {
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.principle-icon-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.principle-icon {
+  font-size: 60px; /* Bigger size */
+  text-align: center;
+}
+
+.principle-icon.blue {
+  color: #000000;
+}
+.circle-icon {
+  background-color: #000000; /* light green background */
+  border-radius: 50%;
+  padding: 8px; /* space inside circle */
+  font-size: 40px; /* size of the icon */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.principle-icon.green {
+  color: #ffffff;
+}
+
+.principle-icon.red {
+  color: #000000;
+}
+
+
+.principle-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #111827;
+  margin-bottom: 0.5rem;
+}
+
+.principle-description {
+  color: #4b5563;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+/* Action buttons container */
+.principle-actions {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+/* Buttons */
+.action-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.6rem 1.2rem;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #fff;
+  text-decoration: none;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.action-btn .btn-icon {
+  font-size: 1rem;
+}
+
+/* Button colors */
+.action-btn.email {
+  background-color: #ffffff;
+  color:#2563eb;
+  border: 1px solid #2563eb;
+  border-radius: 24px;
+}
+
+.action-btn.whatsapp {
+  background-color: #25d366; /* WhatsApp Green */
+   border-radius: 24px;
+}
+
+/* Hover effects */
+.action-btn:hover {
+  transform: translateY(-2px);
+  opacity: 0.9;
+}

@@ -1,37 +1,45 @@
-/* Navbar Container */
+/* Navbar Wrapper */
+.navbar-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  transition: background 0.3s ease, border-bottom 0.3s ease;
+  background: transparent; /* start transparent */
+  border-bottom: none;
+}
+
+/* When scrolled */
+.navbar-wrapper.scrolled {
+  background: #fff; /* solid white after scroll */
+  border-bottom: 1px solid #e5e7eb;
+}
+
 /* Navbar Container */
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  max-width: 1200px;   /* keeps navbar centered */
-  margin: 0 auto;      /* centers horizontally */
+  max-width: 1200px;
+  margin: 0 auto;
   padding: 0.75rem 1.5rem;
-  background-color: #fff;
-  border-bottom: 1px solid #e5e7eb;
   font-family: 'Inter', sans-serif;
 }
-.navbar-wrapper {
-  width: 100%;
-  background: #fff;
-  border-bottom: 1px solid #e5e7eb;
-}
-
-
 
 /* Logo + Brand */
 .navbar-logo {
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  font-size: 1.125rem; /* slightly smaller than before */
+  font-size: 1.125rem;
   font-weight: 700;
   color: #000;
   text-decoration: none;
 }
 
 .navbar-logo img {
-  width: 273px;   /* reduced from 100px */
+  width: 273px;
   height: 40px;
   object-fit: contain;
   transition: transform 0.3s ease, opacity 0.3s ease;
@@ -39,16 +47,22 @@
 }
 
 .navbar-logo img:hover {
-  transform: scale(1.05); /* smaller hover zoom */
+  transform: scale(1.05);
   opacity: 0.9;
 }
 
 /* Nav Links */
 .navbar-links {
   display: flex;
-  gap: 1.5rem; /* reduced gap */
+  gap: 1.5rem;
   font-size: 0.95rem;
   font-weight: 500;
+  color: #000000; /* default: white over hero */
+  transition: color 0.3s ease;
+}
+
+/* Change link color when navbar is scrolled */
+.navbar-wrapper.scrolled .navbar-links {
   color: #1f2937;
 }
 
@@ -65,7 +79,7 @@
 /* Buttons Container */
 .navbar-buttons {
   display: flex;
-  gap: 0.75rem; /* reduced spacing */
+  gap: 0.75rem;
 }
 
 /* Contact Sales Button */
@@ -74,9 +88,14 @@
   border: 1px solid #d1d5db;
   border-radius: 9999px;
   background: transparent;
-  color: #1f2937;
+  color: #000000; /* default white */
   cursor: pointer;
-  transition: background 0.2s ease;
+  transition: background 0.2s ease, color 0.3s ease;
+}
+
+/* Change color on scroll */
+.navbar-wrapper.scrolled .btn-outline {
+  color: #1f2937;
 }
 
 .btn-outline:hover {
@@ -92,7 +111,6 @@
   color: #fff;
   border: none;
   cursor: pointer;
-
   background: linear-gradient(to bottom, #0f0f0f, #1a1a1a, #2c2c2c, #3b3b3b, #4b5563);
   box-shadow: inset 0 2px 6px rgba(255, 255, 255, 0.2),
               inset 0 -2px 6px rgba(0, 0, 0, 0.3),

@@ -10,6 +10,9 @@ import Footer from "./components/Footer";
 import CTA from "./components/CTA";
 import PrivacyPolicy from "./components/PrivacyAndPolicy";
 import RefundPolicy from "./components/Refund";
+import ContactUs from "./components/ContactUs";
+import Testimonials from "./components/Testimonial";
+import CustomerHelp from "./components/CustomerHelp";
 function App() {
   return (
      <Router>
@@ -19,6 +22,7 @@ function App() {
         <Route path="/termsandconditions" element={<TermsAndCondition />} />
         <Route path="/privacypolicy" element={<PrivacyPolicy />} />
         <Route path="/refundpolicy" element={<RefundPolicy />} />
+        <Route path="/contactus" element={<ContactUs/>}/>
       </Routes>
     </Router>
   );
