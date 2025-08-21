@@ -1,0 +1,201 @@
+.footer {
+  position: relative; /* make it a positioned container */
+  background: linear-gradient(to bottom, #10121a, #1f2129);
+  color: #d1d5db;
+  padding: 30px 20px;
+  border-radius: 20px;
+  max-width: 1372px;
+  margin: 2px auto 0;
+  font-family: 'Inter', sans-serif;
+  overflow: hidden; /* hide overflow of background image */
+}
+
+/* Add the background image */
+.footer::before {
+  content: "";
+  position: absolute;
+  left: 20px;              /* add some padding from left */
+  top: 50%;
+  transform: translateY(-50%);
+  background: url("../assets/footer_logo2.png") no-repeat left center;
+  background-size: 400px auto; /* set explicit width for clarity */
+  width: 400px;           /* matches background-size width */
+  height: 400px;          /* makes it proportional */
+  opacity: 0.25;          /* more visible */
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Ensure footer content is above the image */
+.footer-container,
+.footer-bottom {
+  position: relative;
+  z-index: 1;
+}
+
+
+/* Footer Container */
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;   /* align logo + links vertically in one line */
+  gap: 60px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+
+/* Brand Section */
+.footer-brand {
+  flex: 1;
+  min-width: 220px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;  /* centers logo + text block with links */
+}
+
+
+.footer-logo {
+  margin-top: 2px;
+  width: 180px; /* slightly smaller for balance */
+  height: auto;
+  margin-bottom: 12px;
+}
+
+.footer-brand p {
+  margin: 0;
+  font-size: 14px;
+  color: #9ca3af;
+  line-height: 1.5;
+}
+
+.social-icons {
+  display: flex;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.social-icons a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  border-radius: 8px;
+  background: #1f2937;
+  color: white;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+
+.social-icons a:hover {
+  background: #2766ee;
+  transform: translateY(-2px);
+}
+
+/* Links Section */
+.footer-links {
+  display: flex;
+  flex: 2;
+  justify-content: space-around;
+  gap: 40px;
+  margin-top: 35px;  /* 👈 adjust this value for the gap */
+}
+
+.footer-links h3 {
+  font-size: 15px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: white;
+}
+
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-links li {
+  margin-bottom: 8px;
+}
+
+.footer-links a {
+  color: #9ca3af;
+  font-size: 14px;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: #fff;
+}
+
+/* Bottom Section */
+.footer-bottom {
+  border-top: 1px solid #2e3440;
+  margin-top: 30px;
+  padding-top: 15px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  font-size: 13px;
+  color: #9ca3af;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.footer-bottom a {
+  color: #fff;
+  text-decoration: underline;
+  transition: color 0.2s ease;
+}
+
+.footer-bottom a:hover {
+  color: #93c5fd;
+}
+.footer-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: #60a5fa;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.footer-link:hover {
+  color: #93c5fd;
+}
+
+.footer-link .arrow-icon {
+  transition: transform 0.3s ease;
+}
+
+.footer-link:hover .arrow-icon {
+  transform: translateX(4px) translateY(-2px); /* smooth north-east hover */
+}
+
+
+
+
+/* Responsive */
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 30px;
+  }
+
+  .footer-links {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    text-align: center;
+    gap: 12px;
+  }
+}

@@ -1,0 +1,69 @@
+/* CTA.css */
+.cta-section {
+  position: relative;
+  font-family: 'Inter', sans-serif;
+  background-image: url("../assets/CTA_Background.webp");
+    background-size: cover;       /* makes it cover full area */
+  background-position: center; 
+   
+   border-radius: 20px;
+  padding: 80px 24px;
+  text-align: center;
+  overflow: hidden;
+  margin: 60px auto 7px auto; /* auto = center horizontally, 2px gap */
+  max-width: 1358px;   
+}
+
+.cta-bg {
+  position: absolute;
+  inset: 0;
+  background-image: url("../assets/CTA_Background.webp");
+  background-size: cover;       /* makes it cover full area */
+  background-position: center;  /* keeps it centered */
+  opacity: 0.1;                 /* fades it so text is readable */
+  border-radius: 20px;
+  z-index: 1;
+}
+
+.cta-content {
+  position: relative;
+  z-index: 2;
+  max-width: 768px;
+  margin: 0 auto;
+}
+
+.cta-content h2 {
+  font-size: 2.25rem;
+  font-weight: 700;
+  color: #111827;
+  margin-bottom: 16px;
+}
+
+.cta-content p {
+  font-size: 1.125rem;
+  color: #374151;
+  margin-bottom: 32px;
+}
+
+.cta-content button {
+   padding: 0.6rem 1.5rem;
+  border-radius: 9999px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+
+  background: linear-gradient(to bottom, #0f0f0f, #1a1a1a, #2c2c2c, #3b3b3b, #4b5563);
+  box-shadow: inset 0 2px 6px rgba(255, 255, 255, 0.2),
+              inset 0 -2px 6px rgba(0, 0, 0, 0.3),
+              0 3px 8px rgba(0, 0, 0, 0.25);
+  transition: all 0.3s ease;
+}
+
+.cta-content button:hover {
+  background: linear-gradient(to bottom, #1f1f1f, #2a2a2a, #3a3a3a, #4b4b4b, #6b7280);
+  box-shadow: inset 0 3px 8px rgba(255, 255, 255, 0.25),
+              inset 0 -3px 8px rgba(0, 0, 0, 0.4),
+              0 5px 12px rgba(0, 0, 0, 0.3);
+}
