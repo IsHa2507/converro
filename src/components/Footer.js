@@ -33,10 +33,13 @@ export default function Footer() {
       <div>
         <h3>Quick Links</h3>
         <ul>
-          <li><a href="#">Benefits</a></li>
-          <li><a href="#">Features</a></li>
-          <li><a href="#">Testimonials</a></li>
-          <li><a href="#">FAQs</a></li>
+          <li><a href="#">Whatsapp API</a></li>
+          <li><a href="#">Automations</a></li>
+          <li><a href="#">SMS Marketing</a></li>
+          <li><a href="#">IVR Solutions</a></li>
+          <li><a href="#">AI Bot Assistant</a></li>
+          <li><a href="#">Task Manager</a></li>
+          
         </ul>
       </div>
       <div>
@@ -45,18 +48,21 @@ export default function Footer() {
           <li><a href="#">Home</a></li>
           <li><a href="#">About</a></li>
           <li><a href="#">Pricing</a></li>
-          <li><a href="#">Contact</a></li>
+          <li><a href="#">Products</a></li>
+          <li><a href="#">Industries</a></li>
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">Contact Us</a></li>
         </ul>
       </div>
       <div>
-        <h3>Other Pages</h3>
+        <h3>Important</h3>
         <ul>
-          <li><a href="#">Blog</a></li>
-          <li><a href="#">Blog Details</a></li>
-          <li><a href="#">Error 404</a></li>
-          <li><a href="#">Licences</a></li>
-          <li><a href="#">Changelog</a></li>
-          <li><a href="#">Style Guide</a></li>
+          <li><a href="#">FAQs</a></li>
+          <li><a href="/termsandconditions">Terms & Conditions</a></li>
+          <li><a href="/privacypolicy">Privacy Policy</a></li>
+          <li><a href="/refundpolicy">Refund Policy</a></li>
+          <li><a href="#">Support</a></li>
+          
         </ul>
       </div>
     </div>

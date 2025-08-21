@@ -2,6 +2,7 @@ import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 // Import pages
+import Homepage from "./components/Home";
 import TermsAndCondition from "./components/TermsAndCondition";
 // import PrivacyPolicy from "./PrivacyPolicy"; 
 import Navbar from "./components/Navbar";
@@ -14,6 +15,7 @@ function App() {
      <Router>
       <Routes>
         {/* <Route path="/" element={<Home />} /> */}
+        <Route path="/Homepage" element={<Homepage/>}/>
         <Route path="/termsandconditions" element={<TermsAndCondition />} />
         <Route path="/privacypolicy" element={<PrivacyPolicy />} />
         <Route path="/refundpolicy" element={<RefundPolicy/>}/>

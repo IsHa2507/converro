@@ -8,7 +8,7 @@ const Navbar = () => {
     <header className="navbar-wrapper">
   <div className="navbar">
     {/* Logo + Brand */}
-    <Link to="/" className="navbar-logo">
+    <Link to="/Homepage" className="navbar-logo">
       <img 
         src={logo}
         alt="Custo Logo"
