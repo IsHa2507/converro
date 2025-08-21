@@ -1,8 +1,8 @@
 import React from "react";
 import { AiFillQuestionCircle } from "react-icons/ai";
-import { MdSchool } from "react-icons/md"; // Training
-import { MdCancel } from "react-icons/md"; // Cancel
-import { FaEnvelope, FaWhatsapp } from "react-icons/fa";
+
+import { FaEnvelope, FaWhatsapp, FaBriefcase, FaHeadset } from "react-icons/fa";
+
 import "./CustomerHelp.css";
 
 const PrinciplesSection = () => {
@@ -16,16 +16,16 @@ const PrinciplesSection = () => {
       whatsapp: "https://wa.me/9211616225",
     },
     {
-      icon:  <MdSchool className="principle-icon green circle-icon" />,
-      title: "Lead with Training",
+      icon:  <FaHeadset className="principle-icon green circle-icon" />,
+      title: "Sales Inquiry",
       description:
         "Learn about the product and it's features by connecting with our experts.",
-      email: "mailto:onboard@converro.io",
+      email: "mailto:sales@converro.io",
       whatsapp: "https://wa.me/9211616225",
     },
     {
-      icon: <MdCancel className="principle-icon red" />,
-      title: "Cancel the Noise",
+      icon: <FaBriefcase className="principle-icon red" />,
+      title: "Customer Support",
       description:
         "We stand by you even if wish to cancel your suscription at any point.",
       email: "mailto:support@converro.io",
@@ -37,7 +37,7 @@ const PrinciplesSection = () => {
     <section className="principles-section">
       <div className="principles-container">
         <h2 className="principles-heading">
-          For Existing Customer
+          For Customer Supports & Services
         </h2>
         <p className="principles-subheading">
          lets connect and understand how we can enable your business to grow faster.
@@ -66,7 +66,7 @@ const PrinciplesSection = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <FaWhatsapp className="btn-icon" /> 9211616225
+                  <FaWhatsapp className="btn-icon" /> Whatsapp
                 </a>
               </div>
             </div>
