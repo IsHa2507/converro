@@ -18,7 +18,7 @@ export default function Footer() {
       <img src={logo} alt="Custo Logo" className="footer-logo" />
       <p>
         Simplify customer relationships and <br />
-        scale your business with Custo.
+        scale your business with Coverro.
       </p>
       <div className="social-icons">
         <a href="#"><FaLinkedin /></a>
