@@ -69,10 +69,10 @@
 }
 
 .principle-icon.blue {
-  color: #000000;
+  color: #2e303a;
 }
 .circle-icon {
-  background-color: #000000; /* light green background */
+  background-color: #2e303a; /* light green background */
   border-radius: 50%;
   padding: 8px; /* space inside circle */
   font-size: 40px; /* size of the icon */
@@ -85,7 +85,7 @@
 }
 
 .principle-icon.red {
-  color: #000000;
+  color: #2e303a;
 }
 
 

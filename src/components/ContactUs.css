@@ -11,7 +11,7 @@
   padding: 80px 24px;
   text-align: center;
   overflow: hidden;
-   margin: 0 auto 7px auto;
+   margin: 7px auto 7px auto;
   max-width: 1358px;  
   z-index: 0; /* ensure container itself is behind content */
 }

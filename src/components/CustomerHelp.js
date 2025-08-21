@@ -1,5 +1,5 @@
 import React from "react";
-import { AiOutlineQuestionCircle } from "react-icons/ai"; // Inquiry
+import { AiFillQuestionCircle } from "react-icons/ai";
 import { MdSchool } from "react-icons/md"; // Training
 import { MdCancel } from "react-icons/md"; // Cancel
 import { FaEnvelope, FaWhatsapp } from "react-icons/fa";
@@ -8,7 +8,7 @@ import "./CustomerHelp.css";
 const PrinciplesSection = () => {
   const principles = [
     {
-      icon: <AiOutlineQuestionCircle className="principle-icon blue" />,
+      icon: <AiFillQuestionCircle className="principle-icon blue" />,
       title: "General Inquiry",
       description:
         "Get in touch with our support team for any general enquiry regarding product.",
@@ -66,7 +66,7 @@ const PrinciplesSection = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <FaWhatsapp className="btn-icon" /> WhatsApp
+                  <FaWhatsapp className="btn-icon" /> 9211616225
                 </a>
               </div>
             </div>
