@@ -1,16 +1,17 @@
 import React from "react";
-import "./TermsAndCondition.css";
+import "./TermsAndCondition.css"; // Reuse same CSS
 import Navbar from "./Navbar";
 import Footer from "./Footer";
+import CTA from "./CTA";
 
 const TermsAndCondition = () => {
   return (
     <div className="terms-page bg-white text-gray-800">
-    
+      <Navbar />
 
       {/* Page Heading */}
       <main className="terms-heading max-w-4xl mx-auto py-12 px-6">
-        
+       
         <h1>Terms & Conditions</h1>
         <p>Effective Date: January 1, 2025</p>
 
@@ -204,12 +205,13 @@ const TermsAndCondition = () => {
         </section>
       </main>
 
-    
-
-    
+     
+      <CTA/>
+      <Footer />
     </div>
   );
 };
 
 export default TermsAndCondition;
+
 
