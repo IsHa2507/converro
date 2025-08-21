@@ -8,6 +8,7 @@ import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import CTA from "./components/CTA";
 import PrivacyPolicy from "./components/PrivacyAndPolicy";
+import RefundPolicy from "./components/Refund";
 function App() {
   return (
      <Router>
@@ -15,6 +16,7 @@ function App() {
         {/* <Route path="/" element={<Home />} /> */}
         <Route path="/termsandconditions" element={<TermsAndCondition />} />
         <Route path="/privacypolicy" element={<PrivacyPolicy />} />
+        <Route path="/refundpolicy" element={<RefundPolicy/>}/>
       </Routes>
     </Router>
   );

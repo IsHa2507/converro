@@ -11,7 +11,7 @@ const PrivacyPolicy = () => {
 
       <div className="privacy-page">
         <div className="privacy-heading">
-          <h1>Privacy Policy</h1>
+          <h1>Privacy Policy</h1><br />
           <p>
             At <strong>Converro</strong>, we value transparency and are committed
             to protecting your privacy. This policy explains how we collect, use,

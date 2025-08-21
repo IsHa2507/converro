@@ -12,7 +12,7 @@ const TermsAndCondition = () => {
       {/* Page Heading */}
       <main className="terms-heading max-w-4xl mx-auto py-12 px-6">
        
-        <h1>Terms & Conditions</h1>
+        <h1>Terms & Conditions</h1><br />
         <p>Effective Date: January 1, 2025</p>
 
         {/* Content */}
