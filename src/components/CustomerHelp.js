@@ -11,7 +11,7 @@ const PrinciplesSection = () => {
       icon: <AiFillQuestionCircle className="circle-icon blue" />,
       title: "General Inquiry",
       description:
-        "Get in touch with our support team for any general enquiry regarding product.",
+        "Have questions about our company, services, or need basic information? Our team is here to provide quick answers and guide you in the right direction.",
       email: "mailto:info@converro.io",
       whatsapp: "https://wa.me/9211616225",
     },
@@ -19,7 +19,7 @@ const PrinciplesSection = () => {
       icon: <FaRegLifeRing className="circle-icon green" />,
       title: "Sales Inquiry",
       description:
-        "Learn about the product and its features by connecting with our experts.",
+        "Looking to explore our product features, pricing, or partnership opportunities? Connect with our sales experts to discover how we can add value to your business.",
       email: "mailto:sales@converro.io",
       whatsapp: "https://wa.me/9211616225",
     },
@@ -27,7 +27,7 @@ const PrinciplesSection = () => {
       icon: <BiSupport className="circle-icon red" />,
       title: "Customer Support",
       description:
-        "We stand by you even if you wish to cancel your subscription at any point.",
+        "Already a customer and need help with your account, subscription, or technical issues? Our support team is ready to assist you at every step.",
       email: "mailto:support@converro.io",
       whatsapp: "https://wa.me/9211616225",
     },
