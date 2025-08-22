@@ -5,7 +5,7 @@
   color: #d1d5db;
   padding: 30px 20px;
   border-radius: 20px;
-  max-width: 1372px;
+  width: 100%;
   margin: 2px auto 7px;
   font-family: 'Inter', sans-serif;
   overflow: hidden; /* hide overflow of background image */
