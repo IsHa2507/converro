@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { FiPlus } from "react-icons/fi"; // plus icon
 import "./FAQs.css";
 
 const faqsData = [
@@ -54,14 +55,13 @@ const FAQs = () => {
           <div
             key={index}
             className={`faq-item ${activeIndex === index ? "active" : ""}`}
+            onClick={() => toggleFAQ(index)}
           >
-            <div className="faq-question" onClick={() => toggleFAQ(index)}>
-              <span>{activeIndex === index ? "✕" : "+"}</span>
+            <div className="faq-question">
               {faq.question}
+              <FiPlus className="faq-icon" />
             </div>
-            {activeIndex === index && (
-              <div className="faq-answer">{faq.answer}</div>
-            )}
+            <div className="faq-answer">{faq.answer}</div>
           </div>
         ))}
       </div>
@@ -70,3 +70,4 @@ const FAQs = () => {
 };
 
 export default FAQs;
+

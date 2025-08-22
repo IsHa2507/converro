@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import "./StatsSection.css";
-import statsImg from "../assets/homepagesection.webp"; // use your uploaded image
+import statsImg from "../assets/background.png"; // use your uploaded image
 
 const StatsSection = () => {
   const sectionRef = useRef(null);

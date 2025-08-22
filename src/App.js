@@ -16,6 +16,7 @@ import CustomerHelp from "./components/CustomerHelp";
 import StatsSection from "./components/StatsSection";
 import ParallaxSections from "./components/ParallaxSections";
 import FAQs from "./components/FAQs";
+import SpiralSection from "./components/SpiralSection";
 function App() {
   return (
      <Router>
