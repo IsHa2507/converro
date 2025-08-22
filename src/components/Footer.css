@@ -1,30 +1,31 @@
 .footer {
-  position: relative; /* make it a positioned container */
-  width: 100%; 
+  position: relative;
+  width: calc(100% - 20px);   /* stretch but leave margin gap */
   background: linear-gradient(to bottom, #10121a, #1f2129);
   color: #d1d5db;
-  padding: 30px 20px;
+  padding: 80px 24px;
   border-radius: 20px;
-  width: 100%;
-  margin: 2px auto 7px;
+  max-width: 1920px;
+  margin: 10px auto;          /* equal margin from all sides */
   font-family: 'Inter', sans-serif;
-  overflow: hidden; /* hide overflow of background image */
+  overflow: hidden;           /* clip background inside radius */
 }
 
 /* Add the background image */
 .footer::before {
   content: "";
   position: absolute;
-  left: 20px;              /* add some padding from left */
+  left: 20px;
   top: 50%;
   transform: translateY(-50%);
   background: url("../assets/footer_logo2.png") no-repeat left center;
-  background-size: 400px auto; /* set explicit width for clarity */
-  width: 400px;           /* matches background-size width */
-  height: 400px;          /* makes it proportional */
-  opacity: 0.25;          /* more visible */
+  background-size: 400px auto;
+  width: 400px;
+  height: 400px;
+  opacity: 0.25;
   pointer-events: none;
   z-index: 0;
+  border-radius: inherit;    /* match parent radius */
 }
 
 /* Ensure footer content is above the image */
@@ -34,18 +35,15 @@
   z-index: 1;
 }
 
-
 /* Footer Container */
-
 .footer-container {
   display: flex;
   justify-content: space-between;
-  align-items: center;   /* align logo + links vertically in one line */
+  align-items: center;
   gap: 60px;
   max-width: 1200px;
   margin: 0 auto;
 }
-
 
 /* Brand Section */
 .footer-brand {
@@ -53,13 +51,12 @@
   min-width: 220px;
   display: flex;
   flex-direction: column;
-  justify-content: center;  /* centers logo + text block with links */
+  justify-content: center;
 }
-
 
 .footer-logo {
   margin-top: 2px;
-  width: 180px; /* slightly smaller for balance */
+  width: 180px;
   height: auto;
   margin-bottom: 12px;
 }
@@ -101,7 +98,7 @@
   flex: 2;
   justify-content: space-around;
   gap: 40px;
-  margin-top: 35px;  /* 👈 adjust this value for the gap */
+  margin-top: 35px;
 }
 
 .footer-links h3 {
@@ -156,6 +153,7 @@
 .footer-bottom a:hover {
   color: #93c5fd;
 }
+
 .footer-link {
   display: inline-flex;
   align-items: center;
@@ -174,11 +172,8 @@
 }
 
 .footer-link:hover .arrow-icon {
-  transform: translateX(4px) translateY(-2px); /* smooth north-east hover */
+  transform: translateX(4px) translateY(-2px);
 }
-
-
-
 
 /* Responsive */
 @media (max-width: 768px) {

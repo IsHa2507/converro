@@ -3,29 +3,31 @@
   position: relative;
   font-family: 'Inter', sans-serif;
   background-image: url("../assets/CTA_Background.webp");
-  background-size: cover;       /* cover full area */
+  background-size: cover;        /* cover full area */
   background-position: center; 
   border-radius: 20px;
   padding: 80px 24px;
   text-align: center;
   overflow: hidden;
 
-  margin: 60px auto 7px auto; 
-  
-  width: 100%;         /* responsive stretch */
+  width: calc(100% - 20px);   /* stretch but leave margin gap */
+  max-width: 1920px;          /* prevents over-stretch on big screens */
+  margin: 10px auto;          /* equal margin from all sides */
 }
 
+/* Background overlay */
 .cta-bg {
   position: absolute;
   inset: 0;
   background-image: url("../assets/CTA_Background.webp");
-  background-size: cover;       
-  background-position: center;  
-  opacity: 0.1;                 
-  border-radius: 20px;
+  background-size: cover;
+  background-position: center;
+  opacity: 0.1;
+  border-radius: inherit;  /* ✅ follows parent radius */
   z-index: 1;
 }
 
+/* Content container */
 .cta-content {
   position: relative;
   z-index: 2;
@@ -74,7 +76,7 @@
 @media (max-width: 1024px) {
   .cta-section {
     padding: 60px 20px;
-    margin: 40px auto 6px auto;
+    margin: 40px auto;
   }
 
   .cta-content h2 {
@@ -108,7 +110,7 @@
 @media (max-width: 480px) {
   .cta-section {
     padding: 40px 15px;
-    margin: 30px auto 5px auto;
+    margin: 30px auto;
   }
 
   .cta-content h2 {
