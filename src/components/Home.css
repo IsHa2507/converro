@@ -4,6 +4,27 @@
   background: #f9fafb;
   font-family: 'Inter', sans-serif;
 }
+.homepage-bg {
+  background: #fff;
+  /* Or you can use a solid color: background-color: #f0f4f8; */
+}
+
+.hero, .stats-section, .stats-text-section {
+  background: transparent; /* make sections inherit the parent background */
+}
+
+/* Optional: add padding to separate sections nicely */
+.hero {
+  padding: 80px 20px;
+}
+
+.stats-section {
+  padding: 60px 20px;
+}
+
+.stats-text-section {
+  padding: 60px 20px;
+}
 
 .hero-container {
   max-width: 1100px;

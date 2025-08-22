@@ -13,6 +13,9 @@ import RefundPolicy from "./components/Refund";
 import ContactUs from "./components/ContactUs";
 import Testimonials from "./components/Testimonial";
 import CustomerHelp from "./components/CustomerHelp";
+import StatsSection from "./components/StatsSection";
+import ParallaxSections from "./components/ParallaxSections";
+import FAQs from "./components/FAQs";
 function App() {
   return (
      <Router>
