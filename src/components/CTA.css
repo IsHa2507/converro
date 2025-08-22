@@ -1,6 +1,6 @@
 /* CTA.css */
 .cta-section {
-   position: relative;
+  position: relative;
   font-family: 'Inter', sans-serif;
   background-image: url("../assets/CTA_Background.webp");
   background-size: cover;       /* cover full area */
@@ -11,25 +11,25 @@
   overflow: hidden;
 
   margin: 60px auto 7px auto; 
-  max-width: 1358px;   /* instead of fixed width */
-  width: 100%;     
+  max-width: 1358px;   /* container cap */
+  width: 100%;         /* responsive stretch */
 }
 
 .cta-bg {
   position: absolute;
   inset: 0;
   background-image: url("../assets/CTA_Background.webp");
-  background-size: cover;       /* makes it cover full area */
-  background-position: center;  /* keeps it centered */
-  opacity: 0.1;                 /* fades it so text is readable */
+  background-size: cover;       
+  background-position: center;  
+  opacity: 0.1;                 
   border-radius: 20px;
   z-index: 1;
 }
 
 .cta-content {
-   position: relative;
+  position: relative;
   z-index: 2;
-  max-width: 768px;   /* keeps content at readable width */
+  max-width: 768px;   /* keeps content readable */
   margin: 0 auto;
   padding: 0 16px;
 }
@@ -48,7 +48,7 @@
 }
 
 .cta-content button {
-   padding: 0.6rem 1.5rem;
+  padding: 0.6rem 1.5rem;
   border-radius: 9999px;
   font-size: 0.95rem;
   font-weight: 600;
@@ -68,4 +68,59 @@
   box-shadow: inset 0 3px 8px rgba(255, 255, 255, 0.25),
               inset 0 -3px 8px rgba(0, 0, 0, 0.4),
               0 5px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* ✅ Responsive */
+@media (max-width: 1024px) {
+  .cta-section {
+    padding: 60px 20px;
+    margin: 40px auto 6px auto;
+  }
+
+  .cta-content h2 {
+    font-size: 2rem;
+  }
+
+  .cta-content p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .cta-section {
+    padding: 50px 18px;
+  }
+
+  .cta-content h2 {
+    font-size: 1.75rem;
+  }
+
+  .cta-content p {
+    font-size: 0.95rem;
+  }
+
+  .cta-content button {
+    padding: 0.5rem 1.25rem;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .cta-section {
+    padding: 40px 15px;
+    margin: 30px auto 5px auto;
+  }
+
+  .cta-content h2 {
+    font-size: 1.5rem;
+  }
+
+  .cta-content p {
+    font-size: 0.9rem;
+  }
+
+  .cta-content button {
+    padding: 0.45rem 1rem;
+    font-size: 0.85rem;
+  }
 }
