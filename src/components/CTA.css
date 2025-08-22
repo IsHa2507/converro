@@ -11,7 +11,7 @@
   overflow: hidden;
 
   margin: 60px auto 7px auto; 
-  max-width: 1358px;   /* container cap */
+  
   width: 100%;         /* responsive stretch */
 }
 
