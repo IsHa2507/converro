@@ -1,148 +1,131 @@
 .principles-section {
-  padding: 4rem 1.5rem;
-  background-color: #ffffff;
-}
-
-.principles-container {
-  max-width: 1200px;
-  margin: 0 auto;
+  font-family: 'Inter', sans-serif;
+  padding: 60px 20px;
+  background: #f9fafb;
   text-align: center;
 }
 
 .principles-heading {
   font-size: 2rem;
   font-weight: 700;
-  color: #111827; /* Tailwind gray-900 */
-  margin-bottom: 1rem;
-  line-height: 1.3;
-}
-
-@media (min-width: 768px) {
-  .principles-heading {
-    font-size: 2.5rem;
-  }
+  margin-bottom: 10px;
+  color: #111827;
 }
 
 .principles-subheading {
-  color: #4b5563; /* Tailwind gray-600 */
-  max-width: 640px;
-  margin: 0 auto 3rem auto;
   font-size: 1rem;
-  line-height: 1.6;
+  color: #6b7280;
+  margin-bottom: 40px;
 }
 
 .principles-grid {
   display: grid;
-  grid-template-columns: 1fr;
-  gap: 1.5rem;
-}
-
-@media (min-width: 768px) {
-  .principles-grid {
-    grid-template-columns: repeat(3, 1fr);
-  }
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  max-width: 1100px;
+  margin: 0 auto;
 }
 
 .principle-card {
-  padding: 1.5rem;
-  border: 1px solid #e5e7eb; /* Tailwind gray-200 */
-  border-radius: 1rem;
-  background-color: #ffffff;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
-  transition: box-shadow 0.2s ease;
+  background: #fff;
+  border-radius: 16px;
+  padding: 30px 20px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .principle-card:hover {
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.12);
 }
 
 .principle-icon-wrapper {
   display: flex;
   justify-content: center;
-  align-items: center;
   margin-bottom: 15px;
 }
 
-.principle-icon {
-  font-size: 60px; /* Bigger size */
-  text-align: center;
-}
-
-.principle-icon.blue {
-  color: #2e303a;
-}
+/* Circle Icon */
 .circle-icon {
-  background-color: #2e303a; /* light green background */
+  font-size: 2rem;
+  background: #e5e7eb;
   border-radius: 50%;
-  padding: 8px; /* space inside circle */
-  font-size: 40px; /* size of the icon */
-  display: flex;
-  justify-content: center;
+  padding: 18px;
+  display: inline-flex;
   align-items: center;
-}
-.principle-icon.green {
-  color: #ffffff;
+  justify-content: center;
 }
 
-.principle-icon.red {
-  color: #2e303a;
+/* Circle Colors */
+.circle-icon.blue {
+  background: #dbeafe;
+  color: #2563eb;
 }
 
+.circle-icon.green {
+  background: #d1fae5;
+  color: #059669;
+}
+
+.circle-icon.red {
+  background: #fee2e2;
+  color: #dc2626;
+}
 
 .principle-title {
   font-size: 1.25rem;
   font-weight: 600;
+  margin-bottom: 8px;
   color: #111827;
-  margin-bottom: 0.5rem;
 }
 
 .principle-description {
-  color: #4b5563;
   font-size: 0.95rem;
-  line-height: 1.5;
-}
-/* Action buttons container */
-.principle-actions {
-  margin-top: 1rem;
-  display: flex;
-  justify-content: center;
-  gap: 1rem;
-  flex-wrap: wrap;
+  color: #4b5563;
+  margin-bottom: 20px;
 }
 
-/* Buttons */
+.principle-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
 .action-btn {
-  display: inline-flex;
+  display: flex;
   align-items: center;
-  gap: 0.5rem;
-  padding: 0.6rem 1.2rem;
-  border-radius: 8px;
+  justify-content: center;
+  gap: 8px;
+  padding: 10px 14px;
+  border-radius: 10px;
   font-size: 0.95rem;
   font-weight: 500;
-  color: #fff;
   text-decoration: none;
-  transition: background-color 0.2s ease, transform 0.2s ease;
+  transition: background 0.2s ease, transform 0.2s ease;
 }
 
 .action-btn .btn-icon {
-  font-size: 1rem;
+  font-size: 1.1rem;
 }
 
-/* Button colors */
+/* Email button */
 .action-btn.email {
-  background-color: #ffffff;
-  color:#2563eb;
-  border: 1px solid #2563eb;
-  border-radius: 24px;
+  background: #eff6ff;
+  color: #2563eb;
 }
 
-.action-btn.whatsapp {
-  background-color: #25d366; /* WhatsApp Green */
-   border-radius: 24px;
-}
-
-/* Hover effects */
-.action-btn:hover {
+.action-btn.email:hover {
+  background: #dbeafe;
   transform: translateY(-2px);
-  opacity: 0.9;
+}
+
+/* WhatsApp button */
+.action-btn.whatsapp {
+  background: #ecfdf5;
+  color: #059669;
+}
+
+.action-btn.whatsapp:hover {
+  background: #d1fae5;
+  transform: translateY(-2px);
 }

@@ -1,14 +1,14 @@
 import React from "react";
 import { AiFillQuestionCircle } from "react-icons/ai";
-
-import { FaEnvelope, FaWhatsapp, FaBriefcase, FaHeadset } from "react-icons/fa";
+import { FaEnvelope, FaWhatsapp, FaRegLifeRing } from "react-icons/fa";
+import { BiSupport } from "react-icons/bi";
 
 import "./CustomerHelp.css";
 
 const PrinciplesSection = () => {
   const principles = [
     {
-      icon: <AiFillQuestionCircle className="principle-icon blue" />,
+      icon: <AiFillQuestionCircle className="circle-icon blue" />,
       title: "General Inquiry",
       description:
         "Get in touch with our support team for any general enquiry regarding product.",
@@ -16,18 +16,18 @@ const PrinciplesSection = () => {
       whatsapp: "https://wa.me/9211616225",
     },
     {
-      icon:  <FaHeadset className="principle-icon green circle-icon" />,
+      icon: <FaRegLifeRing className="circle-icon green" />,
       title: "Sales Inquiry",
       description:
-        "Learn about the product and it's features by connecting with our experts.",
+        "Learn about the product and its features by connecting with our experts.",
       email: "mailto:sales@converro.io",
       whatsapp: "https://wa.me/9211616225",
     },
     {
-      icon: <FaBriefcase className="principle-icon red" />,
+      icon: <BiSupport className="circle-icon red" />,
       title: "Customer Support",
       description:
-        "We stand by you even if wish to cancel your suscription at any point.",
+        "We stand by you even if you wish to cancel your subscription at any point.",
       email: "mailto:support@converro.io",
       whatsapp: "https://wa.me/9211616225",
     },
@@ -40,7 +40,7 @@ const PrinciplesSection = () => {
           For Customer Supports & Services
         </h2>
         <p className="principles-subheading">
-         lets connect and understand how we can enable your business to grow faster.
+          Let’s connect and understand how we can enable your business to grow faster.
         </p>
 
         <div className="principles-grid">
@@ -58,7 +58,8 @@ const PrinciplesSection = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <FaEnvelope className="btn-icon" /> {item.email.replace("mailto:", "")}
+                  <FaEnvelope className="btn-icon" />{" "}
+                  {item.email.replace("mailto:", "")}
                 </a>
                 <a
                   href={item.whatsapp}
