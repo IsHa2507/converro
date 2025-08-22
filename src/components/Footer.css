@@ -1,5 +1,6 @@
 .footer {
   position: relative; /* make it a positioned container */
+  width: 100%; 
   background: linear-gradient(to bottom, #10121a, #1f2129);
   color: #d1d5db;
   padding: 30px 20px;
