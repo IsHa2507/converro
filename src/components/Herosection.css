@@ -1,0 +1,269 @@
+.hero {
+  background: linear-gradient(180deg, #e6fff4 0%, #f7fffb 100%);
+  background-image: url("../images/hero_background.png"); /* <-- your background image */
+  background-repeat: no-repeat;
+  background-position: center;
+  min-height: 90vh;
+  background-size: cover;
+  padding: 80px 20px;
+  font-family: "Bricolage Grotesque", sans-serif;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding-top: 60px;
+}
+
+.hero-content {
+  flex: 1 1 450px;
+  max-width: 550px;
+  margin-bottom: 40px;
+}
+
+.hero-content h1 {
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 20px;
+  text-align: left;
+  color: #000;
+  font-family: 'Bricolage Grotesque', sans-serif;
+}
+
+.hero-content p {
+  font-size: 18px;
+  margin-bottom: 30px;
+  color: #444;
+  text-align: left;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 15px;
+}
+
+/* Shared width for both buttons */
+.btn-primary,
+.btn-secondary {
+  min-width: 171px; /* same width */
+  justify-content: center; /* center text + arrow */
+}
+
+/* Shared arrow circle */
+.arrow-circle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  margin-left: 15px;
+  border-radius: 50%;
+  background: white;
+  transition: all 0.3s ease;
+}
+
+.arrow {
+  transition: transform 0.3s ease;
+  font-size: 16px;
+  color: black;
+}
+.arrow2{
+   font-size: 16px;
+  color: black;
+} 
+
+
+/* Primary Button */
+.btn-primary {
+  background: black;
+  color: white;
+  padding: 14px 26px;
+  border-radius: 40px;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+  background: #3fce71;
+  color: black;
+}
+
+.btn-primary:hover .arrow {
+  transform: rotate(-45deg); /* → becomes ↗ */
+}
+
+/* Secondary Button */
+.btn-secondary {
+  background: transparent;
+  color: black;
+  padding: 14px 26px;
+  border-radius: 40px;
+  border: 2px solid black;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  transition: all 0.3s ease;
+}
+
+.btn-secondary:hover {
+  border: 2px solid #3fce71;
+}
+
+
+
+
+
+.hero-image {
+  flex: 1 1 600px;
+  position: relative;
+  text-align: center;
+}
+.hero-image .ipad{
+    max-width: 100%;
+    height: auto;
+}
+
+.ipad {
+  width: 100%;
+  max-width: 600px;
+  z-index: 2;
+  position: relative;
+}
+
+/* Floating Badges */
+.badge {
+  position: absolute;
+  width: 140px;
+  animation: float 5s ease-in-out infinite;
+  z-index: 3;
+}
+
+/* Adjusted positions closer to iPad */
+.badge1 { top: 15%; left: -6%; animation-delay: 0s; }         /* WhatsApp */
+.badge2 { top: -12%; right: 30%; animation-delay: 1s; }        /* Task Auto Allocation */
+.badge3 { top: 18%; right: -6%; animation-delay: 2s; }        /* Lead Score */
+.badge4 { bottom: 25%; right: -5%; animation-delay: 1.5s; }   /* AI Marketing */
+.badge5 { bottom: 10%; left: -8%; animation-delay: 2.5s; }    /* AI Support */
+.badge6 { bottom: -8%; left: 15%; animation-delay: 3s; }      /* Workflows */
+.badge7 { bottom: -12%; right: 20%; animation-delay: 3.5s; }
+
+/* Smooth floating animation */
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-15px); }
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-content {
+    max-width: 100%;
+  }
+
+  .hero-image {
+    margin-top: 40px;
+  }
+
+  .badge {
+    width: 100px;
+  }
+}
+
+@media (max-width: 600px) {
+  .hero-content h1 {
+    font-size: 32px;
+  }
+  .hero-content p {
+    font-size: 16px;
+  }
+  .btn-primary, .btn-secondary {
+    font-size: 14px;
+    padding: 10px 20px;
+  }
+  .badge {
+    width: 80px;
+  }
+}
+.hero-bottom {
+ margin-top: -35px;
+  width: 100%;
+}
+
+
+
+.trusted {
+  display: flex;
+  flex-direction: column; /* keep main layout stacked */
+  align-items: flex-start;
+  gap: 8px;
+  font-size: 14px;
+  color: #555;
+}
+
+/* New wrapper for logos + text in one line */
+.trusted-top {
+  display: flex;
+  align-items: center;
+  gap: 12px; /* spacing between logos and text */
+}
+
+.trusted .logos {
+  display: flex;
+  align-items: center;
+}
+
+.overlap-logos img {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #fff;
+  margin-left: -10px;
+}
+
+.overlap-logos img:first-child {
+  margin-left: 0;
+}
+
+.trusted-text {
+  margin: 0;
+  font-size: 14px;
+  color: #333;
+}
+
+
+
+.rating {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  color: #555;
+}
+
+.rating .star-icon {
+  color: #f4b400;
+  font-size: 20px;
+}
+
+.rating-score {
+  font-weight: bold;
+  font-size: 16px;
+  color: #000;
+}

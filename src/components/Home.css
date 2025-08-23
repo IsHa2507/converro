@@ -1,13 +1,4 @@
-.hero {
-  padding: 80px 20px;
-  text-align: center;
-  background: #f9fafb;
-  font-family: 'Inter', sans-serif;
-}
-.homepage-bg {
-  background: #fff;
-  /* Or you can use a solid color: background-color: #f0f4f8; */
-}
+
 
 .hero, .stats-section, .stats-text-section {
   background: transparent; /* make sections inherit the parent background */

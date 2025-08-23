@@ -18,6 +18,7 @@ import ParallaxSections from "./components/ParallaxSections";
 import FAQs from "./components/FAQs";
 import SpiralSection from "./components/SpiralSection";
 import BrandSlider from "./components/BrandSlider";
+import HeroSection from "./components/Herosection";
 function App() {
   return (
      <Router>
