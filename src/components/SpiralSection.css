@@ -78,7 +78,7 @@
 /* Hero text */
 .hero-text {
   position: relative;
-  z-index: 1; /* ensure on top of spiral */
+  z-index: 1; /* ensure on top of spiral */ 
   max-width: 700px;
   margin: 0 auto;
   color: #111;

@@ -8,6 +8,7 @@ import StatsSection from "./StatsSection";
 import ParallaxSections from "./ParallaxSections";
 import FAQs from "./FAQs";
 import SpiralSection from "./SpiralSection";
+import BrandSlider from "./BrandSlider";
 const Homepage = () => {
   return (
     <>
@@ -60,7 +61,9 @@ const Homepage = () => {
     {/* Stats Section */}
     <StatsSection />
     <ParallaxSections/>
+
     <SpiralSection/>
+    <BrandSlider/>
     <FAQs/>
   </div>
 

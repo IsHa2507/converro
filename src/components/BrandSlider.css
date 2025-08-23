@@ -1,0 +1,74 @@
+.branding-container {
+  width: 100%;
+  overflow: hidden;
+  background: #f9fafb;
+  padding: 30px 0;
+}
+.branding-container h1 {
+  font-size: 2rem;
+  font-weight: 500;
+  color: #111827; /* normal text color */
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.highlighted-text {
+  color: #2563eb;      /* unique color */
+  font-weight: 700;
+   /* subtle background highlight */
+  padding: 2px 8px;    /* spacing inside the highlight */
+  border-radius: 6px;
+  
+}
+
+.logo-row {
+  display: flex;
+  gap: 30px;
+  margin: 20px 0;
+}
+
+.logo-box {
+  background: #fff;
+  padding: 8px 15px;
+  border-radius: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  min-width: 160px;
+  min-height: 112px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo-box img {
+  max-width: 120px;
+  max-height: 50px;
+  object-fit: contain;
+}
+
+/* Animation for right moving row */
+.row-right {
+  animation: scrollRight 20s linear infinite;
+}
+
+@keyframes scrollRight {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0%);
+  }
+}
+
+/* Animation for left moving row */
+.row-left {
+  animation: scrollLeft 20s linear infinite;
+}
+
+@keyframes scrollLeft {
+  from {
+    transform: translateX(0%);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
