@@ -18,12 +18,10 @@ const HeroSection = () => {
       <div className="container">
         <div className="hero-content">
           <h1>
-            Powerful CRM <br /> Solutions to <br /> Accelerate Your Growth
+            Smart <strong className="highlight">  CRM</strong>  <br /> For Smarter <br /> Businesses
           </h1>
           <p>
-            Converro helps you capture, organize, and convert leads effortlessly
-            so you can focus on closing deals and scaling your business, not
-            managing complexity.
+            Converro helps you capture, organize, and convert leads effortlessly so you can focus on closing deals and scaling your business, not managing complexity.
           </p>
 
           {/* Buttons */}

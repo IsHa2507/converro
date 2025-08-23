@@ -19,6 +19,7 @@ import FAQs from "./components/FAQs";
 import SpiralSection from "./components/SpiralSection";
 import BrandSlider from "./components/BrandSlider";
 import HeroSection from "./components/Herosection";
+import FinanceSection from "./components/FinanceSection";
 function App() {
   return (
      <Router>

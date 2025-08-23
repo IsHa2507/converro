@@ -1,0 +1,194 @@
+/* Layout */
+.finance-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  max-width: 1200px;        /* under 1200px, centered */
+  margin: 0 auto;
+  padding: 64px 20px;
+  font-family: "Inter", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  flex-wrap: wrap;
+}
+
+/* Left image */
+.finance-image {
+  flex: 1 1 460px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 320px;
+}
+
+.finance-image-el {
+  width: 100%;
+  max-width: 520px;
+  height: auto;
+  border-radius: 16px;
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.12);
+
+  /* buttery fade/slide on change */
+  opacity: 0;
+  transform: translateY(10px) scale(0.995);
+  animation: financeFadeIn 0.9s cubic-bezier(.25,.8,.25,1) forwards;
+}
+
+@keyframes financeFadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* Right content */
+.finance-content {
+  flex: 1 1 480px;
+  min-width: 340px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.finance-header {
+  margin-bottom: 8px;
+}
+
+.finance-title {
+  font-size: clamp(1.6rem, 2.2vw, 2.2rem);
+  font-weight: 800;
+  color: #111827;
+  letter-spacing: -0.02em;
+}
+
+.finance-subtitle {
+  margin-top: 8px;
+  color: #6b7280;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+/* List (FAQ-like) */
+.finance-list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+/* Item */
+.finance-item {
+  position: relative;
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 14px;
+  padding: 16px 18px;
+  cursor: pointer;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease, background 0.25s ease;
+  outline: none;
+}
+
+/* animated left accent bar */
+.finance-item::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 6px;
+  bottom: 6px;
+  width: 3px;
+  border-radius: 6px;
+  background: linear-gradient(180deg, #16a34a, #22c55e);
+  transform: scaleY(0);
+  transform-origin: top;
+  transition: transform 0.35s ease;
+}
+
+/* improved hover (richer than before, still subtle) */
+.finance-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 22px rgba(17, 24, 39, 0.08);
+  border-color: #d1d5db;
+  background: #f9fafb;
+}
+.finance-item:hover::before {
+  transform: scaleY(1);
+}
+
+/* Head row (title + icon) */
+.finance-item-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.finance-item-title {
+  font-size: 1.06rem;
+  font-weight: 600;
+  color: #111827;
+  margin: 0;
+}
+
+/* icon behavior matches FAQ vibe but refined */
+.finance-item-icon {
+  font-size: 1.3rem;
+  color: #16a34a;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+.finance-item.active .finance-item-icon {
+  transform: rotate(45deg);
+  color: #ef4444;
+}
+
+/* Body text with slow, smooth open/close */
+.finance-item-text {
+  color: #4b5563;
+  font-size: 0.98rem;
+  line-height: 1.65;
+
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  margin-top: 0;
+
+  transition:
+    max-height 0.8s ease-in-out,
+    opacity 0.8s ease-in-out,
+    margin-top 0.45s ease;
+}
+
+/* Active/open state */
+.finance-item.active {
+  background: #f0fdf4; /* subtle green tint */
+  border-color: #bbf7d0;
+  box-shadow: 0 12px 28px rgba(16, 185, 129, 0.08);
+}
+.finance-item.active::before {
+  transform: scaleY(1);
+}
+
+.finance-item.active .finance-item-text {
+  max-height: 260px; /* adjust for your copy length */
+  opacity: 1;
+  margin-top: 10px;  /* space between title and text */
+}
+
+/* Keyboard focus */
+.finance-item:focus-visible {
+  box-shadow: 0 0 0 3px rgba(59,130,246,.35);
+  border-color: #93c5fd;
+}
+
+/* Responsive stack */
+@media (max-width: 900px) {
+  .finance-section {
+    gap: 28px;
+    padding: 48px 16px;
+  }
+  .finance-image,
+  .finance-content {
+    flex: 1 1 100%;
+    min-width: 0;
+  }
+  .finance-image-el {
+    max-width: 520px;
+  }
+}

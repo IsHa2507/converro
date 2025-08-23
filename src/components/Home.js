@@ -10,6 +10,7 @@ import FAQs from "./FAQs";
 import SpiralSection from "./SpiralSection";
 import BrandSlider from "./BrandSlider";
 import HeroSection from "./Herosection";
+import FinanceSection from "./FinanceSection";
 const Homepage = () => {
   return (
     <>
@@ -22,10 +23,13 @@ const Homepage = () => {
 
     {/* Stats Section */}
     <StatsSection />
+     <BrandSlider/>
+     <FinanceSection/>
+     <SpiralSection/>
     <ParallaxSections/>
 
     <SpiralSection/>
-    <BrandSlider/>
+   
     <FAQs/>
   
 

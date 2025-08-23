@@ -26,13 +26,16 @@
 }
 
 .hero-content h1 {
-  font-size: 48px;
+  font-size: 60px;
   font-weight: 700;
   line-height: 1.2;
   margin-bottom: 20px;
   text-align: left;
   color: #000;
   font-family: 'Bricolage Grotesque', sans-serif;
+}
+.highlight {
+  color: #3fce71; /* pick your color (example: green) */
 }
 
 .hero-content p {
