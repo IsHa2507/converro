@@ -1,24 +1,32 @@
 import React from 'react';
 import './SpiralSection.css';
 
+// Import images correctly
+import Facebook from '../assets/Facebook.png';
+import Whatsapp from '../assets/Whatsapp.png';
+import Google from '../assets/Google.png';
+import Instagram from '../assets/Instagram.png';
+import Github from '../assets/Github.png';
+import Linkedin from '../assets/Linkedin.png';
+import Youtube from '../assets/Youtube.png';
+
 const SpiralSection = () => {
   // All logos
   const logos = [
-    { src: '/logos/spotify.png', alt: 'Spotify' },
-    { src: '/logos/notion.png', alt: 'Notion' },
-    { src: '/logos/discord.png', alt: 'Discord' },
-    { src: '/logos/zapier.png', alt: 'Zapier' },
-    { src: '/logos/gitlab.png', alt: 'GitLab' },
-    { src: '/logos/slack.png', alt: 'Slack' },
-    { src: '/logos/figma.png', alt: 'Figma' },
-    { src: '/logos/zoom.png', alt: 'Zoom' },
+    { src: Facebook, alt: 'Facebook' },
+    { src: Whatsapp, alt: 'Whatsapp' },
+    { src: Google, alt: 'Google' },
+    { src: Instagram, alt: 'Instagram' },
+    { src: Github, alt: 'Github' },
+    { src: Linkedin, alt: 'Linkedin' },
+    { src: Youtube, alt: 'Youtube' },
   ];
 
-  // Split into 3 groups → [3,3,2]
+  // Split into 3 groups → [3,3,1] (since you have 7 logos)
   const groups = [
     logos.slice(0, 3), // first 3
     logos.slice(3, 6), // next 3
-    logos.slice(6, 8), // last 2
+    logos.slice(6),    // last 1
   ];
 
   return (
@@ -32,7 +40,7 @@ const SpiralSection = () => {
                 <div
                   key={i}
                   className="orbit"
-                  style={{ transform: `rotate(${(360 / group.length) * i}deg)` }}
+                  style={{ '--angle': `${(360 / group.length) * i}deg` }}
                 >
                   <img src={logo.src} alt={logo.alt} />
                 </div>
@@ -56,5 +64,3 @@ const SpiralSection = () => {
 };
 
 export default SpiralSection;
-
-

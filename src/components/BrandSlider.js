@@ -7,7 +7,7 @@ const logos = [
   "https://upload.wikimedia.org/wikipedia/commons/0/08/Google_Logo.svg",
   "https://upload.wikimedia.org/wikipedia/commons/1/19/Spotify_logo_without_text.svg",
   "https://upload.wikimedia.org/wikipedia/commons/5/51/IBM_logo.svg",
-  "https://upload.wikimedia.org/wikipedia/commons/0/0e/Netflix_logo.svg",
+"https://upload.wikimedia.org/wikipedia/commons/0/0e/Whatsapp_logo.svg",
   "https://upload.wikimedia.org/wikipedia/commons/0/02/Stack_Overflow_logo.svg",
   "https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg",
   "https://upload.wikimedia.org/wikipedia/commons/2/2f/Instagram_logo_2016.svg",
