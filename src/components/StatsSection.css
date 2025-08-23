@@ -33,7 +33,7 @@
   right: 0;
   height: 120px; /* control fade size */
   border-radius: 0 0 16px 16px;
-  background: linear-gradient(to bottom, rgba(255,255,255,0) 0%, #fff 100%);
+  
 }
 .stats-content {
   display: flex;
