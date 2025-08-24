@@ -4,13 +4,13 @@ import { FiArrowRight } from "react-icons/fi";
 import { FaStar } from "react-icons/fa";
 
 import ipadMockup from "../images/Tab.png"; // iPad PNG
-import badge1 from "../images/badge1.png";
-import badge2 from "../images/badge2.png";
-import badge3 from "../images/badge3.png";
-import badge4 from "../images/badge4.png";
-import badge5 from "../images/badge5.png";
-import badge6 from "../images/badge6.png";
-import badge7 from "../images/badge7.png";
+import badge1 from "../images/badge1.svg";
+import badge2 from "../images/badge2.svg";
+import badge3 from "../images/badge3.svg";
+import badge4 from "../images/badge4.svg";
+import badge5 from "../images/badge5.svg";
+import badge6 from "../images/badge6.svg";
+import badge7 from "../images/badge7.svg";
 
 const HeroSection = () => {
   return (

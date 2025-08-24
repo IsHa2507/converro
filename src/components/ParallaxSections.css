@@ -1,12 +1,12 @@
-.fixed-section {
+.parallax-section {
   width: 100%;
-  min-height: 300vh; /* enough space to scroll through 3 contents */
+  min-height: 300vh;
   background: #fff;
   display: flex;
   justify-content: center;
 }
 
-.container {
+.parallax-container {
   max-width: 1200px;
   width: 100%;
   display: flex;
@@ -14,77 +14,119 @@
   position: relative;
 }
 
-.green-box {
+/* Green sticky box */
+.parallax-green-box {
   width: 50%;
   height: 500px;
-  background: #d1fae5; /* light green */
+  background-image: url(../images/green-box-bg.png);
+  
   border-radius: 20px;
   position: sticky;
-  top: 80px;
+  top: 150px;
   display: flex;
   align-items: center;
   justify-content: center;
   overflow: hidden;
+  margin-top: 150px;
 }
+
 
 .image-wrapper {
   position: relative;
-  width: 250px;
-  height: 250px;
+  width: 550px;
+  height: 550px;
 }
 
 .content-img {
-  position: absolute;
-  inset: 0;
   width: 100%;
   height: 100%;
   object-fit: contain;
-  opacity: 0;
-  transform: translateY(30px);
-  transition: opacity 0.6s ease, transform 0.6s ease;
+  position: absolute;
+  inset: 0;
 }
 
-/* Right side text sections */
-.text-sections {
+/* Right side text */
+.parallax-text-sections {
   width: 50%;
   display: flex;
   flex-direction: column;
-  scroll-snap-type: y mandatory; /* snap effect */
+  scroll-snap-type: y mandatory;
+  align-items: flex-start; /* ✅ align blocks to start (left) */
+  text-align: left;        /* ✅ left align text */
 }
 
-.text-block {
-  min-height: 100vh; /* full screen per block */
+.parallax-text-block {
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  scroll-snap-align: start;
+  align-items: flex-start; /* ✅ left align inside block */
+  text-align: left;        /* ✅ left align text */
   padding: 50px 20px;
-  /* opacity: 0.3; */
+  opacity: 1;
   transition: opacity 0.6s ease, transform 0.6s ease;
 }
 
-.text-block:target,
-.text-block:focus-within {
-  opacity: 0.5;
-  transform: translateY(0);
-}
 
-/* Sync images with scroll (pure CSS trick using :target) */
-#block1:target ~ .green-box .img-1,
-#block2:target ~ .green-box .img-2,
-#block3:target ~ .green-box .img-3 {
+.parallax-text-block.active {
   opacity: 1;
   transform: translateY(0);
 }
 
-.label {
-  color: #059669;
+.parallax-label {
+  color: #78c8a1;
   font-weight: 600;
-  margin-bottom: 10px;
+  font-size: 12px;
+  margin-bottom: -10px;
+  background-color: #f8fffb;
+  border: 1px solid #78c8a1;
+  border-radius: 24px;
+  padding: 5px 15px;
+  
 }
 
-.text-block h2 {
+.parallax-text-block h2 {
   font-size: 2rem;
   font-weight: bold;
   margin-bottom: 15px;
+}
+.parallax-btn {
+  margin-top: 20px;
+  padding: 12px 28px;
+  border-radius: 40px;
+  border: none;
+  background: #000000;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  transition: all 0.3s ease;
+}
+
+.parallax-btn:hover {
+  background: #34b360;
+}
+.parallax-arrow {
+  font-size: 16px;
+  color: rgb(255, 255, 255);
+  transition: transform 0.3s ease;
+}
+
+.parallax-btn:hover .parallax-arrow {
+  transform: rotate(-45deg);
+}
+.parallax-text-block ul {
+  list-style-type: disc;
+  margin-left: 20px;
+  margin-top: 10px;
+  margin-bottom: 15px;
+  text-align: left;
+}
+
+.parallax-text-block li {
+  margin-bottom: 8px;
+  text-align: left;
 }

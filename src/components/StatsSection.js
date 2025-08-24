@@ -37,34 +37,8 @@ const StatsSection = () => {
         <img src={statsImg} alt="Deals Section" className="stats-image" />
       </section>
 
-      {/* Stats Text Section */}
-      <section className="stats-text-section">
-        <div className="stats-content">
-          <div>
-            <h2>10K+</h2>
-            <p>Users Worldwide</p>
-            <span>
-              Businesses trust Custo to streamline sales and manage customer
-              relationships.
-            </span>
-          </div>
-          <div>
-            <h2>30%</h2>
-            <p>Faster Sales Cycles</p>
-            <span>
-              Optimize your sales process and close deals more efficiently with
-              automated workflows.
-            </span>
-          </div>
-          <div>
-            <h2>$1B</h2>
-            <p>in Deals Closed</p>
-            <span>
-              Track high-value opportunities and drive revenue growth effortlessly.
-            </span>
-          </div>
-        </div>
-      </section>
+      
+      
     </div>
   );
 };

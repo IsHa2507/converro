@@ -40,7 +40,7 @@
 
 .hero-content p {
   font-size: 18px;
-  margin-bottom: 30px;
+  margin-bottom: 60px;
   color: #444;
   text-align: left;
 }
@@ -48,6 +48,9 @@
 .hero-buttons {
   display: flex;
   gap: 15px;
+  margin-top: 20px;
+  margin-bottom: 40px;
+  
 }
 
 /* Shared width for both buttons */
@@ -59,15 +62,17 @@
 
 /* Shared arrow circle */
 .arrow-circle {
-  display: inline-flex;
+   display: inline-flex;
   align-items: center;
   justify-content: center;
   width: 32px;
   height: 32px;
-  margin-left: 15px;
+  margin-left: 15px; /* keep spacing from text */
   border-radius: 50%;
   background: white;
   transition: all 0.3s ease;
+  position: relative;
+  left: 10px;
 }
 
 .arrow {

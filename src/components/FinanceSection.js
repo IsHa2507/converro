@@ -3,9 +3,9 @@ import { FiPlus } from "react-icons/fi";
 import "./FinanceSection.css";
 
 // replace these with your real images
-import img1 from "../assets/finance1.jpg";
-import img2 from "../assets/finance2.jpg";
-import img3 from "../assets/finance3.jpg";
+import img1 from "../assets/finance1.png";
+import img2 from "../assets/finance2.png";
+import img3 from "../assets/finance3.png";
 
 const FinanceSection = () => {
   const [active, setActive] = useState(0); // keep one open, always shows an image
