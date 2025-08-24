@@ -95,7 +95,7 @@
   bottom: 6px;
   width: 3px;
   border-radius: 6px;
-  background: linear-gradient(180deg, #16a34a, #22c55e);
+  
   transform: scaleY(0);
   transform-origin: top;
   transition: transform 0.35s ease;
