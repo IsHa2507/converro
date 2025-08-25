@@ -4,36 +4,36 @@ import "./FAQs.css";
 
 const faqsData = [
   {
-    question: "How do I get started with Custo?",
-    answer: "Simply sign up, choose a plan, and start organizing your CRM in minutes, no setup required."
+    question: " What does marketing automation in Converro CRM do?",
+    answer: " It automates tasks like capturing leads, sending autoresponders for incoming queries, triggering personalized communication, tracking funnels, and nurturing leads—all seamlessly integrated into your CRM."
   },
   {
-    question: "Is there a free trial available before subscribing?",
-    answer: "Yes, Custo offers a free trial so you can explore the features before committing."
+    question: "How is Converro CRM different from traditional marketing automation?",
+    answer: "Converro CRM is built for sales professionals to manage one-to-one buyer relationships, while marketing automation tools support broader marketing campaigns and nurture large audiences. With growing synergy between sales and marketing, Converro includes automation features to bridge the gap."
   },
   {
-    question: "Can I manage multiple pipelines at once?",
-    answer: "Yes, Custo allows you to manage multiple pipelines simultaneously with ease."
+    question: "What does CRM-focused marketing include?",
+    answer: "It encompasses campaigns for brand awareness, engagement (like training or product updates), and retention (such as collecting feedback or organizing meet-ups)—all managed through Converro CRM."
   },
   {
-    question: "What types of businesses can use Custo?",
-    answer: "Custo is designed for businesses of all sizes and industries that need streamlined CRM management."
+    question: "Why is Converro considered a leading CRM for sales and marketing automation?",
+    answer: " Converro stands out thanks to its strong automation, direct lead capture, campaign‑management features, and ease of use that helps businesses scale quickly."
   },
   {
     question: "Can I import data from spreadsheets or another CRM?",
     answer: "Yes, you can import your existing data seamlessly from spreadsheets or other CRMs."
   },
   {
-    question: "How does Custo handle data backups?",
-    answer: "Custo performs automated daily backups to keep your data secure and retrievable."
+    question: "What does lead capture automation include?",
+    answer: "It consolidates lead sources—forms, emails, phone calls, voicemails, list imports, and more—into one unified CRM platform to eliminate manual data handling."
   },
   {
-    question: "Will I lose data if I downgrade my plan?",
-    answer: "No, your data remains safe, though some advanced features may no longer be available."
+    question: "What are the different lead capture methods?",
+    answer: " Common methods include: Web or ad forms, Phone calls and voicemails, Email inquiries, Spreadsheet imports. Plus, Converro can enrich lead data automatically."
   },
   {
-    question: "How often is Custo updated with new features?",
-    answer: "Custo is updated regularly with new features and improvements based on user feedback."
+    question: " Does Converro offer a free version or trial?",
+    answer: " Converro does not offer a free version, but does provide a free trial, and typically does not require credit card details to start."
   }
 ];
 

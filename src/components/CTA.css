@@ -11,8 +11,8 @@
       text-align: center; 
       overflow: hidden;
        margin: 60px auto 7px auto;
-        max-width: 100%; /* instead of fixed width */
-         width: 100%;
+         /* instead of fixed width */
+         max-width: 1400px;
        }
 
 /* Background overlay */
@@ -22,6 +22,7 @@
   background-image: url("../assets/CTA_Background.jpg");
   background-size: cover;
   background-position: center;
+  max-width: 1400px;
   opacity: 0.1;
   border-radius: inherit;  /* ✅ follows parent radius */
   z-index: 1;
