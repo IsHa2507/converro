@@ -7,7 +7,7 @@
   text-align: center;
   overflow: visible;
   background: #fff;
-  margin-bottom: -25px;
+  margin-bottom: -30px;
 }
 
 /* Spiral background */
@@ -62,9 +62,52 @@
 }
 
 /* Animate each logo separately */
-.ring-1 .orbit { --radius: 400px; animation: orbit1 20s linear infinite; }
-.ring-2 .orbit { --radius: 300px; animation: orbit2 26s linear infinite reverse; }
-.ring-3 .orbit { --radius: 200px; animation: orbit3 32s linear infinite; }
+/* Keep old CSS as is, just adding new rings and button styling */
+
+/* Orbit animation speeds (different for each ring) */
+.ring-1 .orbit { --radius: 420px; animation: orbit1 20s linear infinite; }
+.ring-2 .orbit { --radius: 340px; animation: orbit2 26s linear infinite reverse; }
+.ring-3 .orbit { --radius: 260px; animation: orbit3 32s linear infinite; }
+.ring-4 .orbit { --radius: 180px; animation: orbit4 38s linear infinite reverse; }
+.ring-5 .orbit { --radius: 100px; animation: orbit5 44s linear infinite; }
+
+/* Ring sizes */
+.ring-1 { width: 850px; height: 850px; }
+.ring-2 { width: 680px; height: 680px; }
+.ring-3 { width: 500px; height: 500px; }
+.ring-4 { width: 320px; height: 320px; }
+.ring-5 { width: 150px; height: 150px; }
+
+/* Keyframes for new rings */
+@keyframes orbit4 {
+  from { transform: rotate(var(--angle)) translateX(var(--radius)) rotate(calc(-1 * var(--angle))); }
+  to   { transform: rotate(calc(var(--angle) - 360deg)) translateX(var(--radius)) rotate(calc(-1 * var(--angle) + 360deg)); }
+}
+@keyframes orbit5 {
+  from { transform: rotate(var(--angle)) translateX(var(--radius)) rotate(calc(-1 * var(--angle))); }
+  to   { transform: rotate(calc(var(--angle) + 360deg)) translateX(var(--radius)) rotate(calc(-1 * var(--angle) - 360deg)); }
+}
+
+/* Button styling */
+.hero-btn {
+  margin-top: 25px;
+  background: black;
+  color: white;
+  padding: 14px 26px;
+  border-radius: 40px;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 500;
+  
+  align-items: center;
+  transition: all 0.3s ease;
+}
+
+.hero-btn:hover {
+  background: #3fce71;
+  color: black;
+}
 
 
 

@@ -1,17 +1,24 @@
 import React from 'react';
 import './SpiralSection.css';
 
-// Import images correctly
-import Facebook from '../assets/Facebook.png';
-import Whatsapp from '../assets/Whatsapp.png';
-import Google from '../assets/Google.png';
-import Instagram from '../assets/Instagram.png';
-import Github from '../assets/Github.png';
-import Linkedin from '../assets/Linkedin.png';
-import Youtube from '../assets/Youtube.png';
+// Import 14 logos
+import Facebook from '../assets/icon1.png';
+import Whatsapp from '../assets/icon2.png';
+import Google from '../assets/icon3.png';
+import Instagram from '../assets/icon4.png';
+import Github from '../assets/icon5.png';
+import Linkedin from '../assets/icon6.png';
+import Youtube from '../assets/icon7.png';
+import Twitter from '../assets/icon8.png';
+import Snapchat from '../assets/icon9.png';
+import Pinterest from '../assets/icon10.png';
+import Tiktok from '../assets/icon11.png';
+import Reddit from '../assets/icon12.png';
+import Discord from '../assets/icon13.png';
+import Slack from '../assets/icon14.png';
 
 const SpiralSection = () => {
-  // All logos
+  // All 14 logos
   const logos = [
     { src: Facebook, alt: 'Facebook' },
     { src: Whatsapp, alt: 'Whatsapp' },
@@ -20,13 +27,22 @@ const SpiralSection = () => {
     { src: Github, alt: 'Github' },
     { src: Linkedin, alt: 'Linkedin' },
     { src: Youtube, alt: 'Youtube' },
+    { src: Twitter, alt: 'Twitter' },
+    { src: Snapchat, alt: 'Snapchat' },
+    { src: Pinterest, alt: 'Pinterest' },
+    { src: Tiktok, alt: 'Tiktok' },
+    { src: Reddit, alt: 'Reddit' },
+    { src: Discord, alt: 'Discord' },
+    { src: Slack, alt: 'Slack' },
   ];
 
-  // Split into 3 groups → [3,3,1] (since you have 7 logos)
+  // Split into 5 groups for 5 rings
   const groups = [
-    logos.slice(0, 3), // first 3
-    logos.slice(3, 6), // next 3
-    logos.slice(6),    // last 1
+    logos.slice(0, 3),   // Ring 1 → 3 logos
+    logos.slice(3, 6),   // Ring 2 → 3 logos
+    logos.slice(6, 9),   // Ring 3 → 3 logos
+    logos.slice(9, 12),  // Ring 4 → 3 logos
+    logos.slice(12, 14), // Ring 5 → 2 logos
   ];
 
   return (
@@ -58,6 +74,7 @@ const SpiralSection = () => {
           Discover powerful features designed to simplify money management,
           track progress, and achieve your financial goals with ease.
         </p>
+        <button className="hero-btn">Start For Free</button>
       </div>
     </section>
   );
