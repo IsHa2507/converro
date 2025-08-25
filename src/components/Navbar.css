@@ -30,7 +30,7 @@
   margin: 0 auto;
   padding: 0.75rem 1.5rem;
 
-  font-family: 'Inter', sans-serif;
+  
   box-sizing: border-box; /* ensures padding is inside width */
 }
 
@@ -93,7 +93,7 @@
 /* Contact Sales Button */
 .btn-outline {
   padding: 0.4rem 1rem;
-  border: 1px solid #d1d5db;
+  border: 1px solid #000000;
   border-radius: 9999px;
   background: transparent;
   color: #000000; /* default white */
@@ -108,29 +108,27 @@
 
 .btn-outline:hover {
   background-color: #f9fafb;
+  border: 1px solid #3fce71;
 }
 
 /* Start for Free Button */
 .btn-glossy {
-  padding: 0.6rem 1.5rem;
-  border-radius: 9999px;
-  font-size: 0.95rem;
-  font-weight: 600;
-  color: #fff;
+  background: black;
+  color: white;
+  padding: 14px 26px;
+  border-radius: 40px;
   border: none;
   cursor: pointer;
-  background: linear-gradient(to bottom, #0f0f0f, #1a1a1a, #2c2c2c, #3b3b3b, #4b5563);
-  box-shadow: inset 0 2px 6px rgba(255, 255, 255, 0.2),
-              inset 0 -2px 6px rgba(0, 0, 0, 0.3),
-              0 3px 8px rgba(0, 0, 0, 0.25);
+  font-size: 16px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
   transition: all 0.3s ease;
 }
 
 .btn-glossy:hover {
-  background: linear-gradient(to bottom, #1f1f1f, #2a2a2a, #3a3a3a, #4b4b4b, #6b7280);
-  box-shadow: inset 0 3px 8px rgba(255, 255, 255, 0.25),
-              inset 0 -3px 8px rgba(0, 0, 0, 0.4),
-              0 5px 12px rgba(0, 0, 0, 0.3);
+ background: #3fce71;
+  color: black;
 }
 /* --- EXISTING STYLES ABOVE --- */
 
