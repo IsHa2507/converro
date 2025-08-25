@@ -161,7 +161,7 @@ const ContactUs = () => {
     
       
        <CustomerHelp/>
-       <Testimonials />
+       
       
 
       {/* Footer */}

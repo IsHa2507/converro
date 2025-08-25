@@ -19,7 +19,7 @@ const Navbar = () => {
     <header className={`navbar-wrapper ${scrolled ? "scrolled" : ""}`}>
       <div className="navbar">
         {/* Logo */}
-        <Link to="/Homepage" className="navbar-logo">
+        <Link to="/" className="navbar-logo">
           <img src={logo} alt="Custo Logo" />
         </Link>
 
