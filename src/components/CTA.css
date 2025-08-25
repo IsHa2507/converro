@@ -2,16 +2,16 @@
 .cta-section {
    position: relative;
    font-family: 'Inter', sans-serif;
-    background-image: url("../assets/CTA_Background.webp"); 
+    background-image: url("../assets/CTA_Background.jpg"); 
     background-size: cover; /* cover full area */ 
     background-position: center;
-     border-radius: 20px;
+     
       padding: 80px 24px; 
       
       text-align: center; 
       overflow: hidden;
        margin: 60px auto 7px auto;
-        max-width: 1358px; /* instead of fixed width */
+        max-width: 100%; /* instead of fixed width */
          width: 100%;
        }
 
@@ -19,7 +19,7 @@
 .cta-bg {
   position: absolute;
   inset: 0;
-  background-image: url("../assets/CTA_Background.webp");
+  background-image: url("../assets/CTA_Background.jpg");
   background-size: cover;
   background-position: center;
   opacity: 0.1;
