@@ -1,12 +1,13 @@
 .hero-section {
   position: relative;
-  min-height: 120vh; /* reduced height so bottom space is less */
+  min-height: 130vh; /* reduced height so bottom space is less */
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
   overflow: hidden;
   background: #fff;
+  margin: 60px auto;
   margin-bottom: -10px; /* reduced negative margin */
 }
 

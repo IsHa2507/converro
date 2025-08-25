@@ -73,25 +73,28 @@ const FixedSection = () => {
   const [activeIndex, setActiveIndex] = useState(0);
 
   useEffect(() => {
-  const handleScroll = () => {
-    const section = document.getElementById("fixed-section");
-    if (section) {
-      const scrollTop = window.scrollY - section.offsetTop;
+   const handleScroll = () => {
+      const section = document.getElementById("fixed-section");
+      if (section) {
+        const scrollTop = window.scrollY - section.offsetTop;
+        const blockHeight = window.innerHeight;
+        const newIndex = Math.min(
+          contents.length - 1,
+          Math.max(0, Math.floor(scrollTop / blockHeight))
+        );
+        setActiveIndex(newIndex);
+      }
+    };
 
-      const blockHeight = window.innerHeight; // each text block height
-      const newIndex = Math.min(
-        contents.length - 1,
-        Math.max(0, Math.floor(scrollTop / blockHeight))
-      );
-
-      setActiveIndex(newIndex);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+const scrollToBlock = (index) => {
+    const block = document.getElementById(`block${contents[index].id}`);
+    if (block) {
+      block.scrollIntoView({ behavior: "smooth", block: "start" });
     }
   };
-
-  window.addEventListener("scroll", handleScroll);
-  return () => window.removeEventListener("scroll", handleScroll);
-}, []);
-
 
   return (
     <section id="fixed-section" className="parallax-section">
@@ -157,6 +160,16 @@ const FixedSection = () => {
   </button>
 </section>
 
+          ))}
+        </div>
+        {/* Vertical Dot Navigation */}
+        <div className="dot-navigation">
+          {contents.map((_, index) => (
+            <div
+              key={index}
+              className={`dot ${activeIndex === index ? "active-dot" : ""}`}
+              onClick={() => scrollToBlock(index)}
+            ></div>
           ))}
         </div>
       </div>
