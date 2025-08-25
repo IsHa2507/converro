@@ -3,7 +3,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 120px auto 60px auto; /* more top margin to avoid overlap */
+  margin: 60px auto ; /* more top margin to avoid overlap */
   
   min-height: 90vh;
   max-width: 1200px;
