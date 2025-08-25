@@ -11,6 +11,7 @@ import badge4 from "../images/badge4.svg";
 import badge5 from "../images/badge5.svg";
 import badge6 from "../images/badge6.svg";
 import badge7 from "../images/badge7.svg";
+import spiral from "../images/herosection-bg.png";
 
 const HeroSection = () => {
   return (
@@ -42,19 +43,22 @@ const HeroSection = () => {
          
         </div>
 
-        <div className="hero-image">
-          {/* iPad Mockup */}
-          <img src={ipadMockup} alt="iPad CRM Dashboard" className="ipad" />
+       <div className="hero-image">
+  {/* Spiral Background */}
+  <img src={spiral} alt="Spiral Background" className="spiral-bg" />
 
-          {/* Floating Badges */}
-          <img src={badge1} alt="WhatsApp" className="badge badge1" />
-          <img src={badge2} alt="Task Auto Allocation" className="badge badge2" />
-          <img src={badge3} alt="Lead Score" className="badge badge3" />
-          <img src={badge4} alt="AI Marketing" className="badge badge4" />
-          <img src={badge5} alt="AI Support" className="badge badge5" />
-          <img src={badge6} alt="Workflows" className="badge badge6" />
-          <img src={badge7} alt="AI Chatbot" className="badge badge7" />
-        </div>
+  {/* iPad Mockup */}
+  <img src={ipadMockup} alt="iPad CRM Dashboard" className="ipad" />
+
+  {/* Floating Badges */}
+  <img src={badge1} alt="WhatsApp" className="badge badge1" />
+  <img src={badge2} alt="Task Auto Allocation" className="badge badge2" />
+  <img src={badge3} alt="Lead Score" className="badge badge3" />
+  <img src={badge4} alt="AI Marketing" className="badge badge4" />
+  <img src={badge5} alt="AI Support" className="badge badge5" />
+  <img src={badge6} alt="Workflows" className="badge badge6" />
+  <img src={badge7} alt="AI Chatbot" className="badge badge7" />
+</div>
       
 <div className="hero-bottom">
   <div className="trusted">

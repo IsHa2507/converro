@@ -1,6 +1,7 @@
 .hero {
-  background: linear-gradient(180deg, #e6fff4 0%, #f7fffb 100%);
-  background-image: url("../images/hero_background.png"); /* <-- your background image */
+  background: #FFFFFF;
+background: linear-gradient(0deg, rgba(255, 255, 255, 1) 0%, rgba(194, 251, 223, 1) 100%);
+   /* <-- your background image */
   background-repeat: no-repeat;
   background-position: center;
   min-height: 90vh;
@@ -17,6 +18,16 @@
   justify-content: space-between;
   flex-wrap: wrap;
   padding-top: 60px;
+}
+.spiral-bg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 750px;   /* adjust size */
+  transform: translate(-50%, -50%);
+  z-index: 1;     /* behind the iPad */
+  opacity: 0.9;   /* optional transparency */
+  pointer-events: none; /* ensures clicks go through */
 }
 
 .hero-content {

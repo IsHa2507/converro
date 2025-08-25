@@ -36,7 +36,7 @@ const SpiralSection = () => {
     { src: Slack, alt: 'Slack' },
   ];
 
-  // Split into 5 groups for 5 rings
+  // Split into 5 rings
   const groups = [
     logos.slice(0, 3),   // Ring 1 → 3 logos
     logos.slice(3, 6),   // Ring 2 → 3 logos
@@ -58,7 +58,7 @@ const SpiralSection = () => {
                   className="orbit"
                   style={{ '--angle': `${(360 / group.length) * i}deg` }}
                 >
-                  <img src={logo.src} alt={logo.alt} />
+                  <img src={logo.src} alt={logo.alt} className="spiral-logo" />
                 </div>
               ))}
             </div>
@@ -81,3 +81,4 @@ const SpiralSection = () => {
 };
 
 export default SpiralSection;
+
