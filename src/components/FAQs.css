@@ -21,7 +21,7 @@
 }
 
 .faqs-container {
-  display: grid;
+  display: flex;
   grid-template-columns: 1fr 1fr; /* 2 columns */
   gap: 24px;
 }
@@ -30,7 +30,9 @@
   display: flex;
   flex-direction: column;
   gap: 16px;
+  flex: 1;
 }
+
 
 .faq-item {
   background: #ffffff;
@@ -39,6 +41,10 @@
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
   transition: all 0.3s ease;
   cursor: pointer;
+  flex-shrink: 0;            /* prevents shrinking */
+}
+.faq-column .faq-item {
+  flex: 1;
 }
 
 .faq-item:hover {
