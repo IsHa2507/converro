@@ -24,27 +24,35 @@ const Integrations = () => {
           Our integrations make it easy to work with the applications your team
           already loves.
         </p>
-        <button className="orbit-btn">Start For Free
-          <FiArrowRight className="integrations-arrow"/>
+        <button className="orbit-btn">
+          Start For Free
+          <FiArrowRight className="integrations-arrow" />
         </button>
       </div>
 
-      {/* Orbit Animation */}
+      {/* Orbit Center & Icons */}
       <div className="orbit-wrapper">
-        <div className="orbit-center">Z</div>
+        <div className="orbit-center">
+          <img src="/Fav.svg" alt="Logo" className="orbit-image" />
+        </div>
 
         {/* Rings */}
         <div className="orbit-ring ring-1"></div>
         <div className="orbit-ring ring-2"></div>
         <div className="orbit-ring ring-3"></div>
+        <div className="orbit-ring ring-4"></div>
 
-        {/* Icons orbiting */}
+        {/* Orbiting Icons */}
         <div className="orbit-icons">
           {integrations.map((item, i) => (
             <div
               key={i}
               className={`orbit-icon orbit-${i + 1}`}
-              style={{ "--orbit-color": item.color }}
+              style={{
+                "--orbit-color": item.color,
+                "--orbit-radius": `${80 + i * 40}px`, // different radius per icon
+                "--orbit-speed": `${6 + i * 2}s` // different rotation speed
+              }}
               title={item.name}
             >
               {item.icon}

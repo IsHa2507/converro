@@ -88,18 +88,16 @@
   width: 120px;
   height: 120px;
   border-radius: 50%;
-  background: #3fce71;
-  color: #000;
-  font-size: 2.5rem;
-  font-weight: bold;
+  background: transparent; /* changed from white to transparent */
   display: flex;
   align-items: center;
-  
   justify-content: center;
   z-index: 1;
   overflow: visible;
 }
 
+
+/* Glowing blurred gradient behind the center */
 /* Glowing blurred gradient behind the center */
 .orbit-center::before {
   content: "";
@@ -109,7 +107,8 @@
   bottom: -20px;
   left: -20px;
   border-radius: inherit;
-  background: linear-gradient(261deg, #f7f779, #fbd07c);
+  /* Change gradient to white shades */
+  background: linear-gradient(261deg, rgba(255,255,255,0.8), rgba(255,255,255,0.4));
   filter: blur(30px);
   opacity: 0.7;
   z-index: -1;
@@ -122,11 +121,18 @@
   position: absolute;
   inset: 0;
   border-radius: inherit;
-  background: inherit;
+  background: transparent; /* set solid white */
   z-index: -1;
 }
 
 
+
+
+.orbit-image {
+  width: 70%;
+  height: 70%;
+  object-fit: contain;    /* keeps the image proportions */
+}
 /* Rings */
 .orbit-ring {
   position: absolute;
@@ -160,6 +166,10 @@
   height: 420px;
   animation-duration: 80s;
 }
+.ring-4{
+  width:180px;
+  height: 180px;
+}
 
 /* Icons */
 .orbit-icons {
@@ -180,7 +190,7 @@
   justify-content: center;
   font-size: 28px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  box-shadow: 0 0 10px rgba(0,0,0,0.6);
+  animation: float 5s ease-in-out infinite;
 }
 
 .orbit-icon:hover {
@@ -189,10 +199,10 @@
 }
 
 /* Positioning 6 icons evenly */
-.orbit-1 { top: 0; left: 50%; transform: translate(-50%, -50%); }
+.orbit-1 { top: 0; left: 40%; transform: translate(-50%, -50%); }
 .orbit-2 { top: 25%; right: 0; transform: translate(50%, -50%); }
 .orbit-3 { bottom: 25%; right: 0; transform: translate(50%, 50%); }
-.orbit-4 { bottom: 0; left: 50%; transform: translate(-50%, 50%); }
+.orbit-4 { bottom: 0; left: 40%; transform: translate(-50%, 50%); }
 .orbit-5 { bottom: 25%; left: 0; transform: translate(-50%, 50%); }
 .orbit-6 { top: 25%; left: 0; transform: translate(-50%, -50%); }
 
