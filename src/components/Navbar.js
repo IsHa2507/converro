@@ -1,8 +1,58 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import { motion, AnimatePresence } from "framer-motion"; // for smooth animations
+import { motion, AnimatePresence } from "framer-motion";
+import { 
+  TrendingUp, 
+  Briefcase, 
+  Heart, 
+  FileText, 
+  Settings, 
+  ShoppingCart, 
+  Bot, 
+  Sprout,
+  ShoppingBag,
+  Building2,
+  CreditCard,
+  ChevronDown,
+  Sparkles,
+  Users,
+  Zap,
+  Phone,
+  Car,
+} from "lucide-react";
 import "./Navbar.css";
 import logo from "../assets/logo.svg";
+
+const dropdowns = {
+  products: [
+    { title: "Marketing Hub", desc: "Marketing automation software", to: "/products/marketing", icon: TrendingUp, color: "#ff7a59" },
+    { title: "Sales Hub", desc: "Sales software", to: "/products/sales", icon: Briefcase, color: "#ff9500" },
+    { title: "Service Hub", desc: "Customer service software", to: "/products/service", icon: Heart, color: "#00bda5" },
+    { title: "Content Hub", desc: "Content marketing software", to: "/products/content", icon: FileText, color: "#7c98b6" },
+    { title: "Operations Hub", desc: "Operations software", to: "/products/operations", icon: Settings, color: "#00a4bd" },
+    { title: "Commerce Hub", desc: "B2B commerce software", to: "/products/commerce", icon: ShoppingCart, color: "#1b2653" },
+    { title: "Smart CRM", desc: "AI-powered CRM software", to: "/products/smart-crm", icon: Bot, color: "#ff7a59" },
+    { title: "Small Business Bundle", desc: "Starter edition for startups and SMBs", to: "/products/small-business", icon: Sprout, color: "#00bda5" },
+  ],
+  industries: [
+    { title: "Real Estate", desc: "Solutions tailored for real estate businesses", to: "/industries/real-estate", icon: Building2, color: "#ff7a59" },
+    { title: "Education", desc: "Engagement tools for schools and universities", to: "/industries/education", icon: Users, color: "#00a4bd" },
+    { title: "Financial Services", desc: "CRM solutions for banking and finance", to: "/industries/financial-services", icon: CreditCard, color: "#7c98b6" },
+    { title: "Tours and Travel", desc: "Automation for travel agencies", to: "/industries/tours-travel", icon: Zap, color: "#ff9500" },
+    { title: "Call Centers", desc: "Scale your call center operations", to: "/industries/call-centers", icon: Phone, color: "#00bda5" },
+    { title: "B2B CRM", desc: "CRM designed for B2B businesses", to: "/industries/b2b-crm", icon: Briefcase, color: "#7c98b6" },
+    { title: "Automobile", desc: "CRM for automobile sales and service", to: "/industries/automobile", icon: Car, color: "#ff7a59" },
+    { title: "Consulting", desc: "Grow and manage consulting businesses", to: "/industries/consulting", icon: Settings, color: "#00a4bd" },
+    { title: "Products & Services", desc: "Tools for service-based companies", to: "/industries/products-services", icon: ShoppingBag, color: "#7c98b6" },
+  ],
+};
+
+// ✅ FIX: moved this OUTSIDE of dropdowns
+const additionalSections = [
+  { icon: Sparkles, title: "Breeze", desc: "HubSpot's AI that powers the entire customer platform", link: "See all AI features", to: "/ai-features" },
+  { icon: Users, title: "Breeze Agents", desc: "AI-powered specialists that extend your team's marketing, sales, and service capabilities", link: "Meet your AI growth team", to: "/breeze-agents" },
+  { icon: Zap, title: "App Marketplace", desc: "Connect your favorite apps to HubSpot", link: "See all integrations", to: "/integrations" },
+];
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -10,27 +60,10 @@ const Navbar = () => {
   const [activeDropdown, setActiveDropdown] = useState(null);
 
   useEffect(() => {
-    const handleScroll = () => {
-      setScrolled(window.scrollY > 50);
-    };
+    const handleScroll = () => setScrolled(window.scrollY > 50);
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
-
-  // Dropdown menu content
-  const dropdowns = {
-    products: [
-      { title: "Platform Overview", desc: "Learn about our platform.", to: "/products/overview" },
-      { title: "SMS Marketing", desc: "Boost sales with SMS campaigns.", to: "/products/sms" },
-      { title: "Email Marketing", desc: "Increase engagement with emails.", to: "/products/email" },
-      { title: "Automation 360", desc: "Maximize efficiency with automation.", to: "/products/automation" },
-    ],
-    industries: [
-      { title: "Retail", desc: "Solutions for retail businesses.", to: "/industries/retail" },
-      { title: "Healthcare", desc: "Boost patient engagement.", to: "/industries/healthcare" },
-      { title: "Finance", desc: "Secure finance communication.", to: "/industries/finance" },
-    ],
-  };
 
   return (
     <header className={`navbar-wrapper ${scrolled ? "scrolled" : ""}`}>
@@ -50,22 +83,70 @@ const Navbar = () => {
             onMouseEnter={() => setActiveDropdown("products")}
             onMouseLeave={() => setActiveDropdown(null)}
           >
-            <span className="dropdown-title">Products ▾</span>
+            <span className="dropdown-title">
+              Products <ChevronDown size={16} className="dropdown-arrow" />
+            </span>
             <AnimatePresence>
               {activeDropdown === "products" && (
                 <motion.div
-                  className="dropdown-menu"
+                  className="hubspot-mega-dropdown"
                   initial={{ opacity: 0, y: -10 }}
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, y: -10 }}
-                  transition={{ duration: 0.3 }}
+                  transition={{ duration: 0.2 }}
                 >
-                  {dropdowns.products.map((item, i) => (
-                    <Link key={i} to={item.to} className="dropdown-item">
-                      <h4>{item.title}</h4>
-                      <p>{item.desc}</p>
-                    </Link>
-                  ))}
+                  <div className="dropdown-header">
+                    <h3>The HubSpot Customer Platform</h3>
+                    <p>All of HubSpot's marketing, sales, and customer service software on one AI-powered platform.</p>
+                    <div className="header-buttons">
+                      <button className="free-crm-btn">
+                        <Bot size={16} />
+                        Free HubSpot CRM
+                      </button>
+                      <button className="overview-btn">
+                        <Sparkles size={16} />
+                        Overview of all products
+                      </button>
+                    </div>
+                  </div>
+
+                  <div className="products-grid">
+                    {dropdowns.products.map((item, i) => {
+                      const IconComponent = item.icon;
+                      return (
+                        <Link key={i} to={item.to} className="product-item">
+                          <div className="product-icon" style={{ color: item.color }}>
+                            <IconComponent size={20} />
+                          </div>
+                          <div className="product-content">
+                            <h4>{item.title}</h4>
+                            <p>{item.desc}</p>
+                            <span className="product-link">Free and premium plans</span>
+                          </div>
+                        </Link>
+                      );
+                    })}
+                  </div>
+
+                  <div className="additional-sections">
+                    {additionalSections.map((section, i) => {
+                      const IconComponent = section.icon;
+                      return (
+                        <div key={i} className="additional-section">
+                          <div className="section-icon">
+                            <IconComponent size={20} />
+                          </div>
+                          <div className="section-content">
+                            <h4>{section.title}</h4>
+                            <p>{section.desc}</p>
+                            <Link to={section.to} className="section-link">
+                              {section.link}
+                            </Link>
+                          </div>
+                        </div>
+                      );
+                    })}
+                  </div>
                 </motion.div>
               )}
             </AnimatePresence>
@@ -77,22 +158,32 @@ const Navbar = () => {
             onMouseEnter={() => setActiveDropdown("industries")}
             onMouseLeave={() => setActiveDropdown(null)}
           >
-            <span className="dropdown-title">Industries ▾</span>
+            <span className="dropdown-title">
+              Industries <ChevronDown size={16} className="dropdown-arrow" />
+            </span>
             <AnimatePresence>
               {activeDropdown === "industries" && (
                 <motion.div
-                  className="dropdown-menu"
+                  className="industries-mega-dropdown"
                   initial={{ opacity: 0, y: -10 }}
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, y: -10 }}
-                  transition={{ duration: 0.3 }}
+                  transition={{ duration: 0.2 }}
                 >
-                  {dropdowns.industries.map((item, i) => (
-                    <Link key={i} to={item.to} className="dropdown-item">
-                      <h4>{item.title}</h4>
-                      <p>{item.desc}</p>
-                    </Link>
-                  ))}
+                  <h3>For Calling & WhatsApp Based Sales Teams</h3>
+                  <div className="industries-grid">
+                    {dropdowns.industries.map((item, i) => {
+                      const IconComponent = item.icon;
+                      return (
+                        <Link key={i} to={item.to} className="industry-item">
+                          <div className="industry-icon" style={{ color: item.color }}>
+                            <IconComponent size={20} />
+                          </div>
+                          <span>{item.title}</span>
+                        </Link>
+                      );
+                    })}
+                  </div>
                 </motion.div>
               )}
             </AnimatePresence>
@@ -132,4 +223,3 @@ const Navbar = () => {
 };
 
 export default Navbar;
-
