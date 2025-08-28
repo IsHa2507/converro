@@ -7,10 +7,11 @@ import { FaStar } from "react-icons/fa"; // React Star Icon
 import StatsSection from "./StatsSection";
 import ParallaxSections from "./ParallaxSections";
 import FAQs from "./FAQs";
-import SpiralSection from "./SpiralSection";
+import Integrations from "./Integrations";
 import BrandSlider from "./BrandSlider";
 import HeroSection from "./Herosection";
 import FinanceSection from "./FinanceSection";
+
 const Homepage = () => {
   return (
     <>
@@ -28,7 +29,7 @@ const Homepage = () => {
      
     <ParallaxSections/>
 
-    <SpiralSection/>
+    <Integrations/>
    
     <FAQs/>
   

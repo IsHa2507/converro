@@ -115,6 +115,7 @@
 
 .parallax-btn:hover {
   background: #34b360;
+  color: black;
 }
 .parallax-arrow {
   font-size: 16px;
