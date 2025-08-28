@@ -31,6 +31,7 @@ const Homepage = () => {
 
     <Integrations/>
    
+   
     <FAQs/>
   
 

@@ -1,32 +1,19 @@
 /* CTA.css */
 .cta-section {
    position: relative;
-   font-family: 'Inter', sans-serif;
-    background-image: url("../assets/CTA_Background.jpg"); 
-    background-size: cover; /* cover full area */ 
-    background-position: center;
-     
-      padding: 80px 24px; 
-      
-      text-align: center; 
-      overflow: hidden;
-       margin: 60px auto 7px auto;
-         /* instead of fixed width */
-         max-width: 1400px;
-       }
+   background-image: url("../assets/CTA_Background.jpg"); 
+   background-size: 100% 100%; /* stretch image */
+   background-position: center;
+   background-repeat: no-repeat;
+   padding: 80px 24px; 
+   text-align: center; 
+   overflow: hidden;
+   margin: 60px auto 7px auto;
+   max-width: 100%;
+}
 
 /* Background overlay */
-.cta-bg {
-  position: absolute;
-  inset: 0;
-  background-image: url("../assets/CTA_Background.jpg");
-  background-size: cover;
-  background-position: center;
-  max-width: 1400px;
-  opacity: 0.1;
-  border-radius: inherit;  /* ✅ follows parent radius */
-  z-index: 1;
-}
+
 
 /* Content container */
 .cta-content {
@@ -72,15 +59,18 @@ background: #3fce71;
 @media (max-width: 1024px) {
   .cta-section {
     padding: 60px 20px;
-    margin: 40px auto;
   }
+}
 
-  .cta-content h2 {
-    font-size: 2rem;
+@media (max-width: 768px) {
+  .cta-section {
+    padding: 50px 18px;
   }
+}
 
-  .cta-content p {
-    font-size: 1rem;
+@media (max-width: 480px) {
+  .cta-section {
+    padding: 40px 15px;
   }
 }
 

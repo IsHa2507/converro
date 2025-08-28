@@ -20,6 +20,7 @@ import Integration from "./components/Integrations";
 import BrandSlider from "./components/BrandSlider";
 import HeroSection from "./components/Herosection";
 import FinanceSection from "./components/FinanceSection";
+import spiralIntergration from "./main_component/spiralintegration";
 function App() {
   return (
      <Router>
