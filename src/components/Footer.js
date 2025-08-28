@@ -72,7 +72,7 @@ export default function Footer() {
   <div className="footer-bottom">
   <p>2025 © Converro a subsidiary of Cybershield Technologies Pvt. Ltd.</p>
   <p>
-    <a href="#" className="footer-link">
+    <a href="https://cybershieldtechnologies.com/" className="footer-link">
       Cybershield Technologies Pvt. Ltd.
       <ArrowUpRight size={13} className="arrow-icon" />
     </a>
