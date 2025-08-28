@@ -1,7 +1,8 @@
 // CTA.js
 import React from "react";
 import "./CTA.css";
-// import { FiArrowRight } from "react-icons/fi";
+
+import { FiArrowRight } from "react-icons/fi";
 
 export default function CTA() {
   return (
@@ -13,8 +14,8 @@ export default function CTA() {
           Take control of your sales pipeline, automate tasks, and build stronger
           customer relationships with ease.
         </p>
-        <button> Start for Free
-          {/* <FiArrowRight className="CTA-arrow" /> */}
+        <button className="CTA-button"> Start for Free
+          <FiArrowRight className="CTA-arrow" />
         </button>
       </div>
     </section>

@@ -125,6 +125,7 @@
 
 .parallax-btn:hover .parallax-arrow {
   transform: rotate(-45deg);
+  color: black;
 }
 .parallax-text-block ul {
   list-style-type: disc;

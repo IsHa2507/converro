@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
+import { FiArrowRight } from "react-icons/fi";
 import { 
   TrendingUp, 
   Briefcase, 
@@ -196,7 +197,9 @@ const Navbar = () => {
         {/* Desktop Buttons */}
         <div className="navbar-buttons">
           <button className="btn-outline">Login</button>
-          <button className="btn-glossy">Start for Free</button>
+          <button className="btn-glossy">Start for Free
+            <FiArrowRight className="nav-arrow"/>
+          </button>
         </div>
 
         {/* Hamburger */}

@@ -153,7 +153,7 @@ const scrollToBlock = (index) => {
 )}
   {/* Optional button */}
   <button className="parallax-btn">
-    Learn More
+    Start For Free
     
       <FiArrowRight className="parallax-arrow" />
     

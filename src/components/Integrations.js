@@ -24,7 +24,7 @@ const Integrations = () => {
           Our integrations make it easy to work with the applications your team
           already loves.
         </p>
-        <button className="orbit-btn">Learn More 
+        <button className="orbit-btn">Start For Free
           <FiArrowRight className="integrations-arrow"/>
         </button>
       </div>

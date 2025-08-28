@@ -123,13 +123,27 @@
   font-weight: 500;
   display: flex;
   align-items: center;
+  gap: 8px; /* space between text and arrow */
   transition: all 0.3s ease;
 }
 
 .btn-glossy:hover {
- background: #3fce71;
+  background: #3fce71;
   color: black;
 }
+
+.nav-arrow {
+  font-size: 16px;
+  color: white;
+  display: inline-block; /* needed for rotation */
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.btn-glossy:hover .nav-arrow {
+  transform: rotate(-45deg);
+  color: black;
+}
+
 /* --- EXISTING STYLES ABOVE --- */
 
 /* Hide hamburger by default */
