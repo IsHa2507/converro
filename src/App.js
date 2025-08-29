@@ -20,7 +20,7 @@ import Integration from "./components/Integrations";
 import BrandSlider from "./components/BrandSlider";
 import HeroSection from "./components/Herosection";
 import FinanceSection from "./components/FinanceSection";
-import spiralIntergration from "./main_component/spiralintegration";
+import AboutUS from "./components/AboutUs";
 function App() {
   return (
      <Router>
@@ -31,6 +31,7 @@ function App() {
         <Route path="/privacypolicy" element={<PrivacyPolicy />} />
         <Route path="/refundpolicy" element={<RefundPolicy />} />
         <Route path="/contactus" element={<ContactUs/>}/>
+        <Route path="/aboutus" element={<AboutUS/>}/>
       </Routes>
     </Router>
   );

@@ -2,51 +2,50 @@ import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { motion, AnimatePresence, color } from "framer-motion";
 import { FiArrowRight } from "react-icons/fi";
-import { 
-  TrendingUp, 
-  Briefcase, 
-  Heart, 
-  FileText, 
-  Settings, 
-  ShoppingCart, 
-  Bot, 
-  Sprout,
-  ShoppingBag,
-  Building2,
-  CreditCard,
-  ChevronDown,
-  Sparkles,
-  Users,
-  Zap,
-  Phone,
-  Car,
-  SprayCan,
-} from "lucide-react";
+import smsImg from "../images/SMS Marketing.svg";
+import emailImg from "../images/Email Marketing.svg";
+import automationImg from "../images/Automation 360.svg";
+import whatsappImg from "../images/WhatsApp Business API.svg";
+import ivrImg from "../images/IVR Solution.svg";
+import googleImg from "../images/Google Data Extraor.svg";
+import tasksImg from "../images/Task & Events.svg";
+import obdImg from "../images/OBD_Call.svg";
+import invoiceImg from "../images/Invoice & Quotation.svg";
+import realEstateImg from "../images/Realstate.svg";
+import educationImg from "../images/Education.svg";
+import financeImg from "../images/Financial Services.svg";
+import travelImg from "../images/Tours and travels.svg";
+import callcenterImg from "../images/Call Centers.svg";
+import b2bImg from "../images/B2B CRM.svg";
+import automobileImg from "../images/Automobile.svg";
+import consultingImg from "../images/Consulting.svg";
+import servicesImg from "../images/Product and Services.svg";
 import "./Navbar.css";
 import logo from "../assets/logo.svg";
+import { ChevronDown } from "lucide-react";
 
 const dropdowns = {
-  products: [
-    { title: "SMS Marketing", desc: "Reach more customers instantly with targeted SMS campaigns.", to: "/products/marketing", icon: TrendingUp, color: "#000" },
-    { title: "Email Marketing", desc: "Boost engagement and conversions with powerful email campaigns.", to: "/products/sales", icon: Briefcase, color: "#000" },
-    { title: "Automation 360", desc: "Automate workflows and maximize efficiency with ease.", to: "/products/service", icon: Heart, color: "#000" },
-    { title: "WhatsApp Business API", desc: "Connect directly with customers using WhatsApp marketing.", to: "/products/content", icon: FileText, color: "#000" },
-    { title: "IVR Solunion", desc: "Deliver better experiences with interactive voice response.", to: "/products/operations", icon: Settings, color: "#000" },
-    { title: "Google Data Extractor", desc: "Capture leads directly from Google into your CRM.", to: "/products/commerce", icon: ShoppingCart, color: "#000" },
-    { title: "Tasks & Events", desc: "Manage tasks and events seamlessly in one pipeline.", to: "/products/smart-crm", icon: Bot, color: "#000" },
-    { title: "OBD Call", desc: "Make safe, hands-free calls with OBD technology.", to: "/products/small-business", icon: Sprout, color: "#000" },
-    {title:"Invoice & Quotation", desc:"Generate invoices and quotations instantly online.", to: "#", icon: SprayCan, color:"#000"},
+ products: [
+    { title: "SMS Marketing", desc: "Reach more customers instantly with targeted SMS campaigns.", to: "/products/marketing", image: smsImg },
+    { title: "Email Marketing", desc: "Boost engagement and conversions with powerful email campaigns.", to: "/products/sales", image: emailImg },
+    { title: "Automation 360", desc: "Automate workflows and maximize efficiency with ease.", to: "/products/service", image: automationImg },
+    { title: "WhatsApp Business API", desc: "Connect directly with customers using WhatsApp marketing.", to: "/products/content", image: whatsappImg },
+    { title: "IVR Solution", desc: "Deliver better experiences with interactive voice response.", to: "/products/operations", image: ivrImg },
+    { title: "Google Data Extractor", desc: "Capture leads directly from Google into your CRM.", to: "/products/commerce", image: googleImg },
+    { title: "Tasks & Events", desc: "Manage tasks and events seamlessly in one pipeline.", to: "/products/smart-crm", image: tasksImg },
+    { title: "OBD Call", desc: "Make safe, hands-free calls with OBD technology.", to: "/products/small-business", image: obdImg },
+    { title: "Invoice & Quotation", desc: "Generate invoices and quotations instantly online.", to: "#", image: invoiceImg },
   ],
   industries: [
-    { title: "Real Estate", desc: "Solutions tailored for real estate businesses", to: "/industries/real-estate", icon: Building2, color: "#000" },
-    { title: "Education", desc: "Engagement tools for schools and universities", to: "/industries/education", icon: Users, color: "#000" },
-    { title: "Financial Services", desc: "CRM solutions for banking and finance", to: "/industries/financial-services", icon: CreditCard, color: "#000" },
-    { title: "Tours and Travel", desc: "Automation for travel agencies", to: "/industries/tours-travel", icon: Zap, color: "#000" },
-    { title: "Call Centers", desc: "Scale your call center operations", to: "/industries/call-centers", icon: Phone, color: "#000" },
-    { title: "B2B CRM", desc: "CRM designed for B2B businesses", to: "/industries/b2b-crm", icon: Briefcase, color: "#000" },
-    { title: "Automobile", desc: "CRM for automobile sales and service", to: "/industries/automobile", icon: Car, color: "#000" },
-    { title: "Consulting", desc: "Grow and manage consulting businesses", to: "/industries/consulting", icon: Settings, color: "#000" },
-    { title: "Products & Services", desc: "Tools for service-based companies", to: "/industries/products-services", icon: ShoppingBag, color: "#000" },
+    { title: "Real Estate", desc: "Solutions tailored for real estate businesses", to: "/industries/real-estate", image: realEstateImg },
+    { title: "Education", desc: "Engagement tools for schools and universities", to: "/industries/education", image: educationImg },
+    { title: "Financial Services", desc: "CRM solutions for banking and finance", to: "/industries/financial-services", image: financeImg },
+    { title: "Tours and Travel", desc: "Automation for travel agencies", to: "/industries/tours-travel", image: travelImg },
+    { title: "Call Centers", desc: "Scale your call center operations", to: "/industries/call-centers", image: callcenterImg },
+    { title: "B2B CRM", desc: "CRM designed for B2B businesses", to: "/industries/b2b-crm", image: b2bImg },
+    { title: "Automobile", desc: "CRM for automobile sales and service", to: "/industries/automobile", image: automobileImg },
+    { title: "Consulting", desc: "Grow and manage consulting businesses", to: "/industries/consulting", image: consultingImg },
+    { title: "Products & Services", desc: "Tools for service-based companies", to: "/industries/products-services", image: servicesImg },
   ],
 };
 
@@ -82,7 +81,7 @@ const Navbar = () => {
 
         {/* Desktop Links */}
         <nav className="navbar-links">
-          <Link to="/about">About</Link>
+          <Link to="/aboutus">About</Link>
 
           {/* Products Dropdown */}
           <div
@@ -117,23 +116,19 @@ const Navbar = () => {
                     </div> */}
                   </div>
 
-                  <div className="products-grid">
-                    {dropdowns.products.map((item, i) => {
-                      const IconComponent = item.icon;
-                      return (
-                        <Link key={i} to={item.to} className="product-item">
-                          <div className="product-icon" style={{ color: item.color }}>
-                            <IconComponent size={20} />
-                          </div>
-                          <div className="product-content">
-                            <h4>{item.title}</h4>
-                            <p>{item.desc}</p>
-                            {/* <span className="product-link">Free and premium plans</span> */}
-                          </div>
-                        </Link>
-                      );
-                    })}
-                  </div>
+                 <div className="products-grid">
+  {dropdowns.products.map((item, i) => (
+    <Link key={i} to={item.to} className="product-item">
+      <div className="product-icon">
+        <img src={item.image} alt={item.title} />
+      </div>
+      <div className="product-content">
+        <h4>{item.title}</h4>
+        <p>{item.desc}</p>
+      </div>
+    </Link>
+  ))}
+</div>
 
                   {/* <div className="additional-sections">
                     {additionalSections.map((section, i) => {
@@ -179,18 +174,16 @@ const Navbar = () => {
                 >
                   <h3>For Calling & WhatsApp Based Sales Teams</h3>
                   <div className="industries-grid">
-                    {dropdowns.industries.map((item, i) => {
-                      const IconComponent = item.icon;
-                      return (
-                        <Link key={i} to={item.to} className="industry-item">
-                          <div className="industry-icon" style={{ color: item.color }}>
-                            <IconComponent size={20} />
-                          </div>
-                          <span>{item.title}</span>
-                        </Link>
-                      );
-                    })}
-                  </div>
+  {dropdowns.industries.map((item, i) => (
+    <Link key={i} to={item.to} className="industry-item">
+      <div className="industry-icon">
+        <img src={item.image} alt={item.title} />
+      </div>
+      <span>{item.title}</span>
+    </Link>
+  ))}
+</div>
+
                 </motion.div>
               )}
             </AnimatePresence>

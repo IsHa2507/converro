@@ -276,11 +276,12 @@
 .dropdown-header p {
   font-size: 16px;
   color: #718096;
-  margin: 0 0 20px 0;
+  margin: 0 0 10px 0;
   line-height: 1.5;
+  
 }
 
-.header-buttons {
+/* .header-buttons {
   display: flex;
   gap: 12px;
 }
@@ -306,7 +307,7 @@
   background: #ffffff;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   transform: translateY(-1px);
-}
+} */
 
 /* Products grid */
 .products-grid {
@@ -314,6 +315,7 @@
   grid-template-columns: repeat(3, 1fr);
   gap: 16px;
   margin-bottom: 32px;
+  margin-top: -20px;
 }
 
 .product-item {
@@ -365,6 +367,11 @@
   font-size: 14px;
   color: #3182ce;
   font-weight: 500;
+}
+.product-icon img {
+  width: 35px;   /* adjust size */
+  height: 35px;
+  object-fit: contain;
 }
 
 /* Additional sections */
@@ -530,4 +537,9 @@
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
+}
+.industry-icon img {
+  width: 35px;   /* adjust to match design */
+  height: 35px;
+  object-fit: contain;
 }
