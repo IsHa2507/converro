@@ -40,14 +40,14 @@ const AboutUs = () => {
           {/* Middle Column */}
           <div className="column">
             <div className="about-card dark-card">
-              <div className="icon">👥</div>
-              <h3>A Team Committed to Real Impact</h3>
+              {/* <div className="icon">👥</div>
+              <h3>t</h3>
               <p>
                 Custo is built by a diverse team of thinkers and builders who
                 care deeply about helping businesses grow. With a focus on
                 simplicity, performance, and people, we’re creating solutions
                 that truly make a difference.
-              </p>
+              </p> */}
             </div>
           </div>
 

@@ -55,6 +55,7 @@
 .dark-card {
   background: #111;
   color: #fff;
+  background-image: url(../images/aboutus.png);
   padding: 40px 28px;
   height: 450px;
   display: flex;
