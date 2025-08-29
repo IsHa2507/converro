@@ -12,21 +12,21 @@ const FinanceSection = () => {
 
   const items = [
     {
-      title: "Automated categorization",
+      title: "Capture & Nurture Leads Automatically",
       text:
-        "We auto-tag every transaction so you instantly see where money goes. No spreadsheets, no manual sorting—just clarity.",
+        "Converro makes sure no lead slips through the cracks. It auto-captures inquiries, organizes them, and nurtures every lead with smart, timely follow ups maximizing your conversion opportunities with ease.",
       img: img1,
     },
     {
-      title: "Savings goals",
+      title: "Smart Calling & Automated Follow-Ups",
       text:
-        "Create goals, set targets, and track progress with gentle nudges. We’ll guide you to hit milestones without stress.",
+        "Converro keeps your sales pipeline active with automated calls and timely reminders. It connects with prospects instantly, maintains consistent communication, minimizes drop-offs, and drives higher conversions all without manual effort.",
       img: img2,
     },
     {
-      title: "Budget suggestions",
+      title: "Faster Responses, Stronger Relationships",
       text:
-        "Get adaptive, AI-powered budgets that learn your patterns and recommend smart adjustments month to month.",
+        "Converro ensures clients get quick, accurate answers to their queries—building trust and satisfaction instantly. By cutting response times and offering round the clock support, it elevates customer experience and nurtures lasting relationships.",
       img: img3,
     },
   ];
@@ -53,9 +53,9 @@ const FinanceSection = () => {
       {/* Right: Title + Accordion-like list */}
       <div className="finance-content">
         <header className="finance-header">
-          <h2 className="finance-title">Stay ahead of your finances</h2>
+          <h2 className="finance-title">Generate, engage, and convert leads even in your downtime.</h2>
           <p className="finance-subtitle">
-            Track, save, and budget with effortless, intelligent tools.
+            {/* Track, save, and budget with effortless, intelligent tools. */}
           </p>
         </header>
 

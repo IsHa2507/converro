@@ -24,9 +24,9 @@ const Homepage = () => {
 
     {/* Stats Section */}
     <StatsSection />
-     <BrandSlider/>
-     <FinanceSection/>
      
+     <FinanceSection/>
+     <BrandSlider/>
     <ParallaxSections/>
 
     <Integrations/>

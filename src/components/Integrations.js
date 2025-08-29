@@ -25,7 +25,7 @@ const Integrations = () => {
           already loves.
         </p>
         <button className="orbit-btn">
-          Start For Free
+          Explore
           <FiArrowRight className="integrations-arrow" />
         </button>
       </div>

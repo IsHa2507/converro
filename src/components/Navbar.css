@@ -244,9 +244,10 @@
   top: calc(100% + 12px);
   left: -350px;
   width: 1000px;
+  margin-top: 13px;
   height: 350px; /* FIXED HEIGHT */
   background: #ffffff;
-  border-radius: 12px;
+  border-radius: 0 0 12px 12px;
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
   border: 1px solid rgba(0, 0, 0, 0.08);
   padding: 32px;
@@ -310,7 +311,7 @@
 /* Products grid */
 .products-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 16px;
   margin-bottom: 32px;
 }
@@ -480,8 +481,9 @@
   top: calc(100% + 12px);
   left: -350px;
   width: 900px;
+  margin-top: 13px;
   background: #ffffff;
-  border-radius: 12px;
+  border-radius: 0 0 12px 12px;
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
   border: 1px solid rgba(0, 0, 0, 0.08);
   padding: 32px;
