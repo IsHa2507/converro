@@ -14,7 +14,7 @@ export default function CTA() {
           Take control of your sales pipeline, automate tasks, and build stronger
           customer relationships with ease.
         </p>
-        <button className="CTA-button"> Start for Free
+        <button className="CTA-button" onClick={()=>window.location.href="https://app.converro.online/register"}> Start for Free
           <FiArrowRight className="CTA-arrow" />
         </button>
       </div>

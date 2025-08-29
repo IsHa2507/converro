@@ -202,7 +202,8 @@ const Navbar = () => {
 >
   Login
 </button>
-          <button className="btn-glossy">Start for Free
+          <button className="btn-glossy"
+          onClick={()=>window.location.href="https://app.converro.online/register"}>Start for Free
             <FiArrowRight className="nav-arrow"/>
           </button>
         </div>

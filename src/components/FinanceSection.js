@@ -79,7 +79,7 @@ const FinanceSection = () => {
             </div>
           ))}
         </div>
-        <button className="finance-btn">
+        <button className="finance-btn" onClick={()=>window.location.href="https://app.converro.online/register"}>
     Start For Free
     <FiArrowRight className="finance-arrow"/>
   </button>

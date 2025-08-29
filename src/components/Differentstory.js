@@ -67,7 +67,8 @@ const StorySection = () => {
       </div>
       {/* ✅ Button outside the box, centered */}
       <div className="story-button-wrapper">
-        <button className="story-button">Start For Free
+        <button className="story-button"
+        onClick={()=>window.location.href="https://app.converro.online/register"}>Start For Free
           <FiArrowRight className="story-arrow"/>
           </button>
       </div>

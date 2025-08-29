@@ -29,12 +29,12 @@ const HeroSection = () => {
           <div className="hero-buttons">
             <button className="btn-primary">
               Start For Free
-              <span className="arrow-circle">
+              <span className="arrow-circle" onClick={()=>window.location.href="https://app.converro.online/register"}>
                 <FiArrowRight className="arrow" />
               </span>
             </button>
 
-            <button className="btn-secondary">
+            <button className="btn-secondary" >
               Book A Demo
               <FiArrowRight className="arrow2" />
             </button>
