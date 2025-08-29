@@ -26,34 +26,34 @@ import logo from "../assets/logo.svg";
 
 const dropdowns = {
   products: [
-    { title: "Marketing Hub", desc: "Marketing automation software", to: "/products/marketing", icon: TrendingUp, color: "#ff7a59" },
-    { title: "Sales Hub", desc: "Sales software", to: "/products/sales", icon: Briefcase, color: "#ff9500" },
-    { title: "Service Hub", desc: "Customer service software", to: "/products/service", icon: Heart, color: "#00bda5" },
-    { title: "Content Hub", desc: "Content marketing software", to: "/products/content", icon: FileText, color: "#7c98b6" },
-    { title: "Operations Hub", desc: "Operations software", to: "/products/operations", icon: Settings, color: "#00a4bd" },
-    { title: "Commerce Hub", desc: "B2B commerce software", to: "/products/commerce", icon: ShoppingCart, color: "#1b2653" },
-    { title: "Smart CRM", desc: "AI-powered CRM software", to: "/products/smart-crm", icon: Bot, color: "#ff7a59" },
-    { title: "Small Business Bundle", desc: "Starter edition for startups and SMBs", to: "/products/small-business", icon: Sprout, color: "#00bda5" },
+    { title: "Marketing Hub", desc: "Marketing automation software", to: "/products/marketing", icon: TrendingUp, color: "#000" },
+    { title: "Sales Hub", desc: "Sales software", to: "/products/sales", icon: Briefcase, color: "#000" },
+    { title: "Service Hub", desc: "Customer service software", to: "/products/service", icon: Heart, color: "#000" },
+    { title: "Content Hub", desc: "Content marketing software", to: "/products/content", icon: FileText, color: "#000" },
+    { title: "Operations Hub", desc: "Operations software", to: "/products/operations", icon: Settings, color: "#000" },
+    { title: "Commerce Hub", desc: "B2B commerce software", to: "/products/commerce", icon: ShoppingCart, color: "#000" },
+    { title: "Smart CRM", desc: "AI-powered CRM software", to: "/products/smart-crm", icon: Bot, color: "#000" },
+    { title: "Small Business Bundle", desc: "Starter edition for startups and SMBs", to: "/products/small-business", icon: Sprout, color: "#000" },
   ],
   industries: [
-    { title: "Real Estate", desc: "Solutions tailored for real estate businesses", to: "/industries/real-estate", icon: Building2, color: "#ff7a59" },
-    { title: "Education", desc: "Engagement tools for schools and universities", to: "/industries/education", icon: Users, color: "#00a4bd" },
-    { title: "Financial Services", desc: "CRM solutions for banking and finance", to: "/industries/financial-services", icon: CreditCard, color: "#7c98b6" },
-    { title: "Tours and Travel", desc: "Automation for travel agencies", to: "/industries/tours-travel", icon: Zap, color: "#ff9500" },
-    { title: "Call Centers", desc: "Scale your call center operations", to: "/industries/call-centers", icon: Phone, color: "#00bda5" },
-    { title: "B2B CRM", desc: "CRM designed for B2B businesses", to: "/industries/b2b-crm", icon: Briefcase, color: "#7c98b6" },
-    { title: "Automobile", desc: "CRM for automobile sales and service", to: "/industries/automobile", icon: Car, color: "#ff7a59" },
-    { title: "Consulting", desc: "Grow and manage consulting businesses", to: "/industries/consulting", icon: Settings, color: "#00a4bd" },
-    { title: "Products & Services", desc: "Tools for service-based companies", to: "/industries/products-services", icon: ShoppingBag, color: "#7c98b6" },
+    { title: "Real Estate", desc: "Solutions tailored for real estate businesses", to: "/industries/real-estate", icon: Building2, color: "#000" },
+    { title: "Education", desc: "Engagement tools for schools and universities", to: "/industries/education", icon: Users, color: "#000" },
+    { title: "Financial Services", desc: "CRM solutions for banking and finance", to: "/industries/financial-services", icon: CreditCard, color: "#000" },
+    { title: "Tours and Travel", desc: "Automation for travel agencies", to: "/industries/tours-travel", icon: Zap, color: "#000" },
+    { title: "Call Centers", desc: "Scale your call center operations", to: "/industries/call-centers", icon: Phone, color: "#000" },
+    { title: "B2B CRM", desc: "CRM designed for B2B businesses", to: "/industries/b2b-crm", icon: Briefcase, color: "#000" },
+    { title: "Automobile", desc: "CRM for automobile sales and service", to: "/industries/automobile", icon: Car, color: "#000" },
+    { title: "Consulting", desc: "Grow and manage consulting businesses", to: "/industries/consulting", icon: Settings, color: "#000" },
+    { title: "Products & Services", desc: "Tools for service-based companies", to: "/industries/products-services", icon: ShoppingBag, color: "#000" },
   ],
 };
 
 // ✅ FIX: moved this OUTSIDE of dropdowns
-const additionalSections = [
-  { icon: Sparkles, title: "Breeze", desc: "HubSpot's AI that powers the entire customer platform", link: "See all AI features", to: "/ai-features" },
-  { icon: Users, title: "Breeze Agents", desc: "AI-powered specialists that extend your team's marketing, sales, and service capabilities", link: "Meet your AI growth team", to: "/breeze-agents" },
-  { icon: Zap, title: "App Marketplace", desc: "Connect your favorite apps to HubSpot", link: "See all integrations", to: "/integrations" },
-];
+// const additionalSections = [
+//   { icon: Sparkles, title: "Breeze", desc: "HubSpot's AI that powers the entire customer platform", link: "See all AI features", to: "/ai-features" },
+//   { icon: Users, title: "Breeze Agents", desc: "AI-powered specialists that extend your team's marketing, sales, and service capabilities", link: "Meet your AI growth team", to: "/breeze-agents" },
+//   { icon: Zap, title: "App Marketplace", desc: "Connect your favorite apps to HubSpot", link: "See all integrations", to: "/integrations" },
+// ];
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -70,7 +70,7 @@ const Navbar = () => {
     <header className={`navbar-wrapper ${scrolled ? "scrolled" : ""}`}>
     {/* 🔹 Work in Progress Strip (on very top) */}
     <div className="work-strip">
-      🚧 Work in Progress
+      🚧 Website is under maintenance
     </div>
       <div className="navbar">
         {/* Logo */}
@@ -101,9 +101,9 @@ const Navbar = () => {
                   transition={{ duration: 0.2 }}
                 >
                   <div className="dropdown-header">
-                    <h3>The HubSpot Customer Platform</h3>
-                    <p>All of HubSpot's marketing, sales, and customer service software on one AI-powered platform.</p>
-                    <div className="header-buttons">
+                    <h3>Converro CRM Platform</h3>
+                    <p>Your leads, sales, and customer conversations streamlined in one AI powered hub.</p>
+                    {/* <div className="header-buttons">
                       <button className="free-crm-btn">
                         <Bot size={16} />
                         Free HubSpot CRM
@@ -112,7 +112,7 @@ const Navbar = () => {
                         <Sparkles size={16} />
                         Overview of all products
                       </button>
-                    </div>
+                    </div> */}
                   </div>
 
                   <div className="products-grid">
@@ -133,7 +133,7 @@ const Navbar = () => {
                     })}
                   </div>
 
-                  <div className="additional-sections">
+                  {/* <div className="additional-sections">
                     {additionalSections.map((section, i) => {
                       const IconComponent = section.icon;
                       return (
@@ -151,7 +151,7 @@ const Navbar = () => {
                         </div>
                       );
                     })}
-                  </div>
+                  </div> */}
                 </motion.div>
               )}
             </AnimatePresence>

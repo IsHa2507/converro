@@ -327,8 +327,8 @@
 }
 
 .product-item:hover {
-  background: #f8fafc;
-  border-color: #e2e8f0;
+  background:  #f0fef7;
+  
   transform: translateY(-1px);
 }
 
@@ -336,7 +336,7 @@
   width: 40px;
   height: 40px;
   border-radius: 8px;
-  background: rgba(255, 122, 89, 0.1);
+  background:#daffed;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -453,7 +453,7 @@
   width: 32px;
   height: 32px;
   border-radius: 6px;
-  background: rgba(255, 122, 89, 0.1);
+  background: #daffed;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -517,7 +517,7 @@
 }
 
 .industry-item:hover {
-  background: #f8fafc;
+  background: #f0fef7;
   transform: translateY(-2px);
 }
 
@@ -525,7 +525,7 @@
   width: 40px;
   height: 40px;
   border-radius: 8px;
-  background: rgba(255, 122, 89, 0.1);
+  background: #daffed;
   display: flex;
   align-items: center;
   justify-content: center;
