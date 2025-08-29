@@ -1,0 +1,139 @@
+.story-wrapper {
+  background: #fcfbfa;
+  padding: 80px 20px;
+  display: flex;
+  justify-content: center;
+  margin-top: -80px;
+}
+
+.story-container {
+  max-width: 1150px;
+  width: 100%;
+  display: flex;
+  background: #fff;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 6px 24px rgba(0,0,0,0.08);
+  height: 474px; /* ✅ fixed height */
+}
+
+/* Left Image */
+.story-image {
+  width: 283px;   /* ✅ fixed width */
+  height: auto;
+  flex-shrink: 0;
+  padding: 40px 20px 40px 40px; /* don’t shrink below 283px */
+  border-radius: 24px;
+}
+.story-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  border-radius: 24px;
+}
+
+/* Right Content */
+.story-content {
+  flex: 1;
+  padding: 5px 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;  /* vertical center */
+  align-items: left;      /* ✅ horizontal center */
+  text-align: left;       /* ✅ center text */
+  height: 100%;
+}
+
+.story-content h2 {
+    text-align: left;
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: #111;
+  margin-top: -15px;
+}
+
+.story-content p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #4b5563;
+  margin-bottom: 30px;
+  max-width: 600px;
+  
+}
+
+/* Features List */
+.story-features {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* ✅ 2 columns */
+  gap: 25px 40px; /* row gap + column gap */
+}
+
+.story-feature {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.story-feature-top {
+  display: flex;
+  align-items: center; /* ✅ icon + heading inline */
+  gap: 10px;
+}
+
+.story-icon {
+  color: #22c55e;
+  font-size: 20px;
+  flex-shrink: 0;
+}
+
+.story-feature h3 {
+  font-size: 18px;
+  font-weight: 600;
+  margin: 0;
+  color: #111;
+}
+
+.story-feature p {
+  font-size: 15px;
+  color: #555;
+  margin: 0;
+  line-height: 1.5;
+}
+
+/* Responsive: stack to 1 column on smaller screens */
+@media (max-width: 768px) {
+  .story-features {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+/* Hover effect */
+.story-features li:hover {
+  transform: translateX(4px);
+  transition: transform 0.2s ease;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .story-container {
+    flex-direction: column;
+    height: auto; /* ✅ allow auto height on tablets */
+  }
+
+  .story-image {
+    width: 100%;
+    height: 300px;
+  }
+
+  .story-content {
+    padding: 30px 20px;
+  }
+
+  .story-features {
+    grid-template-columns: 1fr;
+  }
+}
+

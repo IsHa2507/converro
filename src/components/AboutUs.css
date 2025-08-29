@@ -1,118 +1,127 @@
 .about-section {
   text-align: center;
-  font-family: 'Inter', sans-serif;
-  max-width: 100%;
-  margin: 60px auto;
-  padding: 0 20px;
+  padding: 80px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  margin-top: 30px;
+  
 }
 
 .about-section h2 {
-  font-size: 2.5rem;
+  font-size: 40px;
   font-weight: 700;
-  margin-bottom: 12px;
-  color: #111827;
+  margin-bottom: 16px;
 }
 
 .about-section .subtitle {
-  font-size: 1.1rem;
-  color: #4b5563;
-  max-width: 700px;
-  margin: 0 auto 40px;
+  font-size: 16px;
+  color: #555;
+  margin: 0 auto 60px;  /* centers + spacing below */
+  max-width: 850px;     /* keeps line length readable */
+  text-align: center;   /* center-aligns text */
+  line-height: 1.6;     /* improves readability */
 }
 
-.parent {
+
+/* Layout: 3 columns */
+.about-layout {
   display: grid;
-  grid-template-columns: repeat(6, 1fr);
-  grid-template-rows: repeat(6, 1fr);
-  gap: 16px;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
 }
 
-.parent div {
-  border-radius: 12px;
+/* Each column stacks items */
+.column {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.about-card {
+  background: #fff;
+  border-radius: 20px;
   overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.05);
 }
 
-.parent img {
+.about-card img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   display: block;
 }
 
-/* Grid Positions */
-.div1 {
-  grid-column: span 2;
-  grid-row: span 3;
-}
-
-.div3 {
-  grid-column: span 2;
-  grid-row: span 6;
-  grid-column-start: 3;
-  background: linear-gradient(to bottom right, #111827, #1f2937);
-  color: white;
+/* Dark middle card */
+.dark-card {
+  background: #111;
+  color: #fff;
+  padding: 40px 28px;
+  height: 450px;
   display: flex;
+  flex-direction: column;
   justify-content: center;
-  align-items: center;
-  text-align: center;
-  padding: 30px;
+  text-align: left;
 }
 
-.div4 {
-  grid-column: span 2;
-  grid-row: span 3;
-  grid-column-start: 5;
+.dark-card .icon {
+  font-size: 40px;
+  margin-bottom: 20px;
 }
 
-.div5 {
-  grid-column: span 2;
-  grid-row: span 3;
-  grid-column-start: 5;
-  grid-row-start: 4;
-}
-
-.div6 {
-  grid-column: span 2;
-  grid-row: span 3;
-  grid-column-start: 1;
-  grid-row-start: 4;
-}
-
-/* Center Box Content */
-.center-box h3 {
-  font-size: 1.3rem;
-  font-weight: 600;
-  margin: 12px 0;
-}
-
-.center-box p {
-  font-size: 0.95rem;
-  line-height: 1.6;
-  color: #d1d5db;
-}
-
-.center-box .icon {
-  font-size: 2rem;
+.dark-card h3 {
+  font-size: 22px;
   margin-bottom: 12px;
 }
 
-/* ✅ Responsive */
-@media (max-width: 768px) {
-  .parent {
+.dark-card p {
+  font-size: 16px;
+  line-height: 1.5;
+  color: #ccc;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .about-layout {
     grid-template-columns: 1fr;
-    grid-template-rows: auto;
   }
+}
 
-  .div1,
-  .div3,
-  .div4,
-  .div5,
-  .div6 {
-    grid-column: auto;
-    grid-row: auto;
-  }
+/* Metrics Section */
+.metrics-section {
+  padding: 60px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  margin-top: -50px;
+  text-align: center;
+  
+}
 
-  .div3 {
-    order: -1; /* text box comes first */
-  }
+.metrics-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 40px;
+}
+
+.metric-card {
+  padding: 20px;
+}
+
+.metric-number {
+  font-size: 36px;
+  font-weight: 700;
+  color: #10b981; /* green accent */
+  margin-bottom: 12px;
+}
+
+.metric-title {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #111;
+}
+
+.metric-card p {
+  font-size: 15px;
+  color: #555;
+  line-height: 1.5;
 }

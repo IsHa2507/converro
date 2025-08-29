@@ -21,6 +21,8 @@ import BrandSlider from "./components/BrandSlider";
 import HeroSection from "./components/Herosection";
 import FinanceSection from "./components/FinanceSection";
 import AboutUS from "./components/AboutUs";
+import AboutValues from "./components/AboutValues";
+import Differentstory from "./components/Differentstory";
 function App() {
   return (
      <Router>

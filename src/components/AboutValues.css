@@ -1,0 +1,75 @@
+.features-bg {
+  width: 100%;
+  background-color: #fcfbfa;   /* full width background */
+}
+
+.features-wrapper {
+  width: 100%;
+  max-width: 1200px;           /* content max width */
+  margin: 0 auto;              /* center horizontally */
+  padding: 30px 20px;
+  text-align: center;
+}
+
+
+.features-heading {
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 40px;
+}
+
+.features-heading .black-text {
+  color: #111;  /* black */
+}
+
+.features-heading .green-text {
+  color: green;  /* green */
+}
+
+.features-section {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 24px;
+  padding: 30px;
+  margin: 0 auto;  /* keeps grid centered inside wrapper */
+  text-align: center;
+}
+
+.feature-card {
+   background: #fff;
+  padding: 30px 25px;
+  height: 300px;
+  border-radius: 16px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  
+  display: flex;               /* make flexbox */
+  flex-direction: column;      /* stack icon, heading, text vertically */
+  justify-content: space-between; 
+}
+
+.feature-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+.feature-icon {
+  font-size: 40px;
+  margin-bottom: 10px;
+  padding-top: 20px;
+}
+
+.feature-card h3 {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: #111827;
+  flex-shrink: 0;
+}
+
+.feature-card p {
+   font-size: 15px;
+  line-height: 1.6;
+  color: #4b5563;
+  margin-top: auto;
+}
