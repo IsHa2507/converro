@@ -36,40 +36,53 @@
 }
 
 .feature-card {
-   background: #fff;
+  background: #fff;
   padding: 30px 25px;
-  height: 300px;
+  height: 250px;
   border-radius: 16px;
   box-shadow: 0 4px 10px rgba(0,0,0,0.05);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  
-  display: flex;               /* make flexbox */
-  flex-direction: column;      /* stack icon, heading, text vertically */
-  justify-content: space-between; 
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;   /* left align content */
+  text-align: left;          /* make text left-aligned */
 }
+
+.feature-icon {
+  margin-bottom: 16px;
+}
+
+.feature-icon img {
+  width: 60px;      /* adjust size as needed */
+  height: 60px;
+  object-fit: contain;
+  display: block;
+}
+
+
+.feature-content {
+  margin-top: auto;  /* pushes title+text block to bottom */
+}
+
+.feature-card h3 {
+  font-size: 18px;
+  font-weight: 600;
+  color: #111827;
+  margin-bottom: 8px;
+}
+
+.feature-card p {
+  font-size: 15px;
+  line-height: 1.6;
+  color: #4b5563;
+}
+
+
 
 .feature-card:hover {
   transform: translateY(-6px);
   box-shadow: 0 8px 20px rgba(0,0,0,0.1);
 }
 
-.feature-icon {
-  font-size: 40px;
-  margin-bottom: 10px;
-  padding-top: 20px;
-}
 
-.feature-card h3 {
-  font-size: 18px;
-  font-weight: 600;
-  margin-bottom: 10px;
-  color: #111827;
-  flex-shrink: 0;
-}
-
-.feature-card p {
-   font-size: 15px;
-  line-height: 1.6;
-  color: #4b5563;
-  margin-top: auto;
-}
