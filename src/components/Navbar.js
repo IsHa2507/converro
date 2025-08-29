@@ -195,7 +195,13 @@ const Navbar = () => {
 
         {/* Desktop Buttons */}
         <div className="navbar-buttons">
-          <button className="btn-outline">Login</button>
+          
+         <button 
+  className="btn-outline" 
+  onClick={() => window.location.href = "https://app.converro.online/"}
+>
+  Login
+</button>
           <button className="btn-glossy">Start for Free
             <FiArrowRight className="nav-arrow"/>
           </button>
