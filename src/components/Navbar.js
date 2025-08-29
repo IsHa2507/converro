@@ -68,6 +68,10 @@ const Navbar = () => {
 
   return (
     <header className={`navbar-wrapper ${scrolled ? "scrolled" : ""}`}>
+    {/* 🔹 Work in Progress Strip (on very top) */}
+    <div className="work-strip">
+      🚧 Work in Progress
+    </div>
       <div className="navbar">
         {/* Logo */}
         <Link to="/" className="navbar-logo">

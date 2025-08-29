@@ -291,3 +291,18 @@
     width: 80px;
   }
 }
+
+  .work-strip {
+  width: 100%;
+  background: #f0ca60; /* bright red/orange warning */
+  color: #000000;
+  font-size: 14px;
+  font-weight: 600;
+  text-align: center;
+  padding: 6px 0;
+  position: relative;
+  top: 0;
+  left: 0;
+  z-index: 2000;
+  border-bottom: 2px solid #d9363e;
+}
