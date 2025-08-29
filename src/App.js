@@ -23,6 +23,7 @@ import FinanceSection from "./components/FinanceSection";
 import AboutUS from "./components/AboutUs";
 import AboutValues from "./components/AboutValues";
 import Differentstory from "./components/Differentstory";
+import MissionIdeaSection from "./components/MissionIdeas";
 function App() {
   return (
      <Router>

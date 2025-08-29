@@ -22,9 +22,7 @@
   color: #111;  /* black */
 }
 
-.features-heading .green-text {
-  color: green;  /* green */
-}
+
 
 .features-section {
   display: grid;
@@ -40,7 +38,8 @@
   padding: 30px 25px;
   height: 250px;
   border-radius: 16px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  border: 1px solid #e5e7eb;
+  /* box-shadow: 0 4px 10px rgba(0,0,0,0.05); */
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 
   display: flex;
@@ -82,7 +81,8 @@
 
 .feature-card:hover {
   transform: translateY(-6px);
-  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  /* box-shadow: 0 8px 20px rgba(0,0,0,0.1); */
+  border: 0.5px solid #3fce71;
 }
 
 

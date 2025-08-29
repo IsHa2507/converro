@@ -5,6 +5,7 @@ import AboutValues from "./AboutValues";
 import Differentstory from "./Differentstory";
 import CTA from "../components/CTA";
 import Footer from "../components/Footer";
+import MissionIdeaSection from "./MissionIdeas";
 
 const AboutUs = () => {
   return (
@@ -101,6 +102,7 @@ const AboutUs = () => {
 </section>
 <AboutValues/>
 <Differentstory/>
+<MissionIdeaSection/>
 <CTA/>
 <Footer/>
     </>

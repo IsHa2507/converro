@@ -13,7 +13,8 @@
   background: #fff;
   border-radius: 32px;
   overflow: hidden;
-  box-shadow: 0 6px 24px rgba(0,0,0,0.08);
+  border: 1px solid #e5e7eb;
+  /* box-shadow: 0 6px 24px rgba(0,0,0,0.08); */
   height: 474px; /* ✅ fixed height */
 }
 
@@ -139,7 +140,7 @@
 
 .story-wrapper {
   position: relative;   /* allows absolute positioning inside */
-  padding-bottom: 130px; /* add space for button */
+  padding-bottom: 115px; /* add space for button */
   
 }
 
@@ -149,7 +150,7 @@
   left: 50%;
   transform: translateX(-50%);
   text-align: center;
-  margin-top: 40px;
+  margin-top: 30px;
   
 }
 .story-button {

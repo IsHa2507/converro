@@ -37,8 +37,8 @@ const Features = () => {
      <section className="features-bg">
   <div className="features-wrapper">
     <h2 className="features-heading">
-      <span className="black-text">Our</span>{" "}
-      <span className="green-text">Values</span>
+      <span className="black-text">Our Values </span>{" "}
+      
     </h2>
 
     <div className="features-section">

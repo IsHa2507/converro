@@ -1,0 +1,66 @@
+/* Common styling */
+.mission-idea-section {
+  max-width: 1200px;
+  margin: 80px auto;
+  padding: 40px 20px;
+  
+  color: #111;
+}
+
+/* Row layout */
+.content-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.content-row.reverse {
+  flex-direction: row-reverse;
+}
+
+/* Text section */
+.text-block {
+  flex: 1;
+}
+
+.text-block h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.text-block p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #333;
+}
+
+/* Image section */
+.image-block {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.image-block img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  object-fit: contain;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .content-row,
+  .content-row.reverse {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .image-block {
+    margin-top: 20px;
+  }
+}
+
+
