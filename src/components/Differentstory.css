@@ -1,9 +1,9 @@
 .story-wrapper {
   background: #fcfbfa;
-  padding: 80px 20px;
+  padding: 50px 20px;
   display: flex;
   justify-content: center;
-  margin-top: -80px;
+  margin-top: -20px;
 }
 
 .story-container {
@@ -137,3 +137,48 @@
   }
 }
 
+.story-wrapper {
+  position: relative;   /* allows absolute positioning inside */
+  padding-bottom: 130px; /* add space for button */
+  
+}
+
+.story-button-wrapper {
+  position: absolute;
+  bottom: 30px;          /* distance from bottom */
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  margin-top: 40px;
+  
+}
+.story-button {
+  background: black;
+  color: white;
+  padding: 14px 26px;
+  border-radius: 40px;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 500;
+  display: inline-flex;   /* ✅ inline-flex so it centers properly */
+  align-items: center;
+  gap: 8px; /* space between text and arrow */
+  transition: all 0.3s ease;
+}
+
+.story-button:hover {
+  background: #3fce71;
+  color: black;
+}
+
+.story-arrow {
+  font-size: 16px;
+  transition: transform 0.3s ease, color 0.3s ease;
+  /* ✅ remove hardcoded white so it inherits from .story-button */
+}
+
+.story-button:hover .story-arrow {
+  transform: rotate(-45deg);
+  color: black;  /* ✅ matches text color on hover */
+}

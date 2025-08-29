@@ -1,5 +1,6 @@
 import React from "react";
 import { FaCheckCircle } from "react-icons/fa";
+import { FiArrowRight } from "react-icons/fi";
 import "./Differentstory.css";
 
 const StorySection = () => {
@@ -63,6 +64,12 @@ const StorySection = () => {
             ))}
           </div>
         </div>
+      </div>
+      {/* ✅ Button outside the box, centered */}
+      <div className="story-button-wrapper">
+        <button className="story-button">Start For Free
+          <FiArrowRight className="story-arrow"/>
+          </button>
       </div>
     </section>
   );
