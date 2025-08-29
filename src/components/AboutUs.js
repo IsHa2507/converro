@@ -6,6 +6,8 @@ import Differentstory from "./Differentstory";
 import CTA from "../components/CTA";
 import Footer from "../components/Footer";
 import MissionIdeaSection from "./MissionIdeas";
+import HandshakeImg from "../images/handshake.svg"; 
+import { FiArrowRight } from "react-icons/fi";
 
 const AboutUs = () => {
   return (
@@ -102,6 +104,31 @@ const AboutUs = () => {
 </section>
 <AboutValues/>
 <Differentstory/>
+{/* <section className="promise-section">
+      <div className="promise-container">
+        <div className="promise-content">
+          <h2 className="promise-title">
+            Our Promise{" "}
+            <img
+              src={HandshakeImg}
+              alt="Handshake"
+              className="promise-image"
+            />
+          </h2>
+          <p className="promise-text">
+            We don’t just provide a CRM, we provide a{" "}
+            <span className="highlight">“partner”</span> in your business growth
+            journey. At Converro, we promise to continuously innovate, listen to
+            our users, and deliver tools that amplify sales and customer
+            engagement.
+          </p>
+        </div>
+        <button className="promise-btn" onClick={()=>window.location.href="https://app.converro.online/register"}>
+          Start For Free 
+          <FiArrowRight className="promise-arrow"/>
+            </button>
+      </div>
+    </section> */}
 <MissionIdeaSection/>
 <CTA/>
 <Footer/>

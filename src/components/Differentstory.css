@@ -2,8 +2,11 @@
   background: #fcfbfa;
   padding: 10px 20px;
   display: flex;
-  justify-content: center;
+  flex-direction: column; /* stack container + promise vertically */
+  align-items: center;
+  justify-content: flex-start;
   margin-top: -40px;
+  gap: 40px; /* spacing between story and promise */
 }
 
 .story-container {
@@ -14,16 +17,15 @@
   border-radius: 32px;
   overflow: hidden;
   border: 1px solid #e5e7eb;
-  /* box-shadow: 0 6px 24px rgba(0,0,0,0.08); */
   height: 474px; /* ✅ fixed height */
 }
 
 /* Left Image */
 .story-image {
-  width: 283px;   /* ✅ fixed width */
+  width: 283px;
   height: auto;
   flex-shrink: 0;
-  padding: 40px 20px 40px 40px; /* don’t shrink below 283px */
+  padding: 40px 20px 40px 40px;
   border-radius: 24px;
 }
 .story-image img {
@@ -40,14 +42,13 @@
   padding: 5px 40px;
   display: flex;
   flex-direction: column;
-  justify-content: center;  /* vertical center */
-  align-items: left;      /* ✅ horizontal center */
-  text-align: left;       /* ✅ center text */
+  justify-content: center;
+  text-align: left;
   height: 100%;
 }
 
 .story-content h2 {
-    text-align: left;
+  text-align: left;
   font-size: 36px;
   font-weight: 700;
   margin-bottom: 10px;
@@ -61,14 +62,13 @@
   color: #4b5563;
   margin-bottom: 30px;
   max-width: 600px;
-  
 }
 
 /* Features List */
 .story-features {
   display: grid;
-  grid-template-columns: 1fr 1fr; /* ✅ 2 columns */
-  gap: 25px 40px; /* row gap + column gap */
+  grid-template-columns: 1fr 1fr;
+  gap: 25px 40px;
 }
 
 .story-feature {
@@ -79,7 +79,7 @@
 
 .story-feature-top {
   display: flex;
-  align-items: center; /* ✅ icon + heading inline */
+  align-items: center;
   gap: 10px;
 }
 
@@ -97,19 +97,11 @@
 }
 
 .story-feature p {
-  font-size: 15px;
+  font-size: 14px;
   color: #555;
   margin: 0;
   line-height: 1.5;
 }
-
-/* Responsive: stack to 1 column on smaller screens */
-@media (max-width: 768px) {
-  .story-features {
-    grid-template-columns: 1fr;
-  }
-}
-
 
 /* Hover effect */
 .story-features li:hover {
@@ -121,7 +113,7 @@
 @media (max-width: 992px) {
   .story-container {
     flex-direction: column;
-    height: auto; /* ✅ allow auto height on tablets */
+    height: auto;
   }
 
   .story-image {
@@ -138,48 +130,98 @@
   }
 }
 
-.story-wrapper {
-  position: relative;   /* allows absolute positioning inside */
-  padding-bottom: 115px; /* add space for button */
-  
+/* ===================== */
+/* PROMISE BLOCK (inside same wrapper) */
+/* ===================== */
+
+.promise-container {
+  max-width: 1080px;
+  width: 100%;
+  background: linear-gradient(
+    0deg,
+    rgba(255, 255, 253, 1) 0%,
+    rgba(255, 249, 210, 1) 100%
+  );
+  border-radius: 24px;
+  padding: 30px 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+  margin-bottom: 30px;
 }
 
-.story-button-wrapper {
-  position: absolute;
-  bottom: 30px;          /* distance from bottom */
-  left: 50%;
-  transform: translateX(-50%);
-  text-align: center;
-  margin-top: 30px;
-  
+.promise-content {
+  max-width: 700px;
 }
-.story-button {
-  background: black;
-  color: white;
-  padding: 14px 26px;
+
+.promise-title {
+  font-size: 20px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: #222;
+}
+
+.promise-image {
+  width: 28px;
+  height: 28px;
+  object-fit: contain;
+}
+
+.promise-text {
+  margin-top: 8px;
+  font-size: 14px;
+  line-height: 1.6;
+  color: #555;
+}
+
+.highlight {
+  font-style: italic;
+  font-weight: 500;
+  color: #111;
+}
+
+.promise-btn {
+  background: #111;
+  color: #fff;
+  padding: 14px 24px;
   border-radius: 40px;
   border: none;
   cursor: pointer;
-  font-size: 16px;
+  font-size: 1rem;
   font-weight: 500;
-  display: inline-flex;   /* ✅ inline-flex so it centers properly */
+  display: flex;
   align-items: center;
-  gap: 8px; /* space between text and arrow */
+  gap: 8px;
   transition: all 0.3s ease;
 }
 
-.story-button:hover {
+.promise-btn:hover {
   background: #3fce71;
   color: black;
 }
 
-.story-arrow {
+.promise-arrow {
   font-size: 16px;
+  color: white;
   transition: transform 0.3s ease, color 0.3s ease;
-  /* ✅ remove hardcoded white so it inherits from .story-button */
 }
 
-.story-button:hover .story-arrow {
+.promise-btn:hover .promise-arrow {
   transform: rotate(-45deg);
-  color: black;  /* ✅ matches text color on hover */
+  color: black;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .promise-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .promise-btn {
+    margin-top: 20px;
+  }
 }
