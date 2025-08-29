@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { FiPlus } from "react-icons/fi";
 import "./FinanceSection.css";
-
+import { FiArrowRight } from "react-icons/fi";
 // replace these with your real images
 import img1 from "../assets/finance1.png";
 import img2 from "../assets/finance2.png";
@@ -79,7 +79,12 @@ const FinanceSection = () => {
             </div>
           ))}
         </div>
-      </div>
+        <button className="finance-btn">
+    Start For Free
+    <FiArrowRight className="finance-arrow"/>
+  </button>
+</div>
+      
     </section>
   );
 };
