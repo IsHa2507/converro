@@ -1,9 +1,9 @@
 .story-wrapper {
   background: #fcfbfa;
-  padding: 50px 20px;
+  padding: 10px 20px;
   display: flex;
   justify-content: center;
-  margin-top: -20px;
+  margin-top: -40px;
 }
 
 .story-container {
@@ -11,7 +11,7 @@
   width: 100%;
   display: flex;
   background: #fff;
-  border-radius: 20px;
+  border-radius: 32px;
   overflow: hidden;
   box-shadow: 0 6px 24px rgba(0,0,0,0.08);
   height: 474px; /* ✅ fixed height */
