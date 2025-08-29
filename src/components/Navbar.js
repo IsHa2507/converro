@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence, color } from "framer-motion";
 import { FiArrowRight } from "react-icons/fi";
 import { 
   TrendingUp, 
@@ -20,20 +20,22 @@ import {
   Zap,
   Phone,
   Car,
+  SprayCan,
 } from "lucide-react";
 import "./Navbar.css";
 import logo from "../assets/logo.svg";
 
 const dropdowns = {
   products: [
-    { title: "Marketing Hub", desc: "Marketing automation software", to: "/products/marketing", icon: TrendingUp, color: "#000" },
-    { title: "Sales Hub", desc: "Sales software", to: "/products/sales", icon: Briefcase, color: "#000" },
-    { title: "Service Hub", desc: "Customer service software", to: "/products/service", icon: Heart, color: "#000" },
-    { title: "Content Hub", desc: "Content marketing software", to: "/products/content", icon: FileText, color: "#000" },
-    { title: "Operations Hub", desc: "Operations software", to: "/products/operations", icon: Settings, color: "#000" },
-    { title: "Commerce Hub", desc: "B2B commerce software", to: "/products/commerce", icon: ShoppingCart, color: "#000" },
-    { title: "Smart CRM", desc: "AI-powered CRM software", to: "/products/smart-crm", icon: Bot, color: "#000" },
-    { title: "Small Business Bundle", desc: "Starter edition for startups and SMBs", to: "/products/small-business", icon: Sprout, color: "#000" },
+    { title: "SMS Marketing", desc: "Reach more customers instantly with targeted SMS campaigns.", to: "/products/marketing", icon: TrendingUp, color: "#000" },
+    { title: "Email Marketing", desc: "Boost engagement and conversions with powerful email campaigns.", to: "/products/sales", icon: Briefcase, color: "#000" },
+    { title: "Automation 360", desc: "Automate workflows and maximize efficiency with ease.", to: "/products/service", icon: Heart, color: "#000" },
+    { title: "WhatsApp Business API", desc: "Connect directly with customers using WhatsApp marketing.", to: "/products/content", icon: FileText, color: "#000" },
+    { title: "IVR Solunion", desc: "Deliver better experiences with interactive voice response.", to: "/products/operations", icon: Settings, color: "#000" },
+    { title: "Google Data Extractor", desc: "Capture leads directly from Google into your CRM.", to: "/products/commerce", icon: ShoppingCart, color: "#000" },
+    { title: "Tasks & Events", desc: "Manage tasks and events seamlessly in one pipeline.", to: "/products/smart-crm", icon: Bot, color: "#000" },
+    { title: "OBD Call", desc: "Make safe, hands-free calls with OBD technology.", to: "/products/small-business", icon: Sprout, color: "#000" },
+    {title:"Invoice & Quotation", desc:"Generate invoices and quotations instantly online.", to: "#", icon: SprayCan, color:"#000"},
   ],
   industries: [
     { title: "Real Estate", desc: "Solutions tailored for real estate businesses", to: "/industries/real-estate", icon: Building2, color: "#000" },
@@ -126,7 +128,7 @@ const Navbar = () => {
                           <div className="product-content">
                             <h4>{item.title}</h4>
                             <p>{item.desc}</p>
-                            <span className="product-link">Free and premium plans</span>
+                            {/* <span className="product-link">Free and premium plans</span> */}
                           </div>
                         </Link>
                       );
