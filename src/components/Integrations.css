@@ -193,8 +193,8 @@
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 .orbit-icons .orbit-icon:nth-child(1) {
-  width: 60px;
-  height: 60px;
+  width: 90px;
+  height: 90px;
   font-size: 24px;
 }
 
@@ -211,8 +211,8 @@
 }
 
 .orbit-icons .orbit-icon:nth-child(4) {
-  width: 75px;
-  height: 75px;
+  width: 85px;
+  height: 85px;
   font-size: 32px;
 }
 
@@ -236,12 +236,12 @@
 
 /* Individual floating animations */
 .orbit-1 {
-  top: 0; left: 50%;
+  top: 0; left: 70%;
   transform: translate(-50%, -50%);
-  animation: float1 2s ease-in-out infinite;
+  animation: float1 3s ease-in-out infinite;
 }
 .orbit-2 {
-  top: 25%; right: 0;
+  top: 35%; right: 10%;
   transform: translate(50%, -50%);
   animation: float2 4s ease-in-out infinite;
 }
@@ -251,12 +251,12 @@
   animation: float3 2s ease-in-out infinite;
 }
 .orbit-4 {
-  bottom: 0; left: 50%;
+  bottom: 10%; left: 50%;
   transform: translate(-50%, 50%);
   animation: float4 3s ease-in-out infinite;
 }
 .orbit-5 {
-  bottom: 25%; left: 0;
+  bottom: 25%; left: 0%;
   transform: translate(-50%, 50%);
   animation: float5 4s ease-in-out infinite;
 }

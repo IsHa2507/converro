@@ -219,8 +219,8 @@ const Navbar = () => {
       {/* Mobile Menu */}
       <div className={`mobile-menu ${menuOpen ? "active" : ""}`}>
         <Link to="/about" onClick={() => setMenuOpen(false)}>About</Link>
-        <Link to="/products" onClick={() => setMenuOpen(false)}>Products</Link>
-        <Link to="/industries" onClick={() => setMenuOpen(false)}>Industries</Link>
+        <Link to="#">Products</Link>
+        <Link to="#" >Industries</Link>
         <Link to="/pricing" onClick={() => setMenuOpen(false)}>Pricing</Link>
         <Link to="/integrations" onClick={() => setMenuOpen(false)}>Integration</Link>
 

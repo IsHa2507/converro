@@ -331,9 +331,9 @@
 }
 
 .product-item:hover {
-  background: #f8fafc;
+  /* background: #f8fafc; */
   
-  transform: translateY(-1px);
+  /* transform: translateY(-1px); */
 }
 
 .product-icon {
@@ -455,7 +455,7 @@
 }
 
 .dropdown-item:hover {
-  background: #f8fafc;
+  /* background: #f8fafc; */
 }
 
 .dropdown-icon {
@@ -526,8 +526,8 @@
 }
 
 .industry-item:hover {
-   background: #f8fafc;
-  transform: translateY(-2px);
+   /* background: #f8fafc; */
+  /* transform: translateY(-2px); */
 }
 
 .industry-icon {
