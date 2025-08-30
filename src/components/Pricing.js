@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { FaCheckCircle, FaTimesCircle } from "react-icons/fa";
+import sparkle from "../images/star.svg"; 
 import "./Pricing.css";
 import Navbar from "../components/Navbar";
 import FAQs from "../components/FAQs";
@@ -38,9 +39,10 @@ const plans = {
       "AI-powered chatbots",
       "Mobile Access to CRM",
       "API Integrations",
-      "Live Support",
+      
     ],
     excludedFeatures: [
+      "Live Support",
       "Geo Tracking",
       "Custom Request",
       "Green Tick Application",
@@ -153,9 +155,11 @@ includedFeatures: [ "Unlimited Lead Management",
       "AI-powered chatbots",
       "Mobile Access to CRM",
       "API Integrations",
-      "Live Support",
+      
     ],
-excludedFeatures: ["Geo Tracking",
+excludedFeatures: [
+  "Live Support",
+  "Geo Tracking",
       "Custom Request",
       "Green Tick Application",
       "White-label Account",
@@ -263,9 +267,11 @@ includedFeatures: ["5 Team Members",
       "AI-powered chatbots",
       "Mobile Access to CRM",
       "API Integrations",
-      "Live Support",
+      
     ],
-excludedFeatures: ["Geo Tracking",
+excludedFeatures: [
+  "Live Support",
+  "Geo Tracking",
       "Custom Request",
       "Green Tick Application",
       "White-label Account",],
@@ -391,7 +397,11 @@ Yearly
     >
       {plan.popular ? (
         <div className="inner-box">
-          <span className="badgeP">Most Popular</span>
+         <div className="badgeP">
+      <img src={sparkle} alt="sparkle" className="icon" />
+      Most Popular 
+      <img src={sparkle} alt="sparkle" className="icon" />
+    </div>
           <h3 className="plan-name">{plan.name}</h3>
           <p className="price">
             {plan.price}{" "}

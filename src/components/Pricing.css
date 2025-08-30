@@ -103,7 +103,7 @@
 }
 
 .pricing-card.highlighted {
-  background-color: rgb(255, 252, 235);
+  background-color: rgb(255, 255, 255);
   border: 2px solid #3fce71;
   border-radius: 20px;
   transform: scale(1.05);
@@ -127,16 +127,29 @@
 
 
 .badgeP {
-  position: relative;
-  top: -40px;
-  left: 29%;
+    position: relative;
+  top: -45px;
+  left: 50%;
+  transform: translateX(-50%);
   background: #3fce71;
-  color: #ffffff;
-  font-size: 1rem;
+  color: #fff;
+  font-size: 0.9rem;
+  font-weight: 600;
   margin-bottom: -20px;
-  padding: 5px 15px;
-  border-radius: 20px;
-  border: 2px solid grey;
+  padding: 6px 16px;
+  border-radius: 9999px; /* pill shape */
+  /* border: 2px solid #2fa95b; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px; /* spacing between images and text */
+  white-space: nowrap;
+  z-index: 5;
+  max-width: 150px;
+}
+.badgeP .icon {
+  width: 16px;  /* adjust size */
+  height: 16px;
 }
 
 .plan-name {
