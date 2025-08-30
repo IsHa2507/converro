@@ -10,7 +10,8 @@ const plans = [
   {
     name: "Pro",
     price: "₹12,999",
-    period: "Yearly",
+    period: "/Yearly",
+    text: "+18% GST",
     description: "Automate Sales, Marketing & close more Deals",
     includedFeatures: [
       "Unlimited Lead Management",
@@ -49,7 +50,8 @@ const plans = [
   {
     name: "Business",
     price: "₹19,999",
-    period: "Yearly",
+    period: "/Yearly",
+    text: "+18% GST",
     description: "Accelerate growth with innovative solutions.",
     includedFeatures: [
       "Unlimited Lead Management",
@@ -85,6 +87,7 @@ const plans = [
     name: "Enterprise",
     price: "Custom Price",
     period: "",
+    
     description: "Build & Organize your Sales Function at your ease.",
     includedFeatures: [
       "Unlimited Lead Management",
@@ -134,19 +137,27 @@ const PricingSection = () => {
 
         {/* Toggle Button */}
         <div className="billing-toggle">
-          <button
-            className={billing === "monthly" ? "active" : ""}
-            onClick={() => setBilling("monthly")}
-          >
-            Monthly
-          </button>
-          <button
-            className={billing === "yearly" ? "active" : ""}
-            onClick={() => setBilling("yearly")}
-          >
-            Yearly
-          </button>
-        </div>
+  <button
+    className={billing === "monthly" ? "active" : ""}
+    onClick={() => setBilling("monthly")}
+  >
+    Quarterly
+  </button>
+  <button
+    className={billing === "quarterly" ? "active" : ""}
+    onClick={() => setBilling("quarterly")}
+  >
+    Half-Yearly
+  </button>
+  <button
+    className={billing === "yearly" ? "active" : ""}
+    onClick={() => setBilling("yearly")}
+  >
+    Yearly
+  </button>
+  <span className={`slider ${billing}`}></span>
+</div>
+
 
         {/* Pricing Cards */}
         <div className="pricing-cards">
@@ -160,10 +171,16 @@ const PricingSection = () => {
       <span className="badge">Most Popular</span>
       <h3 className="plan-name">{plan.name}</h3>
       <p className="price">
-        {plan.price} <span className="period">{plan.period}</span>
+        {plan.price} <span className="period">{plan.period}</span> <span className="txt">{plan.text}</span>
       </p>
-      <p className="desc">{plan.description}</p>
 
+      <p className="desc">{plan.description}</p>
+      
+
+      {/* ✅ Button placed right after description */}
+      <button className="btn">{plan.cta}</button>
+
+      {/* Features after button */}
       <ul className="features">
         {plan.includedFeatures.map((f, i) => (
           <li key={i} className="available">
@@ -176,17 +193,19 @@ const PricingSection = () => {
           </li>
         ))}
       </ul>
-
-      <button className="btn">{plan.cta}</button>
     </div>
   ) : (
     <>
       <h3 className="plan-name">{plan.name}</h3>
       <p className="price">
-        {plan.price} <span className="period">{plan.period}</span>
+        {plan.price} <span className="period">{plan.period}</span>  <span className="txt">{plan.text}</span>
       </p>
       <p className="desc">{plan.description}</p>
 
+      {/* ✅ Button placed right after description */}
+      <button className="btn">{plan.cta}</button>
+
+      {/* Features after button */}
       <ul className="features">
         {plan.includedFeatures.map((f, i) => (
           <li key={i} className="available">
@@ -199,11 +218,10 @@ const PricingSection = () => {
           </li>
         ))}
       </ul>
-
-      <button className="btn">{plan.cta}</button>
     </>
   )}
 </div>
+
 
           ))}
         </div>
