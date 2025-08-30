@@ -190,7 +190,7 @@ const Navbar = () => {
           </div>
 
           <Link to="/pricing">Pricing</Link>
-          <Link to="/integrations">Integration</Link>
+          <Link to="/integrationpage">Integration</Link>
         </nav>
 
         {/* Desktop Buttons */}

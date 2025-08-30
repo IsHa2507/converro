@@ -27,6 +27,7 @@ import MissionIdeaSection from "./components/MissionIdeas";
 import Pricing from "./components/Pricing";
 import AddOns from "./components/AddOns";
 import WhatWeDo from "./components/WhatWeDo";
+import IntegrationPage from "./components/IntegrationPage";
 function App() {
   return (
      <Router>
@@ -39,6 +40,7 @@ function App() {
         <Route path="/contactus" element={<ContactUs/>}/>
         <Route path="/aboutus" element={<AboutUS/>}/>
         <Route path="/pricing" element={<Pricing/>}/>
+        <Route path="/integrationpage" element={<IntegrationPage/>}/>
       </Routes>
     </Router>
   );
