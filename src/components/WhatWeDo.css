@@ -1,0 +1,87 @@
+.whatwedo-section {
+  
+  background: linear-gradient(
+    0deg,
+    rgba(252, 251, 250, 1) 0%,
+    rgba(194, 251, 223, 1) 100%
+  );
+ 
+ 
+  margin: 0 auto;   /* ✅ center the whole section */
+  padding: 60px 20px;
+}
+
+.whatwedo-container {
+  max-width: 1100px;
+  width: 100%;
+  margin: 0 auto;
+  text-align: center; /* ✅ center title + text */
+}
+
+.whatwedo-title {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  margin-top: -10px;
+}
+
+.whatwedo-text {
+  font-size: 1rem;
+  color: #444;
+  line-height: 1.6;
+  max-width: 900px;
+  margin: 0 auto 40px auto; /* ✅ centers text block */
+}
+
+.advantages-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 30px;
+  margin-top: 30px;
+}
+
+.advantages-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* ✅ always 2 columns */
+  gap: 20px 40px;
+  max-width: 1000px; /* ✅ wider, matches section */
+  margin: 0 auto; /* ✅ center grid */
+  text-align: left;
+}
+
+@media (max-width: 768px) {
+  .advantages-grid {
+    grid-template-columns: 1fr; /* ✅ stack on mobile */
+    max-width: 100%;
+  }
+}
+
+.advantage-card {
+  display: flex;
+  align-items: center; /* ✅ icon + text aligned */
+  gap: 15px;
+}
+
+.advantage-icon {
+  font-size: 1.5rem;
+  color: #3fce71;
+  background: #ffffff7d;
+  padding: 10px;
+  border-radius: 8px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.advantage-card h4 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.advantage-card p {
+  font-size: 0.95rem;
+  color: #555;
+  line-height: 1.5;
+}

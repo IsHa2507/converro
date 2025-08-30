@@ -6,6 +6,7 @@ import Differentstory from "./Differentstory";
 import CTA from "../components/CTA";
 import Footer from "../components/Footer";
 import MissionIdeaSection from "./MissionIdeas";
+import WhatWeDo from "./WhatWeDo";
 import HandshakeImg from "../images/handshake.svg"; 
 import { FiArrowRight } from "react-icons/fi";
 
@@ -102,6 +103,7 @@ const AboutUs = () => {
     </div>
   </div>
 </section>
+<WhatWeDo/>
 <AboutValues/>
 <Differentstory/>
 {/* <section className="promise-section">

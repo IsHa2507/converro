@@ -26,6 +26,7 @@ import Differentstory from "./components/Differentstory";
 import MissionIdeaSection from "./components/MissionIdeas";
 import Pricing from "./components/Pricing";
 import AddOns from "./components/AddOns";
+import WhatWeDo from "./components/WhatWeDo";
 function App() {
   return (
      <Router>
