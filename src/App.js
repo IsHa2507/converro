@@ -24,6 +24,7 @@ import AboutUS from "./components/AboutUs";
 import AboutValues from "./components/AboutValues";
 import Differentstory from "./components/Differentstory";
 import MissionIdeaSection from "./components/MissionIdeas";
+import Pricing from "./components/Pricing";
 function App() {
   return (
      <Router>
@@ -35,6 +36,7 @@ function App() {
         <Route path="/refundpolicy" element={<RefundPolicy />} />
         <Route path="/contactus" element={<ContactUs/>}/>
         <Route path="/aboutus" element={<AboutUS/>}/>
+        <Route path="/pricing" element={<Pricing/>}/>
       </Routes>
     </Router>
   );
