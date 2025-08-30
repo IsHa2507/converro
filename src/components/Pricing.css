@@ -108,7 +108,7 @@
   border-radius: 20px;
   transform: scale(1.05);
   transition: transform 0.3s ease;
-  animation: glowBorder 2s infinite alternate;
+  /* animation: glowBorder 2s infinite alternate; */
 }
 .pricing-card.highlighted:hover {
   transform: scale(1.05) translateY(-8px);
