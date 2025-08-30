@@ -5,6 +5,7 @@ import Navbar from "../components/Navbar";
 import FAQs from "../components/FAQs";
 import CTA from "../components/CTA";
 import Footer from "../components/Footer";
+import AddOns from "./AddOns";
 
 const plans = [
   {
@@ -168,7 +169,7 @@ const PricingSection = () => {
 >
   {plan.popular ? (
     <div className="inner-box">
-      <span className="badge">Most Popular</span>
+      <span className="badgeP">Most Popular</span>
       <h3 className="plan-name">{plan.name}</h3>
       <p className="price">
         {plan.price} <span className="period">{plan.period}</span> <span className="txt">{plan.text}</span>
@@ -226,6 +227,7 @@ const PricingSection = () => {
           ))}
         </div>
       </section>
+      <AddOns/>
       <FAQs />
       <CTA />
       <Footer />

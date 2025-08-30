@@ -1,0 +1,81 @@
+.addons-container {
+  max-width: 1100px;
+  margin: 40px auto;
+  padding: 10px 30px;
+  background: #fff;
+  border-radius: 12px;
+  border: 1px solid #e5e7eb;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.addons-container:hover {
+  border: 0.5px solid #3fce71;
+}
+
+.addons-heading {
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #111;
+  line-height: 1.6;
+
+  /* Line below heading */
+  border-bottom: 1px solid #eee;
+  padding-bottom: 12px;
+}
+
+.addons-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.addon-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;   /* ✅ keeps price centered with description */
+  border-top: 1px solid #eee;
+  padding: 18px 0;
+}
+
+.addon-card:first-child {
+  border-top: none;
+}
+
+.addon-content {
+  max-width: 75%;
+}
+
+.addon-title {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 6px;
+  color: #000;
+  line-height: 1.6;
+}
+
+.addon-description {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #555;
+  max-width: 700px;
+}
+
+.addon-price {
+  background: #000;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 10px 18px;
+  border-radius: 30px;
+  min-width: 120px;
+  text-align: center;
+  transition: all 0.3s ease;
+
+  /* ✅ gives a little breathing space so it aligns visually */
+  margin-top: 6px;
+}
+
+.addon-price:hover {
+  background: #3fce71;
+  color: #000;
+}
