@@ -99,7 +99,7 @@ const StorySection = () => {
         (window.location.href = "https://app.converro.online/register")
       }
     >
-      Start For Free
+      Start Free Trial
       <FiArrowRight className="promise-arrow" />
     </button>
   </div>

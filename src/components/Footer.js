@@ -30,7 +30,7 @@ export default function Footer() {
 
     {/* Links */}
     <div className="footer-links">
-      <div>
+      {/* <div>
         <h3>Quick Links</h3>
         <ul>
           <li><a href="#">Whatsapp API</a></li>
@@ -41,7 +41,7 @@ export default function Footer() {
           <li><a href="#">Task Manager</a></li>
           
         </ul>
-      </div>
+      </div> */}
       <div>
         <h3>Main Pages</h3>
         <ul>
@@ -50,7 +50,7 @@ export default function Footer() {
           <li><a href="/pricing">Pricing</a></li>
           <li><a href="#">Products</a></li>
           <li><a href="#">Industries</a></li>
-          <li><a href="#">Blog</a></li>
+          {/* <li><a href="#">Blog</a></li> */}
           <li><a href="/contactus">Contact Us</a></li>
         </ul>
       </div>

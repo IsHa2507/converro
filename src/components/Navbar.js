@@ -206,7 +206,7 @@ const Navbar = () => {
   Login
 </button>
           <button className="btn-glossy"
-          onClick={()=>window.location.href="https://app.converro.online/register"}>Start for Free
+          onClick={()=>window.location.href="https://app.converro.online/register"}>Start Free Trial
             <FiArrowRight className="nav-arrow"/>
           </button>
         </div>
@@ -228,7 +228,7 @@ const Navbar = () => {
         <Link to="/integrations" onClick={() => setMenuOpen(false)}>Integration</Link>
 
         <button className="btn-outline" onClick={() => setMenuOpen(false)}>Login</button>
-        <button className="btn-glossy" onClick={() => setMenuOpen(false)}>Start for Free</button>
+        <button className="btn-glossy" onClick={() => setMenuOpen(false)}>Start Free Trial</button>
       </div>
     </header>
   );

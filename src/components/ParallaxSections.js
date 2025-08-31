@@ -153,7 +153,7 @@ const scrollToBlock = (index) => {
 )}
   {/* Optional button */}
   <button className="parallax-btn" onClick={()=>window.location.href="https://app.converro.online/register"}>
-    Start For Free
+    Start Free Trial
     
       <FiArrowRight className="parallax-arrow" />
     
