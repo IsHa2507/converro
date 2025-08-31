@@ -1,42 +1,40 @@
 import React from "react";
 import "./Integrations.css";
-import { FaSlack, FaFigma, FaGoogle, FaTrello, FaFacebook, FaTwitter, FaGithub, FaLinkedin } from "react-icons/fa";
-
-
 import { FiArrowRight } from "react-icons/fi";
 import { useNavigate } from "react-router-dom";
 
 const Integrations = () => {
   const integrations = [
-    { name: "Slack", icon: <FaSlack />, color: "#5f2b60ff" },
-    { name: "Figma", icon: <FaFigma />, color: "#F24E1E" },
-    { name: "Google", icon: <FaGoogle />, color: "#4285F4" },
-    { name: "Trello", icon: <FaTrello />, color: "#0079BF" },
-    { name: "Facebook", icon: <FaFacebook />, color: "#1877F2" },
-    { name: "Twitter", icon: <FaTwitter />, color: "#1DA1F2" },
-     { name: "GitHub", icon: <i className="fab fa-github" />, color: "#333" },
-  { name: "LinkedIn", icon: <i className="fab fa-linkedin" />, color: "#0A66C2" },
-  {name:"Whatsapp", icon: <i classname="fab fa-whatsapp"/>,color:"#3fce71"},
+    { name: "Webhooks", icon: require("../integrationimages/webhooks.png"), color: "#5f2b60ff" },
+    { name: "Housing", icon: require("../integrationimages/housing.png"), color: "#F24E1E" },
+    { name: "Google Ads", icon: require("../integrationimages/gads.png"), color: "#4285F4" },
+    { name: "Dubizell", icon: require("../integrationimages/dubizell.png"), color: "#0079BF" },
+    { name: "Facebook", icon: require("../integrationimages/facebook.png"), color: "#1877F2" },
+    { name: "Zapier", icon: require("../integrationimages/zapeir.png"), color: "#1DA1F2" },
+    { name: "Bayut", icon: require("../integrationimages/bayut.png"), color: "#333" },
+    { name: "Google Sheets", icon: require("../integrationimages/gsheet.png"), color: "#0A66C2" },
+    { name: "WhatsApp", icon: require("../integrationimages/whatsapp.png"), color: "#3fce71" },
   ];
-const navigate = useNavigate();
+
+  const navigate = useNavigate();
+
   return (
     <section className="orbit-section">
       {/* Left Content */}
       <div className="orbit-content">
         <h2>
-          Explore <span>Integrations</span>
+          Seamless<span> Connections</span>, Endless Possibilities
         </h2>
         <p>
-          Our integrations make it easy to work with the applications your team
-          already loves.
+         Converro integrates with your favorite apps ads, email, messaging, and productivity tools so your team can capture leads, communicate, and collaborate without switching platforms.
         </p>
-         <button
-      className="orbit-btn"
-      onClick={() => navigate("/integrationpage")} 
-    >
-      Explore
-      <FiArrowRight className="integrations-arrow" />
-    </button>
+        <button
+          className="orbit-btn"
+          onClick={() => navigate("/integrationpage")}
+        >
+          Explore
+          <FiArrowRight className="integrations-arrow" />
+        </button>
       </div>
 
       {/* Orbit Center & Icons */}
@@ -59,12 +57,12 @@ const navigate = useNavigate();
               className={`orbit-icon orbit-${i + 1}`}
               style={{
                 "--orbit-color": item.color,
-                "--orbit-radius": `${80 + i * 40}px`, // different radius per icon
-                "--orbit-speed": `${6 + i * 2}s` // different rotation speed
+                "--orbit-radius": `${80 + i * 40}px`,
+                "--orbit-speed": `${6 + i * 2}s`,
               }}
               title={item.name}
             >
-              {item.icon}
+              <img src={item.icon} alt={item.name} className="orbit-img" />
             </div>
           ))}
         </div>

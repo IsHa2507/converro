@@ -192,6 +192,11 @@
   font-size: 28px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
+.orbit-img {
+  width: 60px;   /* adjust size */
+  height: 60px;
+  object-fit: contain;
+}
 .orbit-icons .orbit-icon:nth-child(1) {
   width: 90px;
   height: 90px;
