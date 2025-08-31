@@ -20,6 +20,11 @@
   color: #111;
 }
 
+.integrations-title span {
+  color: #3fce71;
+}
+
+
 .integrations-subtitle {
   font-size: 1.1rem;
   color: #555;
