@@ -5,14 +5,14 @@ import { useNavigate } from "react-router-dom";
 
 const Integrations = () => {
   const integrations = [
-    { name: "Webhooks", icon: require("../integrationimages/webhooks.png"), color: "#5f2b60ff" },
-    { name: "Housing", icon: require("../integrationimages/housing.png"), color: "#F24E1E" },
-    { name: "Google Ads", icon: require("../integrationimages/gads.png"), color: "#4285F4" },
-    { name: "Dubizell", icon: require("../integrationimages/dubizell.png"), color: "#0079BF" },
-    { name: "Facebook", icon: require("../integrationimages/facebook.png"), color: "#1877F2" },
-    { name: "Zapier", icon: require("../integrationimages/zapeir.png"), color: "#1DA1F2" },
-    { name: "Bayut", icon: require("../integrationimages/bayut.png"), color: "#333" },
-    { name: "Google Sheets", icon: require("../integrationimages/gsheet.png"), color: "#0A66C2" },
+    { name: "Webhooks", icon: require("../integrationimages/magicbricks.png"), color: "#3fce71" },
+    { name: "Housing", icon: require("../integrationimages/indiamart.png"), color: "#3fce71" },
+    { name: "Google Ads", icon: require("../integrationimages/gads.png"), color: "#3fce71" },
+    { name: "Dubizell", icon: require("../integrationimages/justdail.png"), color: "#3fce71" },
+    { name: "Facebook", icon: require("../integrationimages/wordpress.png"), color: "#3fce71" },
+    { name: "Zapier", icon: require("../integrationimages/zapeir.png"), color: "#3fce71" },
+    { name: "Bayut", icon: require("../integrationimages/propertyfinder.png"), color: "#3fce71" },
+    { name: "Google Sheets", icon: require("../integrationimages/99.png"), color: "#3fce71" },
     { name: "WhatsApp", icon: require("../integrationimages/whatsapp.png"), color: "#3fce71" },
   ];
 
