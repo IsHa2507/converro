@@ -70,15 +70,7 @@
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.06);
 }
 
-.integration-card .icon {
-  margin-bottom: -40px;
-}
 
-.integration-card .icon img {
-  width: 40px;
-  height: 40px;
-  object-fit: contain;
-}
 
 .integration-header {
  display: flex;
@@ -121,6 +113,26 @@
   background: #e6f9ec;
   color: #28a745;
   border: 1px solid #28a745;
+}
+
+
+.icon img {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  margin-bottom: -40px;
+}
+
+.placeholder-icon {
+  width: 50px;
+  height: 50px;
+  background: #eee;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  font-weight: bold;
+  color: #666;
 }
 
 /* .integration-card.highlight {
