@@ -1,11 +1,10 @@
 .integrations-section {
   text-align: center;
   padding: 100px 20px;
-   background: linear-gradient(
+  background: linear-gradient(
     0deg,
     rgba(255, 255, 255, 1) 0%,
     rgba(194, 251, 223, 1) 100%
-    
   );
 }
 
@@ -51,20 +50,18 @@
   }
 }
 
-
 .integration-card {
   background: #fff;
   border-radius: 12px;
-  
   padding: 25px;
   min-height: 240px;
   text-align: left;
   transition: all 0.3s ease;
   border: 1px solid rgb(239, 237, 237);
-  
-  display: flex;              /* 🔹 make flexbox */
-  flex-direction: column;     /* 🔹 stack vertically */
-  justify-content: space-between; /* 🔹 push desc to bottom */
+
+  display: flex;              /* flex layout */
+  flex-direction: column;     /* stack vertically */
+  justify-content: space-between; /* desc at bottom */
 }
 
 .integration-card:hover {
@@ -74,21 +71,56 @@
 }
 
 .integration-card .icon {
-  font-size: 2rem;
   margin-bottom: -40px;
 }
 
+.integration-card .icon img {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+}
+
+.integration-header {
+ display: flex;
+  align-items: center;
+  justify-content: flex-start; /* ✅ keep name + badge close */
+  gap: 8px; /* ✅ small space between name and badge */
+}
+
 .integration-card h3 {
-  font-size: 24px;
+  font-size: 20px;
   font-weight: 600;
-  margin-bottom: 10px;
+  margin: 0;
   color: #222;
 }
 
-.integration-card p {
-  font-size: 1rem;
-  line-height: 1.5;
-  color: #666;
+/* BadgeI styles */
+.badgeI {
+  padding: 3px 10px;
+  border-radius: 24px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  white-space: nowrap; /* prevents text wrap */
+}
+
+/* Colors for badgeI */
+.badgeI.pro {
+  background: #e7f1ff;
+  color: #007bff;
+  border: 1px solid #007bff;
+}
+
+.badgeI.business {
+  background: #fff6d5;
+  color: #b8860b;
+  border: 1px solid #ffd700;
+}
+
+.badgeI.free {
+  background: #e6f9ec;
+  color: #28a745;
+  border: 1px solid #28a745;
 }
 
 /* .integration-card.highlight {
@@ -96,3 +128,77 @@
   background: #fff9f8;
 } */
 
+.alert-section {
+  padding: 30px 20px;
+  display: flex;
+  justify-content: center;
+  margin-top: -35px;
+}
+
+.alert-box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: rgba(255, 249, 210, 1) ; /* light blue background */
+  color: #0c2d57; /* dark blue text */
+  padding: 25px 20px;
+  border-radius: 16px;
+  font-size: 15px;
+  max-width: 1000px;
+  width: 100%;
+  
+}
+
+.alert-icon {
+  color: #e02424; /* red warning icon */
+  font-size: 20px;
+  margin-right: 10px;
+}
+
+.alert-text {
+  flex: 1;
+  margin: 0;
+  color: #0c2d57;
+  
+  text-align: left;
+  
+}
+
+.alert-text strong {
+  font-weight: 600;
+  font-size: larger;
+}
+
+.alert-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.alert-btn {
+  background: #000000;
+  color: #fff;
+  padding: 6px 14px;
+  border-radius: 40px;
+  font-size: 14px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.alert-btn:hover {
+ background: #3fce71;
+  color: black;
+}
+
+.alert-close {
+  background: transparent;
+  border: none;
+  color: #555;
+  cursor: pointer;
+  font-size: 20px;
+  transition: color 0.2s ease;
+}
+
+.alert-close:hover {
+  color: #000;
+}
