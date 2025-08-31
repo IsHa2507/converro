@@ -310,7 +310,7 @@ const Integrations = () => {
       <Navbar />
       <section className="integrations-section">
         <div className="integrations-container">
-          <h2 className="integrations-title">Over More Than<span> 100+</span>Integrations</h2>
+          <h2 className="integrations-title"> More Than<span> 100+ </span>Integrations</h2>
           <p className="integrations-subtitle">
             Our platform seamlessly integrates with the tools your team already
             uses — from CRMs and email clients.

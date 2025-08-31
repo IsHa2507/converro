@@ -4,7 +4,12 @@
 .contact-container {
   position: relative;
   max-width: 100%;
-  background-image: url("../assets/bg_Background.jpg");
+  /* background-image: url("../assets/bg_Background.jpg"); */
+  background: linear-gradient(
+    0deg,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(194, 251, 223, 1) 100%
+  );
   background-size: cover;
   background-position: center;
   padding: 80px 24px;
@@ -41,7 +46,7 @@
 }
 
 .main-title {
-  font-size: 3.75rem;
+  font-size: 2.8rem;
   font-weight: 700;
   color: #1f2937;
   margin-bottom: 24px;
@@ -50,7 +55,7 @@
 }
 
 .subtitle {
-  font-size: 1.125rem;
+  font-size: 1.1rem;
   color: #4b5563;
   line-height: 1.7;
   margin: 0;
@@ -255,4 +260,64 @@ margin-top: 25px;
   .form-container {
     padding: 20px;
   }
+}
+/* Common Input Styles */
+.form-input {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 15px;
+  transition: all 0.3s ease;   /* smooth transition */
+  background: #fff;
+  outline: none;
+}
+
+/* On Focus */
+.form-input:focus {
+  border-color: #3fce71;
+  box-shadow: 0 0 8px rgba(63, 206, 113, 0.35);
+  transform: scale(1.02);      /* slight zoom */
+}
+
+/* Dropdown Styling */
+select.form-input {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background: #fff
+    url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20width%3D'10'%20height%3D'6'%20xmlns%3D'http://www.w3.org/2000/svg'%3E%3Cpath%20d%3D'M0%200l5%206%205-6z'%20fill%3D'%23333'/%3E%3C/svg%3E")
+    no-repeat right 12px center;
+  background-size: 12px;
+  padding-right: 35px;
+  cursor: pointer;
+  transition: all 0.3s ease;  /* smooth hover/focus */
+}
+
+/* Hover effect */
+select.form-input:hover {
+  border-color: #3fce71;
+  box-shadow: 0 0 6px rgba(63, 206, 113, 0.25);
+}
+
+/* Disabled state */
+select.form-input:disabled {
+  background-color: #f8f8f8;
+  cursor: not-allowed;
+}
+.required {
+  color: red;
+  font-weight: bold;
+}
+
+.error-message {
+  color: red;
+  font-size: 13px;
+  margin-top: 4px;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-3px); }
+  to { opacity: 1; transform: translateY(0); }
 }
