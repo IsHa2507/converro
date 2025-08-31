@@ -118,7 +118,8 @@ const Navbar = () => {
 
                  <div className="products-grid">
   {dropdowns.products.map((item, i) => (
-    <Link key={i} to={item.to} className="product-item">
+    // <Link key={i} to={item.to} className="product-item">   // ⛔ commented out
+    <div key={i} className="product-item">   {/* ✅ temporary non-clickable */}
       <div className="product-icon">
         <img src={item.image} alt={item.title} />
       </div>
@@ -126,7 +127,7 @@ const Navbar = () => {
         <h4>{item.title}</h4>
         <p>{item.desc}</p>
       </div>
-    </Link>
+    </div>
   ))}
 </div>
 
@@ -175,14 +176,16 @@ const Navbar = () => {
                   <h3>For Calling & WhatsApp Based Sales Teams</h3>
                   <div className="industries-grid">
   {dropdowns.industries.map((item, i) => (
-    <Link key={i} to={item.to} className="industry-item">
+    // <Link key={i} to={item.to} className="industry-item">   // ⛔ commented out
+    <div key={i} className="industry-item">   {/* ✅ non-clickable */}
       <div className="industry-icon">
         <img src={item.image} alt={item.title} />
       </div>
       <span>{item.title}</span>
-    </Link>
+    </div>
   ))}
 </div>
+
 
                 </motion.div>
               )}
