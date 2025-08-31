@@ -45,9 +45,9 @@ export default function Footer() {
       <div>
         <h3>Main Pages</h3>
         <ul>
-          <li><a href="#">Home</a></li>
-          <li><a href="#">About</a></li>
-          <li><a href="#">Pricing</a></li>
+          <li><a href="/">Home</a></li>
+          <li><a href="/aboutus">About</a></li>
+          <li><a href="/pricing">Pricing</a></li>
           <li><a href="#">Products</a></li>
           <li><a href="#">Industries</a></li>
           <li><a href="#">Blog</a></li>
