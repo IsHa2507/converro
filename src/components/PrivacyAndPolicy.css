@@ -2,11 +2,14 @@
 .privacy-page {
   background-color: #fff;
   color: #1f2937;
+  margin-top: 100px;
+ 
   
 }
 
 /* Main content container */
 .privacy-heading {
+  margin-top: 80px;
   max-width: 1200px;    /* lock width */
   margin: 0 200px;      /* center horizontally */
   padding: 60px 24px;   /* spacing inside */

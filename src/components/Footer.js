@@ -57,11 +57,11 @@ export default function Footer() {
       <div>
         <h3>Important</h3>
         <ul>
-          <li><a href="#">FAQs</a></li>
+          {/* <li><a href="#">FAQs</a></li> */}
           <li><a href="/termsandconditions">Terms & Conditions</a></li>
           <li><a href="/privacypolicy">Privacy Policy</a></li>
           <li><a href="/refundpolicy">Refund Policy</a></li>
-          <li><a href="#">Support</a></li>
+          <li><a href="/contactus">Support</a></li>
           
         </ul>
       </div>
