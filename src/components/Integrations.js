@@ -1,18 +1,24 @@
 import React from "react";
 import "./Integrations.css";
-import { FaSlack, FaFigma, FaGoogle, FaTrello, FaFacebook, FaTwitter } from "react-icons/fa";
+import { FaSlack, FaFigma, FaGoogle, FaTrello, FaFacebook, FaTwitter, FaGithub, FaLinkedin } from "react-icons/fa";
+
+
 import { FiArrowRight } from "react-icons/fi";
+import { useNavigate } from "react-router-dom";
 
 const Integrations = () => {
   const integrations = [
-    { name: "Slack", icon: <FaSlack />, color: "#4A154B" },
+    { name: "Slack", icon: <FaSlack />, color: "#5f2b60ff" },
     { name: "Figma", icon: <FaFigma />, color: "#F24E1E" },
     { name: "Google", icon: <FaGoogle />, color: "#4285F4" },
     { name: "Trello", icon: <FaTrello />, color: "#0079BF" },
     { name: "Facebook", icon: <FaFacebook />, color: "#1877F2" },
     { name: "Twitter", icon: <FaTwitter />, color: "#1DA1F2" },
+     { name: "GitHub", icon: <i className="fab fa-github" />, color: "#333" },
+  { name: "LinkedIn", icon: <i className="fab fa-linkedin" />, color: "#0A66C2" },
+  {name:"Whatsapp", icon: <i classname="fab fa-whatsapp"/>,color:"#3fce71"},
   ];
-
+const navigate = useNavigate();
   return (
     <section className="orbit-section">
       {/* Left Content */}
@@ -24,10 +30,13 @@ const Integrations = () => {
           Our integrations make it easy to work with the applications your team
           already loves.
         </p>
-        <button className="orbit-btn">
-          Explore
-          <FiArrowRight className="integrations-arrow" />
-        </button>
+         <button
+      className="orbit-btn"
+      onClick={() => navigate("/integrationpage")} 
+    >
+      Explore
+      <FiArrowRight className="integrations-arrow" />
+    </button>
       </div>
 
       {/* Orbit Center & Icons */}

@@ -297,3 +297,54 @@
   50% { transform: translate(-50%, -60%); }
 }
 
+.orbit-icons .orbit-icon:nth-child(7) {
+  width: 65px;
+  height: 65px;
+  font-size: 26px;
+}
+
+.orbit-icons .orbit-icon:nth-child(8) {
+  width: 75px;
+  height: 75px;
+  font-size: 24px;
+}
+.orbit-icons .orbit-icon:nth-child(9) {
+  width: 50px;
+  height: 50px;
+  font-size: 28px;
+}
+
+/* Random floating positions */
+.orbit-7 {
+  top: 20%; right: 60%;
+  transform: translate(50%, -50%);
+  animation: float7 3s ease-in-out infinite;
+}
+
+.orbit-8 {
+  bottom: 35%; left: 30%;
+  transform: translate(-50%, 50%);
+  animation: float8 4s ease-in-out infinite;
+}
+.orbit-9 {
+  top: 60%; left: 75%;
+  transform: translate(-50%, -50%);
+  animation: float9 3.5s ease-in-out infinite;
+}
+
+
+
+/* Keyframes */
+@keyframes float7 {
+  0%, 100% { transform: translate(50%, -50%); }
+  50% { transform: translate(55%, -45%); }
+}
+
+@keyframes float8 {
+  0%, 100% { transform: translate(-50%, 50%); }
+  50% { transform: translate(-55%, 55%); }
+}
+@keyframes float9 {
+  0%, 100% { transform: translate(-50%, -50%); }
+  50% { transform: translate(-55%, -45%); }
+}

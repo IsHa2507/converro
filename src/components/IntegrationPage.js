@@ -312,12 +312,12 @@ const Integrations = () => {
         </p>
 
         <div className="alert-actions">
-          <a href="/contact" className="alert-btn">
+          <a href="/contactus" className="alert-btn">
             Contact Us
           </a>
-          <button className="alert-close" onClick={() => setVisible(false)}>
+          {/* <button className="alert-close" onClick={() => setVisible(false)}>
             
-          </button>
+          </button> */}
         </div>
       </div>
     </section>
