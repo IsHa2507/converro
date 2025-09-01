@@ -27,7 +27,7 @@ const HeroSection = () => {
 
           {/* Buttons */}
           <div className="hero-buttons">
-            <button className="btn-primary">
+            <button className="btn-primary" onClick={()=>window.location.href="https://app.converro.online/register"}>
               Start Free Trial
               <span className="arrow-circle" onClick={()=>window.location.href="https://app.converro.online/register"}>
                 <FiArrowRight className="arrow" />
