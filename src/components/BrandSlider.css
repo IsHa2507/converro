@@ -5,21 +5,20 @@
   padding: 30px 0;
   margin: 60px auto;
 }
+
 .branding-container h1 {
   font-size: 2rem;
   font-weight: 500;
-  color: #111827; /* normal text color */
+  color: #111827;
   text-align: center;
   margin-bottom: 40px;
 }
 
 .highlighted-text {
-  color: #2563eb;      /* unique color */
+  color: #2563eb;
   font-weight: 700;
-   /* subtle background highlight */
-  padding: 2px 8px;    /* spacing inside the highlight */
+  padding: 2px 8px;
   border-radius: 6px;
-  
 }
 
 .logo-row {
@@ -71,5 +70,61 @@
   }
   to {
     transform: translateX(-100%);
+  }
+}
+
+/* =====================
+   RESPONSIVE STYLES
+===================== */
+
+/* Tablets */
+@media (max-width: 1024px) {
+  .branding-container h1 {
+    font-size: 1.75rem;
+  }
+  .logo-box {
+    min-width: 130px;
+    min-height: 90px;
+  }
+  .logo-box img {
+    max-width: 100px;
+    max-height: 40px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .branding-container h1 {
+    font-size: 1.5rem;
+    margin-bottom: 25px;
+  }
+  .logo-row {
+    gap: 15px;
+  }
+  .logo-box {
+    min-width: 110px;
+    min-height: 80px;
+    padding: 6px 10px;
+  }
+  .logo-box img {
+    max-width: 80px;
+    max-height: 35px;
+  }
+}
+
+/* Small phones */
+@media (max-width: 480px) {
+  .branding-container h1 {
+    font-size: 1.25rem;
+  }
+  .logo-box {
+    min-width: 90px;
+    min-height: 65px;
+    padding: 5px 8px;
+    border-radius: 12px;
+  }
+  .logo-box img {
+    max-width: 65px;
+    max-height: 30px;
   }
 }
