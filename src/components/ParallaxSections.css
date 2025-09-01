@@ -178,3 +178,73 @@
   background: #10b981; /* green */
   transform: scale(1.3);
 }
+/* Existing desktop/tablet styles remain unchanged */
+/* ...your current CSS above... */
+
+/* ✅ Responsive for Mobile */
+@media (max-width: 768px) {
+  .parallax-container {
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+  }
+
+  /* Green box becomes image wrapper on top */
+  .parallax-green-box {
+    position: relative;
+    top: 0;
+    margin-top: 0;
+    width: 100%;
+    height: auto;
+    background-image: none; /* remove green bg */
+    background: transparent;
+  }
+
+  .image-wrapper {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+  }
+
+  .content-img {
+    position: relative;
+    width: 100%;
+    height: auto;
+  }
+
+  /* Text below image, centered */
+  .parallax-text-sections {
+    width: 100%;
+    flex-direction: row;         /* row for slider effect */
+    overflow-x: auto;            /* horizontal scroll */
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    gap: 16px;
+  }
+
+  .parallax-text-block {
+    min-width: 100%;
+    flex: 0 0 100%;
+    scroll-snap-align: start;
+    text-align: left;
+    padding: 30px 20px;
+    opacity: 1 !important; /* keep visible for horizontal scroll */
+  }
+
+  /* Dot navigation at bottom center */
+  .dot-navigation {
+    position: relative;
+    flex-direction: row;
+    justify-content: center;
+    gap: 10px;
+    margin: 20px auto 0;
+    transform: none;
+    top: auto;
+    right: auto;
+  }
+
+  .dot {
+    width: 10px;
+    height: 10px;
+  }
+}
