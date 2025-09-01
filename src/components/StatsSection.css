@@ -1,16 +1,165 @@
-.stats-section {
+.stat-section {
+  
+  background: #fff;
+  padding: 60px 20px;
+  
+}
+
+.stat-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px; /* default gap for mobile */
+}
+
+.stat-tag {
+  display: inline-block;
+  padding: 6px 12px;
+  font-size: 13px;
+  max-width: 150px;
+  border: 1px solid #ccc;
+  border-radius: 999px;
+  color: #333;
+  margin-bottom: 16px;
+}
+
+.stat-heading {
+  font-size: 26px;
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+
+.stat-description {
+  font-size: 15px;
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.stat-subheading {
+  font-size: 18px;
+  font-weight: 600;
+  margin: 24px 0 12px;
+}
+
+/* Shared box style */
+.stat-left-box,
+.stat-right-box {
+  background: #f0fdf4;
+  padding: 28px 24px;
+  border-radius: 14px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* Left industries box */
+.stat-left-box .stat-industries-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 14px 20px;
+  margin-top: 12px;
+}
+
+.stat-left-box .stat-industry-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  color: #333;
+}
+
+.stat-left-box .stat-industry-icon {
+  font-size: 18px;
+  color: #3fce71;
+}
+
+/* Right features box */
+.stat-features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+  gap: 16px;
+  flex-grow: 1; /* fills remaining space in box */
+}
+
+.stat-feature-card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 18px 14px;
+  text-align: center;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
+
+  min-height: 100px; /* consistent card height */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.stat-feature-card:hover {
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  transform: translateY(-2px);
+}
+
+.stat-feature-icon {
+  font-size: 22px;
+  color: #3fce71;
+  margin-bottom: 6px;
+}
+
+.stat-feature-card p {
+  font-size: 14px;
+  color: #333;
+}
+
+/* Responsive breakpoints */
+@media (min-width: 768px) {
+  .stat-container {
+    grid-template-columns: 1fr 1fr; /* two equal columns */
+    gap: 20px;
+  }
+
+  .stat-heading {
+    font-size: 30px;
+  }
+}
+
+@media (min-width: 992px) {
+  .stat-container {
+    grid-template-columns: 1.1fr 0.9fr; /* industries slightly wider */
+    gap: 20px; /* reduced gap so boxes stay closer */
+  }
+
+  .stat-heading {
+    font-size: 34px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .stat-container {
+    gap: 24px; /* just enough breathing space */
+  }
+}
+
+
+
+
+
+/* .stats-section {
   position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 60px auto ; /* more top margin to avoid overlap */
+  margin: 60px auto ; 
   margin-top: -15px;
   min-height: 90vh;
   max-width: 1200px;
   opacity: 0;
   transform: translateY(50px);
   transition: opacity 1.2s ease-out, transform 1.2s ease-out;
-  z-index: 2; /* ensures it sits above previous section */
+  z-index: 2;
 }
 
 .stats-section.fade-in {
@@ -21,9 +170,9 @@
 .stats-image {
   max-width: 1200px;
   border-radius: 16px;
-  /* box-shadow: 0px 10px 30px rgba(0,0,0,0.15); */
+  
   display: block;
   
-}
+} */
 
 
