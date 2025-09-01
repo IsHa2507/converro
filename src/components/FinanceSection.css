@@ -7,7 +7,6 @@
   max-width: 1200px;        /* under 1200px, centered */
   margin: 60px auto;
   padding: 64px 20px;
-  
   flex-wrap: wrap;
 }
 
@@ -96,13 +95,12 @@
   bottom: 6px;
   width: 3px;
   border-radius: 6px;
-  
   transform: scaleY(0);
   transform-origin: top;
   transition: transform 0.35s ease;
 }
 
-/* improved hover (richer than before, still subtle) */
+/* improved hover */
 .finance-item:hover {
   transform: translateY(-2px);
   box-shadow: 0 10px 22px rgba(17, 24, 39, 0.08);
@@ -113,7 +111,7 @@
   transform: scaleY(1);
 }
 
-/* Head row (title + icon) */
+/* Head row */
 .finance-item-head {
   display: flex;
   align-items: center;
@@ -128,7 +126,7 @@
   margin: 0;
 }
 
-/* icon behavior matches FAQ vibe but refined */
+/* Icon */
 .finance-item-icon {
   font-size: 1.3rem;
   color: #16a34a;
@@ -139,17 +137,15 @@
   color: #ef4444;
 }
 
-/* Body text with slow, smooth open/close */
+/* Body text */
 .finance-item-text {
   color: #4b5563;
   font-size: 0.98rem;
   line-height: 1.65;
-
   max-height: 0;
   opacity: 0;
   overflow: hidden;
   margin-top: 0;
-
   transition:
     max-height 0.8s ease-in-out,
     opacity 0.8s ease-in-out,
@@ -165,11 +161,10 @@
 .finance-item.active::before {
   transform: scaleY(1);
 }
-
 .finance-item.active .finance-item-text {
-  max-height: 260px; /* adjust for your copy length */
+  max-height: 260px; /* adjust for copy length */
   opacity: 1;
-  margin-top: 10px;  /* space between title and text */
+  margin-top: 10px;
 }
 
 /* Keyboard focus */
@@ -178,7 +173,38 @@
   border-color: #93c5fd;
 }
 
-/* Responsive stack */
+/* Button */
+.finance-btn {
+  align-self: flex-start;
+  background: black;
+  color: white;
+  padding: 14px 20px;
+  border-radius: 40px;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.3s ease;
+}
+.finance-btn:hover {
+  background: #3fce71;
+  color: black;
+}
+.finance-arrow {
+  font-size: 16px;
+  color: white;
+  display: inline-block;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+.finance-btn:hover .finance-arrow {
+  transform: rotate(-45deg);
+  color: #000;
+}
+
+/* Responsive: tablets */
 @media (max-width: 900px) {
   .finance-section {
     gap: 28px;
@@ -193,37 +219,28 @@
     max-width: 520px;
   }
 }
-.finance-btn {
-align-self: flex-start; /* button won’t stretch full width */
-  background: black;
-  color: white;
-  padding: 14px 20px;   /* smaller padding */
-  border-radius: 40px;
-  border: none;
-  cursor: pointer;
-  font-size: 16px;
-  font-weight: 500;
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  transition: all 0.3s ease;
-}
 
-.finance-btn:hover {
- background: #3fce71;
-  color: black;
+/* Responsive: phones */
+@media (max-width: 600px) {
+  .finance-section {
+    flex-direction: column;
+    gap: 24px;
+    padding: 32px 16px;
+  }
+  .finance-title {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+  .finance-subtitle {
+    text-align: center;
+  }
+  .finance-item-title {
+    font-size: 1rem;
+  }
+  .finance-btn {
+    align-self: center;
+    width: 100%;
+    max-width: 280px;
+    justify-content: center;
+  }
 }
-
-/* Arrow styling (rotated -45deg like you use usually) */
-.finance-arrow {
-  font-size: 16px;
-  color: white;
-  display: inline-block; /* needed for rotation */
-  transition: transform 0.3s ease, color 0.3s ease;
-}
-
-.finance-btn:hover .finance-arrow {
-  transform: rotate(-45deg);
-  color: #000;
-}
-
