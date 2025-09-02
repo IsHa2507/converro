@@ -185,6 +185,19 @@
   animation: slideDown 0.3s ease forwards;
 }
 
+/* Mobile menu links */
+.mobile-menu a {
+  text-decoration: none;   /* remove underline */
+  color: #000;             /* match desktop color */
+  font-size: 0.95rem;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.mobile-menu a:hover {
+  color: #616161;          /* same hover as desktop */
+}
+
 @keyframes slideDown {
   from {
     opacity: 0;
