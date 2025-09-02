@@ -1,3 +1,6 @@
+/* ============================= */
+/*   Add-ons Container           */
+/* ============================= */
 .addons-container {
   max-width: 1100px;
   margin: 40px auto;
@@ -11,18 +14,22 @@
   border: 0.5px solid #3fce71;
 }
 
+/* ============================= */
+/*   Heading                     */
+/* ============================= */
 .addons-heading {
   font-size: 36px;
   font-weight: 700;
   margin-bottom: 20px;
   color: #111;
   line-height: 1.6;
-
-  /* Line below heading */
   border-bottom: 1px solid #eee;
   padding-bottom: 12px;
 }
 
+/* ============================= */
+/*   Add-ons List & Card         */
+/* ============================= */
 .addons-list {
   display: flex;
   flex-direction: column;
@@ -32,9 +39,10 @@
 .addon-card {
   display: flex;
   justify-content: space-between;
-  align-items: center;   /* ✅ keeps price centered with description */
+  align-items: center;  /* ✅ price stays vertically centered */
   border-top: 1px solid #eee;
   padding: 18px 0;
+  gap: 20px; /* ✅ prevents overlap */
 }
 
 .addon-card:first-child {
@@ -60,6 +68,9 @@
   max-width: 700px;
 }
 
+/* ============================= */
+/*   Price Pill                  */
+/* ============================= */
 .addon-price {
   background: #000;
   color: #fff;
@@ -70,12 +81,48 @@
   min-width: 120px;
   text-align: center;
   transition: all 0.3s ease;
-
-  /* ✅ gives a little breathing space so it aligns visually */
   margin-top: 6px;
 }
-
 .addon-price:hover {
   background: #3fce71;
   color: #000;
+}
+
+/* ============================= */
+/*   Responsive Design           */
+/* ============================= */
+
+/* ✅ Tablet (≤768px) */
+@media (max-width: 768px) {
+  .addons-heading {
+    font-size: 28px;
+  }
+  .addon-card {
+    flex-direction: column; /* ✅ stack content */
+    align-items: flex-start;
+  }
+  .addon-content {
+    max-width: 100%;
+  }
+  .addon-price {
+    align-self: flex-start; /* ✅ button left-aligned */
+    margin-top: 12px;
+  }
+}
+
+/* ✅ Mobile (≤480px) */
+@media (max-width: 480px) {
+  .addons-heading {
+    font-size: 24px;
+  }
+  .addon-title {
+    font-size: 18px;
+  }
+  .addon-description {
+    font-size: 13px;
+  }
+  .addon-price {
+    width: 100%; /* ✅ full width button */
+    text-align: center;
+  }
 }

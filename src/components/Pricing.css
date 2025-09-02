@@ -1,12 +1,13 @@
+/* ============================= */
+/*   Pricing Section Base        */
+/* ============================= */
 .pricing-section {
   text-align: center;
   padding: 180px 20px 80px 20px;
-  
   background: linear-gradient(
     0deg,
     rgba(255, 255, 255, 1) 0%,
     rgba(194, 251, 223, 1) 100%
-    
   );
   max-width: 100%;
 }
@@ -23,6 +24,10 @@
   color: #555;
   margin-bottom: 40px;
 }
+
+/* ============================= */
+/*   Billing Toggle              */
+/* ============================= */
 .billing-toggle {
   display: inline-flex;
   background: #fff;
@@ -32,12 +37,12 @@
   position: relative;
   overflow: hidden;
   border: 1px solid #ddd;
-  width: 300px; 
-  height:36px;/* ✅ set a fixed total width (adjust as needed) */
+  width: 300px;
+  height: 36px;
 }
 
 .billing-toggle button {
-  flex: 1;                  /* ✅ equal size for all buttons */
+  flex: 1;
   border: none;
   background: transparent;
   border-radius: 50px;
@@ -46,9 +51,9 @@
   color: #333;
   z-index: 2;
   transition: color 0.3s ease;
-  display: flex;            
-  align-items: center;      
-  justify-content: center;  
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .billing-toggle button.active {
@@ -60,7 +65,7 @@
   top: 4px;
   bottom: 4px;
   left: 4px;
-  width: calc((100% - 8px) / 3); /* ✅ equal width for 3 buttons */
+  width: calc((100% - 8px) / 3);
   border-radius: 50px;
   background: #111827;
   transition: transform 0.4s ease;
@@ -77,14 +82,15 @@
   transform: translateX(200%);
 }
 
-
-
+/* ============================= */
+/*   Pricing Cards               */
+/* ============================= */
 .pricing-cards {
   display: flex;
-  padding-top: 25px;
-  gap: 25px;
-  justify-content: center;
   flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px; /* ✅ increased default gap */
+  padding-top: 25px;
 }
 
 .pricing-card {
@@ -92,7 +98,8 @@
   border-radius: 20px;
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
   padding: 30px;
-  width: 300px;
+  flex: 1 1 300px;   /* ✅ flexible, min 300px */
+  max-width: 360px;  /* ✅ prevents oversized cards */
   text-align: left;
   position: relative;
   transition: transform 0.3s ease;
@@ -103,31 +110,20 @@
 }
 
 .pricing-card.highlighted {
-  background-color: rgb(255, 255, 255);
+  background-color: #fff;
   border: 2px solid #3fce71;
-  border-radius: 20px;
   transform: scale(1.05);
   transition: transform 0.3s ease;
-  /* animation: glowBorder 2s infinite alternate; */
 }
 .pricing-card.highlighted:hover {
   transform: scale(1.05) translateY(-8px);
 }
 
-/* Border Glow Animation */
-@keyframes glowBorder {
-  0% {
-    box-shadow: 0 0 8px #5ecf86, 0 0 12px #5ecf86;
-  }
-  100% {
-    box-shadow: 0 0 20px #5ecf86, 0 0 20px #5ecf86;
-  }
-}
-
-
-
+/* ============================= */
+/*   Badge                       */
+/* ============================= */
 .badgeP {
-    position: relative;
+  position: relative;
   top: -45px;
   left: 50%;
   transform: translateX(-50%);
@@ -137,26 +133,27 @@
   font-weight: 600;
   margin-bottom: -20px;
   padding: 6px 16px;
-  border-radius: 9999px; /* pill shape */
-  /* border: 2px solid #2fa95b; */
+  border-radius: 9999px;
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 6px; /* spacing between images and text */
+  gap: 6px;
   white-space: nowrap;
   z-index: 5;
   max-width: 150px;
 }
 .badgeP .icon {
-  width: 16px;  /* adjust size */
+  width: 16px;
   height: 16px;
 }
 
+/* ============================= */
+/*   Card Content                */
+/* ============================= */
 .plan-name {
   font-size: 1.4rem;
   font-weight: 600;
   margin-bottom: 10px;
-  
 }
 
 .price {
@@ -169,22 +166,20 @@
   font-size: 1rem;
   color: #666;
 }
-.txt{
+.txt {
   font-size: 0.7rem;
-  color:#666;
+  color: #666;
 }
 .desc {
   font-size: 0.95rem;
   color: #666;
-  margin-bottom: 15px; /* reduced since button comes next */
+  margin-bottom: 15px;
 }
-
 
 .features {
   list-style: none;
-  margin: 0;
   padding: 0;
-  margin-bottom: 20px;
+  margin: 0 0 20px 0;
 }
 
 .features li {
@@ -206,6 +201,9 @@
   color: #d9534f;
 }
 
+/* ============================= */
+/*   Button                      */
+/* ============================= */
 .btn {
   width: 100%;
   padding: 12px;
@@ -215,7 +213,6 @@
   color: #fff;
   font-weight: 600;
   cursor: pointer;
-  
   margin-bottom: 20px;
   transition: all 0.3s ease;
 }
@@ -225,3 +222,72 @@
   color: black;
 }
 
+/* ============================= */
+/*   Responsive Design           */
+/* ============================= */
+
+/* ✅ Laptop (≤1200px) */
+@media (max-width: 1200px) {
+  .section-title {
+    font-size: 2.2rem;
+  }
+  .pricing-cards {
+    gap: 25px;
+  }
+  .pricing-card {
+    flex: 1 1 45%; /* two cards per row */
+    max-width: 48%;
+  }
+}
+
+/* ✅ Tablet (≤768px) */
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 2rem;
+  }
+  .section-subtitle {
+    font-size: 1rem;
+  }
+  .billing-toggle {
+    width: 260px;
+    height: 34px;
+  }
+  .pricing-cards {
+    flex-direction: column;
+    align-items: center;
+    gap: 32px; /* ✅ extra gap to avoid overlap */
+  }
+  .pricing-card {
+    flex: 1 1 100%; /* single column */
+    max-width: 90%;
+  }
+}
+
+/* ✅ Mobile (≤480px) */
+@media (max-width: 480px) {
+  .section-title {
+    font-size: 1.8rem;
+  }
+  .section-subtitle {
+    font-size: 0.95rem;
+  }
+  .billing-toggle {
+    width: 220px;
+    height: 32px;
+  }
+  .pricing-cards {
+    flex-direction: column;
+    gap: 36px; /* ✅ more spacing for stacked cards */
+  }
+  .pricing-card {
+    flex: 1 1 100%;
+    max-width: 100%;
+    padding: 20px;
+  }
+  .plan-name {
+    font-size: 1.2rem;
+  }
+  .price {
+    font-size: 1.6rem;
+  }
+}
