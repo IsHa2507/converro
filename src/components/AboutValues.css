@@ -1,10 +1,10 @@
 .features-bg {
-  width: 100%;
+  /* width: 100%; */
   background-color: #fcfbfa;   /* full width background */
 }
 
 .features-wrapper {
-  width: 100%;
+  /* width: 100%; */
   max-width: 1200px;           /* content max width */
   margin: 0 auto;              /* center horizontally */
   padding: 30px 20px;

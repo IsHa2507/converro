@@ -11,7 +11,7 @@
 
 .story-container {
   max-width: 1150px;
-  width: 100%;
+ 
   display: flex;
   background: #fff;
   border-radius: 32px;
@@ -136,7 +136,7 @@
 
 .promise-container {
   max-width: 1080px;
-  width: 100%;
+  
   background: linear-gradient(
     0deg,
     rgba(255, 255, 253, 1) 0%,
