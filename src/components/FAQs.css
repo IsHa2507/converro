@@ -60,13 +60,23 @@
   font-size: 1.125rem;
   font-weight: 500;
   color: #111827;
+  gap: 12px; /* space between text and icon */
 }
 
 .faq-icon {
+  width: 28px;   /* fixed width */
+  height: 28px;  /* fixed height */
+  min-width: 28px;
+  min-height: 28px;
   font-size: 1.4rem;
   color: #16a34a;
+  display: flex;
+  justify-content: center;
+  align-items: center; /* keeps the + centered */
   transition: transform 0.3s ease, color 0.3s ease;
+  flex-shrink: 0; /* prevents it from shrinking */
 }
+
 
 .faq-item.active .faq-icon {
   transform: rotate(45deg);
