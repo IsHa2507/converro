@@ -1,19 +1,21 @@
+/* ============================= */
 /* Page background */
+/* ============================= */
 .terms-page {
   background-color: #fff;
   color: #1f2937;
   margin-top: 100px;
-  
 }
 
+/* ============================= */
 /* Main content container */
+/* ============================= */
 .terms-heading {
-  max-width: 1200px;    /* lock width */
-margin: 0 200px;        /* center horizontally */
-  padding: 60px 24px;   /* spacing inside */
+  max-width: 1200px;
+  margin: 0 auto;       /* ✅ center horizontally */
+  padding: 60px 24px;   /* ✅ spacing inside */
   background: #fff;
   border-radius: 16px;
-  
 }
 
 /* Title */
@@ -45,7 +47,9 @@ margin: 0 200px;        /* center horizontally */
   color: #111827;
 }
 
+/* ============================= */
 /* Terms content */
+/* ============================= */
 .terms-content {
   line-height: 1.8;
   font-size: 1.05rem;
@@ -77,3 +81,52 @@ margin: 0 200px;        /* center horizontally */
   text-decoration: underline;
 }
 
+/* ============================= */
+/* Responsive Styles */
+/* ============================= */
+
+/* ✅ Tablet (≤1024px) */
+@media (max-width: 1024px) {
+  .terms-heading {
+    margin: 0 40px;   /* shrink side margins */
+    padding: 40px 20px;
+  }
+
+  .terms-heading h1 {
+    font-size: 2.2rem;
+  }
+
+  .terms-content {
+    font-size: 1rem;
+  }
+
+  .terms-content h2 {
+    font-size: 1.3rem;
+  }
+}
+
+/* ✅ Mobile (≤768px) */
+@media (max-width: 768px) {
+  .terms-heading {
+    margin: 0 15px;   /* very small margin */
+    padding: 30px 16px;
+    border-radius: 10px;
+  }
+
+  .terms-heading h1 {
+    font-size: 1.8rem;
+  }
+
+  .terms-heading p {
+    font-size: 0.9rem;
+  }
+
+  .terms-content {
+    font-size: 0.95rem;
+    line-height: 1.7;
+  }
+
+  .terms-content h2 {
+    font-size: 1.2rem;
+  }
+}

@@ -1,18 +1,19 @@
+/* ============================= */
 /* Page background */
+/* ============================= */
 .privacy-page {
   background-color: #fff;
   color: #1f2937;
   margin-top: 100px;
- 
-  
 }
 
+/* ============================= */
 /* Main content container */
+/* ============================= */
 .privacy-heading {
-  margin-top: 80px;
-  max-width: 1200px;    /* lock width */
-  margin: 0 200px;      /* center horizontally */
-  padding: 60px 24px;   /* spacing inside */
+  max-width: 1200px;
+  margin: 0 auto;       /* ✅ center horizontally */
+  padding: 60px 24px;
   background: #fff;
   border-radius: 16px;
 }
@@ -33,7 +34,7 @@
   margin-bottom: 30px;
 }
 
-/* Back link (if needed) */
+/* Back link */
 .back-link {
   display: inline-block;
   margin-bottom: 2rem;
@@ -46,7 +47,9 @@
   color: #111827;
 }
 
+/* ============================= */
 /* Privacy content */
+/* ============================= */
 .privacy-content {
   line-height: 1.8;
   font-size: 1.05rem;
@@ -76,4 +79,54 @@
 
 .privacy-content a:hover {
   text-decoration: underline;
+}
+
+/* ============================= */
+/* Responsive Styles */
+/* ============================= */
+
+/* ✅ Tablet (≤1024px) */
+@media (max-width: 1024px) {
+  .privacy-heading {
+    margin: 0 40px;
+    padding: 40px 20px;
+  }
+
+  .privacy-heading h1 {
+    font-size: 2.2rem;
+  }
+
+  .privacy-content {
+    font-size: 1rem;
+  }
+
+  .privacy-content h2 {
+    font-size: 1.3rem;
+  }
+}
+
+/* ✅ Mobile (≤768px) */
+@media (max-width: 768px) {
+  .privacy-heading {
+    margin: 0 15px;
+    padding: 30px 16px;
+    border-radius: 10px;
+  }
+
+  .privacy-heading h1 {
+    font-size: 1.8rem;
+  }
+
+  .privacy-heading p {
+    font-size: 0.9rem;
+  }
+
+  .privacy-content {
+    font-size: 0.95rem;
+    line-height: 1.7;
+  }
+
+  .privacy-content h2 {
+    font-size: 1.2rem;
+  }
 }
