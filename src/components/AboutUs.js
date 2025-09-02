@@ -41,18 +41,20 @@ const AboutUs = () => {
           </div>
 
           {/* Middle Column */}
-          <div className="column">
-            <div className="about-card dark-card">
-              {/* <div className="icon">👥</div>
-              <h3>t</h3>
-              <p>
-                Custo is built by a diverse team of thinkers and builders who
-                care deeply about helping businesses grow. With a focus on
-                simplicity, performance, and people, we’re creating solutions
-                that truly make a difference.
-              </p> */}
-            </div>
-          </div>
+<div className="column">
+  <div className="about-card dark-card">
+    <img src={HandshakeImg} alt="Handshake" className="dark-icon" />
+    <h3 className="dark-title">Our Story</h3>
+    <p className="dark-text">
+      Converro was born out of frustration with CRMs that were too complex, 
+      too slow, or too expensive. We set out to build something different —
+      an intelligent, easy to use CRM that brings every lead and conversation
+      into one smart hub. <br /><br />
+      Today, Converro ensures no opportunity ever slips away.
+    </p>
+  </div>
+</div>
+
 
           {/* Right Column */}
           <div className="column">

@@ -53,32 +53,45 @@
 
 /* Dark middle card */
 .dark-card {
-  background: #111;
+  background: #000;              /* solid black */
   color: #fff;
-  background-image: url(../images/aboutus.svg);
   padding: 40px 28px;
-  height: 450px;
+  height: 455px;                 /* fixed height */
+  border-radius: 20px;
+  text-align: center;            
   display: flex;
   flex-direction: column;
+  align-items: center;
   justify-content: center;
-  text-align: left;
 }
 
-.dark-card .icon {
-  font-size: 40px;
+/* Handshake Icon */
+.dark-icon {
+  width: 80px;
+  height: 80px;
   margin-bottom: 20px;
 }
 
-.dark-card h3 {
-  font-size: 22px;
-  margin-bottom: 12px;
+/* Heading */
+.dark-title {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 20px;
 }
 
-.dark-card p {
+
+/* Text */
+.dark-text {
   font-size: 16px;
-  line-height: 1.5;
-  color: #ccc;
+  line-height: 1.6;
+  color: #ddd;
+  max-width: 400px;
+  margin-bottom: 30px;   /* adds space below the text */
+  padding-bottom: 10px;  /* extra padding if needed */
 }
+
+
+
 
 /* Responsive */
 @media (max-width: 900px) {
