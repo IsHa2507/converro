@@ -6,7 +6,7 @@
   margin: 40px auto;
   padding: 10px 30px;
   background: #fff;
-  border-radius: 12px;
+  border-radius: 24px;
   border: 1px solid #e5e7eb;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -75,25 +75,35 @@
 /*   WhatsApp Contact Button     */
 /* ============================= */
 .addon-btn {
-  background: #000;                /* default black like old button */
+  background: #000;
   color: #fff;
   font-size: 14px;
   font-weight: 600;
   padding: 10px 18px;
   border-radius: 30px;
-  min-width: 120px;
+  min-width: 140px;
   text-align: center;
   transition: all 0.3s ease;
   margin-top: 6px;
-  display: inline-block;
-  text-decoration: none;          /* remove underline */
+  display: inline-flex;     /* 👈 allows icon + text */
+  align-items: center; /* center icon vertically */
+  justify-content: center;
+  gap: 8px;                 /* space between icon and text */
+  text-decoration: none;
 }
 
 .addon-btn:hover {
-  background: #3fce71;            /* hover = green */
-  color: #000;                    /* hover text = black */
+  background: #3fce71;
+  color: #000;
 }
 
+.whatsapp-icon {
+  font-size: 18px;
+  color: #25d366; /* WhatsApp green */
+}
+.addon-btn:hover .whatsapp-icon {
+  color: #000;  /* matches text color on hover */
+}
 
 /* ============================= */
 /*   Responsive Design           */
@@ -132,4 +142,57 @@
     width: 100%; /* ✅ full width button */
     text-align: center;
   }
+}
+/* Whole section background wrapper */
+.optional-services-section {
+  width: 100%;
+  padding: 50px 20px;
+  /* light background for separation */
+}
+
+/* Center the content inside */
+.optional-services-container {
+  display: flex;
+  justify-content: center;
+}
+
+/* Box styling */
+.optional-services-box {
+  width: 1150px;
+  /* width: 100%; */
+  height: 260px;
+  background: #ffffff;
+  border: 1px solid #e0e0e0;
+  border-radius: 24px;
+  padding: 30px;
+  
+  
+  color: #222;
+}
+
+.optional-services-title {
+  font-size: 28px;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+
+.optional-services-list {
+  margin: 0;
+  padding-left: 20px;
+  margin-bottom: 20px;
+}
+
+.optional-services-list li {
+  margin-bottom: 10px;
+  line-height: 1.6;
+}
+
+.optional-services-support {
+  margin-top: 15px;
+  margin-top: 40px;
+}
+
+.optional-services-email {
+  color: #555;
+  font-size: 14px;
 }
