@@ -558,3 +558,48 @@
   height: 35px;
   object-fit: contain;
 }
+/* --- Mobile Sidebar Dropdown --- */
+@media (max-width: 768px) {
+  /* Override mega dropdowns */
+  .hubspot-mega-dropdown,
+  .industries-mega-dropdown,
+  .dropdown-menu {
+    position: fixed;
+    top: 0;
+    left: -100%;  /* hidden by default */
+    width: 80%;   /* sidebar width */
+    max-width: 320px;
+    height: 100vh;
+    background: #fff;
+    border-radius: 0; /* no rounded corners in sidebar */
+    box-shadow: 2px 0 15px rgba(0,0,0,0.15);
+    border: none;
+    padding: 24px;
+    overflow-y: auto;
+    transition: left 0.3s ease;
+    z-index: 1200;
+  }
+
+  /* When active */
+  .hubspot-mega-dropdown.active,
+  .industries-mega-dropdown.active,
+  .dropdown-menu.active {
+    left: 0; /* slide in */
+  }
+
+  /* Adjust grids inside to single column */
+  .products-grid,
+  .industries-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .dropdown-header h3 {
+    font-size: 20px;
+  }
+  .product-content h4,
+  .section-content h4,
+  .dropdown-content h4 {
+    font-size: 15px;
+  }
+}
