@@ -65,21 +65,21 @@
   top: 4px;
   bottom: 4px;
   left: 4px;
-  width: calc((100% - 8px) / 3);
+  width: calc((100% - 8px) / 2);
   border-radius: 50px;
   background: #111827;
   transition: transform 0.4s ease;
   z-index: 1;
 }
 
-.billing-toggle .slider.monthly {
+/* .billing-toggle .slider.monthly {
+  transform: translateX(0%);
+} */
+.billing-toggle .slider.quarterly {
   transform: translateX(0%);
 }
-.billing-toggle .slider.quarterly {
-  transform: translateX(100%);
-}
 .billing-toggle .slider.yearly {
-  transform: translateX(200%);
+  transform: translateX(100%);
 }
 
 /* ============================= */

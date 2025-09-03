@@ -63,7 +63,7 @@ const Navbar = () => {
 
   return (
     <header className={`navbar-wrapper ${scrolled ? "scrolled" : ""}`}>
-      <div className="work-strip">🚧 Website is under maintenance</div>
+       {/* <div className="work-strip">🚧 Website is under maintenance</div> */}
 
       <div className="navbar">
         {/* Logo */}
