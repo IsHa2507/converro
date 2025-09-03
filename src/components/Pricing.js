@@ -11,11 +11,12 @@ import AddOns from "./AddOns";
 const plans = {
   yearly:[
   {
-    name: "Pro",
-    price: "₹12,999",
-    period: "/Yearly",
-    text: "+18% GST",
-    description: "Automate Sales, Marketing & close more Deals",
+    name: "Startup",
+    texth:"For small team (Min- 5 Users)",
+    price: "₹ 315",
+    period: "₹ 450",
+    // text: "+18% GST",
+    description: "per month for Single user (billed annually)",
     includedFeatures: [
       "Unlimited Lead Management",
       "5 Team Members",
@@ -39,24 +40,27 @@ const plans = {
       "AI-powered chatbots",
       "Mobile Access to CRM",
       "API Integrations",
-      
+      "Live Support",
+      "White-label Account",
     ],
     excludedFeatures: [
-      "Live Support",
+      
       "Geo Tracking",
       "Custom Request",
       "Green Tick Application",
-      "White-label Account",
     ],
     cta: "Get Started",
+    textb:"Include",
+textp:"Everting you get in this plan",
     popular: false,
   },
   {
     name: "Business",
-    price: "₹19,999",
-    period: "/Yearly",
-    text: "+18% GST",
-    description: "Accelerate growth with innovative solutions.",
+    texth:"For mid size team (Min- 20 Users)",
+    price: "₹ 210",
+    period: "₹ 300",
+    // text: "+18% GST",
+    description: "per month for Single user (billed annually)",
     includedFeatures: [
       "Unlimited Lead Management",
       "20 Team Members",
@@ -82,17 +86,21 @@ const plans = {
       "API Integrations",
       "Priority Support",
       "Geo Tracking",
+      "White-label Account"
     ],
-    excludedFeatures: ["Green Tick Application", "White-label Account"],
+    excludedFeatures: ["Green Tick Application", ],
     cta: "Get Started",
+    textb:"Include",
+textp:"Everting you get in this plan",
     popular: true,
   },
   {
     name: "Enterprise",
-    price: "Custom Price",
+    texth:"For large team and organization",
+    price: "₹ Custom ",
     period: "",
     
-    description: "Build & Organize your Sales Function at your ease.",
+    description: "Customise price as per your needs",
     includedFeatures: [
       "Unlimited Lead Management",
       "Requested Team Members",
@@ -123,17 +131,20 @@ const plans = {
     ],
     excludedFeatures: [],
     cta: "Contact Sales",
+    textb:"Include",
+textp:"Everting you get in this plan",
     popular: false,
   },
   ],
   quarterly: [
 {
-name: "Pro",
-price: "₹3,499",
-period: "/Quarterly",
-text: "+18% GST",
-description: "Best for short-term scaling.",
-includedFeatures: [ "Unlimited Lead Management",
+name: "Startup",
+    texth:"For small team (Min- 5 Users)",
+    price: "₹ 450",
+    // period: "₹ 450",
+    
+    description: "per month for Single user (billed annually)",
+   includedFeatures: [ "Unlimited Lead Management",
       "5 Team Members",
       "Roles & Permissions",
       "WhatsApp Business API",
@@ -165,14 +176,17 @@ excludedFeatures: [
       "White-label Account",
     ],
 cta: "Get Started",
+textb:"Include",
+textp:"Everting you get in this plan",
 popular: false,
 },
 {
-name: "Business",
-price: "₹5,499",
-period: "/Quarterly",
-text: "+18% GST",
-description: "Perfect balance of features and cost.",
+ name: "Business",
+    texth:"For mid size team (Min- 20 Users)",
+    price: "₹ 300",
+    // period: "₹ 300",
+    // text: "+18% GST",
+    description: "per month for Single user (billed annually)",
 includedFeatures: ["Unlimited Lead Management",
       "20 Team Members",
       "Roles & Permissions",
@@ -200,13 +214,17 @@ includedFeatures: ["Unlimited Lead Management",
       "Geo Tracking",],
 excludedFeatures: ["Green Tick Application", "White-label Account"],
 cta: "Get Started",
+textb:"Include",
+textp:"Everting you get in this plan",
 popular: true,
 },
 {
 name: "Enterprise",
-price: "Custom Price",
-period: "",
-description: "Flexible for enterprises.",
+    texth:"For large team and organization",
+    price: "₹ Custom ",
+    period: "",
+    
+    description: "Customise price as per your needs",
 includedFeatures: ["Unlimited Lead Management",
       "Requested Team Members",
       "Roles & Permissions",
@@ -236,6 +254,8 @@ includedFeatures: ["Unlimited Lead Management",
     ],
 excludedFeatures: [],
 cta: "Contact Sales",
+textb:"Include",
+textp:"Everting you get in this plan",
 popular: false,
 },
 ],
@@ -373,22 +393,24 @@ onClick={() => setBilling("monthly")}
 >
 Quarterly
 </button> */}
-<button
-className={billing === "quarterly" ? "active" : ""}
-onClick={() => setBilling("quarterly")}
->
-Quarterly
-</button>
-<button
-className={billing === "yearly" ? "active" : ""}
-onClick={() => setBilling("yearly")}
->
-Yearly
-</button>
-<span className={`slider ${billing}`}></span>
+{/* Toggle Button */}
+
+   <button
+    className={billing === "quarterly" ? "active" : ""}
+    onClick={() => setBilling("quarterly")}
+  >
+    Quarterly
+  </button>
+  <button
+    className={billing === "yearly" ? "active" : ""}
+    onClick={() => setBilling("yearly")}
+  >
+    Annual <span className="save">(Save 30%)</span>
+  </button>
+  <span className={`slider ${billing}`}></span>
 </div>
 
-        {/* Pricing Cards */}
+
         <div className="pricing-cards">
   {plans[billing].map((plan, idx) => (
     <div
@@ -397,21 +419,29 @@ Yearly
     >
       {plan.popular ? (
         <div className="inner-box">
-         <div className="badgeP">
-      <img src={sparkle} alt="sparkle" className="icon" />
-      Most Popular 
-      <img src={sparkle} alt="sparkle" className="icon" />
-    </div>
+          <div className="badgeP">
+            <img src={sparkle} alt="sparkle" className="icon" />
+            Most Popular
+            <img src={sparkle} alt="sparkle" className="icon" />
+          </div>
+
+          {/* Plan Name */}
           <h3 className="plan-name">{plan.name}</h3>
+          {/* texth below plan name */}
+          <p className="plan-subtitle">{plan.texth}</p>
+
           <p className="price">
             {plan.price}{" "}
             <span className="period">{plan.period}</span>{" "}
-            <span className="txt">{plan.text}</span>
           </p>
 
           <p className="desc">{plan.description}</p>
 
           <button className="btn">{plan.cta}</button>
+
+          {/* textb and textp after button */}
+          <h4 className="include-title">{plan.textb}</h4>
+          <p className="include-subtitle">{plan.textp}</p>
 
           <ul className="features">
             {plan.includedFeatures.map((f, i) => (
@@ -428,15 +458,23 @@ Yearly
         </div>
       ) : (
         <>
+          {/* Plan Name */}
           <h3 className="plan-name">{plan.name}</h3>
+          {/* texth below plan name */}
+          <p className="plan-subtitle">{plan.texth}</p>
+
           <p className="price">
             {plan.price}{" "}
             <span className="period">{plan.period}</span>{" "}
-            <span className="txt">{plan.text}</span>
           </p>
+
           <p className="desc">{plan.description}</p>
 
           <button className="btn">{plan.cta}</button>
+
+          {/* textb and textp after button */}
+          <h4 className="include-title">{plan.textb}</h4>
+          <p className="include-subtitle">{plan.textp}</p>
 
           <ul className="features">
             {plan.includedFeatures.map((f, i) => (
@@ -455,6 +493,7 @@ Yearly
     </div>
   ))}
 </div>
+
 
       </section>
       <AddOns/>
