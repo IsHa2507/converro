@@ -17,18 +17,18 @@ import { MdOutlineTravelExplore, MdOutlineSchool } from "react-icons/md";
 import "./StatsSection.css";
 
 // 👉 Import your images here
-import crmImg from "../images/CRM.png";
-import automationImg from "../images/Automation.png";
-import whatsappImg from "../images/WhatsApp Marketing.png";
-import emailImg from "../images/Email Marketing.png";
-import smsImg from "../images/SMS Marketing.png";
-import extractorImg from "../images/Google Data Extractor.png";
-import invoiceImg from "../images/Invoice & Quatation.png";
-import appointmentImg from "../images/Appointment.png";
-import helpdeskImg from "../images/Helpdesk.png";
-import ivrImg from "../images/IVR Service.png";
-import callImg from "../images/Call Broadcast.png";
-import aiImg from "../images/AI Marketing.png";
+import crmImg from "../assets/CRM.svg";
+import automationImg from "../assets/Automation.svg";
+import whatsappImg from "../assets/WhatsApp Marketing.svg";
+import emailImg from "../assets/Email Marketing.svg";
+import smsImg from "../assets/SMS Marketing.svg";
+import extractorImg from "../assets/Google Data Extractor.svg";
+import invoiceImg from "../assets/Invoice & Quatation.svg";
+import appointmentImg from "../assets/Appointment.svg";
+import helpdeskImg from "../assets/Helpdesk.svg";
+import ivrImg from "../assets/IVR Service.svg";
+import callImg from "../assets/Call Broadcast.svg";
+import aiImg from "../assets/AI Marketing.svg";
 
 const StatsSection = () => {
   const industries = [

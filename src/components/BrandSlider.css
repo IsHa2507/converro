@@ -39,11 +39,24 @@
   justify-content: center;
 }
 
-.logo-box img {
-  max-width: 120px;
-  max-height: 50px;
-  object-fit: contain;
+.logo-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px; /* space around logo */
 }
+
+.logo-box img {
+  width: 140px;   /* increase this for bigger logos */
+  height: auto;   /* keeps aspect ratio */
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+.logo-box img:hover {
+  transform: scale(1.1); /* hover zoom effect (optional) */
+}
+
 
 /* Animation for right moving row */
 .row-right {
