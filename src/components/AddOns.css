@@ -71,8 +71,11 @@
 /* ============================= */
 /*   Price Pill                  */
 /* ============================= */
-.addon-price {
-  background: #000;
+/* ============================= */
+/*   WhatsApp Contact Button     */
+/* ============================= */
+.addon-btn {
+  background: #000;                /* default black like old button */
   color: #fff;
   font-size: 14px;
   font-weight: 600;
@@ -82,11 +85,15 @@
   text-align: center;
   transition: all 0.3s ease;
   margin-top: 6px;
+  display: inline-block;
+  text-decoration: none;          /* remove underline */
 }
-.addon-price:hover {
-  background: #3fce71;
-  color: #000;
+
+.addon-btn:hover {
+  background: #3fce71;            /* hover = green */
+  color: #000;                    /* hover text = black */
 }
+
 
 /* ============================= */
 /*   Responsive Design           */

@@ -6,19 +6,19 @@ const addons = [
     title: "IVR Service - Unlimited Incoming & Outgoing",
     description:
       "Zero setup fee for the Unlimited Incoming & Outgoing Plan. Accelerate sales and enhance customer support with IVR, auto-dialer, and efficient call management. IVR service is available exclusively with the annual plan.",
-    price: "₹7,200/User/Yrs",
+    price: "Contact Sales",
   },
   {
     title: "SMS Marketing",
     description:
       "If you have DLT verification in India, access SMS marketing at a low cost of 17p per SMS. Promote your business with instant delivery. Minimum order quantity: 10,000.",
-    price: "₹1,699+ 18% GST",
+    price: "Contact Sales",
   },
   {
     title: "Voice OBD Message",
     description:
       "Voice broadcasting service allows you to send notifications, alerts, offers, announcements, surveys, and more. Minimum order quantity: 10,000.",
-    price: "₹2,999+ 18% GST",
+    price: "Contact Sales",
   },
 ];
 
