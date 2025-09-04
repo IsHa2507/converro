@@ -11,7 +11,7 @@
   background-size: cover;
   min-height: 95vh;
   padding: 80px 20px;
-  padding-bottom: 60px;
+  padding-bottom: 80px;
   overflow: hidden; /* ensures nothing cuts weird */
 }
 
