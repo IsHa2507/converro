@@ -18,10 +18,10 @@
   padding: 6px 12px;
   font-size: 13px;
   max-width: 150px;
-  border: 1px solid #ccc;
+  border: 1px solid #1b75bb;
   border-radius: 999px;
-  color: #ffffff;
-  background-color: #3fce71;
+  color: #000;
+  background-color: #eef8ff;
   margin-bottom: 16px;
 }
 
@@ -45,15 +45,24 @@
 }
 
 /* Shared box style */
-.stat-left-box,
-.stat-right-box {
-  background: #f0fdf4;
+.stat-left-box {
+  background: #f6fcff; /* new bg color */
   padding: 28px 24px;
   border-radius: 14px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
+
+.stat-right-box {
+  background: #f0fdf4; /* keep original */
+  padding: 28px 24px;
+  border-radius: 14px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
 
 /* Left industries box */
 .stat-left-box .stat-industries-grid {
@@ -73,7 +82,7 @@
 
 .stat-left-box .stat-industry-icon {
   font-size: 18px;
-  color: #3fce71;
+  color: #1b75bb;
 }
 
 /* Right features box */
