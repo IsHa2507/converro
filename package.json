@@ -2,6 +2,7 @@
   "name": "converro",
   "version": "0.1.0",
   "private": true,
+  "homepage": ".",
   "dependencies": {
     "@testing-library/dom": "^10.4.1",
     "@testing-library/jest-dom": "^6.8.0",
@@ -14,8 +15,9 @@
     "react-dom": "^19.1.1",
     "react-icons": "^5.5.0",
     "react-router-dom": "^7.8.2",
-    "react-scripts": "^5.0.1",
+    "react-scripts": "5.0.1",
     "react-toastify": "^11.0.5",
+    "serve": "^14.2.1",
     "tailwind-variants": "^2.1.0",
     "tailwindcss": "^4.1.12",
     "web-vitals": "^2.1.4"
@@ -24,7 +26,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "serve": "serve -s build -l 10000"
   },
   "eslintConfig": {
     "extends": [
