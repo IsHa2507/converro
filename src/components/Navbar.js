@@ -27,7 +27,7 @@ import servicesImg from "../images/Product and Services.svg";
 
 const dropdowns = {
   products: [
-    { title: "SMS Marketing", desc: "Reach more customers instantly with targeted SMS campaigns.", to: "/products/marketing", image: smsImg },
+    { title: "SMS Marketing", desc: "Reach more customers instantly with targeted SMS campaigns.", to: "/sms-marketing", image: smsImg },
     { title: "Email Marketing", desc: "Boost engagement and conversions with powerful email campaigns.", to: "/products/sales", image: emailImg },
     { title: "Automation 360", desc: "Automate workflows and maximize efficiency with ease.", to: "/products/service", image: automationImg },
     { title: "WhatsApp Business API", desc: "Connect directly with customers using WhatsApp marketing.", to: "/products/content", image: whatsappImg },

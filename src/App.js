@@ -28,6 +28,7 @@ import Pricing from "./components/Pricing";
 import AddOns from "./components/AddOns";
 import WhatWeDo from "./components/WhatWeDo";
 import IntegrationPage from "./components/IntegrationPage";
+import SMS_Marketing from "./internalPages/SMS_Marketing";
 function App() {
   return (
      <Router>
@@ -41,6 +42,7 @@ function App() {
         <Route path="/aboutus" element={<AboutUS/>}/>
         <Route path="/pricing" element={<Pricing/>}/>
         <Route path="/integrationpage" element={<IntegrationPage/>}/>
+        <Route path="/sms-marketing" element={<SMS_Marketing />} />
       </Routes>
     </Router>
   );
