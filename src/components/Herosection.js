@@ -14,6 +14,29 @@ import badge7 from "../images/badge7.svg";
 import spiral from "../images/herosection-bg.png";
 
 const HeroSection = () => {
+  const TrustedSection = () => (
+    <div className="hero-bottom">
+      <div className="trusted">
+        <div className="trusted-top">
+          <div className="logos overlap-logos">
+            <img src="https://cdn-icons-png.flaticon.com/512/5968/5968299.png" alt="Google"/>
+            <img src="https://cdn-icons-png.flaticon.com/512/732/732221.png" alt="Microsoft"/>
+            <img src="https://cdn-icons-png.flaticon.com/512/732/732190.png" alt="Apple"/>
+          </div>
+          <p className="trusted-text">
+            Trusted by <strong>3K+ companies</strong><br/> around the world
+          </p>
+        </div>
+
+        <div className="rating">
+          <FaStar className="star-icon" />
+          <span className="rating-score">4.9</span>
+          <p>Based on 200+ reviews</p>
+        </div>
+      </div>
+    </div>
+  );
+
   return (
     <section className="hero">
       <div className="container">
@@ -22,8 +45,13 @@ const HeroSection = () => {
             Smart <strong className="highlightH">  CRM</strong>  <br /> For Smarter <br /> Businesses
           </h1>
           <p>
-            Converro helps you capture, organize, and convert leads effortlessly so you can focus on closing deals and scaling your business, not managing complexity.
+            Converro helps you capture, organize, and convert leads effortlessly so you can focus on closing deals and scaling your business, not managing complexity.
           </p>
+
+          {/* Trusted above button (mobile only) */}
+          <div className="mobile-only">
+            <TrustedSection />
+          </div>
 
           {/* Buttons */}
           <div className="hero-buttons">
@@ -33,59 +61,33 @@ const HeroSection = () => {
                 <FiArrowRight className="arrow" />
               </span>
             </button>
-
-            {/* <button className="btn-secondary" >
-              Book A Demo
-              <FiArrowRight className="arrow2" />
-            </button> */}
           </div>
-
-         
         </div>
 
-       <div className="hero-image">
-  {/* Spiral Background */}
-  <img src={spiral} alt="Spiral Background" className="spiral-bg" />
+        <div className="hero-image">
+          {/* Spiral Background */}
+          <img src={spiral} alt="Spiral Background" className="spiral-bg" />
 
-  {/* iPad Mockup */}
-  <img src={ipadMockup} alt="iPad CRM Dashboard" className="ipad" />
+          {/* iPad Mockup */}
+          <img src={ipadMockup} alt="iPad CRM Dashboard" className="ipad" />
 
-  {/* Floating Badges */}
-  <img src={badge1} alt="WhatsApp" className="badge badge1" />
-  <img src={badge2} alt="Task Auto Allocation" className="badge badge2" />
-  <img src={badge3} alt="Lead Score" className="badge badge3" />
-  <img src={badge4} alt="AI Marketing" className="badge badge4" />
-  <img src={badge5} alt="AI Support" className="badge badge5" />
-  <img src={badge6} alt="Workflows" className="badge badge6" />
-  <img src={badge7} alt="AI Chatbot" className="badge badge7" />
-</div>
-      
-<div className="hero-bottom">
-  <div className="trusted">
-    <div className="trusted-top">
-      <div className="logos overlap-logos">
-        <img src="https://cdn-icons-png.flaticon.com/512/5968/5968299.png" alt="Google"/>
-        <img src="https://cdn-icons-png.flaticon.com/512/732/732221.png" alt="Microsoft"/>
-        <img src="https://cdn-icons-png.flaticon.com/512/732/732190.png" alt="Apple"/>
+          {/* Floating Badges */}
+          <img src={badge1} alt="WhatsApp" className="badge badge1" />
+          <img src={badge2} alt="Task Auto Allocation" className="badge badge2" />
+          <img src={badge3} alt="Lead Score" className="badge badge3" />
+          <img src={badge4} alt="AI Marketing" className="badge badge4" />
+          <img src={badge5} alt="AI Support" className="badge badge5" />
+          <img src={badge6} alt="Workflows" className="badge badge6" />
+          <img src={badge7} alt="AI Chatbot" className="badge badge7" />
+        </div>
+
+        {/* Trusted below image (desktop only) */}
+        <div className="desktop-only">
+          <TrustedSection />
+        </div>
       </div>
-      <p className="trusted-text">
-        Trusted by <strong>3K+ companies</strong><br/> around the world
-      </p>
-    </div>
-
-    <div className="rating">
-      <FaStar className="star-icon" />
-      <span className="rating-score">4.9</span>
-      <p>Based on 200+ reviews</p>
-    </div>
-  </div>
-</div>
-
-</div>
-
     </section>
   );
 };
 
 export default HeroSection;
-
