@@ -1,10 +1,11 @@
 import React, { useState } from "react";
 import Navbar from "../components/Navbar";
-import CTA from "../components/CTA";
+// import CTA from "../components/CTA";
 import Footer from "../components/Footer";
 import "./ContactUs.css";
-import Testimonials from "./Testimonial";
+// import Testimonials from "./Testimonial";
 import CustomerHelp from "./CustomerHelp";
+import { ToastContainer, toast } from "react-toastify";
 
 const ContactUs = () => {
   const [formData, setFormData] = useState({
@@ -48,57 +49,101 @@ const ContactUs = () => {
     return Object.keys(newErrors).length === 0;
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-
-    if (!validateForm()) return; // stop if errors exist
-
+    if (!validateForm()) return;
+  
     setIsSubmitting(true);
 
-    let recipientEmail = "";
-    let subjectLine = "";
+    try {
+      const response = await fetch(`${process.env.REACT_APP_API_URL}`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          first_name: formData.firstName,
+          last_name: formData.lastName,
+          email: formData.email,
+          phone: formData.phone,
+          subjects: formData.subject, // focus needed here as, backend field is 'subjects' (models.py)
+          message: formData.message,
+        }),
+      });
 
-    switch (formData.subject) {
-      case "sales":
-        recipientEmail = "sales@converro.io";
-        subjectLine = "Sales Inquiry";
-        break;
-      case "support":
-        recipientEmail = "support@converro.io";
-        subjectLine = "Customer Support";
-        break;
-      default:
-        recipientEmail = "info@converro.io";
-        subjectLine = "General Inquiry";
+      if (response.ok) {
+        toast.success("Message sent successfully", {
+          position: "bottom-right",
+          style: { background: "#d4edda", color: "#155724" },
+        });
+
+        setFormData({
+          firstName: "",
+          lastName: "",
+          email: "",
+          phone: "",
+          subject: "general",
+          message: "",
+        });
+      } else {
+        toast.error("Something went wrong!", { position: "bottom-right" });
+      }
+    } catch (error) {
+      toast.error("Server error!", { position: "bottom-right" });
     }
-
-    // Build mailto link
-    const mailtoLink = `mailto:${recipientEmail}?subject=${encodeURIComponent(
-      subjectLine
-    )}&body=${encodeURIComponent(
-      `Name: ${formData.firstName} ${formData.lastName}
-Email: ${formData.email}
-Phone: ${formData.phone}
-
-Message:
-${formData.message}`
-    )}`;
-
-    // Open default email client
-    window.location.href = mailtoLink;
-
-    // Reset form after sending
-    setFormData({
-      firstName: "",
-      lastName: "",
-      email: "",
-      phone: "",
-      subject: "general",
-      message: "",
-    });
 
     setIsSubmitting(false);
   };
+  
+
+//     if (!validateForm()) return; // stop if errors exist
+
+//     setIsSubmitting(true);
+
+//     let recipientEmail = "";
+//     let subjectLine = "";
+
+//     switch (formData.subject) {
+//       case "sales":
+//         recipientEmail = "sales@converro.io";
+//         subjectLine = "Sales Inquiry";
+//         break;
+//       case "support":
+//         recipientEmail = "support@converro.io";
+//         subjectLine = "Customer Support";
+//         break;
+//       default:
+//         recipientEmail = "info@converro.io";
+//         subjectLine = "General Inquiry";
+//     }
+
+//     // Build mailto link
+//     const mailtoLink = `mailto:${recipientEmail}?subject=${encodeURIComponent(
+//       subjectLine
+//     )}&body=${encodeURIComponent(
+//       `Name: ${formData.firstName} ${formData.lastName}
+// Email: ${formData.email}
+// Phone: ${formData.phone}
+
+// Message:
+// ${formData.message}`
+//     )}`;
+
+//     // Open default email client
+//     window.location.href = mailtoLink;
+
+//     // Reset form after sending
+//     setFormData({
+//       firstName: "",
+//       lastName: "",
+//       email: "",
+//       phone: "",
+//       subject: "general",
+//       message: "",
+//     });
+
+//     setIsSubmitting(false);
+//   };
 
   return (
     <>
@@ -251,6 +296,7 @@ ${formData.message}`
 
       <CustomerHelp />
       <Footer />
+      <ToastContainer />
     </>
   );
 };
