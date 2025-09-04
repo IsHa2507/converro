@@ -56,7 +56,7 @@ const ContactUs = () => {
     setIsSubmitting(true);
 
     try {
-      const response = await fetch("http://127.0.0.1:8000/api/contact/", {
+      const response = await fetch("https://converro-backend.onrender.com/api/contact/", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -95,56 +95,6 @@ const ContactUs = () => {
     setIsSubmitting(false);
   };
   
-
-//     if (!validateForm()) return; // stop if errors exist
-
-//     setIsSubmitting(true);
-
-//     let recipientEmail = "";
-//     let subjectLine = "";
-
-//     switch (formData.subject) {
-//       case "sales":
-//         recipientEmail = "sales@converro.io";
-//         subjectLine = "Sales Inquiry";
-//         break;
-//       case "support":
-//         recipientEmail = "support@converro.io";
-//         subjectLine = "Customer Support";
-//         break;
-//       default:
-//         recipientEmail = "info@converro.io";
-//         subjectLine = "General Inquiry";
-//     }
-
-//     // Build mailto link
-//     const mailtoLink = `mailto:${recipientEmail}?subject=${encodeURIComponent(
-//       subjectLine
-//     )}&body=${encodeURIComponent(
-//       `Name: ${formData.firstName} ${formData.lastName}
-// Email: ${formData.email}
-// Phone: ${formData.phone}
-
-// Message:
-// ${formData.message}`
-//     )}`;
-
-//     // Open default email client
-//     window.location.href = mailtoLink;
-
-//     // Reset form after sending
-//     setFormData({
-//       firstName: "",
-//       lastName: "",
-//       email: "",
-//       phone: "",
-//       subject: "general",
-//       message: "",
-//     });
-
-//     setIsSubmitting(false);
-//   };
-
   return (
     <>
       <Navbar />
