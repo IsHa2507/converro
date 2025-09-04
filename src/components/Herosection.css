@@ -351,3 +351,93 @@
   .mobile-only { display: block; }
   .desktop-only { display: none; }
 }
+/* ===== TABLET RESPONSIVENESS ===== */
+/* @media (min-width: 769px) and (max-width: 1024px) {
+  .container {
+    flex-direction: column;
+    text-align: center;
+    padding-top: 30px;
+    padding-bottom: 40px;
+  }
+
+  /* Headline */
+  /* .hero-content {
+    max-width: 650px;
+    margin: 0 auto 30px;
+    text-align: center;
+  }
+
+  .hero-content h1 {
+    font-size: 52px;
+    line-height: 1.2;
+    text-align: center;
+  }
+
+  .hero-content p {
+    font-size: 18px;
+    margin-bottom: 30px;
+    text-align: center;
+  } */
+
+  /* Buttons */
+  /* .hero-buttons {
+    justify-content: center;
+    margin-bottom: 30px;
+  }
+
+  /* Spiral + Tablet */
+  /* .hero-image {
+    margin-top: 0;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  }  */
+
+  /* .spiral-bg {
+    width: 600px; 
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .ipad {
+    width: 380px;
+    max-width: 80%;
+    z-index: 2;
+    position: relative;
+  } */
+
+/*   
+  .badge {
+    width: 90px;
+  }
+
+  .badge1 { top: 20%; left: -6%; }
+  .badge2 { top: 5%; right: 30%; }
+  .badge3 { top: 25%; right: -10%; }
+  .badge4 { bottom: 25%; right: -6%; }
+  .badge5 { bottom: 15%; left: -8%; }
+  .badge6 { bottom: -5%; left: 18%; }
+  .badge7 { bottom: -8%; right: 18%; } */
+
+  /* Trusted + Rating centered */
+  /* .hero-bottom {
+    margin-top: 25px;
+    text-align: center;
+  }
+
+  .trusted {
+    align-items: center;
+    text-align: center;
+  }
+
+  .trusted-top {
+    justify-content: center;
+  }
+
+  .rating {
+    justify-content: center;
+  } */
+
