@@ -4,7 +4,7 @@
 .addons-container {
   max-width: 1100px;
   margin: 40px auto;
-  padding: 10px 30px;
+  padding: 20px;
   background: #fff;
   border-radius: 24px;
   border: 1px solid #e5e7eb;
@@ -25,6 +25,7 @@
   line-height: 1.6;
   border-bottom: 1px solid #eee;
   padding-bottom: 12px;
+  text-align: left;
 }
 
 /* ============================= */
@@ -39,10 +40,10 @@
 .addon-card {
   display: flex;
   justify-content: space-between;
-  align-items: center;  /* ✅ price stays vertically centered */
+  align-items: center;
   border-top: 1px solid #eee;
   padding: 18px 0;
-  gap: 20px; /* ✅ prevents overlap */
+  gap: 20px;
 }
 
 .addon-card:first-child {
@@ -50,6 +51,7 @@
 }
 
 .addon-content {
+  flex: 1;
   max-width: 75%;
 }
 
@@ -69,9 +71,6 @@
 }
 
 /* ============================= */
-/*   Price Pill                  */
-/* ============================= */
-/* ============================= */
 /*   WhatsApp Contact Button     */
 /* ============================= */
 .addon-btn {
@@ -84,12 +83,12 @@
   min-width: 140px;
   text-align: center;
   transition: all 0.3s ease;
-  margin-top: 6px;
-  display: inline-flex;     /* 👈 allows icon + text */
-  align-items: center; /* center icon vertically */
+  display: inline-flex;
+  align-items: center;
   justify-content: center;
-  gap: 8px;                 /* space between icon and text */
+  gap: 8px;
   text-decoration: none;
+  white-space: nowrap; /* ✅ keeps text in one line */
 }
 
 .addon-btn:hover {
@@ -99,74 +98,34 @@
 
 .whatsapp-icon {
   font-size: 18px;
-  color: #25d366; /* WhatsApp green */
+  color: #25d366;
 }
 .addon-btn:hover .whatsapp-icon {
-  color: #000;  /* matches text color on hover */
+  color: #000;
 }
 
 /* ============================= */
-/*   Responsive Design           */
+/*   Optional Services Section   */
 /* ============================= */
-
-/* ✅ Tablet (≤768px) */
-@media (max-width: 768px) {
-  .addons-heading {
-    font-size: 28px;
-  }
-  .addon-card {
-    flex-direction: column; /* ✅ stack content */
-    align-items: flex-start;
-  }
-  .addon-content {
-    max-width: 100%;
-  }
-  .addon-price {
-    align-self: flex-start; /* ✅ button left-aligned */
-    margin-top: 12px;
-  }
-}
-
-/* ✅ Mobile (≤480px) */
-@media (max-width: 480px) {
-  .addons-heading {
-    font-size: 24px;
-  }
-  .addon-title {
-    font-size: 18px;
-  }
-  .addon-description {
-    font-size: 13px;
-  }
-  .addon-price {
-    width: 100%; /* ✅ full width button */
-    text-align: center;
-  }
-}
-/* Whole section background wrapper */
 .optional-services-section {
-  width: 100%;
-  padding: 50px 20px;
-  /* light background for separation */
+  /* width: 100%; */
+  padding: 50px 10px;
+ 
 }
 
-/* Center the content inside */
 .optional-services-container {
   display: flex;
   justify-content: center;
+  /* width: 100%; */
 }
 
-/* Box styling */
 .optional-services-box {
-  width: 1150px;
   /* width: 100%; */
-  height: 260px;
+  max-width: 1200px;
   background: #ffffff;
   border: 1px solid #e0e0e0;
   border-radius: 24px;
-  padding: 30px;
-  
-  
+  padding: 50px;
   color: #222;
 }
 
@@ -188,11 +147,74 @@
 }
 
 .optional-services-support {
-  margin-top: 15px;
-  margin-top: 40px;
+  margin-top: 30px;
 }
 
 .optional-services-email {
   color: #555;
   font-size: 14px;
+  word-break: break-word; /* ✅ breaks long emails */
+}
+
+/* ============================= */
+/*   Responsive Design           */
+/* ============================= */
+
+/* ✅ Tablet (≤1024px) */
+@media (max-width: 1024px) {
+  .addons-heading {
+    font-size: 30px;
+    text-align: center;
+  }
+  .addon-content {
+    max-width: 100%;
+  }
+  .optional-services-title {
+    font-size: 24px;
+  }
+}
+
+/* ✅ Tablet (≤768px) */
+@media (max-width: 768px) {
+  .addon-card {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .addon-btn {
+    margin-top: 12px;
+    /* width: 100%; ✅ button spans full width */
+  }
+  .addons-heading {
+    font-size: 26px;
+    text-align: center;
+  }
+  .addon-title {
+    font-size: 18px;
+  }
+  .addon-description {
+    font-size: 13px;
+  }
+  .optional-services-box {
+    padding: 20px;
+  }
+}
+
+/* ✅ Mobile (≤480px) */
+@media (max-width: 480px) {
+  .addons-heading {
+    font-size: 22px;
+  }
+  .addon-title {
+    font-size: 16px;
+  }
+  .addon-description {
+    font-size: 12px;
+  }
+  .addon-btn {
+    font-size: 13px;
+    padding: 10px;
+  }
+  .optional-services-title {
+    font-size: 20px;
+  }
 }
