@@ -3,7 +3,6 @@ import Navbar from "../components/Navbar";
 import CTA from "../components/CTA";
 import Footer from "../components/Footer";
 import "./ContactUs.css";
-// import Testimonials from "./Testimonial";
 import CustomerHelp from "./CustomerHelp";
 
 const ContactUs = () => {
