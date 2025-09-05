@@ -50,51 +50,59 @@ const ContactUs = () => {
   };
 
   const handleSubmit = async (e) => {
-    e.preventDefault();
-    if (!validateForm()) return;
-  
-    setIsSubmitting(true);
+  e.preventDefault();
+  if (!validateForm()) return;
 
-    try {
-      const response = await fetch("https://converro-backend.onrender.com/api/contact/", {
+  setIsSubmitting(true);
+
+  try {
+    const response = await fetch(
+      "https://converro-backend.onrender.com/api/contact/",
+      {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
         body: JSON.stringify({
-          first_name: formData.firstName,
-          last_name: formData.lastName,
-          email: formData.email,
-          phone: formData.phone,
-          subjects: formData.subject, // focus needed here as, backend field is 'subjects' (models.py)
-          message: formData.message,
+          first_name: formData.firstName || "",
+          last_name: formData.lastName || "",
+          email: formData.email || "",
+          phone: formData.phone || "",
+          subjects: formData.subject || "general", // backend expects 'subjects'
+          message: formData.message || "",
         }),
+      }
+    ).catch(() => null); // prevents crash if server unreachable
+
+    if (response && response.ok) {
+      toast.success("Message sent successfully ✅", {
+        position: "bottom-right",
+        style: { background: "#d4edda", color: "#155724" },
       });
 
-      if (response.ok) {
-        toast.success("Message sent successfully", {
-          position: "bottom-right",
-          style: { background: "#d4edda", color: "#155724" },
-        });
-
-        setFormData({
-          firstName: "",
-          lastName: "",
-          email: "",
-          phone: "",
-          subject: "general",
-          message: "",
-        });
-      } else {
-        toast.error("Something went wrong!", { position: "bottom-right" });
-      }
-    } catch (error) {
-      toast.error("Server error!", { position: "bottom-right" });
+      setFormData({
+        firstName: "",
+        lastName: "",
+        email: "",
+        phone: "",
+        subject: "general",
+        message: "",
+      });
+    } else {
+      toast.error("Unable to send message. Please try again later!", {
+        position: "bottom-right",
+      });
     }
+  } catch (error) {
+    console.error("Contact form error:", error);
+    toast.error("Server not responding. Please try again later!", {
+      position: "bottom-right",
+    });
+  }
 
-    setIsSubmitting(false);
-  };
-  
+  setIsSubmitting(false);
+};
+
   return (
     <>
       <Navbar />
