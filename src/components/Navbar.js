@@ -69,7 +69,7 @@ const Navbar = ({ onOpenModal }) => {
 
       <div className="navbar">
         {/* Logo */}
-        <Link to="/" className="navbar-logo">
+        <Link to="/" className="navbar-logo2">
           <img src={logo} alt="Logo" />
         </Link>
 

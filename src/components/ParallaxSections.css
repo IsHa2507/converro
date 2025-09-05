@@ -133,7 +133,7 @@
   text-align: left;
 }
 
-.dot-navigation {
+/* .dot-navigation {
   position: sticky;
   display: flex;
   margin-top: 150px;
@@ -154,7 +154,7 @@
   background: #22c55e;
   cursor: pointer;
   transition: background 0.3s ease, transform 0.2s ease;
-}
+} */
 
 .dot:hover {
   transform: scale(1.2);
@@ -216,20 +216,4 @@
     scroll-snap-type: none;
   }
 
-  /* Dot nav moves below */
-  .dot-navigation {
-    position: relative;
-    flex-direction: row;
-    justify-content: center;
-    gap: 10px;
-    margin: 20px auto 0;
-    transform: none;
-    top: auto;
-    right: auto;
-  }
-
-  .dot {
-    width: 8px;
-    height: 8px;
-  }
 }
