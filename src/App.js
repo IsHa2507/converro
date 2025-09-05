@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 // Import pages
@@ -18,10 +18,15 @@ import Footer from "./components/Footer";
 import ModalForm from "./components/ModalForm";
 
 function App() {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const openModal = () => setIsModalOpen(true);
+  const closeModal = () => setIsModalOpen(false);
 
   return (
     <Router>
-      <Navbar />
+      {/* Navbar with modal trigger */}
+      <Navbar onOpenModal={openModal} />
 
       <Routes>
         <Route path="/" element={<Homepage />} />
@@ -35,9 +40,11 @@ function App() {
         <Route path="/sms-marketing" element={<SMS_Marketing />} />
       </Routes>
 
-      <Footer />
+      {/* Footer always at bottom */}
+     
 
-      
+      {/* Modal only shows if open */}
+      {isModalOpen && <ModalForm onClose={closeModal} />}
     </Router>
   );
 }

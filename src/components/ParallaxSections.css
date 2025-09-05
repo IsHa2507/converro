@@ -1,10 +1,11 @@
+/* ================= Desktop ================= */
 .parallax-section {
   width: 100%;
   min-height: 300vh;
   background: #fff;
   display: flex;
   justify-content: center;
-   position: relative;
+  position: relative;
 }
 
 .parallax-container {
@@ -15,12 +16,11 @@
   position: relative;
 }
 
-/* Green sticky box */
+/* Green sticky box (desktop) */
 .parallax-green-box {
   width: 50%;
   height: 500px;
   background-image: url(../images/green-box-bg.png);
-  
   border-radius: 20px;
   position: sticky;
   top: 150px;
@@ -30,7 +30,6 @@
   overflow: hidden;
   margin-top: 150px;
 }
-
 
 .image-wrapper {
   position: relative;
@@ -52,8 +51,8 @@
   display: flex;
   flex-direction: column;
   scroll-snap-type: y mandatory;
-  align-items: flex-start; /* ✅ align blocks to start (left) */
-  text-align: left;        /* ✅ left align text */
+  align-items: flex-start;
+  text-align: left;
 }
 
 .parallax-text-block {
@@ -64,7 +63,6 @@
   align-items: flex-start;
   text-align: left;
   padding: 50px 20px;
-
   opacity: 0;
   transition: opacity 0.8s ease;
 }
@@ -72,13 +70,6 @@
 .parallax-text-block.active {
   opacity: 1;
 }
-
-.parallax-text-block.inactive {
-  opacity: 0;
-}
-
-
-
 
 .parallax-label {
   color: #78c8a1;
@@ -89,7 +80,6 @@
   border: 1px solid #78c8a1;
   border-radius: 24px;
   padding: 5px 15px;
-  
 }
 
 .parallax-text-block h2 {
@@ -97,6 +87,7 @@
   font-weight: bold;
   margin-bottom: 15px;
 }
+
 .parallax-btn {
   margin-top: 20px;
   padding: 12px 28px;
@@ -117,9 +108,10 @@
   background: #34b360;
   color: black;
 }
+
 .parallax-arrow {
   font-size: 16px;
-  color: rgb(255, 255, 255);
+  color: #fff;
   transition: transform 0.3s ease;
 }
 
@@ -127,6 +119,7 @@
   transform: rotate(-45deg);
   color: black;
 }
+
 .parallax-text-block ul {
   list-style-type: disc;
   margin-left: 20px;
@@ -139,21 +132,19 @@
   margin-bottom: 8px;
   text-align: left;
 }
+
 .dot-navigation {
   position: sticky;
-  
   display: flex;
   margin-top: 150px;
-  top: 50%; /* vertically center while scrolling */
+  top: 50%;
   transform: translateY(-50%);
   right: 20px;
-  display: flex;
   flex-direction: column;
   gap: 12px;
   align-items: center;
   z-index: 10;
-  height: fit-content;
-  margin-left: auto; /* push it to the right edge of section */
+  margin-left: auto;
 }
 
 .dot {
@@ -167,71 +158,65 @@
 
 .dot:hover {
   transform: scale(1.2);
-  background: #22c55e;
 }
 
-.active-dot {
-  background: #22c55e; /* highlight active */
-  transform: scale(1.3);
-}
 .dot.active-dot {
-  background: #10b981; /* green */
+  background: #10b981;
   transform: scale(1.3);
 }
-/* Existing desktop/tablet styles remain unchanged */
-/* ...your current CSS above... */
 
-/* ✅ Responsive for Mobile */
+/* ================= Mobile ================= */
 @media (max-width: 768px) {
+  
   .parallax-container {
     flex-direction: column;
-    gap: 20px;
+    gap: 40px;
     align-items: center;
   }
 
-  /* Green box becomes image wrapper on top */
+  /* Hide sticky box on mobile */
   .parallax-green-box {
-    position: relative;
-    top: 0;
-    margin-top: 0;
-    width: 100%;
-    height: auto;
-    background-image: none; /* remove green bg */
-    background: transparent;
+    display: none;
   }
 
-  .image-wrapper {
-    width: 100%;
-    max-width: 400px;
-    height: auto;
+  /* Show image inside each text block */
+  .parallax-text-block {
+    min-height: auto;
+    padding: 20px;
+    opacity: 1 !important;
+   
+    background: #fff;
+  
+
+    text-align: center;              /* Center text */
+    align-items: center !important;  /* Center children */
   }
 
-  .content-img {
-    position: relative;
+  .parallax-text-block .mobile-img {
     width: 100%;
-    height: auto;
+    max-width: 350px;
+    margin: 0 auto 20px;             /* Centered image */
+    display: block;
   }
 
-  /* Text below image, centered */
+  .parallax-btn {
+    margin: 20px auto 0;             /* Centered button */
+  }
+
+  .parallax-text-block ul {
+    text-align: left;                /* Keep lists left aligned */
+    margin-left: 20px;
+  }
+
   .parallax-text-sections {
     width: 100%;
-    flex-direction: row;         /* row for slider effect */
-    overflow-x: auto;            /* horizontal scroll */
-    scroll-snap-type: x mandatory;
-    -webkit-overflow-scrolling: touch;
-    gap: 16px;
+    flex-direction: column;
+    gap: 40px;
+    overflow: visible;
+    scroll-snap-type: none;
   }
 
-  .parallax-text-block {
-    min-width: 100%;
-    flex: 0 0 100%;
-    scroll-snap-align: start;
-    text-align: left;
-    padding: 30px 20px;
-    opacity: 1 !important; /* keep visible for horizontal scroll */
-  }
-
-  /* Dot navigation at bottom center */
+  /* Dot nav moves below */
   .dot-navigation {
     position: relative;
     flex-direction: row;
@@ -244,7 +229,7 @@
   }
 
   .dot {
-    width: 10px;
-    height: 10px;
+    width: 8px;
+    height: 8px;
   }
 }

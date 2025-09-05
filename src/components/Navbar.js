@@ -50,7 +50,8 @@ const dropdowns = {
   ],
 };
 
-const Navbar = () => {
+const Navbar = ({ onOpenModal }) => {
+   // ✅ accept prop here
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState(null);
@@ -60,6 +61,7 @@ const Navbar = () => {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
 
   return (
     <header className={`navbar-wrapper ${scrolled ? "scrolled" : ""}`}>
@@ -157,10 +159,21 @@ const Navbar = () => {
         {/* Desktop Buttons */}
         <div className="navbar-buttons">
           <button className="btn-outline" onClick={() => window.location.href = "https://app.converro.online/"}>Login</button>
-          <button className="btn-glossy" onClick={() => window.location.href = "https://app.converro.online/register"}>
+          {/* <button className="btn-glossy" onClick={() => window.location.href = "https://app.converro.online/register"}>
             Start Free Trial
             <FiArrowRight className="nav-arrow" />
-          </button>
+          </button> */}
+          <button 
+  className="btn-glossy" 
+  onClick={() => { 
+    setMenuOpen(false);   // close mobile menu if open
+    onOpenModal();        // open modal
+  }}
+>
+  Start Free Trial
+  <FiArrowRight className="nav-arrow" />
+</button>
+
         </div>
 
         {/* Hamburger */}
