@@ -1,9 +1,11 @@
 import React, { useState } from "react";
 import Navbar from "../components/Navbar";
-import CTA from "../components/CTA";
+// import CTA from "../components/CTA";
 import Footer from "../components/Footer";
 import "./ContactUs.css";
+// import Testimonials from "./Testimonial";
 import CustomerHelp from "./CustomerHelp";
+import { ToastContainer, toast } from "react-toastify";
 
 const ContactUs = () => {
   const [formData, setFormData] = useState({
@@ -29,12 +31,14 @@ const ContactUs = () => {
   const validateForm = () => {
     const newErrors = {};
 
+    // Email validation
     if (!formData.email) {
       newErrors.email = "Email is required";
     } else if (!/\S+@\S+\.\S+/.test(formData.email)) {
       newErrors.email = "Please enter a valid email";
     }
 
+    // Phone validation (10 digits minimum)
     if (!formData.phone) {
       newErrors.phone = "Phone number is required";
     } else if (!/^[0-9]{10,}$/.test(formData.phone)) {
@@ -45,29 +49,52 @@ const ContactUs = () => {
     return Object.keys(newErrors).length === 0;
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     if (!validateForm()) return;
-
+  
     setIsSubmitting(true);
 
-    // Simulate success without backend
-    setTimeout(() => {
-      alert("Message submitted successfully ✅");
-
-      setFormData({
-        firstName: "",
-        lastName: "",
-        email: "",
-        phone: "",
-        subject: "general",
-        message: "",
+    try {
+      const response = await fetch("https://converro-backend.onrender.com/api/contact/", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          first_name: formData.firstName,
+          last_name: formData.lastName,
+          email: formData.email,
+          phone: formData.phone,
+          subjects: formData.subject, // focus needed here as, backend field is 'subjects' (models.py)
+          message: formData.message,
+        }),
       });
 
-      setIsSubmitting(false);
-    }, 1000);
-  };
+      if (response.ok) {
+        toast.success("Message sent successfully", {
+          position: "bottom-right",
+          style: { background: "#d4edda", color: "#155724" },
+        });
 
+        setFormData({
+          firstName: "",
+          lastName: "",
+          email: "",
+          phone: "",
+          subject: "general",
+          message: "",
+        });
+      } else {
+        toast.error("Something went wrong!", { position: "bottom-right" });
+      }
+    } catch (error) {
+      toast.error("Server error!", { position: "bottom-right" });
+    }
+
+    setIsSubmitting(false);
+  };
+  
   return (
     <>
       <Navbar />
@@ -216,11 +243,13 @@ const ContactUs = () => {
           </div>
         </div>
       </div>
-      <CTA/>
+
       <CustomerHelp />
       <Footer />
+      <ToastContainer />
     </>
   );
 };
 
 export default ContactUs;
+
