@@ -557,20 +557,21 @@
   object-fit: contain;
 }
 /* --- Mobile Sidebar Dropdown --- */
+/* --- Mobile Sidebar Dropdown --- */
 @media (max-width: 768px) {
-  /* --- Mobile Sidebar Dropdown --- */
+  /* Turn dropdowns into slide-in sidebar */
   .hubspot-mega-dropdown,
   .industries-mega-dropdown,
   .dropdown-menu {
     position: fixed;
     top: 0;
-    left: -100%;   /* hidden by default */
+    left: -100%;   /* hidden */
     width: 80%;    /* sidebar width */
     max-width: 320px;
     height: 100vh;
     background: #fff;
     border-radius: 0;
-    box-shadow: 2px 0 15px rgba(0, 0, 0, 0.15);
+    box-shadow: 2px 0 15px rgba(0,0,0,0.15);
     border: none;
     padding: 24px 16px;
     overflow-y: auto;
@@ -578,34 +579,32 @@
     z-index: 1200;
   }
 
-  /* Active (visible sidebar) */
+  /* Show sidebar */
   .hubspot-mega-dropdown.active,
   .industries-mega-dropdown.active,
   .dropdown-menu.active {
     left: 0;
   }
+/* Dropdown Title with Arrow */
+.dropdown-title {
+  display: flex;
+  align-items: center;   /* ensures text and arrow are vertically aligned */
+  gap: 6px;              /* space between text and arrow */
+  font-weight: 500;
+  font-size: 16px;
+  color: #2d3748;
+  cursor: pointer;
+}
 
-  /* Dropdown Title with Arrow */
-  .dropdown-title {
-    display: flex;
-    align-items: center;   /* align text + arrow */
-    gap: 6px;
-    font-weight: 500;
-    font-size: 16px;
-    color: #2d3748;
-    cursor: pointer;
-  }
+.dropdown-arrow {
+  display: flex;
+  align-items: center;   /* vertically centers arrow */
+  font-size: 14px;       /* adjust size so it matches text */
+  line-height: 1;        /* prevents shifting */
+  transition: transform 0.2s ease;
+}
 
-  .dropdown-arrow {
-    display: flex;
-    align-items: center;   /* vertically center arrow */
-    font-size: 14px;
-    line-height: 1;
-    transition: transform 0.2s ease;
-    transform: translateY(-1px); /* fine-tune alignment */
-  }
-
-  /* Sidebar Close Button */
+  /* Sidebar close button */
   .sidebar-close {
     font-size: 20px;
     font-weight: bold;
@@ -618,14 +617,13 @@
     border: none;
   }
 
-  /* Stack Grids Vertically */
+  /* Stack content vertically */
   .products-grid,
   .industries-grid {
     grid-template-columns: 1fr;
     gap: 16px;
   }
 
-  /* Sidebar Items */
   .product-item,
   .industry-item,
   .dropdown-item {
@@ -638,10 +636,9 @@
   .product-item:hover,
   .industry-item:hover,
   .dropdown-item:hover {
-    background: #f9fafb; /* light hover */
+    background: #f9fafb;   /* light hover, no black */
   }
 
-  /* Text Sizes */
   .dropdown-header h3 {
     font-size: 20px;
   }
