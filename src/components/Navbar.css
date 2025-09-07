@@ -245,7 +245,8 @@
 }
 
 .dropdown:hover .dropdown-arrow {
-  transform: rotate(180deg);
+  transform: none;
+  
 }
 
 /* HubSpot Mega Dropdown */
