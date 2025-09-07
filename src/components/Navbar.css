@@ -558,43 +558,94 @@
 }
 /* --- Mobile Sidebar Dropdown --- */
 @media (max-width: 768px) {
-  /* Override mega dropdowns */
+  /* --- Mobile Sidebar Dropdown --- */
   .hubspot-mega-dropdown,
   .industries-mega-dropdown,
   .dropdown-menu {
     position: fixed;
     top: 0;
-    left: -100%;  /* hidden by default */
-    width: 80%;   /* sidebar width */
+    left: -100%;   /* hidden by default */
+    width: 80%;    /* sidebar width */
     max-width: 320px;
     height: 100vh;
     background: #fff;
-    border-radius: 0; /* no rounded corners in sidebar */
-    box-shadow: 2px 0 15px rgba(0,0,0,0.15);
+    border-radius: 0;
+    box-shadow: 2px 0 15px rgba(0, 0, 0, 0.15);
     border: none;
-    padding: 24px;
+    padding: 24px 16px;
     overflow-y: auto;
     transition: left 0.3s ease;
     z-index: 1200;
   }
 
-  /* When active */
+  /* Active (visible sidebar) */
   .hubspot-mega-dropdown.active,
   .industries-mega-dropdown.active,
   .dropdown-menu.active {
-    left: 0; /* slide in */
+    left: 0;
   }
 
-  /* Adjust grids inside to single column */
+  /* Dropdown Title with Arrow */
+  .dropdown-title {
+    display: flex;
+    align-items: center;   /* align text + arrow */
+    gap: 6px;
+    font-weight: 500;
+    font-size: 16px;
+    color: #2d3748;
+    cursor: pointer;
+  }
+
+  .dropdown-arrow {
+    display: flex;
+    align-items: center;   /* vertically center arrow */
+    font-size: 14px;
+    line-height: 1;
+    transition: transform 0.2s ease;
+    transform: translateY(-1px); /* fine-tune alignment */
+  }
+
+  /* Sidebar Close Button */
+  .sidebar-close {
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    color: #333;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: none;
+    border: none;
+  }
+
+  /* Stack Grids Vertically */
   .products-grid,
   .industries-grid {
     grid-template-columns: 1fr;
-    gap: 12px;
+    gap: 16px;
   }
 
+  /* Sidebar Items */
+  .product-item,
+  .industry-item,
+  .dropdown-item {
+    padding: 14px;
+    border: 1px solid #f1f1f1;
+    border-radius: 6px;
+    transition: background 0.2s ease;
+  }
+
+  .product-item:hover,
+  .industry-item:hover,
+  .dropdown-item:hover {
+    background: #f9fafb; /* light hover */
+  }
+
+  /* Text Sizes */
   .dropdown-header h3 {
     font-size: 20px;
   }
+
   .product-content h4,
   .section-content h4,
   .dropdown-content h4 {

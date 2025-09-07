@@ -51,10 +51,10 @@ const dropdowns = {
 };
 
 const Navbar = ({ onOpenModal }) => {
-   // ✅ accept prop here
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState(null);
+  const [mobileDropdown, setMobileDropdown] = useState(null);
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 50);
@@ -62,11 +62,12 @@ const Navbar = ({ onOpenModal }) => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  const toggleMobileDropdown = (name) => {
+    setMobileDropdown(mobileDropdown === name ? null : name);
+  };
 
   return (
     <header className={`navbar-wrapper ${scrolled ? "scrolled" : ""}`}>
-       {/* <div className="work-strip">🚧 Website is under maintenance</div> */}
-
       <div className="navbar">
         {/* Logo */}
         <Link to="/" className="navbar-logo2">
@@ -159,21 +160,16 @@ const Navbar = ({ onOpenModal }) => {
         {/* Desktop Buttons */}
         <div className="navbar-buttons">
           <button className="btn-outline" onClick={() => window.location.href = "https://app.converro.online/"}>Login</button>
-          {/* <button className="btn-glossy" onClick={() => window.location.href = "https://app.converro.online/register"}>
+          <button 
+            className="btn-glossy" 
+            onClick={() => { 
+              setMenuOpen(false); 
+              onOpenModal(); 
+            }}
+          >
             Start Free Trial
             <FiArrowRight className="nav-arrow" />
-          </button> */}
-          <button 
-  className="btn-glossy" 
-  onClick={() => { 
-    setMenuOpen(false);   // close mobile menu if open
-    onOpenModal();        // open modal
-  }}
->
-  Start Free Trial
-  <FiArrowRight className="nav-arrow" />
-</button>
-
+          </button>
         </div>
 
         {/* Hamburger */}
@@ -187,8 +183,41 @@ const Navbar = ({ onOpenModal }) => {
       {/* Mobile Menu */}
       <div className={`mobile-menu ${menuOpen ? "active" : ""}`}>
         <Link to="/aboutus" onClick={() => setMenuOpen(false)}>About</Link>
-        <Link to="/products/marketing" onClick={() => setMenuOpen(false)}>Products</Link>
-        <Link to="/industries/real-estate" onClick={() => setMenuOpen(false)}>Industries</Link>
+
+        {/* Mobile Products Dropdown */}
+        <div className="mobile-dropdown">
+          <div className="mobile-dropdown-header" onClick={() => toggleMobileDropdown("products")}>
+            <span>Products</span>
+            <ChevronDown className={`arrow ${mobileDropdown === "products" ? "open" : ""}`} />
+          </div>
+          {mobileDropdown === "products" && (
+            <div className="mobile-dropdown-content">
+              {dropdowns.products.map((item, i) => (
+                <Link key={i} to={item.to} onClick={() => setMenuOpen(false)}>
+                  {item.title}
+                </Link>
+              ))}
+            </div>
+          )}
+        </div>
+
+        {/* Mobile Industries Dropdown */}
+        <div className="mobile-dropdown">
+          <div className="mobile-dropdown-header" onClick={() => toggleMobileDropdown("industries")}>
+            <span>Industries</span>
+            <ChevronDown className={`arrow ${mobileDropdown === "industries" ? "open" : ""}`} />
+          </div>
+          {mobileDropdown === "industries" && (
+            <div className="mobile-dropdown-content">
+              {dropdowns.industries.map((item, i) => (
+                <Link key={i} to={item.to} onClick={() => setMenuOpen(false)}>
+                  {item.title}
+                </Link>
+              ))}
+            </div>
+          )}
+        </div>
+
         <Link to="/pricing" onClick={() => setMenuOpen(false)}>Pricing</Link>
         <Link to="/integrationpage" onClick={() => setMenuOpen(false)}>Integration</Link>
 
