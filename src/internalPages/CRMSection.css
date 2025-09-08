@@ -1,0 +1,171 @@
+.crm-section {
+  
+  text-align: center;
+  padding: 40px 20px;
+  padding-top: 150px;
+  background: linear-gradient(to right, #d1fae5, #fef9c3, #ecfdf5);
+ 
+}
+
+/* Wrapper around toggle + arrows */
+.toggle-wrapper {
+  position: relative;
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+
+/* White pill background container */
+.toggle-container {
+  flex: 1;
+  background: #fff;
+  border-radius: 50px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  padding: 8px 20px;
+}
+
+/* Horizontal scroll bar */
+.toggle-bar {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  scroll-behavior: smooth;
+}
+
+.toggle-bar::-webkit-scrollbar {
+  display: none;
+}
+
+.toggle-item {
+  white-space: nowrap;
+  padding: 8px 18px;
+  border-radius: 999px;
+  border: none;
+  background: transparent;
+  color: #333;
+  font-size: 15px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.toggle-item:hover {
+  color: #111;
+}
+
+.toggle-item.active {
+  background: #000;
+  color: #fff;
+}
+
+/* Arrow buttons */
+/* Scroll Button Styles */
+.scroll-btn {
+  width: 40px;
+  height: 40px;
+  border: none;
+  border-radius: 50%;
+  background: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  color: #444;
+  transition: all 0.3s ease;
+  flex-shrink: 0;
+}
+
+.scroll-btn:hover {
+  background: #f2f2f2;
+  transform: scale(1.05);
+}
+
+.scroll-btn:active {
+  transform: scale(0.95);
+}
+
+.scroll-btn.left {
+  margin-right: 12px;
+}
+
+.scroll-btn.right {
+  margin-left: 12px;
+}
+
+/* Wrapper for spacing */
+.toggle-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 30px; /* space between navbar and content/footer */
+}
+
+
+.content {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.content h1 {
+  font-size: 48px;
+  font-weight: bold;
+}
+
+.content h1 span {
+  color: #22c55e;
+}
+
+.content p {
+  margin-top: 16px;
+  color: #555;
+  font-size: 16px;
+}
+
+.cta-indus {
+  display: inline-flex;         /* make flex so align-items works */
+  align-items: center;          /* vertically center text + icon */
+  justify-content: center;
+  background: black;
+  color: white;
+  padding: 14px 26px;
+  border-radius: 40px;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 500;
+  gap: 8px;                     /* space between text and arrow */
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.cta-indus .Indus-arrow {
+  transition: transform 0.3s ease, color 0.3s ease; /* smooth icon anim */
+}
+
+.cta-indus:hover {
+  background: #3fce71;
+  color: black;
+}
+
+.cta-indus:hover .Indus-arrow {
+  transform: rotate(-45deg); /* rotate + slight move */
+  color: black;
+}
+
+
+.trust {
+  margin-top: 16px;
+  font-size: 14px;
+  color: #666;
+}

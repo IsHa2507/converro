@@ -27,7 +27,7 @@ import servicesImg from "../images/Product and Services.svg";
 
 const dropdowns = {
   products: [
-    { title: "SMS Marketing", desc: "Reach more customers instantly with targeted SMS campaigns.", to: "/sms-marketing", image: smsImg },
+    { title: "SMS Marketing", desc: "Reach more customers instantly with targeted SMS campaigns.", to: "/", image: smsImg },
     { title: "Email Marketing", desc: "Boost engagement and conversions with powerful email campaigns.", to: "/products/sales", image: emailImg },
     { title: "Automation 360", desc: "Automate workflows and maximize efficiency with ease.", to: "/products/service", image: automationImg },
     { title: "WhatsApp Business API", desc: "Connect directly with customers using WhatsApp marketing.", to: "/products/content", image: whatsappImg },
@@ -38,16 +38,17 @@ const dropdowns = {
     { title: "Invoice & Quotation", desc: "Generate invoices and quotations instantly online.", to: "/products/invoice", image: invoiceImg },
   ],
   industries: [
-    { title: "Real Estate", desc: "Solutions tailored for real estate businesses", to: "/industries/real-estate", image: realEstateImg },
-    { title: "Education", desc: "Engagement tools for schools and universities", to: "/industries/education", image: educationImg },
-    { title: "Financial Services", desc: "CRM solutions for banking and finance", to: "/industries/financial-services", image: financeImg },
-    { title: "Tours and Travel", desc: "Automation for travel agencies", to: "/industries/tours-travel", image: travelImg },
-    { title: "Call Centers", desc: "Scale your call center operations", to: "/industries/call-centers", image: callcenterImg },
-    { title: "B2B CRM", desc: "CRM designed for B2B businesses", to: "/industries/b2b-crm", image: b2bImg },
-    { title: "Automobile", desc: "CRM for automobile sales and service", to: "/industries/automobile", image: automobileImg },
-    { title: "Consulting", desc: "Grow and manage consulting businesses", to: "/industries/consulting", image: consultingImg },
-    { title: "Products & Services", desc: "Tools for service-based companies", to: "/industries/products-services", image: servicesImg },
-  ],
+  { title: "Real Estate", desc: "Solutions tailored for real estate businesses", to: "/crmsections?cat=real-estate", image: realEstateImg },
+  { title: "Education", desc: "Engagement tools for schools and universities", to: "/crmsections?cat=education", image: educationImg },
+  { title: "Financial Services", desc: "CRM solutions for banking and finance", to: "/crmsections?cat=financial-services", image: financeImg },
+  { title: "Tours and Travel", desc: "Automation for travel agencies", to: "/crmsections?cat=tours-travels", image: travelImg },
+  { title: "Call Centers", desc: "Scale your call center operations", to: "/crmsections?cat=callcenters", image: callcenterImg },
+  { title: "B2B CRM", desc: "CRM designed for B2B businesses", to: "/crmsections?cat=b2b-crm", image: b2bImg },
+  { title: "Automobile", desc: "CRM for automobile sales and service", to: "/crmsections?cat=automobile", image: automobileImg },
+  { title: "Healthcare", desc: "CRM for hospitals and clinics", to: "/crmsections?cat=healthcare", image: consultingImg },
+  { title: "Hospitality", desc: "CRM for hotels and hospitality industry", to: "/crmsections?cat=hospitality", image: servicesImg },
+],
+
 };
 
 const Navbar = ({ onOpenModal }) => {

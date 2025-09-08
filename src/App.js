@@ -10,7 +10,7 @@ import ContactUs from "./components/ContactUs";
 import AboutUS from "./components/AboutUs";
 import Pricing from "./components/Pricing";
 import IntegrationPage from "./components/IntegrationPage";
-import SMS_Marketing from "./internalPages/SMS_Marketing";
+import CRMSection from "./internalPages/CRMSectionIndus";
 
 // Global components
 import Navbar from "./components/Navbar";
@@ -37,7 +37,7 @@ function App() {
         <Route path="/aboutus" element={<AboutUS />} />
         <Route path="/pricing" element={<Pricing />} />
         <Route path="/integrationpage" element={<IntegrationPage />} />
-        <Route path="/sms-marketing" element={<SMS_Marketing />} />
+        <Route path="/crmsections" element={<CRMSection/>} />
       </Routes>
 
       {/* Footer always at bottom */}
