@@ -275,68 +275,124 @@
 /*   Responsive Design           */
 /* ============================= */
 
-/* ✅ Laptop (≤1200px) */
-@media (max-width: 1200px) {
+
+/* ============================= */
+/*   Responsive Design           */
+/* ============================= */
+
+/* ✅ Tablet (≤1024px) */
+@media (max-width: 1024px) {
   .section-title {
     font-size: 2.2rem;
   }
+  .section-subtitle {
+    font-size: 1rem;
+    max-width: 80%;
+    margin: 0 auto 24px auto; /* center + spacing */
+  }
   .pricing-cards {
-    gap: 25px;
+    gap: 28px;
   }
   .pricing-card {
-    flex: 1 1 45%; /* two cards per row */
-    max-width: 48%;
+    flex: 1 1 45%; /* 2 cards per row */
+    max-width: 45%;
   }
 }
 
-/* ✅ Tablet (≤768px) */
+/* ✅ Small Tablet (≤768px) */
 @media (max-width: 768px) {
   .section-title {
     font-size: 2rem;
+    margin-bottom: 14px;
   }
   .section-subtitle {
-    font-size: 1rem;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    max-width: 90%;
+    margin: 0 auto 28px auto;
   }
   .billing-toggle {
-    width: 260px;
-    height: 34px;
+    width: 240px;
+    height: 38px;
   }
   .pricing-cards {
     flex-direction: column;
     align-items: center;
-    gap: 32px; /* ✅ extra gap to avoid overlap */
+    gap: 40px;
+    padding-top: 32px;
   }
   .pricing-card {
-    flex: 1 1 100%; /* single column */
-    max-width: 90%;
+    flex: 1 1 100%;
+    max-width: 92%;
+
   }
+  .pricing-card:hover{
+    transform: none;
+  }
+  .pricing-card.highlighted:hover {
+  transform: none;
+}
 }
 
 /* ✅ Mobile (≤480px) */
 @media (max-width: 480px) {
+  .pricing-section {
+    padding: 120px 16px 60px 16px; /* reduce big top/bottom padding */
+  }
+
   .section-title {
-    font-size: 1.8rem;
+    font-size: 1.6rem;
+    line-height: 1.3;
+    margin-bottom: 10px;
   }
+
   .section-subtitle {
-    font-size: 0.95rem;
+    font-size: 0.9rem;
+    line-height: 1.4;
+    margin-bottom: 24px;
+    padding: 0 8px;
   }
+
   .billing-toggle {
-    width: 220px;
-    height: 32px;
+    width: 200px;
+    height: 34px;
+    gap: 6px;
   }
+
   .pricing-cards {
-    flex-direction: column;
-    gap: 36px; /* ✅ more spacing for stacked cards */
+    gap: 50px;  
+    padding-top: 24px;
   }
+
   .pricing-card {
-    flex: 1 1 100%;
     max-width: 100%;
     padding: 20px;
+    border-radius: 14px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+  }
+  .pricing-card:hover{
+    transform: none;
   }
   .plan-name {
     font-size: 1.2rem;
   }
+  .pricing-card.highlighted:hover {
+  transform: none;
+}
+
   .price {
-    font-size: 1.6rem;
+    font-size: 1.4rem;
+  }
+
+  .desc,
+  .plan-subtitle,
+  .include-subtitle {
+    font-size: 0.85rem;
+  }
+
+  .btn {
+    font-size: 0.9rem;
+    padding: 9px;
+    border-radius: 18px;
   }
 }
