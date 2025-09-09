@@ -8,6 +8,7 @@ import {
   FaCar,
   FaPhone,
 } from "react-icons/fa";
+
 import { FiArrowRight } from "react-icons/fi";
 import { MdTravelExplore } from "react-icons/md";
 import { BsGraphUp } from "react-icons/bs";
@@ -15,6 +16,7 @@ import "./CRMSection.css";
 import Navbar from "../components/Navbar";
 import CTA from "../components/CTA";
 import Footer from "../components/Footer";
+import CRMIndusFeatures from "./CRMfeatures";
 
 const categories = [
   { id: 1, name: "Real Estate", slug: "real-estate", icon: <FaBuilding /> },
@@ -71,11 +73,11 @@ export default function CRMSection() {
       <div className="crm-section">
         {/* Toggle Bar */}
         <div className="toggle-wrapper">
-          <button className="scroll-btn left" onClick={() => handleArrow("left")}>
-            <FaArrowLeft />
-          </button>
-
           <div className="toggle-container">
+            <button className="scroll-btn inside left" onClick={() => handleArrow("left")}>
+              <FaArrowLeft />
+            </button>
+
             <div className="toggle-bar">
               {categories.map((cat) => (
                 <button
@@ -88,11 +90,11 @@ export default function CRMSection() {
                 </button>
               ))}
             </div>
-          </div>
 
-          <button className="scroll-btn right" onClick={() => handleArrow("right")}>
-            <FaArrowRight />
-          </button>
+            <button className="scroll-btn inside right" onClick={() => handleArrow("right")}>
+              <FaArrowRight />
+            </button>
+          </div>
         </div>
 
         {/* Content Section */}
@@ -106,14 +108,16 @@ export default function CRMSection() {
             From buyer follow-ups to custom workflows, everything is built to
             maximize sales efficiency and client satisfaction.
           </p>
-          <button className="cta-indus">Start Free Trial
+          <button className="cta-indus">
+            Start Free Trial
             <FiArrowRight className="Indus-arrow" />
-            </button>
+          </button>
           <p className="trust">
             Trusted by <b>3K+ companies</b> around the world
           </p>
         </div>
       </div>
+      <CRMIndusFeatures />
       <CTA />
       <Footer />
     </>

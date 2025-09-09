@@ -1,0 +1,89 @@
+.crmindus-section {
+  padding: 64px 24px;
+  background: #fff;
+  text-align: center;
+}
+
+.crmindus-title {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 12px;
+  color: #222;
+}
+
+.crmindus-subtitle {
+  color: #555;
+  margin: 0 auto 48px auto;
+  max-width: 800px;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.crmindus-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.crmindus-card {
+  background: #ffffff;
+  padding: 24px;
+  border-radius: 12px;
+  height: 300px;
+  text-align: left;
+  border: 0.5px solid rgb(206, 205, 205);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.crmindus-card:hover {
+  transform: translateY(-4px);
+  border: 0.5px solid #3fce71;
+}
+
+.crmindus-icon {
+  margin-bottom: 16px;
+  
+}
+.crmindus-icon img {
+  width: 100px;   /* adjust size */
+  height: 100px;
+  object-fit: contain;
+}
+
+
+/* This pushes text to bottom */
+.crmindus-card-title,
+.crmindus-card-description {
+  margin-top: auto;
+}
+
+.crmindus-card-title {
+  font-size: 32px;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #222;
+}
+
+.crmindus-card-description {
+  color: #666;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+/* Responsive */
+@media (min-width: 640px) {
+  .crmindus-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .crmindus-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

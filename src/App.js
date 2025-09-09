@@ -11,6 +11,7 @@ import AboutUS from "./components/AboutUs";
 import Pricing from "./components/Pricing";
 import IntegrationPage from "./components/IntegrationPage";
 import CRMSection from "./internalPages/CRMSectionIndus";
+import CRMIndusFeatures from "./internalPages/CRMfeatures";
 
 // Global components
 import Navbar from "./components/Navbar";

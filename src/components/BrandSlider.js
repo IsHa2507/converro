@@ -9,6 +9,7 @@ import icrinfra from "../assets/ICR Infra.png";
 import ids from "../assets/IDS.png";
 import skillgrow from "../assets/Skillgroww.png";
 import techmaestro from "../assets/Tech Maestro.png";
+import deshizyka from "../assets/Deshizayka.png";
 
 const logos = [
   cybershield,
@@ -18,6 +19,7 @@ const logos = [
   ids,
   skillgrow,
   techmaestro,
+  deshizyka
 ];
 
 const BrandSlider = () => {
