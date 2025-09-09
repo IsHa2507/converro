@@ -20,8 +20,8 @@ import CRMIndusFeatures from "./CRMfeatures";
 import imgcrm1 from "../images/CRMIMG1.png";
 import imgcrm2 from "../images/CRMIMG2.png";
 import imgcrm3 from "../images/CRMIMG3.png";
-import imgcrm4 from "../images/CRMIMG4.png";
-import imgcrm5 from "../images/CRMIMG5.png";
+import imgcrm4 from "../images/CRM Img 4.png";
+import imgcrm5 from "../images/CRM Img 5.png";
 
 const categories = [
   { id: 1, name: "Real Estate", slug: "real-estate", icon: <FaBuilding /> },
@@ -331,6 +331,90 @@ export const crmFeatures = {
       title: "Track showroom & field executives",
       description:
         "Monitor dealer sales reps’ activity and client visits with real-time tracking to ensure accountability.",
+      img: imgcrm5,
+    },
+  ],
+  "healthcare": [
+    {
+      id: 1,
+      tag: "Integration Capabilities",
+      title: "Centralize patient records",
+      description:
+        "All patient details, prescriptions, and reports are stored in one secure hub for easy access.",
+      img: imgcrm1,
+    },
+    {
+      id: 2,
+      tag: "Telesales Management",
+      title: "Simplify patient communication",
+      description:
+        "With auto-dial and one-click calling, staff can connect quickly for appointment confirmations and updates.",
+      img: imgcrm2,
+    },
+    {
+      id: 3,
+      tag: "Lead Management",
+      title: "Track patient interactions",
+      description:
+        "Every consultation, treatment plan, and medical history is organized under one patient profile.",
+      img: imgcrm3,
+    },
+    {
+      id: 4,
+      tag: "Follow-up Call Reminders",
+      title: "Ensure better care",
+      description:
+        "Automated reminders for follow-ups, test results, and medication schedules keep patients on track.",
+      img: imgcrm4,
+    },
+    {
+      id: 5,
+      tag: "Team Management",
+      title: "Coordinate doctors & staff",
+      description:
+        "Monitor doctor visits, nurse check-ins, and overall staff activities for smooth hospital operations.",
+      img: imgcrm5,
+    },
+  ],
+  "hospitality": [
+    {
+      id: 1,
+      tag: "Integration Capabilities",
+      title: "Capture bookings everywhere",
+      description:
+        "From websites, OTAs, and travel partners, all reservations and guest inquiries flow into one hub.",
+      img: imgcrm1,
+    },
+    {
+      id: 2,
+      tag: "Telesales Management",
+      title: "Improve guest calling efficiency",
+      description:
+        "Front-desk teams save time with one-click calling for confirmations, upgrades, and guest requests.",
+      img: imgcrm2,
+    },
+    {
+      id: 3,
+      tag: "Lead Management",
+      title: "Organize guest profiles",
+      description:
+        "Track guest history, preferences, bookings, and communication in a single unified profile.",
+      img: imgcrm3,
+    },
+    {
+      id: 4,
+      tag: "Follow-up Call Reminders",
+      title: "Engage guests at the right time",
+      description:
+        "Send timely check-in messages, feedback requests, and post-stay offers to build loyalty.",
+      img: imgcrm4,
+    },
+    {
+      id: 5,
+      tag: "Team Management",
+      title: "Enhance service delivery",
+      description:
+        "Assign and track housekeeping, concierge, and reception tasks for a seamless guest experience.",
       img: imgcrm5,
     },
   ],
