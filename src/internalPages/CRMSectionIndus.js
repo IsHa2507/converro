@@ -24,16 +24,89 @@ import imgcrm4 from "../images/CRM Img 4.png";
 import imgcrm5 from "../images/CRM Img 5.png";
 
 const categories = [
-  { id: 1, name: "Real Estate", slug: "real-estate", icon: <FaBuilding /> },
-  { id: 2, name: "Education", slug: "education", icon: <FaBook /> },
-  { id: 3, name: "Tours & Travels", slug: "tours-travels", icon: <MdTravelExplore /> },
-  { id: 4, name: "Financial Services", slug: "financial-services", icon: <BsGraphUp /> },
-  { id: 5, name: "Automobile", slug: "automobile", icon: <FaCar /> },
-  { id: 6, name: "Callcenters", slug: "callcenters", icon: <FaPhone /> },
-  { id: 7, name: "B2B CRM", slug: "b2b-crm", icon: <BsGraphUp /> },
-  { id: 8, name: "Healthcare", slug: "healthcare", icon: <FaBuilding /> },
-  { id: 9, name: "Hospitality", slug: "hospitality", icon: <FaBuilding /> },
+  {
+    id: 1,
+    name: "Real Estate",
+    title: <>Best <span>Real Estate</span> CRM for Property Sales & Rentals </>,
+    text:
+      "Converro helps you manage inquiries, track leads, and close property deals faster. From buyer follow-ups to custom workflows, everything is built to maximize sales efficiency and client satisfaction.",
+    slug: "real-estate",
+    icon: <FaBuilding />,
+  },
+  {
+    id: 2,
+    name: "Education",
+    title: <>Smart <span>Education</span> CRM for Schools & Colleges </>,
+    text:
+      "Simplify admissions, manage student inquiries, and boost enrollment with personalized engagement. Converro adapts to your education workflow, ensuring no lead or student query is missed.",
+    slug: "education",
+    icon: <FaBook />,
+  },
+  {
+    id: 3,
+    name: "Tours & Travels",
+    title: <>Powerful <span>Travel CRM</span> for Agencies & Operators </>,
+    text:
+      "From inbound inquiries to itinerary planning, Converro helps you increase bookings, improve engagement, and deliver memorable customer journeys that bring clients back again and again.",
+    slug: "tours-travels",
+    icon: <MdTravelExplore />,
+  },
+  {
+    id: 4,
+    name: "Financial Services",
+    title: <>Secure <span>Financial CRM</span> for Banks & FinTech </>,
+    text:
+      "Converro enables financial institutions to manage client portfolios, automate follow-ups, and ensure compliance—all while building trust through personalized communication.",
+    slug: "financial-services",
+    icon: <BsGraphUp />,
+  },
+  {
+    id: 5,
+    name: "Automobile",
+    title: <>Next-Gen <span>Automobile CRM</span> for Dealers & Showrooms </>,
+    text:
+      "From test-drive bookings to post-sale service, Converro helps you manage leads, track customers, and increase vehicle sales with personalized follow-ups.",
+    slug: "automobile",
+    icon: <FaCar />,
+  },
+  {
+    id: 6,
+    name: "Callcenters",
+    title: <>High-Performance <span>Call Center CRM</span> </>,
+    text:
+      "Boost agent productivity with lead auto-assignment, smart call routing, and real-time analytics. Converro ensures consistent communication that keeps customers engaged.",
+    slug: "callcenters",
+    icon: <FaPhone />,
+  },
+  {
+    id: 7,
+    name: "B2B CRM",
+    title: <>Scalable <span>B2B CRM</span> for Sales Teams </>,
+    text:
+      "Track deals, nurture prospects, and streamline your entire sales cycle with Converro. From lead capture to contract closure, everything you need for B2B success lives in one platform.",
+    slug: "b2b-crm",
+    icon: <BsGraphUp />,
+  },
+  {
+    id: 8,
+    name: "Healthcare",
+    title: <>Patient-Centric <span>Healthcare CRM</span> </>,
+    text:
+      "Manage patient inquiries, appointment scheduling, and follow-ups with ease. Converro helps clinics and hospitals deliver seamless, personalized care experiences.",
+    slug: "healthcare",
+    icon: <FaBuilding />,
+  },
+  {
+    id: 9,
+    name: "Hospitality",
+    title: <>Guest-Focused <span>Hospitality CRM</span> </>,
+    text:
+      "Enhance guest engagement, manage reservations, and increase repeat bookings. Converro allows hotels and restaurants to build strong guest relationships with data-driven insights.",
+    slug: "hospitality",
+    icon: <FaBuilding />,
+  },
 ];
+
 
 export const crmFeatures = {
   "real-estate": [
@@ -493,23 +566,19 @@ export default function CRMSection() {
 
         {/* Content Section */}
         <div className="content">
-          <h1>
-            Best <span>{activeCat?.name}</span> CRM
-          </h1>
-          <p>
-            Converro helps you manage inquiries, track leads, and close{" "}
-            <b>{activeCat?.name}</b> deals faster. From buyer follow-ups to
-            custom workflows, everything is built to maximize sales efficiency
-            and client satisfaction.
-          </p>
-          <button className="cta-indus"onClick={() => window.location.href = "https://app.converro.online/register"} >
-            Start Free Trial
-            <FiArrowRight className="Indus-arrow" />
-          </button>
-          <p className="trust">
-            Trusted by <b>3K+ companies</b> around the world
-          </p>
-        </div>
+  <h1>{activeCat?.title}</h1>
+  <p>{activeCat?.text}</p>
+  <button
+    className="cta-indus"
+    onClick={() => (window.location.href = "https://app.converro.online/register")}
+  >Start Free Trial
+    {activeCat?.cta}
+    <FiArrowRight className="Indus-arrow" />
+  </button>
+  <p className="trust">
+    Trusted by <b>3K+ companies</b> around the world
+  </p>
+</div>
       </div>
 
       <CRMIndusFeatures />
