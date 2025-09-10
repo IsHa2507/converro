@@ -502,7 +502,7 @@ export default function CRMSection() {
             custom workflows, everything is built to maximize sales efficiency
             and client satisfaction.
           </p>
-          <button className="cta-indus">
+          <button className="cta-indus"onClick={() => window.location.href = "https://app.converro.online/register"} >
             Start Free Trial
             <FiArrowRight className="Indus-arrow" />
           </button>
@@ -539,7 +539,7 @@ export default function CRMSection() {
         <span className="feature-tag">#{f.tag || "Feature"}</span>
         <h3>{f.title}</h3>
         <p>{f.description}</p>
-        <button className="start-btn-crm">Start For Free</button>
+        <button className="start-btn-crm" onClick={() => window.location.href = "https://app.converro.online/register"}>Start For Free</button>
       </div>
     </div>
   ))}
