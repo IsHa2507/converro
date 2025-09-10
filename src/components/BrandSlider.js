@@ -10,6 +10,14 @@ import ids from "../assets/IDS.png";
 import skillgrow from "../assets/Skillgroww.png";
 import techmaestro from "../assets/Tech Maestro.png";
 import deshizyka from "../assets/Deshizayka.png";
+import vishalmega from "../assets/Vishal mega mart.png";
+import titan from "../assets/Titan.png";
+import sleepwell from "../assets/Sleepwell.png";
+import roto from "../assets/Roto pumps.png";
+import nxone from "../assets/NX ONE.png";
+import akkar from "../assets/Aakkar.png";
+import godrej from "../assets/Godrej.png";
+import canvas from "../assets/Cavana Fashion.png";
 
 const logos = [
   cybershield,
@@ -19,7 +27,15 @@ const logos = [
   ids,
   skillgrow,
   techmaestro,
-  deshizyka
+  deshizyka,
+  vishalmega,
+  titan,
+  sleepwell,
+  roto,
+  nxone,
+  akkar,
+  godrej,
+  canvas,
 ];
 
 const BrandSlider = () => {
