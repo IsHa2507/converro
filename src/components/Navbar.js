@@ -160,11 +160,11 @@ const Navbar = ({ onOpenModal }) => {
         {/* Desktop Buttons */}
         <div className="navbar-buttons">
           <button className="btn-outline" onClick={() => window.location.href = "https://app.converro.online/"}>Login</button>
-          {/* <button className="btn-glossy" onClick={() => window.location.href = "https://app.converro.online/register"}>
+          <button className="btn-glossy" onClick={() => window.location.href = "https://app.converro.online/register"}>
             Start Free Trial
             <FiArrowRight className="nav-arrow" />
-          </button> */}
-          <button 
+          </button>
+          {/* <button 
   className="btn-glossy" 
   onClick={() => { 
     setMenuOpen(false);   // close mobile menu if open
@@ -172,8 +172,8 @@ const Navbar = ({ onOpenModal }) => {
   }}
 >
   Start Free Trial
-  <FiArrowRight className="nav-arrow" />
-</button>
+  <FiArrowRight className="nav-arrow" /> */}
+{/* </button> */}
 
         </div>
 
