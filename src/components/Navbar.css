@@ -514,8 +514,15 @@
   font-size: 18px;
   font-weight: 600;
   color: #2d3748;
-  margin-bottom: 20px;
+  margin-bottom: 20px; /* space after the whole heading */
+  line-height: 1.5;
+  display: block;
+  padding-bottom: 12px; /* 👈 adds gap between text & line */
+  border-bottom: 1px solid #e2e8f0; /* full-width underline */
+  width: 100%;
 }
+
+
 
 .industries-grid {
   display: grid;
