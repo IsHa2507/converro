@@ -1,0 +1,120 @@
+.features-wrapperp{
+    background-color: #fff;
+     max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 2rem 1rem;
+}
+.features-sectionp {
+ background-color: #fff;
+}
+
+.features-titlep {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.features-subtitlep {
+  font-size: 1rem;
+  color: #555;
+  max-width: 700px;
+  margin: 0 auto 2rem;
+}
+
+.features-gridp {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 1.5rem;
+}
+
+.feature-cardp {
+  background: #fff;
+  border-radius: 12px;
+  padding: 1.5rem;
+  border: 0.5px solid #e0e0e0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+  transition: transform 0.3s ease;
+}
+
+.feature-cardp:hover {
+  transform: translateY(-5px);
+  border: 0.5px solid #22c55e;
+}
+
+.feature-iconp {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  color: #22c55e;
+}
+
+.feature-cardp h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.feature-cardp p {
+  font-size: 0.95rem;
+  margin-bottom: 0.5rem;
+}
+
+.feature-cardp .highlightpf {
+  font-weight: 600;
+  color: #16a34a;
+  margin-bottom: 1rem;
+}
+
+.feature-buttonsp {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: auto;
+ 
+}
+
+/* Outline Button */
+.btn-outlinep {
+  display: flex;                /* makes centering easy */
+  align-items: center;          /* vertical center */
+  justify-content: center;      /* horizontal center */
+  padding: 10px 20px;
+  border-radius: 999px;
+  border: 1.5px solid #000;
+  background: #fff;
+  color: #000;
+  font-size: 0.9rem;
+  font-weight: 600;
+  width: 120px;                 /* slightly wider for better text fit */
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.btn-outlinep:hover {
+  background: #000;
+  color: #fff;
+}
+
+/* Primary Button */
+.btn-primaryp {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 20px;
+  border-radius: 999px;
+  background: #000;
+  color: #fff;
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-decoration: none;
+  width: 120px;
+ 
+  transition: all 0.3s ease;
+}
+
+.btn-primaryp:hover {
+  background: #22c55e; /* blue hover like screenshot */
+  
+}

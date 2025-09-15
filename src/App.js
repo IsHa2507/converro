@@ -17,6 +17,8 @@ import CRMIndusFeatures from "./internalPages/CRMfeatures";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import ModalForm from "./components/ModalForm";
+import ProductSection from "./internalPages/ProductSection";
+import ProductFeatures from "./internalPages/ProductFeatures";
 
 function App() {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -39,6 +41,7 @@ function App() {
         <Route path="/pricing" element={<Pricing />} />
         <Route path="/integrationpage" element={<IntegrationPage />} />
         <Route path="/crmsections" element={<CRMSection/>} />
+        <Route path="/productsection" element={<ProductSection/>}/>
       </Routes>
 
       {/* Footer always at bottom */}

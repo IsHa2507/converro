@@ -1,0 +1,82 @@
+.herop {
+  background: linear-gradient(to right, #d1fae5, #fef9c3, #ecfdf5);
+  padding: 5rem 2rem;
+}
+
+.herop-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 3rem;
+  flex-wrap: wrap;
+}
+
+.herop-text {
+  flex: 1 1 500px;
+}
+
+.herop-text h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 1.5rem;
+}
+
+.herop-text .highlightp {
+   color: #22c55e;
+ 
+  
+}
+
+.herop-subtext {
+  font-size: 1.1rem;
+  color: #555;
+  margin-bottom: 2rem;
+  max-width: 500px;
+}
+
+.herop-cta {
+ display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: black;
+  color: white;
+  padding: 14px 26px;
+  border-radius: 40px;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 500;
+  gap: 8px;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.herop-cta:hover {
+  background: #3fce71;
+  color: black;
+}
+.herop-cta .ctap-icon{
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+.herop-cta:hover .ctap-icon{
+   transform: rotate(-45deg);
+  color: black;
+}
+.herop-trust {
+  margin-top: 1.2rem;
+  font-size: 0.95rem;
+  color: #333;
+}
+
+.herop-image {
+  flex: 1 1 500px;
+  text-align: center;
+}
+
+.herop-image img {
+  width: 100%;
+  max-width: 550px;
+  filter: drop-shadow(0px 10px 20px rgba(0, 0, 0, 0.2));
+}
