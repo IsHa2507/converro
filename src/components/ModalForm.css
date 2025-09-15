@@ -1,58 +1,117 @@
+/* Dark background overlay */
 .modal-overlay {
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0,0,0,0.6);
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.6); /* dim background */
   display: flex;
-  justify-content: center;
   align-items: center;
-  z-index: 9999;
+  justify-content: center;
+  z-index: 1000; /* makes sure it stays on top */
 }
 
+/* Modal box */
 .modal {
-  background: white;
-  padding: 24px;
+  background: #fff;
+  width: 500px;
+  max-width: 90%;
   border-radius: 12px;
-  width: 400px;
+  padding: 2rem;
   position: relative;
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.25);
+  animation: fadeInUp 0.3s ease-out;
 }
 
+/* Close button */
 .close-btn {
   position: absolute;
-  top: 10px;
-  right: 15px;
-  font-size: 18px;
+  top: 12px;
+  right: 12px;
+  background: none;
   border: none;
-  background: transparent;
+  font-size: 20px;
   cursor: pointer;
 }
 
-form label {
-  display: block;
-  margin-bottom: 12px;
+/* Headings */
+.modal h2 {
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+  text-align: center;
 }
 
-form input, form select {
+/* Form styles */
+.form-step label {
+  display: block;
+  margin-bottom: 1rem;
+  font-weight: 500;
+}
+
+.form-step input,
+.form-step select {
   width: 100%;
-  padding: 8px;
-  margin-top: 4px;
+  padding: 10px;
+  margin-top: 6px;
   border: 1px solid #ccc;
   border-radius: 6px;
+  font-size: 14px;
 }
 
-.next-btn, .back-btn, .submit-btn {
-  background: #5a2dff;
-  color: white;
-  border: none;
+/* Buttons */
+.next-btn,
+.back-btn,
+.submit-btn {
   padding: 10px 16px;
+  border: none;
   border-radius: 6px;
   cursor: pointer;
-  margin-top: 12px;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.next-btn {
+  background: #007bff;
+  color: white;
 }
 
 .back-btn {
-  background: gray;
-  margin-right: 10px;
+  background: #6c757d;
+  color: white;
+}
+
+.submit-btn {
+  background: #28a745;
+  color: white;
+}
+
+/* Hover effects */
+.next-btn:hover {
+  background: #28a745;
+}
+.back-btn:hover {
+  background: #565e64;
+}
+.submit-btn:hover {
+  background: #1e7e34;
+}
+
+/* Align actions */
+.form-actions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1rem;
+}
+
+/* Fade-in animation */
+@keyframes fadeInUp {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }

@@ -16,7 +16,7 @@ const ModalForm = ({ isOpen, onClose }) => {
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
-
+  
   const handleNext = () => setStep(2);
   const handleBack = () => setStep(1);
 

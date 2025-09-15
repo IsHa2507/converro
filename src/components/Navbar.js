@@ -5,6 +5,7 @@ import { FiArrowRight } from "react-icons/fi";
 import { ChevronDown } from "lucide-react";
 import logo from "../assets/logo.svg";
 import "./Navbar.css";
+import ModalForm from "./ModalForm";
 
 import smsImg from "../images/SMS Marketing.svg";
 import emailImg from "../images/Email Marketing.svg";
@@ -51,11 +52,13 @@ const dropdowns = {
 
 };
 
-const Navbar = ({ onOpenModal }) => {
-   // ✅ accept prop here
+const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState(null);
+
+  // 🔹 Add modal state
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 50);
@@ -161,10 +164,22 @@ const Navbar = ({ onOpenModal }) => {
         {/* Desktop Buttons */}
         <div className="navbar-buttons">
           <button className="btn-outline" onClick={() => window.location.href = "https://app.converro.online/"}>Login</button>
-          <button className="btn-glossy" onClick={() => window.location.href = "https://app.converro.online/register"}>
-            Start Free Trial
-            <FiArrowRight className="nav-arrow" />
-          </button>
+          <div>
+      {/* Your button */}
+      <button
+        className="btn-glossy"
+        onClick={() => setIsModalOpen(true)}
+      >
+        Start Free Trial
+        <FiArrowRight className="nav-arrow" />
+      </button>
+
+      {/* Modal pops up */}
+      <ModalForm
+        isOpen={isModalOpen}
+        onClose={() => setIsModalOpen(false)}
+      />
+    </div>
           {/* <button 
   className="btn-glossy" 
   onClick={() => { 
