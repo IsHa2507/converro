@@ -57,12 +57,12 @@ export default function Footer() {
           <div>
             <h3>Quick Links</h3>
             <ul>
-              <li><a href="#">Whatsapp API</a></li>
-              <li><a href="#">Automations</a></li>
-              <li><a href="#">SMS Marketing</a></li>
-              <li><a href="#">IVR Solutions</a></li>
-              <li><a href="#">AI Bot Assistant</a></li>
-              <li><a href="#">Task Manager</a></li>
+              <li><a href="/crmsections?cat=education">Education </a></li>
+              <li><a href="/crmsections?cat=real-estate">Real Estate</a></li>
+              <li><a href="/crmsections?cat=tours-travels">Tours & Travel</a></li>
+              <li><a href="/crmsections?cat=automobile">Automobile</a></li>
+              <li><a href="/crmsections?cat=b2b-crm">B2B CRM</a></li>
+              <li><a href="/productsection">Features</a></li>
             </ul>
           </div>
           <div>
