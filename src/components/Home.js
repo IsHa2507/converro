@@ -11,6 +11,7 @@ import Integrations from "./Integrations";
 import BrandSlider from "./BrandSlider";
 import HeroSection from "./Herosection";
 import FinanceSection from "./FinanceSection";
+import FloatingWhatsApp from "./FloatingWhatsApp";
 
 
 
@@ -39,6 +40,7 @@ const Homepage = () => {
 
   <CTA />
   <Footer />
+  <FloatingWhatsApp/>
 </>
   );
 };

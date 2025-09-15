@@ -19,6 +19,7 @@ import Footer from "./components/Footer";
 import ModalForm from "./components/ModalForm";
 import ProductSection from "./internalPages/ProductSection";
 import ProductFeatures from "./internalPages/ProductFeatures";
+import FloatingWhatsApp from "./components/FloatingWhatsApp";
 
 function App() {
   const [isModalOpen, setIsModalOpen] = useState(false);

@@ -26,17 +26,17 @@ import consultingImg from "../images/Consulting.svg";
 import servicesImg from "../images/Product and Services.svg";
 
 const dropdowns = {
-  products: [
-    { title: "SMS Marketing", desc: "Reach more customers instantly with targeted SMS campaigns.", to: "/productsection", image: smsImg },
-    { title: "Email Marketing", desc: "Boost engagement and conversions with powerful email campaigns.", to: "/products/sales", image: emailImg },
-    { title: "Automation 360", desc: "Automate workflows and maximize efficiency with ease.", to: "/products/service", image: automationImg },
-    { title: "WhatsApp Business API", desc: "Connect directly with customers using WhatsApp marketing.", to: "/products/content", image: whatsappImg },
-    { title: "IVR Solution", desc: "Deliver better experiences with interactive voice response.", to: "/products/operations", image: ivrImg },
-    { title: "Google Data Extractor", desc: "Capture leads directly from Google into your CRM.", to: "/products/commerce", image: googleImg },
-    { title: "Tasks & Events", desc: "Manage tasks and events seamlessly in one pipeline.", to: "/products/smart-crm", image: tasksImg },
-    { title: "OBD Call", desc: "Make safe, hands-free calls with OBD technology.", to: "/products/small-business", image: obdImg },
-    { title: "Invoice & Quotation", desc: "Generate invoices and quotations instantly online.", to: "/products/invoice", image: invoiceImg },
-  ],
+  // products: [
+  //   { title: "SMS Marketing", desc: "Reach more customers instantly with targeted SMS campaigns.", to: "/productsection", image: smsImg },
+  //   { title: "Email Marketing", desc: "Boost engagement and conversions with powerful email campaigns.", to: "/products/sales", image: emailImg },
+  //   { title: "Automation 360", desc: "Automate workflows and maximize efficiency with ease.", to: "/products/service", image: automationImg },
+  //   { title: "WhatsApp Business API", desc: "Connect directly with customers using WhatsApp marketing.", to: "/products/content", image: whatsappImg },
+  //   { title: "IVR Solution", desc: "Deliver better experiences with interactive voice response.", to: "/products/operations", image: ivrImg },
+  //   { title: "Google Data Extractor", desc: "Capture leads directly from Google into your CRM.", to: "/products/commerce", image: googleImg },
+  //   { title: "Tasks & Events", desc: "Manage tasks and events seamlessly in one pipeline.", to: "/products/smart-crm", image: tasksImg },
+  //   { title: "OBD Call", desc: "Make safe, hands-free calls with OBD technology.", to: "/products/small-business", image: obdImg },
+  //   { title: "Invoice & Quotation", desc: "Generate invoices and quotations instantly online.", to: "/products/invoice", image: invoiceImg },
+  // ],
   industries: [
   { title: "Real Estate", desc: "Solutions tailored for real estate businesses", to: "/crmsections?cat=real-estate", image: realEstateImg },
   { title: "Education", desc: "Engagement tools for schools and universities", to: "/crmsections?cat=education", image: educationImg },
@@ -77,17 +77,17 @@ const Navbar = ({ onOpenModal }) => {
         {/* Desktop Links */}
         <nav className="navbar-links">
           <Link to="/aboutus">About</Link>
-
+          <Link to="/productsection">Features</Link>
           {/* Products Dropdown */}
-          <div
+          {/* <div
             className="dropdown"
             onMouseEnter={() => setActiveDropdown("products")}
             onMouseLeave={() => setActiveDropdown(null)}
           >
-            <span className="dropdown-title">
-              Products <ChevronDown size={16} className="dropdown-arrow" />
-            </span>
-            <AnimatePresence>
+            <span className="dropdown-title"> */}
+              {/* Products <ChevronDown size={16} className="dropdown-arrow" /> */}
+            {/* </span> */}
+            {/* <AnimatePresence>
               {activeDropdown === "products" && (
                 <motion.div
                   className="hubspot-mega-dropdown"
@@ -116,8 +116,8 @@ const Navbar = ({ onOpenModal }) => {
                   </div>
                 </motion.div>
               )}
-            </AnimatePresence>
-          </div>
+            </AnimatePresence> */}
+          {/* </div> */}
 
           {/* Industries Dropdown */}
           <div
@@ -155,6 +155,7 @@ const Navbar = ({ onOpenModal }) => {
 
           <Link to="/pricing">Pricing</Link>
           <Link to="/integrationpage">Integration</Link>
+          <Link to="/contactus">Contact</Link>
         </nav>
 
         {/* Desktop Buttons */}
@@ -192,6 +193,7 @@ const Navbar = ({ onOpenModal }) => {
         <Link to="/industries/real-estate" onClick={() => setMenuOpen(false)}>Industries</Link>
         <Link to="/pricing" onClick={() => setMenuOpen(false)}>Pricing</Link>
         <Link to="/integrationpage" onClick={() => setMenuOpen(false)}>Integration</Link>
+        <Link to="/contactus" onClick={() => setMenuOpen(false)}>Contact</Link>
 
         <button className="btn-outline" onClick={() => window.location.href = "https://app.converro.online/"}>Login</button>
         <button className="btn-glossy" onClick={() => window.location.href = "https://app.converro.online/register"}>

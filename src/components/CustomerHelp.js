@@ -13,7 +13,7 @@ const PrinciplesSection = () => {
       description:
         "Have questions about our company, services, or need basic information? Our team is here to provide quick answers and guide you in the right direction.",
       email: "mailto:info@converro.io",
-      whatsapp: "https://wa.me/9211616225",
+      whatsapp: "https://wa.me/9211546633",
     },
     {
       icon: <FaRegLifeRing className="circle-icon green" />,
@@ -21,7 +21,7 @@ const PrinciplesSection = () => {
       description:
         "Looking to explore our product features, pricing, or partnership opportunities? Connect with our sales experts to discover how we can add value to your business.",
       email: "mailto:sales@converro.io",
-      whatsapp: "https://wa.me/9211616225",
+      whatsapp: "https://wa.me/9211546633",
     },
     {
       icon: <BiSupport className="circle-icon red" />,
@@ -29,7 +29,7 @@ const PrinciplesSection = () => {
       description:
         "Already a customer and need help with your account, subscription, or technical issues? Our support team is ready to assist you at every step.",
       email: "mailto:support@converro.io",
-      whatsapp: "https://wa.me/9211616225",
+      whatsapp: "https://wa.me/9211546633",
     },
   ];
 

@@ -4,6 +4,9 @@ import "./ProductSection.css";
 
 import { FaArrowRight } from "react-icons/fa";
 import ProductFeatures from "./ProductFeatures";
+import FAQs from "../components/FAQs";
+import CTA from "../components/CTA";
+import Footer from "../components/Footer";
 
 export default function ProductSection() {
   return (
@@ -41,6 +44,9 @@ export default function ProductSection() {
       
     </section>
     <ProductFeatures/>
+    <FAQs/>
+    <CTA/>
+    <Footer/>
     </>
 
   );
