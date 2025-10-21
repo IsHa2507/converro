@@ -2,20 +2,21 @@ import React, { useState } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 // Import pages
-import Homepage from "./components/Home";
+import Homepage from "../about/Home";
 import TermsAndCondition from "./components/TermsAndCondition";
 import PrivacyPolicy from "./components/PrivacyAndPolicy";
 import RefundPolicy from "./components/Refund";
 import ContactUs from "./components/ContactUs";
-import AboutUS from "./components/AboutUs";
+import AboutUS from  "../about/AboutUs";
 import Pricing from "./components/Pricing";
 import IntegrationPage from "./components/IntegrationPage";
 import CRMSection from "./internalPages/CRMSectionIndus";
 import CRMIndusFeatures from "./internalPages/CRMfeatures";
 
 // Global components
-import Navbar from "./components/Navbar";
-import Footer from "./components/Footer";
+import Navbar from "../Components/Navbar";
+import Footer from "../Components/Footer";
+import CTA from "../Components/CTA";
 import ModalForm from "./components/ModalForm";
 import ProductSection from "./internalPages/ProductSection";
 import ProductFeatures from "./internalPages/ProductFeatures";

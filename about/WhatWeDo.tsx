@@ -1,6 +1,6 @@
-import React from "react";
-import "./WhatWeDo.css";
+"use client";
 import { FaLayerGroup } from "react-icons/fa";
+import "./WhatWeDo.css";
 
 const advantages = [
   {
@@ -29,7 +29,7 @@ const advantages = [
   },
 ];
 
-const WhatWeDo = () => {
+export default function WhatWeDo() {
   return (
     <section className="whatwedo-section">
       <div className="whatwedo-container">
@@ -44,6 +44,7 @@ const WhatWeDo = () => {
         </p>
 
         <h3 className="advantages-title">Converro Advantages</h3>
+
         <div className="advantages-grid">
           {advantages.map((item, index) => (
             <div className="advantage-card" key={index}>
@@ -60,6 +61,4 @@ const WhatWeDo = () => {
       </div>
     </section>
   );
-};
-
-export default WhatWeDo;
+}
