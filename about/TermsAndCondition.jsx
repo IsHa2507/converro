@@ -1,8 +1,10 @@
+"use client";
+
 import React from "react";
-import "./TermsAndCondition.css"; // Reuse same CSS
-import Navbar from "./Navbar";
-import Footer from "./Footer";
-import CTA from "./CTA";
+import "../Styles/TermsAndCondition.css"; // reuse CSS
+import Navbar from "../Components/Navbar";
+import Footer from "../Components/Footer";
+import CTA from "../Components/CTA";
 
 const TermsAndCondition = () => {
   return (
@@ -11,8 +13,8 @@ const TermsAndCondition = () => {
 
       {/* Page Heading */}
       <main className="terms-heading max-w-4xl mx-auto py-12 px-6">
-       
-        <h1>Terms & Conditions</h1><br />
+        <h1>Terms & Conditions</h1>
+        <br />
         <p>Effective Date: January 1, 2025</p>
 
         {/* Content */}
@@ -31,9 +33,9 @@ const TermsAndCondition = () => {
             <h2>2. Scope & Definitions</h2>
             <p>
               These Terms & Conditions (“Terms”) govern your access to and use of Converro’s services,
-              including its website(s), mobile apps (e.g. on converro.io, app stores), and any products
+              including its website(s), mobile apps (e.g., converro.io, app stores), and any products
               available via the Converro Marketplace. Additional terms—like our Privacy Policy,
-              Commercial Terms, User Guidelines, IP Compliance Program—are incorporated by reference
+              Commercial Terms, User Guidelines, and IP Compliance Program—are incorporated by reference
               and collectively form the binding agreement between you (“User”) and Converro (“we,” “us,” or “our”).
             </p>
           </div>
@@ -205,13 +207,10 @@ const TermsAndCondition = () => {
         </section>
       </main>
 
-     
-      <CTA/>
+      <CTA />
       <Footer />
     </div>
   );
 };
 
 export default TermsAndCondition;
-
-

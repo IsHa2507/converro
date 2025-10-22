@@ -1,43 +1,53 @@
-import React, { useState } from "react";
-import { FiPlus } from "react-icons/fi"; // plus icon
-import "./FAQs.css";
+"use client";
+
+import { useState } from "react";
+import { FiPlus } from "react-icons/fi";
+import "../Styles/FAQs.css";
 
 const faqsData = [
   {
     question: "What does marketing automation in Converro CRM do?",
-    answer: "It automates tasks like capturing leads, sending autoresponders, triggering personalized communication, tracking funnels, and nurturing leads—all seamlessly integrated into your CRM."
+    answer:
+      "It automates tasks like capturing leads, sending autoresponders, triggering personalized communication, tracking funnels, and nurturing leads—all seamlessly integrated into your CRM.",
   },
   {
     question: "How is Converro CRM different from traditional marketing automation?",
-    answer: "Converro CRM is built for sales professionals to manage one-to-one buyer relationships, while marketing automation tools support broader marketing campaigns and nurture large audiences."
+    answer:
+      "Converro CRM is built for sales professionals to manage one-to-one buyer relationships, while marketing automation tools support broader marketing campaigns and nurture large audiences.",
   },
   {
     question: "What does CRM-focused marketing include?",
-    answer: "It encompasses campaigns for brand awareness, engagement, and retention—all managed through Converro CRM."
+    answer:
+      "It encompasses campaigns for brand awareness, engagement, and retention—all managed through Converro CRM.",
   },
   {
     question: "Why is Converro considered a leading CRM for sales and marketing automation?",
-    answer: "Converro stands out thanks to its strong automation, direct lead capture, campaign-management features, and ease of use that helps businesses scale quickly."
+    answer:
+      "Converro stands out thanks to its strong automation, direct lead capture, campaign-management features, and ease of use that helps businesses scale quickly.",
   },
   {
     question: "Can I import data from spreadsheets or another CRM?",
-    answer: "Yes, you can import your existing data seamlessly from spreadsheets or other CRMs."
+    answer:
+      "Yes, you can import your existing data seamlessly from spreadsheets or other CRMs.",
   },
   {
     question: "What does lead capture automation include?",
-    answer: "It consolidates lead sources—forms, emails, phone calls, voicemails, list imports—into one unified CRM platform."
+    answer:
+      "It consolidates lead sources—forms, emails, phone calls, voicemails, list imports—into one unified CRM platform.",
   },
   {
     question: "What are the different lead capture methods?",
-    answer: "Common methods include: Web or ad forms, Phone calls and voicemails, Email inquiries, Spreadsheet imports. Converro can also enrich lead data automatically."
+    answer:
+      "Common methods include: Web or ad forms, Phone calls and voicemails, Email inquiries, Spreadsheet imports. Converro can also enrich lead data automatically.",
   },
   {
     question: "Does Converro offer a free version or trial?",
-    answer: "Converro does not offer a free version, but does provide a free trial and typically does not require credit card details to start."
-  }
+    answer:
+      "Converro does not offer a free version, but does provide a free trial and typically does not require credit card details to start.",
+  },
 ];
 
-const FAQs = () => {
+export default function FAQs() {
   // Split data into 2 columns
   const mid = Math.ceil(faqsData.length / 2);
   const leftColumn = faqsData.slice(0, mid);
@@ -99,8 +109,4 @@ const FAQs = () => {
       </div>
     </section>
   );
-};
-
-export default FAQs;
-
-
+}

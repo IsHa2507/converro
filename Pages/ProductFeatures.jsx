@@ -1,5 +1,8 @@
+"use client";
+
 import React from "react";
-import "./ProductFeatures.css";
+import Image from "next/image";
+import "../Pages/ProductFeatures.css"; // adjust path
 
 import sms from "../images/message-notifF.svg";
 import email from "../images/EMAILF.svg";
@@ -118,12 +121,15 @@ export default function FeaturesSection() {
         <div className="features-gridp">
           {features.map((feature) => (
             <div className="feature-cardp" key={feature.product}>
-              <img
-                src={feature.icon}
-                alt={feature.title}
-                className="feature-iconp"
-                loading="lazy"
-              />
+              <div className="feature-icon-wrapperp">
+                <Image
+                  src={feature.icon}
+                  alt={feature.title}
+                  width={80}
+                  height={80}
+                  loading="lazy"
+                />
+              </div>
               <h3>{feature.title}</h3>
               <p>{feature.description}</p>
               <p className="highlightpf">{feature.highlightp}</p>

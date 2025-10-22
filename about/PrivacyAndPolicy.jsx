@@ -1,17 +1,19 @@
-import React from "react";
-import Navbar from "../components/Navbar";
-import CTA from "../components/CTA";
-import Footer from "../components/Footer";
-import "./PrivacyAndPolicy.css"; // Privacy-specific CSS
+"use client";
 
-const PrivacyPolicy = () => {
+import Navbar from "@/Components/Navbar";
+import CTA from "@/Components/CTA";
+import Footer from "@/Components/Footer";
+import "../Styles/PrivacyAndPolicy.css"; // Keep your existing styles
+
+export default function PrivacyPolicy() {
   return (
     <>
       <Navbar />
 
       <div className="privacy-page">
         <div className="privacy-heading">
-          <h1>Privacy Policy</h1><br />
+          <h1>Privacy Policy</h1>
+          <br />
           <p>
             At <strong>Converro</strong>, we value transparency and are committed
             to protecting your privacy. This policy explains how we collect, use,
@@ -92,6 +94,4 @@ const PrivacyPolicy = () => {
       <Footer />
     </>
   );
-};
-
-export default PrivacyPolicy;
+}

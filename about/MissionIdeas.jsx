@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import missionImg from "../images/mission.svg";
-import "./MissionIdeas.css";
+import "../Styles/MissionIdeas.css";
 
 export default function MissionIdeaSection() {
   return (

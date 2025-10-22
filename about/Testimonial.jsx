@@ -1,6 +1,8 @@
+"use client";
+
 import React, { useState } from "react";
 import { ChevronLeft, ChevronRight, Play, Star } from "lucide-react";
-import "./Testimonial.css";
+import "../Styles/Testimonial.css"; // adjust path as needed
 
 const TestimonialSection = () => {
   const [currentSlide, setCurrentSlide] = useState(0);

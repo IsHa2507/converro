@@ -1,32 +1,31 @@
-import React, { useState } from "react";
-import { FiPlus } from "react-icons/fi";
-import "./FinanceSection.css";
-import { FiArrowRight } from "react-icons/fi";
-// replace these with your real images
-import img1 from "../assets/finance1.png";
-import img2 from "../assets/finance2.png";
-import img3 from "../assets/finance3.png";
+"use client";
 
-const FinanceSection = () => {
+import { useState } from "react";
+import { FiPlus, FiArrowRight } from "react-icons/fi";
+import Image from "next/image";
+import "../Styles/FinanceSection.css";
+
+import img1 from "@/public/assets/finance1.png";
+import img2 from "@/public/assets/finance2.png";
+import img3 from "@/public/assets/finance3.png";
+
+export default function FinanceSection() {
   const [active, setActive] = useState(0); // keep one open, always shows an image
 
   const items = [
     {
       title: "Capture & Nurture Leads Automatically",
-      text:
-        "Converro makes sure no lead slips through the cracks. It auto-captures inquiries, organizes them, and nurtures every lead with smart, timely follow ups maximizing your conversion opportunities with ease.",
+      text: "Converro makes sure no lead slips through the cracks. It auto-captures inquiries, organizes them, and nurtures every lead with smart, timely follow ups maximizing your conversion opportunities with ease.",
       img: img1,
     },
     {
       title: "Smart Calling & Automated Follow-Ups",
-      text:
-        "Converro keeps your sales pipeline active with automated calls and timely reminders. It connects with prospects instantly, maintains consistent communication, minimizes drop-offs, and drives higher conversions all without manual effort.",
+      text: "Converro keeps your sales pipeline active with automated calls and timely reminders. It connects with prospects instantly, maintains consistent communication, minimizes drop-offs, and drives higher conversions all without manual effort.",
       img: img2,
     },
     {
       title: "Faster Responses, Stronger Relationships",
-      text:
-        "Converro ensures clients get quick, accurate answers to their queries—building trust and satisfaction instantly. By cutting response times and offering round the clock support, it elevates customer experience and nurtures lasting relationships.",
+      text: "Converro ensures clients get quick, accurate answers to their queries—building trust and satisfaction instantly. By cutting response times and offering round the clock support, it elevates customer experience and nurtures lasting relationships.",
       img: img3,
     },
   ];
@@ -42,21 +41,22 @@ const FinanceSection = () => {
     <section className="finance-section">
       {/* Left: Image */}
       <div className="finance-image">
-        <img
+        <Image
           key={active} // triggers fade animation on change
           src={items[active].img}
           alt={items[active].title}
           className="finance-image-el"
+          priority
         />
       </div>
 
       {/* Right: Title + Accordion-like list */}
       <div className="finance-content">
         <header className="finance-header">
-          <h2 className="finance-title">Generate, engage, and convert leads even in your downtime.</h2>
-          <p className="finance-subtitle">
-            {/* Track, save, and budget with effortless, intelligent tools. */}
-          </p>
+          <h2 className="finance-title">
+            Generate, engage, and convert leads even in your downtime.
+          </h2>
+          <p className="finance-subtitle"></p>
         </header>
 
         <div className="finance-list">
@@ -74,22 +74,21 @@ const FinanceSection = () => {
                 <h3 className="finance-item-title">{item.title}</h3>
                 <FiPlus className="finance-item-icon" />
               </div>
-              {/* keep p in DOM for smooth max-height animation */}
               <p className="finance-item-text">{item.text}</p>
             </div>
           ))}
         </div>
-        <button className="finance-btn" onClick={()=>window.location.href="https://app.converro.online/register"}>
-    Start Free Trial
-    <FiArrowRight className="finance-arrow"/>
-  </button>
-</div>
-      
+
+        <button
+          className="finance-btn"
+          onClick={() =>
+            (window.location.href = "https://app.converro.online/register")
+          }
+        >
+          Start Free Trial
+          <FiArrowRight className="finance-arrow" />
+        </button>
+      </div>
     </section>
   );
-};
-
-export default FinanceSection;
-
-
-
+}

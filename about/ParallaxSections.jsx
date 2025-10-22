@@ -1,12 +1,15 @@
-import React, { useState, useEffect } from "react";
+"use client";
+
+import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import "./ParallaxSections.css";
+import Image from "next/image";
 import { FiArrowRight } from "react-icons/fi";
 import Pimg1 from "../images/Image1.png";
 import Pimg2 from "../images/Image2.png";
 import Pimg3 from "../images/Image3.png";
 import Pimg4 from "../images/Image4.png";
 import Pimg5 from "../images/Image5.png";
+import "../Styles/ParallaxSections.css";
 
 const contents = [
   {
@@ -16,10 +19,10 @@ const contents = [
     text: [
       "Converro unifies your lead sources whether from Facebook Ads, TikTok, Google Forms, WordPress, and more into a single, powerful dashboard. No extra tools, no messy setup just effortless lead collection.",
       "And it doesn’t stop there. Engage instantly through WhatsApp, SMS, iMessage, email, or phone calls, all seamlessly integrated.",
-      "⚡ Be ready to capture and engage leads in under 30 seconds."
+      "⚡ Be ready to capture and engage leads in under 30 seconds.",
     ],
     image: Pimg1,
-    buttonText: "Start For Free"
+    buttonText: "Start For Free",
   },
   {
     id: 2,
@@ -28,10 +31,10 @@ const contents = [
     text: [
       "Converro makes it easy to create teams and sub-teams while automatically assigning leads using your own custom rules. Setup takes just minutes, and new leads from campaigns like Facebook Ads are delivered straight to your team’s mobile devices—ready to act.",
       "Stay in control with real-time analytics that let you monitor progress, measure performance, and optimize sales at every stage.",
-      "⚡ Faster assignments. Smarter tracking. Stronger results."
+      "⚡ Faster assignments. Smarter tracking. Stronger results.",
     ],
     image: Pimg2,
-    buttonText: "Start For Free"
+    buttonText: "Start For Free",
   },
   {
     id: 3,
@@ -44,10 +47,10 @@ const contents = [
       "Lead Assignment",
       "Sales Automation",
       "Activity Automation",
-      "⚡ More personalization. More efficiency. More conversions."
+      "⚡ More personalization. More efficiency. More conversions.",
     ],
     image: Pimg3,
-    buttonText: "Start For Free"
+    buttonText: "Start For Free",
   },
   {
     id: 4,
@@ -60,10 +63,10 @@ const contents = [
       "Lead Assignment",
       "Sales Automation",
       "Activity Automation",
-      "Less busywork"
+      "Less busywork",
     ],
     image: Pimg4,
-    buttonText: "Start For Free"
+    buttonText: "Start For Free",
   },
   {
     id: 5,
@@ -72,41 +75,39 @@ const contents = [
     text: [
       "Design workflows the way your business works. With Converro’s intuitive visual canvas, you can connect apps, automate tasks, and let data flow seamlessly between platforms.",
       "Powered by a cloud-based API toolkit, Converro makes it simple to create powerful integrations and automate processes—without writing a single line of code.",
-      "⚡ Connect anything. Automate everything."
+      "⚡ Connect anything. Automate everything.",
     ],
     image: Pimg5,
-    buttonText: "Start For Free"
-  }
+    buttonText: "Start For Free",
+  },
 ];
 
-const FixedSection = () => {
+export default function FixedSection() {
   const [activeIndex, setActiveIndex] = useState(0);
-  const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
+  const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
-    const handleResize = () => {
-      setIsMobile(window.innerWidth <= 768);
-    };
+    setIsMobile(window.innerWidth <= 768);
 
+    const handleResize = () => setIsMobile(window.innerWidth <= 768);
     window.addEventListener("resize", handleResize);
-
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
   useEffect(() => {
-    if (isMobile) return; // disable scroll logic on mobile
+    if (isMobile) return;
 
     const handleScroll = () => {
       const section = document.getElementById("fixed-section");
-      if (section) {
-        const scrollTop = window.scrollY - section.offsetTop;
-        const blockHeight = window.innerHeight;
-        const newIndex = Math.min(
-          contents.length - 1,
-          Math.max(0, Math.floor(scrollTop / blockHeight))
-        );
-        setActiveIndex(newIndex);
-      }
+      if (!section) return;
+
+      const scrollTop = window.scrollY - section.offsetTop;
+      const blockHeight = window.innerHeight;
+      const newIndex = Math.min(
+        contents.length - 1,
+        Math.max(0, Math.floor(scrollTop / blockHeight))
+      );
+      setActiveIndex(newIndex);
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -128,16 +129,22 @@ const FixedSection = () => {
           <div className="parallax-green-box desktop-only">
             <div className="image-wrapper">
               <AnimatePresence mode="wait">
-                <motion.img
+                <motion.div
                   key={contents[activeIndex].id}
-                  src={contents[activeIndex].image}
-                  alt={contents[activeIndex].title}
-                  className="content-img"
                   initial={{ opacity: 0, y: 30 }}
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, y: -30 }}
                   transition={{ duration: 0.6 }}
-                />
+                  className="content-img-wrapper"
+                >
+                  <Image
+                    src={contents[activeIndex].image}
+                    alt={contents[activeIndex].title}
+                    className="content-img"
+                    width={500}
+                    height={500}
+                  />
+                </motion.div>
               </AnimatePresence>
             </div>
           </div>
@@ -151,10 +158,9 @@ const FixedSection = () => {
               className={`parallax-text-block ${index === activeIndex ? "active" : ""}`}
               id={`block${item.id}`}
             >
-              {/* Mobile shows image above text */}
               {isMobile && (
                 <div className="mobile-image-wrapper">
-                  <img src={item.image} alt={item.title} className="mobile-img" />
+                  <Image src={item.image} alt={item.title} width={400} height={300} />
                 </div>
               )}
 
@@ -202,6 +208,4 @@ const FixedSection = () => {
       </div>
     </section>
   );
-};
-
-export default FixedSection;
+}

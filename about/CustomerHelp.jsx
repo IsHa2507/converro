@@ -1,11 +1,12 @@
-import React from "react";
+"use client";
+
 import { AiFillQuestionCircle } from "react-icons/ai";
 import { FaEnvelope, FaWhatsapp, FaRegLifeRing } from "react-icons/fa";
 import { BiSupport } from "react-icons/bi";
 
-import "./CustomerHelp.css";
+import "../Styles/CustomerHelp.css";
 
-const PrinciplesSection = () => {
+export default function PrinciplesSection() {
   const principles = [
     {
       icon: <AiFillQuestionCircle className="circle-icon blue" />,
@@ -76,8 +77,4 @@ const PrinciplesSection = () => {
       </div>
     </section>
   );
-};
-
-export default PrinciplesSection;
-
-
+}

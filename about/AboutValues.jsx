@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import "./AboutValues.css";
+import "../Styles/AboutValues.css";
 import imgf1 from "@/public/images/Customer.svg";
 import imgf2 from "@/public/images/Excellence.svg";
 import imgf3 from "@/public/images/Innovation1.svg";

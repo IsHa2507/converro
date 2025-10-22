@@ -1,17 +1,19 @@
-import React from "react";
-import Navbar from "../components/Navbar";
-import CTA from "../components/CTA";
-import Footer from "../components/Footer";
-import "./PrivacyAndPolicy.css"; // reuse same CSS
+"use client";
 
-const RefundPolicy = () => {
+import Navbar from "@/Components/Navbar";
+import CTA from "@/Components/CTA";
+import Footer from "@/Components/Footer";
+import "../Styles/PrivacyAndPolicy.css"; // reuse same CSS
+
+export default function RefundPolicy() {
   return (
     <>
       <Navbar />
 
       <div className="privacy-page">
         <div className="privacy-heading">
-          <h1>Refund Policy</h1><br />
+          <h1>Refund Policy</h1>
+          <br />
           <p>
             At <strong>Converro</strong>, all subscription purchases are
             considered final. Once a payment has been processed, subscriptions
@@ -63,6 +65,4 @@ const RefundPolicy = () => {
       <Footer />
     </>
   );
-};
-
-export default RefundPolicy;
+}

@@ -1,7 +1,8 @@
+"use client";
+
 import React from "react";
-import "../main_component/spiralintegration.css";
+import "../Styles/spiralintegration.css";
 import { FaSlack, FaFigma, FaGoogle, FaTrello, FaFacebook, FaTwitter } from "react-icons/fa";
-import { SiNotion } from "react-icons/si";
 
 const Integrations = () => {
   const integrations = [
@@ -19,7 +20,9 @@ const Integrations = () => {
         <h2>
           Explore <span>Integrations</span>
         </h2>
-        <p>Our integrations make it easy to work with the applications your team already loves.</p>
+        <p>
+          Our integrations make it easy to work with the applications your team already loves.
+        </p>
         <button className="orbit-btn">Learn More →</button>
       </div>
 
@@ -31,6 +34,7 @@ const Integrations = () => {
               key={i}
               className={`orbit-icon orbit-${i + 1}`}
               style={{ "--orbit-color": item.color }}
+              title={item.name}
             >
               {item.icon}
             </div>

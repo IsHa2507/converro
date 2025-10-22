@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./ModalForm.css";
+import "../Styles/ModalForm.css";
 
 const ModalForm = ({ isOpen, onClose }) => {
   const [step, setStep] = useState(1);

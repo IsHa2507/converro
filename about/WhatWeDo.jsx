@@ -1,6 +1,6 @@
 "use client";
 import { FaLayerGroup } from "react-icons/fa";
-import "./WhatWeDo.css";
+import "../Styles/WhatWeDo.css";
 
 const advantages = [
   {

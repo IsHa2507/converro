@@ -1,5 +1,9 @@
+"use client";
+
 import React from "react";
-import "./CRMfeatures.css";
+import Image from "next/image";
+import "../Pages/CRMfeatures.css"; // adjust path if needed
+
 import crmindus1 from "../images/top.svg";
 import crmindus2 from "../images/calling.svg";
 import crmindus3 from "../images/manageleads.svg";
@@ -59,12 +63,11 @@ const CRMIndusFeatures = () => {
         complete control. With Converro, you can…
       </p>
 
-      {/* Grid */}
       <div className="crmindus-grid">
         {crmfeatures.map((item, index) => (
           <div key={index} className="crmindus-card">
             <div className="crmindus-icon">
-              <img src={item.icon} alt={item.title} />
+              <Image src={item.icon} alt={item.title} width={64} height={64} />
             </div>
             <h3 className="crmindus-card-title">{item.title}</h3>
             <p className="crmindus-card-description">{item.description}</p>

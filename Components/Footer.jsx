@@ -1,5 +1,8 @@
+"use client";
+
 import React from "react";
-import "./Footer.css";
+import Image from "next/image";
+import "../Styles/Footer.css"; // adjust path as needed
 import logo from "../assets/logo-white.svg";
 import { ArrowUpRight } from "lucide-react";
 import {
@@ -15,7 +18,7 @@ export default function Footer() {
       <div className="footer-container">
         {/* Brand */}
         <div className="footer-brand">
-          <img src={logo} alt="Custo Logo" className="footer-logo" />
+          <Image src={logo} alt="Custo Logo" className="footer-logo" />
           <p>
             Simplify customer relationships and <br />
             scale your business with Coverro.
@@ -62,7 +65,6 @@ export default function Footer() {
               <li><a href="/crmsections?cat=tours-travels">Tours & Travel</a></li>
               <li><a href="/crmsections?cat=automobile">Automobile</a></li>
               <li><a href="/crmsections?cat=b2b-crm">B2B CRM</a></li>
-              {/* <li><a href="/productsection">Features</a></li> */}
             </ul>
           </div>
           <div>
@@ -73,14 +75,12 @@ export default function Footer() {
               <li><a href="/pricing">Pricing</a></li>
               <li><a href="/productsection">Features</a></li>
               <li><a href="/crmsections?cat=real-estate">Industries</a></li>
-              {/* <li><a href="#">Blog</a></li> */}
               <li><a href="/contactus">Contact Us</a></li>
             </ul>
           </div>
           <div>
             <h3>Important</h3>
             <ul>
-              {/* <li><a href="#">FAQs</a></li> */}
               <li><a href="/termsandconditions">Terms & Conditions</a></li>
               <li><a href="/privacypolicy">Privacy Policy</a></li>
               <li><a href="/refundpolicy">Refund Policy</a></li>
