@@ -1,6 +1,6 @@
-import React from "react";
+// app/components/FloatingWhatsApp.jsx
 import { FaWhatsapp } from "react-icons/fa";
-import "./FloatingWhatsApp.css";
+import "../Styles/FloatingWhatsApp.css";
 
 export default function FloatingWhatsApp() {
   return (
@@ -10,7 +10,7 @@ export default function FloatingWhatsApp() {
       target="_blank"
       rel="noopener noreferrer"
     >
-      <FaWhatsapp />
+      <FaWhatsapp size={28} />
     </a>
   );
 }

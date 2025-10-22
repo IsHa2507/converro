@@ -1,8 +1,8 @@
 "use client";
 
-import Navbar from "@/Components/Navbar";
-import CTA from "@/Components/CTA";
-import Footer from "@/Components/Footer";
+import Navbar from "../Components/Navbar";
+import CTA from "../Components/CTA";
+import Footer from "../Components/Footer";
 import "../Styles/PrivacyAndPolicy.css"; // Keep your existing styles
 
 export default function PrivacyPolicy() {

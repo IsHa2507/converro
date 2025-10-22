@@ -5,9 +5,9 @@ import { FiPlus, FiArrowRight } from "react-icons/fi";
 import Image from "next/image";
 import "../Styles/FinanceSection.css";
 
-import img1 from "@/public/images/assets/finance1.png";
-import img2 from "@/public/images/assets/finance2.png";
-import img3 from "@/public/images/assets/finance3.png";
+import img1 from "../public/images/assests/finance1.png";
+import img2 from "../public/images/assests/finance2.png";
+import img3 from "../public/images/assests/finance3.png";
 
 export default function FinanceSection() {
   const [active, setActive] = useState(0); // keep one open, always shows an image

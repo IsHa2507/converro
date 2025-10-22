@@ -21,11 +21,10 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-  "dev": "next dev",
-  "build": "next build",
-  "start": "next start"
-},
-
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
+  },
   "eslintConfig": {
     "extends": [
       "react-app",
@@ -43,5 +42,10 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@types/node": "24.9.1",
+    "@types/react": "19.2.2",
+    "typescript": "5.9.3"
   }
 }

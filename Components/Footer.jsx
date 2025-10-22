@@ -3,7 +3,7 @@
 import React from "react";
 import Image from "next/image";
 import "../Styles/Footer.css"; // adjust path as needed
-import logo from "../assets/logo-white.svg";
+import logo from "../public/images/assests/logo-white.svg";
 import { ArrowUpRight } from "lucide-react";
 import {
   FaLinkedin,

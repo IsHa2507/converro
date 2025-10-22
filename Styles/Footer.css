@@ -18,7 +18,7 @@
   left: 20px;
   top: 50%;
   transform: translateY(-50%);
-  background: url("../assets/footer_logo2.png") no-repeat left center;
+  background: url("../public/images/assests/footer_logo2.png") no-repeat left center;
   background-size: 400px auto;
   width: 400px;
   height: 400px;

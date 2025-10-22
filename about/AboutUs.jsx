@@ -2,12 +2,12 @@
 
 import Image from "next/image";
 import "../Styles/AboutUs.css";
-import AboutValues from "../about/AboutValues";
-import Differentstory from "../about/Differentstory";
+import AboutValues from "./AboutValues";
+import Differentstory from "./Differentstory";
 import CTA from "../Components/CTA";
-import MissionIdeaSection from "../about/MissionIdeas";
-import WhatWeDo from "../about/WhatWeDo";
-import HandshakeImg from "@/public/images/handshake.svg";
+import MissionIdeaSection from "./MissionIdeas";
+import WhatWeDo from "./WhatWeDo";
+import HandshakeImg from "../public/images/handshake.svg";
 import { FiArrowRight } from "react-icons/fi";
 
 export default function AboutUs() {

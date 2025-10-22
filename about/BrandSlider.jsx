@@ -4,22 +4,22 @@ import Image from "next/image";
 import "../Styles/BrandSlider.css";
 
 // Import brand logos from public directory
-import cybershield from "@/public/images/assets/Cyber Shield.png";
-import geeksquares from "@/public/images/assets/Geeksquares.png";
-import glamspace from "@/public/images/assets/Glam space.png";
-import icrinfra from "@/public/images/assets/ICR Infra.png";
-import ids from "@/public/images/assets/IDS.png";
-import skillgrow from "@/public/images/assets/Skillgroww.png";
-import techmaestro from "@/public/images/assets/Tech Maestro.png";
-import deshizyka from "@/public/images/assets/Deshizayka.png";
-import vishalmega from "@/public/images/assets/Vishal mega mart.png";
-import titan from "@/public/images/assets/Titan.png";
-import sleepwell from "@/public/images/assets/Sleepwell.png";
-import roto from "@/public/images/assets/Roto pumps.png";
-import nxone from "@/public/images/assets/NX ONE.png";
-import akkar from "@/public/images/assets/Aakkar.png";
-import godrej from "@/public/images/assets/Godrej.png";
-import canvas from "@/public/images/assets/Cavana Fashion.png";
+import cybershield from "../public/images/assests/Cyber Shield.png";
+import geeksquares from "../public/images/assests/Geeksquares.png";
+import glamspace from "../public/images/assests/Glam space.png";
+import icrinfra from "../public/images/assests/ICR Infra.png";
+import ids from "../public/images/assests/IDS.png";
+import skillgrow from "../public/images/assests/Skillgroww.png";
+import techmaestro from "../public/images/assests/Tech Maestro.png";
+import deshizyka from "../public/images/assests/Deshizayka.png";
+import vishalmega from "../public/images/assests/Vishal mega mart.png";
+import titan from "../public/images/assests/Titan.png";
+import sleepwell from "../public/images/assests/Sleepwell.png";
+import roto from "../public/images/assests/Roto pumps.png";
+import nxone from "../public/images/assests/NX ONE.png";
+import akkar from "../public/images/assests/Aakkar.png";
+import godrej from "../public/images/assests/Godrej.png";
+import canvas from "../public/images/assests/Cavana Fashion.png";
 
 const logos = [
   cybershield,

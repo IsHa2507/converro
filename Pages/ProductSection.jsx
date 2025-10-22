@@ -5,13 +5,13 @@ import Image from "next/image";
 import "../Pages/ProductSection.css"; // adjust path
 
 import { FaArrowRight } from "react-icons/fa";
-import ProductFeatures from "../about/ProductFeatures";
-import FAQs from "../Components/FAQs";
+import ProductFeatures from "../Pages/ProductFeatures";
+import FAQs from "../about/FAQs";
 import CTA from "../Components/CTA";
 import Footer from "../Components/Footer";
 
 // Import your hero image (replace path)
-import heroLaptop from "../public/images/hero-laptop.png";
+// import heroLaptop from "../public/images/hero-laptop.png";
 
 export default function ProductSection() {
   return (

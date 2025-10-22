@@ -3,7 +3,7 @@
 import { useState } from "react";
 import Navbar from "../Components/Navbar";
 import Footer from "../Components/Footer";
-import CustomerHelp from "@/about/CustomerHelp";
+import CustomerHelp from "../about/CustomerHelp";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import "../Styles/ContactUs.css";

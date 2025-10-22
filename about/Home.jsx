@@ -4,14 +4,14 @@ import Navbar from "../Components/Navbar";
 import CTA from "../Components/CTA";
 import Footer from "../Components/Footer";
 import { FaStar } from "react-icons/fa"; // still fine to use
-import StatsSection from "../Components/StatsSection";
-import ParallaxSections from "../Components/ParallaxSections";
-import FAQs from "../Components/FAQs";
-import Integrations from "../Components/Integrations";
-import BrandSlider from "../Components/BrandSlider";
-import HeroSection from "../Components/HeroSection";
-import FinanceSection from "../Components/FinanceSection";
-import FloatingWhatsApp from "../Components/FloatingWhatsApp";
+import StatsSection from "../about/StatsSection";
+import ParallaxSections from "../about/ParallaxSections";
+import FAQs from "../about/FAQs";
+import Integrations from "../about/Integrations";
+import BrandSlider from "../about/BrandSlider";
+import HeroSection from "../about/HeroSection";
+import FinanceSection from "../about/FinanceSection";
+import FloatingWhatsApp from "../about/FloatingWhatsApp";
 
 export default function Homepage() {
   return (

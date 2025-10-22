@@ -19,7 +19,7 @@ import "../Pages/CRMSection.css"; // adjust path
 import Navbar from "../Components/Navbar";
 import CTA from "../Components/CTA";
 import Footer from "../Components/Footer";
-import CRMIndusFeatures from "../Pages/CRMIndusFeatures";
+import CRMIndusFeatures from "../Pages/CRMfeatures";
 
 import imgcrm1 from "../public/images/CRMIMG1.png";
 import imgcrm2 from "../public/images/CRMIMG2.png";

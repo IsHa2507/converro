@@ -20,7 +20,7 @@
 .parallax-green-box {
   width: 50%;
   height: 500px;
-  background-image: url(../images/green-box-bg.png);
+  background-image: url(../public/images/green-box-bg.png);
   border-radius: 20px;
   position: sticky;
   top: 150px;

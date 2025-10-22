@@ -1,7 +1,7 @@
 /* CTA.css */
 .cta-section {
    position: relative;
-   background-image: url("../assets/CTA_Background.jpg"); 
+   background-image: url("../public/images/assests/CTA_Background.jpg"); 
    background-size: 100% 100%; /* stretch image */
    background-position: center;
    background-repeat: no-repeat;

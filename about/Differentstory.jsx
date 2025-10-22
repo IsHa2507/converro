@@ -3,7 +3,7 @@
 import Image from "next/image";
 import { FaCheckCircle } from "react-icons/fa";
 import { FiArrowRight } from "react-icons/fi";
-import HandshakeImg from "@/public/images/handshake.svg";
+import HandshakeImg from "../public/images/handshake.svg";
 import "../Styles/Differentstory.css";
 
 export default function Differentstory() {

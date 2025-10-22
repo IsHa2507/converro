@@ -5,15 +5,15 @@ import { FiArrowRight } from "react-icons/fi";
 import { FaStar } from "react-icons/fa";
 import "../Styles/HeroSection.css";
 
-import ipadMockup from "..public//images/Tab.png";
-import badge1 from "..public//images/badge1.svg";
-import badge2 from "..public/images/badge2.svg";
-import badge3 from "..public/images/badge3.svg";
-import badge4 from "..public/images/badge4.svg";
-import badge5 from "..public/images/badge5.svg";
-import badge6 from "..public/images/badge6.svg";
-import badge7 from "..public/images/badge7.svg";
-import spiral from "..public/images/herosection-bg.png";
+import ipadMockup from "../public/images/Tab.png";
+import badge1 from "../public/images/badge1.svg";
+import badge2 from "../public/images/badge2.svg";
+import badge3 from "../public/images/badge3.svg";
+import badge4 from "../public/images/badge4.svg";
+import badge5 from "../public/images/badge5.svg";
+import badge6 from "../public/images/badge6.svg";
+import badge7 from "../public/images/badge7.svg";
+import spiral from "../public/images/herosection-bg.png";
 
 export default function HeroSection() {
   const TrustedSection = () => (

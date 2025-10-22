@@ -19,18 +19,18 @@ import { MdOutlineTravelExplore, MdOutlineSchool } from "react-icons/md";
 import "../Styles/StatsSection.css";
 
 // Images
-import crmImg from "../public/images/assets/CRM.svg";
-import automationImg from "../public/images/assets/Automation.svg";
-import whatsappImg from "../public/images/assets/WhatsApp Marketing.svg";
-import emailImg from "../public/images/assets/Email Marketing.svg";
-import smsImg from "../public/images/assets/SMS Marketing.svg";
-import extractorImg from "../public/images/assets/Google Data Extractor.svg";
-import invoiceImg from "../public/images/assets/Invoice & Quatation.svg";
-import appointmentImg from "../public/images/assets/Appointment.svg";
-import helpdeskImg from "../public/images/assets/Helpdesk.svg";
-import ivrImg from "../public/images/assets/IVR Service.svg";
-import callImg from "../public/images/assets/Call Broadcast.svg";
-import aiImg from "../public/images/assets/AI Marketing.svg";
+import crmImg from "../public/images/assests/CRM.svg";
+import automationImg from "../public/images/assests/Automation.svg";
+import whatsappImg from "../public/images/assests/WhatsApp Marketing.svg";
+import emailImg from "../public/images/assests/Email Marketing.svg";
+import smsImg from "../public/images/assests/SMS Marketing.svg";
+import extractorImg from "../public/images/assests/Google Data Extractor.svg";
+import invoiceImg from "../public/images/assests/Invoice & Quatation.svg";
+import appointmentImg from "../public/images/assests/Appointment.svg";
+import helpdeskImg from "../public/images/assests/Helpdesk.svg";
+import ivrImg from "../public/images/assests/IVR Service.svg";
+import callImg from "../public/images/assests/Call Broadcast.svg";
+import aiImg from "../public/images/assests/AI Marketing.svg";
 
 const StatsSection = () => {
   const industries = [
