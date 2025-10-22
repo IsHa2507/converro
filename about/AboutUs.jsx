@@ -3,8 +3,7 @@
 import Image from "next/image";
 import "../Styles/AboutUs.css";
 import AboutValues from "./AboutValues";
-import Differentstory from "./Differentstory";
-import CTA from "../Components/CTA";
+import Differentstory from "../about/Differentstory";
 import MissionIdeaSection from "./MissionIdeas";
 import WhatWeDo from "./WhatWeDo";
 import HandshakeImg from "../public/images/handshake.svg";
@@ -125,7 +124,7 @@ export default function AboutUs() {
       <AboutValues />
       <Differentstory />
       <MissionIdeaSection />
-      <CTA />
+     
     </>
   );
 }

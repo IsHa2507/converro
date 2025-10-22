@@ -1,0 +1,919 @@
+/*!***************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[14].oneOf[10].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[14].oneOf[10].use[3]!./Styles/Navbar.css ***!
+  \***************************************************************************************************************************************************************************************************************************************************************/
+/* Navbar Wrapper */
+.navbar-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  transition: background 0.3s ease, border-bottom 0.3s ease;
+  background: transparent; /* start transparent */
+  border-bottom: none;
+}
+
+/* When scrolled */
+.navbar-wrapper.scrolled {
+  background: #fff; /* solid white after scroll */
+  border-bottom: 1px solid #e5e7eb;
+}
+
+/* Navbar Container */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  /* Stretches with screen */
+  width: 100%;
+
+  /* Responsive container */
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0.75rem 1.5rem;
+
+  
+  box-sizing: border-box; /* ensures padding is inside width */
+}
+
+/* Logo + Brand */
+.navbar-logo2 {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: #000;
+  text-decoration: none;
+  margin-left:-45px;
+}
+
+.navbar-logo2 img {
+  width: 273px;
+  height: 40px;
+  object-fit: contain;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  cursor: pointer;
+}
+
+
+
+/* Nav Links */
+.navbar-links {
+  display: flex;
+  gap: 1.5rem;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #000000; /* default: white over hero */
+  transition: color 0.3s ease;
+}
+
+/* Change link color when navbar is scrolled */
+.navbar-wrapper.scrolled .navbar-links {
+  color: #1f2937;
+}
+
+.navbar-links a {
+  text-decoration: none;
+  color: inherit;
+  transition: color 0.2s ease;
+}
+
+.navbar-links a:hover {
+  color: #616161;
+}
+
+/* Buttons Container */
+.navbar-buttons {
+  display: flex;
+  gap: 0.75rem;
+}
+
+/* Contact Sales Button */
+.btn-outline {
+  padding: 0.4rem 1rem;
+  border: 1px solid #000000;
+  border-radius: 9999px;
+  background: transparent;
+  color: #000000; /* default white */
+  cursor: pointer;
+  transition: background 0.2s ease, color 0.3s ease;
+}
+
+/* Change color on scroll */
+.navbar-wrapper.scrolled .btn-outline {
+  color: #1f2937;
+}
+
+.btn-outline:hover {
+  background-color: #f9fafb;
+  border: 1px solid #3fce71;
+}
+
+/* Start for Free Button */
+.btn-glossy {
+  background: black;
+  color: white;
+  padding: 14px 26px;
+  border-radius: 40px;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 8px; /* space between text and arrow */
+  transition: all 0.3s ease;
+}
+
+.btn-glossy:hover {
+  background: #3fce71;
+  color: black;
+}
+
+.nav-arrow {
+  font-size: 16px;
+  color: white;
+  display: inline-block; /* needed for rotation */
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.btn-glossy:hover .nav-arrow {
+  transform: rotate(-45deg);
+  color: black;
+}
+
+/* --- EXISTING STYLES ABOVE --- */
+
+/* Hide hamburger by default */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+  z-index: 1100; /* above mobile menu */
+}
+
+.hamburger span {
+  width: 24px;
+  height: 3px;
+  background: #000;
+  border-radius: 3px;
+  transition: all 0.3s ease;
+}
+
+/* Mobile Menu (hidden by default) */
+.mobile-menu {
+  display: none;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1rem;
+  padding: 1rem 1.5rem;
+  background: #fff;
+  border-top: 1px solid #e5e7eb;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+/* Show when active */
+.mobile-menu.active {
+  display: flex;
+  animation: slideDown 0.3s ease forwards;
+}
+
+/* Mobile menu links */
+.mobile-menu a {
+  text-decoration: none;   /* remove underline */
+  color: #000;             /* match desktop color */
+  font-size: 0.95rem;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.mobile-menu a:hover {
+  color: #616161;          /* same hover as desktop */
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Rules */
+@media (max-width: 768px) {
+  .navbar-links,
+  .navbar-buttons {
+    display: none; /* hide desktop nav */
+  }
+
+  .hamburger {
+    display: flex; /* show hamburger */
+  }
+}
+/* Dropdown Styling */
+.dropdown {
+  position: relative;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  max-height: 50vh;
+}
+
+.dropdown-title {
+  color: #2d3748;
+  font-weight: 500;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  transition: color 0.2s ease;
+}
+
+.dropdown:hover .dropdown-title {
+  color: #34b360;
+}
+
+.dropdown-arrow {
+  transition: transform 0.2s ease;
+}
+
+.dropdown:hover .dropdown-arrow {
+  transform: none;
+  
+}
+
+/* HubSpot Mega Dropdown */
+.hubspot-mega-dropdown {
+  position: absolute;
+  top: calc(100% + 12px);
+  left: -350px;
+  width: 1000px;
+  margin-top: 13px;
+  height: 350px; /* FIXED HEIGHT */
+  background: #ffffff;
+  border-radius: 0 0 12px 12px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  padding: 32px;
+  z-index: 1000;
+
+  overflow-y: auto; /* ENABLE SCROLL INSIDE */
+  scrollbar-width: thin; /* (Optional) better scrollbar */
+}
+
+
+
+/* Dropdown header */
+.dropdown-header {
+  margin-bottom: 32px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.dropdown-header h3 {
+  font-size: 24px;
+  font-weight: 700;
+  color: #2d3748;
+  margin: 0 0 8px 0;
+}
+
+.dropdown-header p {
+  font-size: 16px;
+  color: #718096;
+  margin: 0 0 10px 0;
+  line-height: 1.5;
+  
+}
+
+/* .header-buttons {
+  display: flex;
+  gap: 12px;
+}
+
+.free-crm-btn,
+.overview-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 16px;
+  border-radius: 8px;
+  border: 1px solid #e2e8f0;
+  background: #f8fafc;
+  color: #2d3748;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.free-crm-btn:hover,
+.overview-btn:hover {
+  background: #ffffff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transform: translateY(-1px);
+} */
+
+/* Products grid */
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin-bottom: 32px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  
+}
+
+.product-item {
+  display: flex;
+  gap: 16px;
+  padding: 16px;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  border: 1px solid transparent;
+}
+
+.product-item:hover {
+  /* background: #f8fafc; */
+  
+  /* transform: translateY(-1px); */
+}
+
+.product-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  background:#daffed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.product-content {
+  flex: 1 1;
+}
+
+.product-content h4 {
+  font-size: 16px;
+  font-weight: 600;
+  color: #2d3748;
+  margin: 0 0 4px 0;
+}
+
+.product-content p {
+  font-size: 12px;
+  color: #718096;
+  margin: 0 0 8px 0;
+  line-height: 1.4;
+}
+
+.product-link {
+  font-size: 14px;
+  color: #3182ce;
+  font-weight: 500;
+}
+.product-icon img {
+  width: 35px;   /* adjust size */
+  height: 35px;
+  object-fit: contain;
+}
+
+/* Additional sections */
+.additional-sections {
+  border-top: 1px solid #e2e8f0;
+  padding-top: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.additional-section {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+}
+
+.section-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  background: linear-gradient(135deg, #ff7a59, #ff9500);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  flex-shrink: 0;
+}
+
+.section-content h4 {
+  font-size: 16px;
+  font-weight: 600;
+  color: #2d3748;
+  margin: 0 0 4px 0;
+}
+
+.section-content p {
+  font-size: 14px;
+  color: #718096;
+  margin: 0 0 8px 0;
+  line-height: 1.4;
+}
+
+.section-link {
+  font-size: 14px;
+  color: #3182ce;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.section-link:hover {
+  text-decoration: underline;
+}
+
+/* Regular dropdown menu (for Industries) */
+.dropdown-menu {
+  position: absolute;
+  top: calc(100% + 12px);
+  left: -50px;
+  width: 320px;
+  height: 400px; /* FIXED HEIGHT */
+  background: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12);
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  padding: 12px 0;
+  z-index: 1000;
+
+  overflow-y: auto; /* Scroll if content exceeds height */
+}
+
+.dropdown-item {
+  display: flex;
+  gap: 12px;
+  padding: 12px 20px;
+  text-decoration: none;
+  transition: background 0.2s ease;
+  align-items: flex-start;
+}
+
+.dropdown-item:hover {
+  /* background: #f8fafc; */
+}
+
+.dropdown-icon {
+  width: 32px;
+  height: 32px;
+  border-radius: 6px;
+  background: #daffed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.dropdown-content h4 {
+  font-size: 14px;
+  font-weight: 600;
+  color: #2d3748;
+  margin: 0 0 4px 0;
+}
+
+.dropdown-content p {
+  font-size: 13px;
+  color: #718096;
+  margin: 0;
+  line-height: 1.3;
+}
+
+
+/* Industries Mega Dropdown */
+.industries-mega-dropdown {
+  position: absolute;
+  top: calc(100% + 12px);
+  left: -350px;
+  width: 900px;
+  margin-top: 13px;
+  background: #ffffff;
+  border-radius: 0 0 12px 12px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  padding: 32px;
+  z-index: 1000;
+}
+
+.industries-mega-dropdown h3 {
+  font-size: 18px;
+  font-weight: 600;
+  color: #2d3748;
+  margin-bottom: 20px; /* space after the whole heading */
+  line-height: 1.5;
+  display: block;
+  padding-bottom: 12px; /* 👈 adds gap between text & line */
+  border-bottom: 1px solid #e2e8f0; /* full-width underline */
+  width: 100%;
+}
+
+
+
+.industries-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 columns */
+  gap: 20px;
+}
+
+.industry-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  color: #2d3748;
+  font-size: 15px;
+  font-weight: 500;
+  padding: 10px;
+  border-radius: 8px;
+  transition: all 0.2s ease;
+}
+
+.industry-item:hover {
+   /* background: #f8fafc; */
+  /* transform: translateY(-2px); */
+}
+
+.industry-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  background: #daffed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.industry-icon img {
+  width: 35px;   /* adjust to match design */
+  height: 35px;
+  object-fit: contain;
+}
+/* --- Mobile Sidebar Dropdown --- */
+/* --- Mobile Sidebar Dropdown --- */
+@media (max-width: 768px) {
+  /* Turn dropdowns into slide-in sidebar */
+  .hubspot-mega-dropdown,
+  .industries-mega-dropdown,
+  .dropdown-menu {
+    position: fixed;
+    top: 0;
+    left: -100%;   /* hidden */
+    width: 80%;    /* sidebar width */
+    max-width: 320px;
+    height: 100vh;
+    background: #fff;
+    border-radius: 0;
+    box-shadow: 2px 0 15px rgba(0,0,0,0.15);
+    border: none;
+    padding: 24px 16px;
+    overflow-y: auto;
+    transition: left 0.3s ease;
+    z-index: 1200;
+  }
+
+  /* Show sidebar */
+  .hubspot-mega-dropdown.active,
+  .industries-mega-dropdown.active,
+  .dropdown-menu.active {
+    left: 0;
+  }
+/* Dropdown Title with Arrow */
+.dropdown-title {
+  display: flex;
+  align-items: center;   /* ensures text and arrow are vertically aligned */
+  gap: 6px;              /* space between text and arrow */
+  font-weight: 500;
+  font-size: 16px;
+  color: #2d3748;
+  cursor: pointer;
+}
+
+.dropdown-arrow {
+  display: flex;
+  align-items: center;   /* vertically centers arrow */
+  font-size: 14px;       /* adjust size so it matches text */
+  line-height: 1;        /* prevents shifting */
+  transition: transform 0.2s ease;
+}
+
+  /* Sidebar close button */
+  .sidebar-close {
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    color: #333;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: none;
+    border: none;
+  }
+
+  /* Stack content vertically */
+  .products-grid,
+  .industries-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .product-item,
+  .industry-item,
+  .dropdown-item {
+    padding: 14px;
+    border: 1px solid #f1f1f1;
+    border-radius: 6px;
+    transition: background 0.2s ease;
+  }
+
+  .product-item:hover,
+  .industry-item:hover,
+  .dropdown-item:hover {
+    background: #f9fafb;   /* light hover, no black */
+  }
+
+  .dropdown-header h3 {
+    font-size: 20px;
+  }
+
+  .product-content h4,
+  .section-content h4,
+  .dropdown-content h4 {
+    font-size: 15px;
+  }
+}
+
+/*!******************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[14].oneOf[10].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[14].oneOf[10].use[3]!./Styles/ModalForm.css ***!
+  \******************************************************************************************************************************************************************************************************************************************************************/
+/* Dark background overlay */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.6); /* dim background */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000; /* makes sure it stays on top */
+}
+
+/* Modal box */
+.modal {
+  background: #fff;
+  width: 500px;
+  max-width: 90%;
+  border-radius: 12px;
+  padding: 2rem;
+  position: relative;
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.25);
+  animation: fadeInUp 0.3s ease-out;
+}
+
+/* Close button */
+.close-btn {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+/* Headings */
+.modal h2 {
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+/* Form styles */
+.form-step label {
+  display: block;
+  margin-bottom: 1rem;
+  font-weight: 500;
+}
+
+.form-step input,
+.form-step select {
+  width: 100%;
+  padding: 10px;
+  margin-top: 6px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+/* Buttons */
+.next-btn,
+.back-btn,
+.submit-btn {
+  padding: 10px 16px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.next-btn {
+  background: #28a745;
+  color: white;
+}
+
+.back-btn {
+  background: #6c757d;
+  color: white;
+}
+
+.submit-btn {
+  background: #28a745;
+  color: white;
+}
+
+/* Hover effects */
+.next-btn:hover {
+  background: #28a745;
+}
+.back-btn:hover {
+  background: #565e64;
+}
+.submit-btn:hover {
+  background: #1e7e34;
+}
+
+/* Align actions */
+.form-actions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1rem;
+}
+
+/* Fade-in animation */
+@keyframes fadeInUp {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/*!*************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[14].oneOf[10].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[14].oneOf[10].use[3]!./Styles/PrivacyAndPolicy.css ***!
+  \*************************************************************************************************************************************************************************************************************************************************************************/
+/* ============================= */
+/* Page background */
+/* ============================= */
+.privacy-page {
+  background-color: #fff;
+  color: #1f2937;
+  margin-top: 100px;
+}
+
+/* ============================= */
+/* Main content container */
+/* ============================= */
+.privacy-heading {
+  max-width: 1200px;
+  margin: 0 auto;       /* ✅ center horizontally */
+  padding: 60px 24px;
+  background: #fff;
+  border-radius: 16px;
+}
+
+/* Title */
+.privacy-heading h1 {
+  font-size: 2.5rem;
+  margin-bottom: 12px;
+  color: #111827;
+  font-weight: 800;
+  text-align: center;
+}
+
+.privacy-heading p {
+  text-align: left;
+  font-size: 1rem;
+  color: #6b7280;
+  margin-bottom: 30px;
+}
+
+/* Back link */
+.back-link {
+  display: inline-block;
+  margin-bottom: 2rem;
+  color: #6b7280;
+  font-size: 0.9rem;
+  transition: color 0.2s ease;
+}
+
+.back-link:hover {
+  color: #111827;
+}
+
+/* ============================= */
+/* Privacy content */
+/* ============================= */
+.privacy-content {
+  line-height: 1.8;
+  font-size: 1.05rem;
+  color: #374151;
+  text-align: left;
+}
+
+.privacy-content h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-top: 2.2rem;
+  margin-bottom: 0.75rem;
+  color: #111827;
+}
+
+.privacy-content p {
+  margin-bottom: 1.2rem;
+}
+
+/* Links */
+.privacy-content a {
+  color: #2563eb;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.privacy-content a:hover {
+  text-decoration: underline;
+}
+
+/* ============================= */
+/* Responsive Styles */
+/* ============================= */
+
+/* ✅ Tablet (≤1024px) */
+@media (max-width: 1024px) {
+  .privacy-heading {
+    margin: 0 40px;
+    padding: 40px 20px;
+  }
+
+  .privacy-heading h1 {
+    font-size: 2.2rem;
+  }
+
+  .privacy-content {
+    font-size: 1rem;
+  }
+
+  .privacy-content h2 {
+    font-size: 1.3rem;
+  }
+}
+
+/* ✅ Mobile (≤768px) */
+@media (max-width: 768px) {
+  .privacy-heading {
+    margin: 0 15px;
+    padding: 30px 16px;
+    border-radius: 10px;
+  }
+
+  .privacy-heading h1 {
+    font-size: 1.8rem;
+  }
+
+  .privacy-heading p {
+    font-size: 0.9rem;
+  }
+
+  .privacy-content {
+    font-size: 0.95rem;
+    line-height: 1.7;
+  }
+
+  .privacy-content h2 {
+    font-size: 1.2rem;
+  }
+}
+

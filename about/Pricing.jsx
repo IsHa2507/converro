@@ -6,10 +6,10 @@ import Image from "next/image";
 import sparkle from "../public/images/star.svg"; 
 import "../Styles/Pricing.css";
 import Navbar from "../Components/Navbar";
-import FAQs from "../about/FAQs";
-import CTA from "../Components/CTA";
-import Footer from "../Components/Footer";
-import AddOns from "../about/AddOns";
+import FAQs from "../Components/FAQs";
+
+
+import AddOns from "./AddOns";
 
 const plans = {
   yearly: [
@@ -333,8 +333,7 @@ export default function PricingSection() {
 
       <AddOns />
       <FAQs />
-      <CTA />
-      <Footer />
+      
     </>
   );
 }

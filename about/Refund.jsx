@@ -1,8 +1,7 @@
 "use client";
 
 import Navbar from "../Components/Navbar";
-import CTA from "../Components/CTA";
-import Footer from "../Components/Footer";
+
 import "../Styles/PrivacyAndPolicy.css"; // reuse same CSS
 
 export default function RefundPolicy() {
@@ -61,8 +60,7 @@ export default function RefundPolicy() {
         </div>
       </div>
 
-      <CTA />
-      <Footer />
+      
     </>
   );
 }

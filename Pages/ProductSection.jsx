@@ -6,7 +6,7 @@ import "../Pages/ProductSection.css"; // adjust path
 
 import { FaArrowRight } from "react-icons/fa";
 import ProductFeatures from "../Pages/ProductFeatures";
-import FAQs from "../about/FAQs";
+import FAQs from "../Components/FAQs";
 import CTA from "../Components/CTA";
 import Footer from "../Components/Footer";
 
@@ -46,15 +46,15 @@ export default function ProductSection() {
           </div>
 
           {/* Right Image */}
-          <div className="herop-image">
+          {/* <div className="herop-image">
             <Image
-              src={heroLaptop}
+              src="#"
               alt="GrowthFlow Dashboard Preview"
               width={600} // adjust size
               height={400} // adjust size
               priority
             />
-          </div>
+          </div> */}
         </div>
       </section>
 

@@ -1,3 +1,8 @@
 {
-  "/page": "app/page.js"
+  "/_not-found/page": "app/_not-found/page.js",
+  "/aboutus/page": "app/aboutus/page.js",
+  "/productsection/page": "app/productsection/page.js",
+  "/pricing/page": "app/pricing/page.js",
+  "/contactus/page": "app/contactus/page.js",
+  "/refundpolicy/page": "app/refundpolicy/page.js"
 }

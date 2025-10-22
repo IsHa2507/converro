@@ -8,7 +8,7 @@ import { FiArrowRight } from "react-icons/fi";
 import { ChevronDown } from "lucide-react";
 import logo from "../public/images/assests/logo.svg";
 import "../Styles/Navbar.css";
-import ModalForm from "../about/ModalForm";
+import ModalForm from "./ModalForm";
 
 // Image imports (Next.js auto-optimizes)
 import smsImg from "../public/images/SMS Marketing.svg";
