@@ -4,15 +4,15 @@ import "../Styles/Integrations.css";
 import { FiArrowRight } from "react-icons/fi";
 import { useRouter } from "next/navigation";
 
-import magicbricks from "../integrationimages/magicbricks.png";
-import indiamart from "../integrationimages/indiamart.png";
-import gads from "../integrationimages/gads.png";
-import justdail from "../integrationimages/justdail.png";
-import wordpress from "../integrationimages/wordpress.png";
-import zapeir from "../integrationimages/zapeir.png";
-import propertyfinder from "../integrationimages/propertyfinder.png";
-import ninetynine from "../integrationimages/99.png";
-import whatsapp from "../integrationimages/whatsapp.png";
+import magicbricks from "../public/images/integrationimages/magicbricks.png";
+import indiamart from "../public/images/integrationimages/indiamart.png";
+import gads from "../public/images/integrationimages/gads.png";
+import justdail from "../public/images/integrationimages/justdail.png";
+import wordpress from "../public/images/integrationimages/wordpress.png";
+import zapeir from "../public/images/integrationimages/zapeir.png";
+import propertyfinder from "../public/images/integrationimages/propertyfinder.png";
+import ninetynine from "../public/images/integrationimages/99.png";
+import whatsapp from "../public/images/integrationimages/whatsapp.png";
 
 const Integrations = () => {
   const router = useRouter();

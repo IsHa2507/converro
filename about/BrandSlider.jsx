@@ -4,22 +4,22 @@ import Image from "next/image";
 import "../Styles/BrandSlider.css";
 
 // Import brand logos from public directory
-import cybershield from "@/public/assets/Cyber Shield.png";
-import geeksquares from "@/public/assets/Geeksquares.png";
-import glamspace from "@/public/assets/Glam space.png";
-import icrinfra from "@/public/assets/ICR Infra.png";
-import ids from "@/public/assets/IDS.png";
-import skillgrow from "@/public/assets/Skillgroww.png";
-import techmaestro from "@/public/assets/Tech Maestro.png";
-import deshizyka from "@/public/assets/Deshizayka.png";
-import vishalmega from "@/public/assets/Vishal mega mart.png";
-import titan from "@/public/assets/Titan.png";
-import sleepwell from "@/public/assets/Sleepwell.png";
-import roto from "@/public/assets/Roto pumps.png";
-import nxone from "@/public/assets/NX ONE.png";
-import akkar from "@/public/assets/Aakkar.png";
-import godrej from "@/public/assets/Godrej.png";
-import canvas from "@/public/assets/Cavana Fashion.png";
+import cybershield from "@/public/images/assets/Cyber Shield.png";
+import geeksquares from "@/public/images/assets/Geeksquares.png";
+import glamspace from "@/public/images/assets/Glam space.png";
+import icrinfra from "@/public/images/assets/ICR Infra.png";
+import ids from "@/public/images/assets/IDS.png";
+import skillgrow from "@/public/images/assets/Skillgroww.png";
+import techmaestro from "@/public/images/assets/Tech Maestro.png";
+import deshizyka from "@/public/images/assets/Deshizayka.png";
+import vishalmega from "@/public/images/assets/Vishal mega mart.png";
+import titan from "@/public/images/assets/Titan.png";
+import sleepwell from "@/public/images/assets/Sleepwell.png";
+import roto from "@/public/images/assets/Roto pumps.png";
+import nxone from "@/public/images/assets/NX ONE.png";
+import akkar from "@/public/images/assets/Aakkar.png";
+import godrej from "@/public/images/assets/Godrej.png";
+import canvas from "@/public/images/assets/Cavana Fashion.png";
 
 const logos = [
   cybershield,

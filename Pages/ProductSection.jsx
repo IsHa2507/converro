@@ -11,7 +11,7 @@ import CTA from "../Components/CTA";
 import Footer from "../Components/Footer";
 
 // Import your hero image (replace path)
-import heroLaptop from "../images/hero-laptop.png";
+import heroLaptop from "../public/images/hero-laptop.png";
 
 export default function ProductSection() {
   return (

@@ -3,24 +3,24 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 // Import pages
 import Homepage from "../about/Home";
-import TermsAndCondition from "./components/TermsAndCondition";
-import PrivacyPolicy from "./components/PrivacyAndPolicy";
-import RefundPolicy from "./components/Refund";
-import ContactUs from "./components/ContactUs";
+import TermsAndCondition from "../about/TermsAndCondition";
+import PrivacyPolicy from "../about/PrivacyAndPolicy";
+import RefundPolicy from "../about/Refund";
+import ContactUs from "../about/ContactUs";
 import AboutUS from  "../about/AboutUs";
-import Pricing from "./components/Pricing";
-import IntegrationPage from "./components/IntegrationPage";
-import CRMSection from "./internalPages/CRMSectionIndus";
-import CRMIndusFeatures from "./internalPages/CRMfeatures";
+import Pricing from "../about/Pricing";
+import IntegrationPage from "../about/IntegrationPage";
+import CRMSection from "../Pages/CRMSectionIndus";
+import CRMIndusFeatures from "../Pages/CRMfeatures";
 
 // Global components
 import Navbar from "../Components/Navbar";
 import Footer from "../Components/Footer";
 import CTA from "../Components/CTA";
-import ModalForm from "./components/ModalForm";
-import ProductSection from "./internalPages/ProductSection";
-import ProductFeatures from "./internalPages/ProductFeatures";
-import FloatingWhatsApp from "./components/FloatingWhatsApp";
+import ModalForm from "../about/ModalForm";
+import ProductSection from "../Pages/ProductSection";
+import ProductFeatures from "../Pages/ProductFeatures";
+import FloatingWhatsApp from "../about/FloatingWhatsApp";
 
 function App() {
   const [isModalOpen, setIsModalOpen] = useState(false);

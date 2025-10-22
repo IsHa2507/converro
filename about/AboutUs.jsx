@@ -3,7 +3,7 @@
 import Image from "next/image";
 import "../Styles/AboutUs.css";
 import AboutValues from "../about/AboutValues";
-import Differentstory from "./Differentstory";
+import Differentstory from "../about/Differentstory";
 import CTA from "../Components/CTA";
 import MissionIdeaSection from "../about/MissionIdeas";
 import WhatWeDo from "../about/WhatWeDo";

@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import missionImg from "../images/mission.svg";
+import missionImg from "../public/images/mission.svg";
 import "../Styles/MissionIdeas.css";
 
 export default function MissionIdeaSection() {

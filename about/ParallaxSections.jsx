@@ -4,11 +4,11 @@ import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
 import { FiArrowRight } from "react-icons/fi";
-import Pimg1 from "../images/Image1.png";
-import Pimg2 from "../images/Image2.png";
-import Pimg3 from "../images/Image3.png";
-import Pimg4 from "../images/Image4.png";
-import Pimg5 from "../images/Image5.png";
+import Pimg1 from "../public/images/Image1.png";
+import Pimg2 from "../public/images/Image2.png";
+import Pimg3 from "../public/images/Image3.png";
+import Pimg4 from "../public/images/Image4.png";
+import Pimg5 from "../public/images/Image5.png";
 import "../Styles/ParallaxSections.css";
 
 const contents = [

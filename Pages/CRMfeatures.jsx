@@ -4,12 +4,12 @@ import React from "react";
 import Image from "next/image";
 import "../Pages/CRMfeatures.css"; // adjust path if needed
 
-import crmindus1 from "../images/top.svg";
-import crmindus2 from "../images/calling.svg";
-import crmindus3 from "../images/manageleads.svg";
-import crmindus4 from "../images/automate.svg";
-import crmindus5 from "../images/trackteams.svg";
-import crmindus6 from "../images/multipleleads.svg";
+import crmindus1 from "../public/images/top.svg";
+import crmindus2 from "../public/images/calling.svg";
+import crmindus3 from "../public/images/manageleads.svg";
+import crmindus4 from "../public/images/automate.svg";
+import crmindus5 from "../public/images/trackteams.svg";
+import crmindus6 from "../public/images/multipleleads.svg";
 
 const crmfeatures = [
   {

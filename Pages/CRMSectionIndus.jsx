@@ -21,11 +21,11 @@ import CTA from "../Components/CTA";
 import Footer from "../Components/Footer";
 import CRMIndusFeatures from "../Pages/CRMIndusFeatures";
 
-import imgcrm1 from "../images/CRMIMG1.png";
-import imgcrm2 from "../images/CRMIMG2.png";
-import imgcrm3 from "../images/CRMIMG3.png";
-import imgcrm4 from "../images/CRM Img 4.png";
-import imgcrm5 from "../images/CRM Img 5.png";
+import imgcrm1 from "../public/images/CRMIMG1.png";
+import imgcrm2 from "../public/images/CRMIMG2.png";
+import imgcrm3 from "../public/images/CRMIMG3.png";
+import imgcrm4 from "../public/images/CRM Img 4.png";
+import imgcrm5 from "../public/images/CRM Img 5.png";
 
 const categories = [
   {

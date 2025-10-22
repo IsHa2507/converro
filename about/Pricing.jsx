@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { FaCheckCircle, FaTimesCircle } from "react-icons/fa";
 import Image from "next/image";
-import sparkle from "../images/star.svg"; 
+import sparkle from "../public/images/star.svg"; 
 import "../Styles/Pricing.css";
 import Navbar from "../Components/Navbar";
 import FAQs from "../about/FAQs";

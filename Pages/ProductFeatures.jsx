@@ -4,15 +4,15 @@ import React from "react";
 import Image from "next/image";
 import "../Pages/ProductFeatures.css"; // adjust path
 
-import sms from "../images/message-notifF.svg";
-import email from "../images/EMAILF.svg";
-import auto from "../images/AUTOMATIONF.svg";
-import whatsapp from "../images/WhatsappF.svg";
-import ivr from "../images/IVR SolutionF.svg";
-import google from "../images/GOOGLEF.svg";
-import calendar from "../images/CALENDERF.svg";
-import obd from "../images/OBD CallF.svg";
-import analytics from "../images/INVOICEF.svg";
+import sms from "../public/images/message-notifF.svg";
+import email from "../public/images/EMAILF.svg";
+import auto from "../public/images/AUTOMATIONF.svg";
+import whatsapp from "../public/images/WhatsappF.svg";
+import ivr from "../public/images/IVR SolutionF.svg";
+import google from "../public/images/GOOGLEF.svg";
+import calendar from "../public/images/CALENDERF.svg";
+import obd from "../public/images/OBD CallF.svg";
+import analytics from "../public/images/INVOICEF.svg";
 
 const features = [
   {

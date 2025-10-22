@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
-import "./globals.css";
-import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
+import "../app/Global.css";
+import Navbar from "@/Components/Navbar";
+import Footer from "@/Components/Footer";
 
 export const metadata: Metadata = {
   title: "Converro | Smart CRM Platform",
