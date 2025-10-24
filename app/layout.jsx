@@ -5,6 +5,7 @@ import CTA from "../Components/CTA";
 import FloatingWhatsApp from "../Components/FloatingWhatsApp";
 import ModalProvider from "../Components/ModalProvider"; // new wrapper for modal logic
 
+
 export const metadata = {
   title: "Your App Name",
   description: "App description here",
@@ -17,6 +18,7 @@ export default function RootLayout({ children }) {
         <ModalProvider>
           <Navbar />
           <main>{children}</main>
+          
           <CTA />
           <Footer />
           <FloatingWhatsApp />
