@@ -74,7 +74,7 @@ export default function Footer() {
               <li><a href="/aboutus">About</a></li>
               <li><a href="/pricing">Pricing</a></li>
               <li><a href="/productsection">Features</a></li>
-              <li><a href="/crmsections?cat=real-estate">Industries</a></li>
+              <li><a href="/crmsection?cat=real-estate">Industries</a></li>
               <li><a href="/contactus">Contact Us</a></li>
             </ul>
           </div>

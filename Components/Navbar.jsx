@@ -32,15 +32,15 @@ import servicesImg from "../public/images/Product and Services.svg";
 
 const dropdowns = {
   industries: [
-    { title: "Real Estate", desc: "Solutions tailored for real estate businesses", to: "/crmsections?cat=real-estate", image: realEstateImg },
-    { title: "Education", desc: "Engagement tools for schools and universities", to: "/crmsections?cat=education", image: educationImg },
-    { title: "Financial Services", desc: "CRM solutions for banking and finance", to: "/crmsections?cat=financial-services", image: financeImg },
-    { title: "Tours and Travel", desc: "Automation for travel agencies", to: "/crmsections?cat=tours-travels", image: travelImg },
-    { title: "Call Centers", desc: "Scale your call center operations", to: "/crmsections?cat=callcenters", image: callcenterImg },
-    { title: "B2B CRM", desc: "CRM designed for B2B businesses", to: "/crmsections?cat=b2b-crm", image: b2bImg },
-    { title: "Automobile", desc: "CRM for automobile sales and service", to: "/crmsections?cat=automobile", image: automobileImg },
-    { title: "Healthcare", desc: "CRM for hospitals and clinics", to: "/crmsections?cat=healthcare", image: consultingImg },
-    { title: "Hospitality", desc: "CRM for hotels and hospitality industry", to: "/crmsections?cat=hospitality", image: servicesImg },
+    { title: "Real Estate", desc: "Solutions tailored for real estate businesses", to: "/crmsection?cat=real-estate", image: realEstateImg },
+    { title: "Education", desc: "Engagement tools for schools and universities", to: "/crmsection?cat=education", image: educationImg },
+    { title: "Financial Services", desc: "CRM solutions for banking and finance", to: "/crmsection?cat=financial-services", image: financeImg },
+    { title: "Tours and Travel", desc: "Automation for travel agencies", to: "/crmsection?cat=tours-travels", image: travelImg },
+    { title: "Call Centers", desc: "Scale your call center operations", to: "/crmsection?cat=callcenters", image: callcenterImg },
+    { title: "B2B CRM", desc: "CRM designed for B2B businesses", to: "/crmsection?cat=b2b-crm", image: b2bImg },
+    { title: "Automobile", desc: "CRM for automobile sales and service", to: "/crmsection?cat=automobile", image: automobileImg },
+    { title: "Healthcare", desc: "CRM for hospitals and clinics", to: "/crmsection?cat=healthcare", image: consultingImg },
+    { title: "Hospitality", desc: "CRM for hotels and hospitality industry", to: "/crmsection?cat=hospitality", image: servicesImg },
   ],
 };
 
@@ -110,7 +110,7 @@ export default function Navbar() {
           </div>
 
           <Link href="/pricing">Pricing</Link>
-          <Link href="/integrationpage">Integration</Link>
+          <Link href="/integration">Integration</Link>
           <Link href="/contactus">Contact</Link>
         </nav>
 

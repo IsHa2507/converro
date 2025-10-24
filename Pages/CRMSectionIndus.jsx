@@ -114,11 +114,11 @@ const categories = [
 export const crmFeatures = {
   // Example: Only "real-estate" shown for brevity; you can copy all other categories similarly
   "real-estate": [
-    { id: 1, tag: "Integration Capabilities", title: "Capture leads from all property portals", description: "Stop juggling between multiple platforms...", img: imgcrm1 },
-    { id: 2, tag: "Telesales Management", title: "Boost property deal conversions", description: "Close more deals with less effort...", img: imgcrm2 },
-    { id: 3, tag: "Lead Management", title: "Complete client & property interaction history", description: "Never lose track of a buyer’s journey...", img: imgcrm3 },
-    { id: 4, tag: "Follow-up Call Reminders", title: "Never miss a client touchpoint", description: "Missed follow-ups mean missed deals...", img: imgcrm4 },
-    { id: 5, tag: "Team Management", title: "Track your property agents", description: "Keep full visibility on field teams...", img: imgcrm5 },
+    { id: 1, tag: "Integration Capabilities", title: "Capture leads from all property portals", description: "Stop juggling between multiple platforms. Converro connects with real estate portals, websites, and ad campaigns, bringing every inquiry into one centralized hub. Leads can be auto-assigned to the right agents and instantly engaged via WhatsApp or SMS.", img: imgcrm1 },
+    { id: 2, tag: "Telesales Management", title: "Boost property deal conversions", description: "Close more deals with less effort. With the auto-dialer and one-click calling, your agents spend time building relationships with buyers instead of manually dialing numbers. Every call gets logged automatically for transparency.", img: imgcrm2 },
+    { id: 3, tag: "Lead Management", title: "Complete client & property interaction history", description: "Never lose track of a buyer’s journey. Converro stores all calls, emails, chats, and property documents—agreements, invoices, KYC—securely in one place. This helps agents personalize every interaction and build trust.", img: imgcrm3 },
+    { id: 4, tag: "Follow-up Call Reminders", title: "Never miss a client touchpoint", description: "Missed follow-ups mean missed deals. Converro sends timely WhatsApp and app reminders for property viewings, callbacks, or payment discussions, ensuring your pipeline stays hot and deals keep moving.", img: imgcrm4 },
+    { id: 5, tag: "Team Management", title: "Track your property agents", description: "Keep full visibility on field teams. With check-in tracking, you can monitor property visits, client meetings, and location activity, ensuring accountability and better performance from your agents.", img: imgcrm5 },
   ],
 };
 
