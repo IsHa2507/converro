@@ -235,8 +235,7 @@ export default function CRMSection() {
         ))}
       </div>
 
-      <CTA />
-      <Footer />
+   
     </>
   );
 }

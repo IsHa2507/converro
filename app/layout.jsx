@@ -1,27 +1,26 @@
-"use client";
-
-import React, { useState } from "react";
+import "../app/global.css";
 import Navbar from "../Components/Navbar";
 import Footer from "../Components/Footer";
 import CTA from "../Components/CTA";
-import ModalForm from "../Components/ModalForm";
 import FloatingWhatsApp from "../Components/FloatingWhatsApp";
-import "../app/global.css";
+import ModalProvider from "../Components/ModalProvider"; // new wrapper for modal logic
+
+export const metadata = {
+  title: "Your App Name",
+  description: "App description here",
+};
 
 export default function RootLayout({ children }) {
-  const [isModalOpen, setIsModalOpen] = useState(false);
-  const openModal = () => setIsModalOpen(true);
-  const closeModal = () => setIsModalOpen(false);
-
   return (
     <html lang="en">
       <body>
-        <Navbar onOpenModal={openModal} /> 
-        <main>{children}</main>
-        <CTA />
-        <Footer />
-        <FloatingWhatsApp />
-        {isModalOpen && <ModalForm onClose={closeModal} />}
+        <ModalProvider>
+          <Navbar />
+          <main>{children}</main>
+          <CTA />
+          <Footer />
+          <FloatingWhatsApp />
+        </ModalProvider>
       </body>
     </html>
   );

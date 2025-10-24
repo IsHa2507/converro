@@ -161,8 +161,7 @@ export default function Integrations() {
         </section>
       )}
 
-      <CTA />
-      <Footer />
+
     </>
   );
 }

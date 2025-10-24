@@ -1,7 +1,7 @@
 "use client";
 
-import IntegrationPage from "../../about/IntegrationPage";
+import IntegrationComponent from "../../about/IntegrationPage"; // correct import
 
 export default function IntegrationPage() {
-  return <IntegrationPage />;
+  return <IntegrationComponent />;
 }

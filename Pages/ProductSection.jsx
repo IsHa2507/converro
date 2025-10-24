@@ -60,8 +60,7 @@ export default function ProductSection() {
 
       <ProductFeatures />
       <FAQs />
-      <CTA />
-      <Footer />
+     
     </>
   );
 }
