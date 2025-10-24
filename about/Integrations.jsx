@@ -1,8 +1,11 @@
 "use client";
 import React from "react";
+import Image from "next/image";
+
 import "../Styles/Integrations.css";
 import { FiArrowRight } from "react-icons/fi";
 import { useRouter } from "next/navigation";
+import logonint from "../public/icons/Fav.svg";
 
 import magicbricks from "../public/images/integrationimages/magicbricks.png";
 import indiamart from "../public/images/integrationimages/indiamart.png";
@@ -50,7 +53,14 @@ const Integrations = () => {
       {/* Orbit Center & Icons */}
       <div className="orbit-wrapper">
         <div className="orbit-center">
-          <img src="/Fav.svg" alt="Logo" className="orbit-image" />
+           <Image
+            src={logonint}
+            alt="Logo"
+            className="orbit-image"
+            width={80}
+            height={80}
+            priority
+          />
         </div>
 
         {/* Rings */}

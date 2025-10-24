@@ -145,7 +145,7 @@ export default function Navbar() {
         <Link href="/aboutus" onClick={() => setMenuOpen(false)}>About</Link>
         <Link href="/productsection" onClick={() => setMenuOpen(false)}>Features</Link>
         <Link href="/pricing" onClick={() => setMenuOpen(false)}>Pricing</Link>
-        <Link href="/integrationpage" onClick={() => setMenuOpen(false)}>Integration</Link>
+        <Link href="/integration" onClick={() => setMenuOpen(false)}>Integration</Link>
         <Link href="/contactus" onClick={() => setMenuOpen(false)}>Contact</Link>
 
         <button
