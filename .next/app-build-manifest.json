@@ -12,6 +12,30 @@
       "static/css/app/page.css",
       "static/chunks/app/page.js"
     ],
+    "/integration/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/css/app/integration/page.css",
+      "static/chunks/app/integration/page.js"
+    ],
+    "/aboutus/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/css/app/aboutus/page.css",
+      "static/chunks/app/aboutus/page.js"
+    ],
+    "/productsection/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/css/app/productsection/page.css",
+      "static/chunks/app/productsection/page.js"
+    ],
+    "/pricing/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/css/app/pricing/page.css",
+      "static/chunks/app/pricing/page.js"
+    ],
     "/_not-found/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",

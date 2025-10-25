@@ -1,0 +1,672 @@
+/*!****************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[14].oneOf[10].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[14].oneOf[10].use[3]!./Styles/AboutUs.css ***!
+  \****************************************************************************************************************************************************************************************************************************************************************/
+.about-section {
+  text-align: center;
+  padding: 80px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  margin-top: 30px;
+  
+}
+
+.about-section h2 {
+  font-size: 40px;
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+
+.about-section .subtitle {
+  font-size: 16px;
+  color: #555;
+  margin: 0 auto 60px;  /* centers + spacing below */
+  max-width: 850px;     /* keeps line length readable */
+  text-align: center;   /* center-aligns text */
+  line-height: 1.6;     /* improves readability */
+}
+
+
+/* Layout: 3 columns */
+.about-layout {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+/* Each column stacks items */
+.column {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.about-card {
+  background: #fff;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+}
+
+.about-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Dark middle card */
+.dark-card {
+  background: #000;              /* solid black */
+  color: #fff;
+  padding: 40px 28px;
+  height: 455px;                 /* fixed height */
+  border-radius: 20px;
+  text-align: center;            
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Handshake Icon */
+.dark-icon {
+  width: 80px;
+  height: 80px;
+  margin-bottom: 20px;
+}
+
+/* Heading */
+.dark-title {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+
+/* Text */
+.dark-text {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #ddd;
+  max-width: 400px;
+  margin-bottom: 30px;   /* adds space below the text */
+  padding-bottom: 10px;  /* extra padding if needed */
+}
+
+
+
+
+/* Responsive */
+@media (max-width: 900px) {
+  .about-layout {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Metrics Section */
+.metrics-section {
+  padding: 60px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  margin-top: -50px;
+  text-align: center;
+  
+}
+
+.metrics-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 40px;
+}
+
+.metric-card {
+  padding: 20px;
+}
+
+.metric-number {
+  font-size: 36px;
+  font-weight: 700;
+  color: #10b981; /* green accent */
+  margin-bottom: 12px;
+}
+
+.metric-title {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #111;
+}
+
+.metric-card p {
+  font-size: 15px;
+  color: #555;
+  line-height: 1.5;
+}
+
+/*!********************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[14].oneOf[10].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[14].oneOf[10].use[3]!./Styles/AboutValues.css ***!
+  \********************************************************************************************************************************************************************************************************************************************************************/
+.features-bg {
+  /* width: 100%; */
+  background-color: #fcfbfa;   /* full width background */
+}
+
+.features-wrapper {
+  /* width: 100%; */
+  max-width: 1200px;           /* content max width */
+  margin: 0 auto;              /* center horizontally */
+  padding: 30px 20px;
+  text-align: center;
+}
+
+
+.features-heading {
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 40px;
+}
+
+.features-heading .black-text {
+  color: #111;  /* black */
+}
+
+
+
+.features-section {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 24px;
+  padding: 30px;
+  margin: 0 auto;  /* keeps grid centered inside wrapper */
+  text-align: center;
+}
+
+.feature-card {
+  background: #fff;
+  padding: 30px 25px;
+  height: 250px;
+  border-radius: 16px;
+  border: 1px solid #e5e7eb;
+  /* box-shadow: 0 4px 10px rgba(0,0,0,0.05); */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;   /* left align content */
+  text-align: left;          /* make text left-aligned */
+}
+
+.feature-icon {
+  margin-bottom: 16px;
+}
+
+.feature-icon img {
+  width: 60px;      /* adjust size as needed */
+  height: 60px;
+  object-fit: contain;
+  display: block;
+}
+
+
+.feature-content {
+  margin-top: auto;  /* pushes title+text block to bottom */
+}
+
+.feature-card h3 {
+  font-size: 18px;
+  font-weight: 600;
+  color: #111827;
+  margin-bottom: 8px;
+}
+
+.feature-card p {
+  font-size: 15px;
+  line-height: 1.6;
+  color: #4b5563;
+}
+
+
+
+.feature-card:hover {
+  transform: translateY(-6px);
+  /* box-shadow: 0 8px 20px rgba(0,0,0,0.1); */
+  border: 0.5px solid #3fce71;
+}
+
+
+
+/*!***********************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[14].oneOf[10].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[14].oneOf[10].use[3]!./Styles/Differentstory.css ***!
+  \***********************************************************************************************************************************************************************************************************************************************************************/
+.story-wrapper {
+  background: #fcfbfa;
+  padding: 10px 20px;
+  display: flex;
+  flex-direction: column; /* stack container + promise vertically */
+  align-items: center;
+  justify-content: flex-start;
+  margin-top: -40px;
+  gap: 40px; /* spacing between story and promise */
+}
+
+.story-container {
+  max-width: 1150px;
+ 
+  display: flex;
+  background: #fff;
+  border-radius: 32px;
+  overflow: hidden;
+  border: 1px solid #e5e7eb;
+  height: 474px; /* ✅ fixed height */
+}
+
+/* Left Image */
+.story-image {
+  width: 283px;
+  height: auto;
+  flex-shrink: 0;
+  padding: 40px 20px 40px 40px;
+  border-radius: 24px;
+}
+.story-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  border-radius: 24px;
+}
+
+/* Right Content */
+.story-content {
+  flex: 1 1;
+  padding: 5px 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: left;
+  height: 100%;
+}
+
+.story-content h2 {
+  text-align: left;
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: #111;
+  margin-top: -15px;
+}
+
+.story-content p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #4b5563;
+  margin-bottom: 30px;
+  max-width: 600px;
+}
+
+/* Features List */
+.story-features {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 25px 40px;
+}
+
+.story-feature {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.story-feature-top {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.story-icon {
+  color: #22c55e;
+  font-size: 20px;
+  flex-shrink: 0;
+}
+
+.story-feature h3 {
+  font-size: 18px;
+  font-weight: 600;
+  margin: 0;
+  color: #111;
+}
+
+.story-feature p {
+  font-size: 14px;
+  color: #555;
+  margin: 0;
+  line-height: 1.5;
+}
+
+/* Hover effect */
+.story-features li:hover {
+  transform: translateX(4px);
+  transition: transform 0.2s ease;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .story-container {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .story-image {
+    width: 100%;
+    height: 300px;
+  }
+
+  .story-content {
+    padding: 30px 20px;
+  }
+
+  .story-features {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ===================== */
+/* PROMISE BLOCK (inside same wrapper) */
+/* ===================== */
+
+.promise-container {
+  max-width: 1080px;
+  
+  background: linear-gradient(
+    0deg,
+    rgba(255, 255, 253, 1) 0%,
+    rgba(255, 249, 210, 1) 100%
+  );
+  border-radius: 24px;
+  padding: 30px 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+  margin-bottom: 30px;
+}
+
+.promise-content {
+  max-width: 700px;
+}
+
+.promise-title {
+  font-size: 24px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: #222;
+}
+
+.promise-image {
+  width: 28px;
+  height: 28px;
+  object-fit: contain;
+}
+
+.promise-text {
+  margin-top: 8px;
+  font-size: 14px;
+  line-height: 1.6;
+  color: #555;
+}
+
+.highlight {
+  font-style: italic;
+  font-weight: 500;
+  color: #111;
+}
+
+.promise-btn {
+  background: #111;
+  color: #fff;
+  padding: 14px 24px;
+  border-radius: 40px;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.3s ease;
+}
+
+.promise-btn:hover {
+  background: #3fce71;
+  color: black;
+}
+
+.promise-arrow {
+  font-size: 16px;
+  color: white;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.promise-btn:hover .promise-arrow {
+  transform: rotate(-45deg);
+  color: black;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .promise-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .promise-btn {
+    margin-top: 20px;
+  }
+}
+
+/*!*********************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[14].oneOf[10].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[14].oneOf[10].use[3]!./Styles/MissionIdeas.css ***!
+  \*********************************************************************************************************************************************************************************************************************************************************************/
+/* Common styling */
+.mission-idea-section {
+  max-width: 1200px;
+  margin: 80px auto;
+  padding: 40px 20px;
+  
+  color: #111;
+}
+
+/* Row layout */
+.content-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.content-row.reverse {
+  flex-direction: row-reverse;
+}
+
+/* Text section */
+.text-block {
+  flex: 1 1;
+}
+
+.text-block h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.text-block p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #333;
+}
+
+/* Image section */
+.image-block {
+  flex: 1 1;
+  display: flex;
+  justify-content: center;
+}
+
+.image-block img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  object-fit: contain;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .content-row,
+  .content-row.reverse {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .image-block {
+    margin-top: 20px;
+  }
+}
+
+
+
+/*!*****************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[14].oneOf[10].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[14].oneOf[10].use[3]!./Styles/WhatWeDo.css ***!
+  \*****************************************************************************************************************************************************************************************************************************************************************/
+/* ============================= */
+/*   What We Do Section */
+/* ============================= */
+.whatwedo-section {
+  background: linear-gradient(
+    0deg,
+    rgba(252, 251, 250, 1) 0%,
+    rgba(194, 251, 223, 1) 100%
+  );
+  margin: 0 auto;
+  padding: 60px 20px;
+}
+
+.whatwedo-container {
+  max-width: 1100px;
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.whatwedo-title {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.whatwedo-text {
+  font-size: 1rem;
+  color: #444;
+  line-height: 1.6;
+  max-width: 900px;
+  margin: 0 auto 40px auto;
+}
+
+.advantages-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: 30px 0;
+}
+
+.advantages-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px 40px;
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.advantage-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+  padding: 16px;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.6);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.advantage-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.08);
+}
+
+.advantage-icon {
+  font-size: 1.6rem;
+  color: #3fce71;
+  background: #fff;
+  padding: 12px;
+  border-radius: 10px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.advantage-card h4 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.advantage-card p {
+  font-size: 0.95rem;
+  color: #555;
+  line-height: 1.5;
+}
+
+
+@media (max-width: 1024px) {
+  .advantages-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+
+  .whatwedo-title {
+    font-size: 1.8rem;
+  }
+
+  .whatwedo-text {
+    font-size: 0.95rem;
+  }
+}
+
+/* ============================= */
+/*   Responsive - Mobile */
+/* ============================= */
+@media (max-width: 768px) {
+  .advantages-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .advantage-card {
+    padding: 14px;
+  }
+
+  .whatwedo-title {
+    font-size: 1.6rem;
+  }
+
+  .whatwedo-text {
+    font-size: 0.9rem;
+  }
+
+  .story-image img {
+    max-height: 280px;
+    border-radius: 12px;
+  }
+}
+
