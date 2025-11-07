@@ -1,7 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
-  experimental: { appDir: true }, // enable App Router
+  // ✅ Remove deprecated experimental flag
   images: {
     remotePatterns: [
       { protocol: "https", hostname: "images.pexels.com" },

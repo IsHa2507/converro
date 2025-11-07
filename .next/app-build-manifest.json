@@ -11,53 +11,6 @@
       "static/chunks/main-app.js",
       "static/css/app/page.css",
       "static/chunks/app/page.js"
-    ],
-    "/productsection/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/css/app/productsection/page.css",
-      "static/chunks/app/productsection/page.js"
-    ],
-    "/aboutus/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/css/app/aboutus/page.css",
-      "static/chunks/app/aboutus/page.js"
-    ],
-    "/pricing/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/css/app/pricing/page.css",
-      "static/chunks/app/pricing/page.js"
-    ],
-    "/contactus/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/css/app/contactus/page.css",
-      "static/chunks/app/contactus/page.js"
-    ],
-    "/terms-and-condition/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/css/app/terms-and-condition/page.css",
-      "static/chunks/app/terms-and-condition/page.js"
-    ],
-    "/privacy&policy/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/css/app/privacy&policy/page.css",
-      "static/chunks/app/privacy&policy/page.js"
-    ],
-    "/crmsection/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/css/app/crmsection/page.css",
-      "static/chunks/app/crmsection/page.js"
-    ],
-    "/_not-found/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/_not-found/page.js"
     ]
   }
 }
