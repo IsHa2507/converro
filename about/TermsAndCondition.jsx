@@ -207,8 +207,7 @@ const TermsAndCondition = () => {
         </section>
       </main>
 
-      <CTA />
-      <Footer />
+     
     </div>
   );
 };

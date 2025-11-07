@@ -4,8 +4,6 @@ import { useState } from "react";
 import Image from "next/image";
 import { FaExclamationTriangle } from "react-icons/fa";
 import Navbar from "../Components/Navbar";
-import CTA from "../Components/CTA";
-import Footer from "../Components/Footer";
 import "../Styles/IntegrationPage.css";
 
 // Images

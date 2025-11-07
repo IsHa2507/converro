@@ -1,4 +1,4 @@
-// File: C:\Users\kajal\Desktop\custro\converro-11\app\pricing\page.jsx
+// File: C:\Users\kajal\Desktop\custro\converro\app\pricing\page.jsx
 import * as entry from '../../../../app/pricing/page.js'
 import type { ResolvingMetadata, ResolvingViewport } from 'next/dist/lib/metadata/types/metadata-interface.js'
 

@@ -132,7 +132,7 @@ export default function Navbar() {
           <ModalForm isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
         </div>
 
-        {/* ✅ Hamburger */}
+        {/*  Hamburger */}
         <div className="hamburger" onClick={() => setMenuOpen(!menuOpen)}>
           <span></span>
           <span></span>
@@ -140,7 +140,7 @@ export default function Navbar() {
         </div>
       </div>
 
-      {/* ✅ Mobile Menu */}
+      {/*  Mobile Menu */}
       <div className={`mobile-menu ${menuOpen ? "active" : ""}`}>
         <Link href="/aboutus" onClick={() => setMenuOpen(false)}>About</Link>
         <Link href="/productsection" onClick={() => setMenuOpen(false)}>Features</Link>
