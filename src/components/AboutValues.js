@@ -1,5 +1,5 @@
 import React from "react";
-import { FaChartPie, FaChartLine, FaShieldAlt, FaCog } from "react-icons/fa";
+
 import "./AboutValues.css";
 import imgf1 from "../images/Customer.svg";
 import imgf2 from "../images/Excellence.svg";

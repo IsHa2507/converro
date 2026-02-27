@@ -303,7 +303,7 @@ const integrations = [
 ];
 
 const Integrations = () => {
-  const [visible, setVisible] = useState(true);
+  const [visible] = useState(true);
 
   return (
      <>

@@ -6,16 +6,6 @@ import { ChevronDown } from "lucide-react";
 import logo from "../assets/logo.svg";
 import "./Navbar.css";
 import ModalForm from "./ModalForm";
-
-import smsImg from "../images/SMS Marketing.svg";
-import emailImg from "../images/Email Marketing.svg";
-import automationImg from "../images/Automation 360.svg";
-import whatsappImg from "../images/WhatsApp Business API.svg";
-import ivrImg from "../images/IVR Solution.svg";
-import googleImg from "../images/Google Data Extraor.svg";
-import tasksImg from "../images/Task & Events.svg";
-import obdImg from "../images/OBD_Call.svg";
-import invoiceImg from "../images/Invoice & Quotation.svg";
 import realEstateImg from "../images/Realstate.svg";
 import educationImg from "../images/Education.svg";
 import financeImg from "../images/Financial Services.svg";
@@ -27,17 +17,7 @@ import consultingImg from "../images/Consulting.svg";
 import servicesImg from "../images/Product and Services.svg";
 
 const dropdowns = {
-  // products: [
-  //   { title: "SMS Marketing", desc: "Reach more customers instantly with targeted SMS campaigns.", to: "/productsection", image: smsImg },
-  //   { title: "Email Marketing", desc: "Boost engagement and conversions with powerful email campaigns.", to: "/products/sales", image: emailImg },
-  //   { title: "Automation 360", desc: "Automate workflows and maximize efficiency with ease.", to: "/products/service", image: automationImg },
-  //   { title: "WhatsApp Business API", desc: "Connect directly with customers using WhatsApp marketing.", to: "/products/content", image: whatsappImg },
-  //   { title: "IVR Solution", desc: "Deliver better experiences with interactive voice response.", to: "/products/operations", image: ivrImg },
-  //   { title: "Google Data Extractor", desc: "Capture leads directly from Google into your CRM.", to: "/products/commerce", image: googleImg },
-  //   { title: "Tasks & Events", desc: "Manage tasks and events seamlessly in one pipeline.", to: "/products/smart-crm", image: tasksImg },
-  //   { title: "OBD Call", desc: "Make safe, hands-free calls with OBD technology.", to: "/products/small-business", image: obdImg },
-  //   { title: "Invoice & Quotation", desc: "Generate invoices and quotations instantly online.", to: "/products/invoice", image: invoiceImg },
-  // ],
+ 
   industries: [
   { title: "Real Estate", desc: "Solutions tailored for real estate businesses", to: "/crmsections?cat=real-estate", image: realEstateImg },
   { title: "Education", desc: "Engagement tools for schools and universities", to: "/crmsections?cat=education", image: educationImg },
@@ -81,48 +61,7 @@ const Navbar = () => {
         <nav className="navbar-links">
           <Link to="/aboutus">About</Link>
           <Link to="/productsection">Features</Link>
-          {/* Products Dropdown */}
-          {/* <div
-            className="dropdown"
-            onMouseEnter={() => setActiveDropdown("products")}
-            onMouseLeave={() => setActiveDropdown(null)}
-          >
-            <span className="dropdown-title"> */}
-              {/* Products <ChevronDown size={16} className="dropdown-arrow" /> */}
-            {/* </span> */}
-            {/* <AnimatePresence>
-              {activeDropdown === "products" && (
-                <motion.div
-                  className="hubspot-mega-dropdown"
-                  initial={{ opacity: 0, y: -10 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  exit={{ opacity: 0, y: -10 }}
-                  transition={{ duration: 0.2 }}
-                >
-                  <div className="dropdown-header">
-                    <h3>Converro CRM Platform</h3>
-                    <p>Your leads, sales, and customer conversations streamlined in one AI powered hub.</p>
-                  </div>
-
-                  <div className="products-grid">
-                    {dropdowns.products.map((item, i) => (
-                      <Link key={i} to={item.to} className="product-item">
-                        <div className="product-icon">
-                          <img src={item.image} alt={item.title} />
-                        </div>
-                        <div className="product-content">
-                          <h4>{item.title}</h4>
-                          <p>{item.desc}</p>
-                        </div>
-                      </Link>
-                    ))}
-                  </div>
-                </motion.div>
-              )}
-            </AnimatePresence> */}
-          {/* </div> */}
-
-          {/* Industries Dropdown */}
+         
           <div
             className="dropdown"
             onMouseEnter={() => setActiveDropdown("industries")}
@@ -180,17 +119,7 @@ const Navbar = () => {
         onClose={() => setIsModalOpen(false)}
       />
     </div>
-          {/* <button 
-  className="btn-glossy" 
-  onClick={() => { 
-    setMenuOpen(false);   // close mobile menu if open
-    onOpenModal();        // open modal
-  }}
->
-  Start Free Trial
-  <FiArrowRight className="nav-arrow" /> */}
-{/* </button> */}
-
+         
         </div>
 
         {/* Hamburger */}

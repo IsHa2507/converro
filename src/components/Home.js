@@ -2,7 +2,6 @@ import React from "react";
 import Navbar from "../components/Navbar";
 import CTA from "../components/CTA";
 import Footer from "../components/Footer";
-import { FaStar } from "react-icons/fa"; // React Star Icon
 
 import StatsSection from "./StatsSection";
 import ParallaxSections from "./ParallaxSections";

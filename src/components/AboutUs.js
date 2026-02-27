@@ -8,7 +8,7 @@ import Footer from "../components/Footer";
 import MissionIdeaSection from "./MissionIdeas";
 import WhatWeDo from "./WhatWeDo";
 import HandshakeImg from "../images/handshake.svg"; 
-import { FiArrowRight } from "react-icons/fi";
+
 
 const AboutUs = () => {
   return (
