@@ -11,15 +11,14 @@ import AboutUS from "./components/AboutUs";
 import Pricing from "./components/Pricing";
 import IntegrationPage from "./components/IntegrationPage";
 import CRMSection from "./internalPages/CRMSectionIndus";
-import CRMIndusFeatures from "./internalPages/CRMfeatures";
+
 
 // Global components
 import Navbar from "./components/Navbar";
-import Footer from "./components/Footer";
+
 import ModalForm from "./components/ModalForm";
 import ProductSection from "./internalPages/ProductSection";
-import ProductFeatures from "./internalPages/ProductFeatures";
-import FloatingWhatsApp from "./components/FloatingWhatsApp";
+
 
 function App() {
   const [isModalOpen, setIsModalOpen] = useState(false);
