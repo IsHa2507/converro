@@ -67,8 +67,7 @@ const AddOns = () => {
               (including re-logins), applicable for Startup Plans.
             </li>
             <li>
-              Automation Workflow Creation: ₹3000 per setup flow for Startup
-              Plans, and ₹1500 per setup + 18% GST flow for Business Plans.
+              Automation Workflow Setup: ₹6000 per workflow ( applicable to all plans ) + 18% GST .
             </li>
           </ul>
           <div className="optional-services-support">
